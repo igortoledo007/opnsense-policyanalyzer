@@ -113,6 +113,9 @@ class FakeSystem:
         self.listeners = ['127.0.0.1:11434']
         self.api_down = False            # jail up but the API never answers
         self.ollama_alive = True         # result of "jexec ollama pgrep -x ollama"
+        self.zfs_loaded = zfs            # kldstat -q -m zfs
+        self.pools = {'zroot'} if zfs else set()
+        self.md = {}                     # unit -> backing file (mdconfig -t vnode)
 
     def p(self, path):
         return path if path.startswith(self.root) else self.root + path
@@ -125,6 +128,19 @@ class FakeSystem:
         if cancel:
             cancel()
         prog = argv[0]
+        if prog == '/sbin/sysctl' and len(argv) == 2 and '=' in argv[1]:
+            name, value = argv[1].split('=', 1)
+            self.sysctl[name] = value
+            return 0, '%s: x -> %s\n' % (name, value), ''
+        if prog == '/sbin/kldstat':
+            return (0, '', '') if self.zfs_loaded else (1, '', '')
+        if prog == '/sbin/kldload':
+            self.zfs_loaded = True
+            return 0, '', ''
+        if prog == '/sbin/mdconfig':
+            return self._mdconfig(argv[1:])
+        if prog == '/sbin/zpool':
+            return self._zpool(argv[1:])
         if prog == '/sbin/sysctl':
             return (0, self.sysctl[argv[2]] + '\n', '') if argv[2] in self.sysctl else (1, '', 'unknown oid')
         if prog == '/sbin/mount' and argv[1] == '-p':
@@ -136,13 +152,22 @@ class FakeSystem:
             self.mounts = [m for m in self.mounts if m[1] != argv[1]]
             return 0, '', ''
         if prog == '/sbin/zfs':
+            if argv[1] == 'list' and '-r' in argv:
+                name = argv[-1]
+                if '-t' in argv:
+                    return 0, '', ''             # no snapshots
+                lines = ['%s\t%s' % (d, self.datasets[d] or 'none') for d in sorted(self.datasets)
+                         if d == name or d.startswith(name + '/')]
+                return (0, '\n'.join(lines) + '\n', '') if lines else (1, '', 'no such dataset')
             if argv[1] == 'list':
                 return (0, argv[-1] + '\n', '') if argv[-1] in self.datasets else (1, '', 'no such dataset')
             if argv[1] == 'get':
                 return 0, self.p(self.datasets.get(argv[-1], '-')) + '\n', ''
             if argv[1] == 'create':
                 name = argv[-1]
-                mountpoint = self.datasets[name.rsplit('/', 1)[0]] + '/' + name.rsplit('/', 1)[1]
+                explicit = [a.split('=', 1)[1] for a in argv if a.startswith('mountpoint=')]
+                mountpoint = explicit[0] if explicit else \
+                    self.datasets[name.rsplit('/', 1)[0]] + '/' + name.rsplit('/', 1)[1]
                 self.datasets[name] = mountpoint
                 os.makedirs(self.p(mountpoint), exist_ok=True)
                 self.mounts.append((name, mountpoint, 'zfs'))
@@ -203,6 +228,51 @@ class FakeSystem:
 
     tunables = None
 
+    def _mdconfig(self, args):
+        if args[:1] == ['-lv']:
+            return 0, ''.join('md%d\tvnode\t 4G\t%s\n' % (u, f) for u, f in sorted(self.md.items())), ''
+        if args[:1] == ['-a']:
+            unit = int(args[args.index('-u') + 1])
+            if unit in self.md:
+                return 1, '', 'mdconfig: ioctl(/dev/mdctl): Device busy'
+            self.md[unit] = args[args.index('-f') + 1]
+            return 0, '', ''
+        if args[:1] == ['-d']:
+            unit = int(args[args.index('-u') + 1])
+            if any(dev == '/dev/md%d' % unit for dev in self.pool_devices.values()):
+                return 1, '', 'mdconfig: ioctl(/dev/mdctl): Device busy'
+            self.md.pop(unit, None)
+            return 0, '', ''
+        return 1, '', 'unexpected mdconfig'
+
+    pool_devices = None
+
+    def _zpool(self, args):
+        if self.pool_devices is None:
+            self.pool_devices = {}
+        if args[0] == 'list':
+            return (0, args[-1] + '\n', '') if args[-1] in self.pools else (1, '', 'no such pool')
+        if args[0] == 'create':
+            pool, device = args[-2], args[-1]
+            if not device.startswith('/dev/md') or int(device[len('/dev/md'):]) not in self.md:
+                return 1, '', 'cannot open %s' % device
+            self.pools.add(pool)
+            self.pool_devices[pool] = device
+            self.datasets[pool] = None
+            return 0, '', ''
+        if args[0] == 'destroy':
+            pool = args[-1]
+            for ds in [d for d in self.datasets if d == pool or d.startswith(pool + '/')]:
+                mountpoint = self.datasets.pop(ds)
+                if mountpoint:
+                    shutil.rmtree(self.p(mountpoint), ignore_errors=True)
+                    os.makedirs(self.p(mountpoint), exist_ok=True)      # the empty mount point stays
+                self.mounts = [m for m in self.mounts if m[0] != ds]
+            self.pools.discard(pool)
+            self.pool_devices.pop(pool, None)
+            return 0, '', ''
+        return 1, '', 'unexpected zpool'
+
     def _tunables(self, args):
         if self.tunables is None:
             self.tunables = {}
@@ -238,7 +308,10 @@ class FakeSystem:
                 or c[0] == '/usr/local/sbin/configctl'
                 or c[0] in ('/usr/sbin/jail', '/usr/sbin/chroot', '/usr/bin/tar', '/sbin/umount', '/usr/bin/cpuset',
                             '/usr/sbin/jexec', '/usr/bin/rctl', '/sbin/devfs', '/bin/chflags')
-                or (c[0] == '/sbin/zfs' and c[1] in mutating) or (c[0] == '/sbin/mount' and c[1] == '-t')]
+                or (c[0] == '/sbin/zfs' and c[1] in mutating) or (c[0] == '/sbin/mount' and c[1] == '-t')
+                or c[0] == '/sbin/kldload' or (c[0] == '/sbin/mdconfig' and c[1] in ('-a', '-d'))
+                or (c[0] == '/sbin/zpool' and c[1] in ('create', 'destroy', 'export', 'import'))
+                or (c[0] == '/sbin/sysctl' and len(c) == 2 and '=' in c[1])]
 
 
 class SetupTestCase(unittest.TestCase):

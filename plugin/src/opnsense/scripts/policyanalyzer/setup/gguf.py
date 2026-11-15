@@ -227,11 +227,13 @@ def import_plan(ctx, args):
     if size and not MIN_BYTES <= size <= MAX_BYTES:
         errors.append('size %s outside the accepted range (%s - %s)' % (
             common.fmt_bytes(size), common.fmt_bytes(MIN_BYTES), common.fmt_bytes(MAX_BYTES)))
-    free = common.free_bytes(ctx.models_dir)
-    need = size * (2 if download else 1) + common.SPACE_MARGIN_BYTES
-    if free is not None and size and need > free:
-        errors.append('not enough space: the import needs %s (the blob is a copy), %s free'
-                      % (common.fmt_bytes(need), common.fmt_bytes(free)))
+    # the downloaded file and the blob Ollama copies from it are both below /var/db/ai/models
+    need = size * (2 if download else 1)
+    space = common.space_check(ctx, ctx.models_dir, need, 'the import of %s (the blob is a copy)' % full)
+    errors += space['errors']
+    warnings += space['warnings']
+    free = space['free']
+    need = space['needed']
     if template == 'gguf':
         warnings.append('template "gguf": Ollama uses the chat template embedded in the file; if the answers '
                         'look broken, revert and import again with template=llama3 or chatml')

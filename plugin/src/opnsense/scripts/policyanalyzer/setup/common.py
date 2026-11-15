@@ -71,6 +71,13 @@ BASE_EXTRACTED_BYTES_ESTIMATE = 695943538        # sum of file sizes in base.txz
 PKG_DOWNLOAD_ESTIMATE = {'quarterly': 171457156, 'latest': 166597579}      # ollama + deps + pkg
 PKG_INSTALLED_ESTIMATE = {'quarterly': 865506985, 'latest': 840764781}
 SPACE_MARGIN_BYTES = 1 * GIB
+# Space guard (space_check): the estimate gets 20 % on top, and the file system that holds /var (logs, config
+# backups, package database) is never left with less than SYSTEM_FREE_FLOOR_BYTES free.
+SPACE_ESTIMATE_FACTOR = 1.2
+SYSTEM_FREE_FLOOR_BYTES = 2 * GIB
+SHARED_DISK_WARNING = ('%s is not on ZFS and shares the file system of /var (%s): models (several GiB each) take '
+                       'space from logs, config backups and updates; a ZFS pool in a file (create_file_pool) gives '
+                       'them a fixed size limit, an Ollama server in the LAN keeps them off the firewall')
 
 DEFAULT_LIMITS = {
     'cpus': '2-3',
@@ -117,7 +124,7 @@ class Context:
         self.tunables_php = os.path.join(os.path.dirname(os.path.abspath(here)), 'tunables.php') if here \
             else '/usr/local/opnsense/scripts/policyanalyzer/setup/tunables.php'
         self.configctl = '/usr/local/sbin/configctl'
-        self.console_log = '/var/log/policyanalyzer/jail-%s.console.log' % JAIL_NAME
+        self.console_log = '/var/db/ai/jail-%s.console.log' % JAIL_NAME   # not /var/log: tmpfs on nano/RAM-disk installs
         self.runner = runner or Runner()
         self.http = http or Http()
         self._ncpu = ncpu
@@ -403,6 +410,64 @@ def mounts_below(ctx, path):
 
 def dataset_exists(ctx, name):
     return ctx.runner.read(['/sbin/zfs', 'list', '-H', '-o', 'name', name]).strip() == name
+
+
+def system_path(ctx, path):
+    """ path as seen by the system (without the test root prefix) """
+    return path[len(ctx.root):] if ctx.root and path.startswith(ctx.root) else path
+
+
+def _existing(path):
+    probe = path
+    while probe and not os.path.exists(probe) and probe != '/':
+        probe = os.path.dirname(probe)
+    return probe or '/'
+
+
+def target_filesystem(ctx, path):
+    """
+    read only: which file system receives the data written below path, and whether it is the one that holds
+    /var (UFS: same device; ZFS: same pool, the datasets share its free space)
+    """
+    rel = system_path(ctx, path)
+    device, mountpoint, fstype = mount_of(ctx, rel)
+    var_device, _var_mp, var_fstype = mount_of(ctx, '/var')
+    if fstype == 'zfs' or var_fstype == 'zfs':
+        shares = fstype == var_fstype == 'zfs' and device.split('/')[0] == var_device.split('/')[0]
+    else:
+        try:
+            shares = os.stat(_existing(path)).st_dev == os.stat(_existing(ctx.root + '/var')).st_dev
+        except OSError:
+            shares = True
+    return {'path': rel, 'device': device or None, 'mountpoint': mountpoint, 'fstype': fstype or None,
+            'shares_var': shares}
+
+
+def space_check(ctx, path, need, what='this action', exact=False):
+    """
+    read only space guard used before writing large files (runtime, models, pool image).
+    need: bytes the action writes below path (an estimate unless exact=True, then no 20 % is added).
+    Blocks when the free space left afterwards would be below max(20 % of need, floor), the floor being
+    SYSTEM_FREE_FLOOR_BYTES on the file system of /var and SPACE_MARGIN_BYTES elsewhere.
+    :return: {errors, warnings, free, needed, margin, filesystem}
+    """
+    fs = target_filesystem(ctx, path)
+    free = free_bytes(path)
+    reserve = 0 if exact else int(need * (SPACE_ESTIMATE_FACTOR - 1))
+    floor = SYSTEM_FREE_FLOOR_BYTES if fs['shares_var'] else SPACE_MARGIN_BYTES
+    margin = max(reserve, floor)
+    errors, warnings = [], []
+    if need and free is not None and free - need < margin:
+        errors.append('not enough space for %s on %s (%s): need %s plus a margin of %s, %s free'
+                      % (what, fs['mountpoint'], fs['fstype'] or 'unknown file system', fmt_bytes(need),
+                         fmt_bytes(margin), fmt_bytes(free)))
+    if fs['fstype'] != 'zfs' and fs['shares_var']:
+        warnings.append(SHARED_DISK_WARNING % (fs['path'], fs['mountpoint']))
+    if fs['fstype'] == 'tmpfs':
+        warnings.append('%s is on a memory file system (tmpfs): its content uses RAM and is lost at reboot'
+                        % fs['path'])
+    return {'errors': errors, 'warnings': warnings, 'free': free, 'needed': need + margin if need else 0,
+            'margin': margin, 'filesystem': fs}
 
 
 def sysctl(ctx, name):

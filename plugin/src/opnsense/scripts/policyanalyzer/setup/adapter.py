@@ -74,6 +74,9 @@ DESCRIPTIONS = {
     'benchmark': 'Measure the local AI runtime speed (nothing is changed)',
     'import_gguf': 'Import a GGUF model (file copied to /var/db/ai/models/import/ or downloaded from Hugging Face) '
                    'into the local AI runtime',
+    'create_file_pool': 'Create a ZFS pool in a file (/var/db/ai.zpool.img, size limited) for the models on '
+                        'installations without ZFS (UFS)',
+    'remove_file_pool': 'Destroy the ZFS pool in a file with everything in it and delete its image',
 }
 
 

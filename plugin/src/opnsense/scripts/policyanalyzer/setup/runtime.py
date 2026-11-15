@@ -71,10 +71,17 @@ def runtime_args(ctx, args, defaults=True):
     if args.get('cpus') not in (None, ''):
         out['cpus'] = common.format_cpuset(common.parse_cpuset(args['cpus'], ctx.ncpu))
     else:
-        out['cpus'] = common.format_cpuset(common.parse_cpuset(out['cpus'], ctx.ncpu)) \
-            if _cpus_fit(out['cpus'], ctx.ncpu) else common.format_cpuset([max(0, ctx.ncpu - 1)])
+        if _cpus_fit(out['cpus'], ctx.ncpu):
+            out['cpus'] = common.format_cpuset(common.parse_cpuset(out['cpus'], ctx.ncpu))
+        else:
+            # the default set does not exist on this host (e.g. a 2-cpu VM): the upper half of the cpus
+            half = max(1, ctx.ncpu // 2)
+            out['cpus'] = common.format_cpuset(list(range(max(0, ctx.ncpu - half), ctx.ncpu)))
     if args.get('threads') not in (None, ''):
         out['threads'] = common.as_int(args['threads'], 1, ctx.ncpu, 'threads')
+    elif 'threads' not in current:
+        # default threads never exceed the default cpu set picked above
+        out['threads'] = min(out['threads'], len(common.parse_cpuset(out['cpus'], ctx.ncpu)))
     if args.get('ctx') not in (None, ''):
         out['ctx'] = common.as_int(args['ctx'], 2048, 32768, 'ctx')
         if out['ctx'] not in common.CTX_VALUES:
@@ -474,6 +481,12 @@ def install_plan(ctx, args):
                   'description': 'Make %s (HOME of the service user) writable by nobody' % common.JAIL_SERVICE_HOME,
                   'effect': 'ollama serve keeps its key pair in %s/.ollama' % common.JAIL_SERVICE_HOME,
                   'undo': 'removed with the jail root'})
+    if not os.path.isdir(ctx.models_dir):
+        # the storage step was skipped (or the models were removed): the jail mounts this directory with nullfs
+        steps.append({'type': 'mkdir', 'path': ctx.models_dir, 'mode': '0750',
+                      'argv': ['/bin/mkdir', '-p', ctx.models_dir],
+                      'description': 'Create the models directory %s' % common.system_path(ctx, ctx.models_dir),
+                      'undo': 'remove it if empty'})
     steps.append({'type': 'chown', 'path': ctx.models_dir, 'uid': common.JAIL_SERVICE_UID,
                   'gid': common.JAIL_SERVICE_UID, 'mode': '0755',
                   'argv': ['/usr/sbin/chown', '%d:%d' % (common.JAIL_SERVICE_UID, common.JAIL_SERVICE_UID),
@@ -502,10 +515,11 @@ def install_plan(ctx, args):
     download = base_size + pkg_bytes
     needed = (base_size + (common.BASE_EXTRACTED_BYTES_ESTIMATE if base_size else 0)
               + (common.PKG_INSTALLED_ESTIMATE[branch] if pkg_bytes else 0) + pkg_bytes)
-    free = info['free_bytes']
-    if free is not None and free < needed + common.SPACE_MARGIN_BYTES:
-        errors.append('not enough space on /var/db/ai: need %s, %s free' % (common.fmt_bytes(needed),
-                                                                              common.fmt_bytes(free)))
+    # base.txz download + extracted userland + packages (download and installed), estimates in common.py
+    space = common.space_check(ctx, ctx.ai_dir, needed, 'the runtime')
+    errors += space['errors']
+    warnings += space['warnings']
+    free = space['free']
     if not base_sha and base_size:
         errors.append('could not read the SHA256 of base.txz from the official MANIFEST')
     if download:
@@ -675,7 +689,9 @@ def uninstall_plan(ctx, args):
     keep_models = not remove_dataset
     errors, warnings, irreversible = [], [], []
     steps = []
-    steps += [dict(s, undo_argv=None, undo='') for s in stop_steps(ctx)]
+    # the stop keeps its inverse (start the jail): a failed uninstall rolls back to a running Ollama; the revert of a
+    # finished uninstall uses revert_action (install) instead of the inverses
+    steps += stop_steps(ctx)
     steps.append(dict(boot_step(ctx, False), description='Remove jail %s from /etc/rc.conf.d/jail' % JAIL_NAME))
     steps.append({'type': 'write_file', 'path': ctx.jail_conf, 'content': None, 'argv': ['/bin/rm', ctx.jail_conf],
                   'description': 'Remove /etc/jail.conf.d/%s.conf' % JAIL_NAME, 'undo': 'file restored'})
@@ -691,9 +707,22 @@ def uninstall_plan(ctx, args):
                         '(about %s)' % common.fmt_bytes(common.BASE_TXZ_BYTES_ESTIMATE
                                                          + common.PKG_DOWNLOAD_ESTIMATE['quarterly']))
     if remove_dataset:
+        steps.append({'type': 'unlink', 'path': ctx.root + ctx.console_log, 'argv': ['/bin/rm', ctx.console_log],
+                      'description': 'Delete the jail console log %s' % ctx.console_log})
         dataset = info['ai_dataset']
+        models = common.system_path(ctx, ctx.models_dir)
         if not dataset:
-            errors.append('/var/db/ai is not a ZFS dataset, nothing to destroy')
+            # UFS (or any file system without the dataset): the models are a plain directory
+            if not os.path.isdir(ctx.models_dir):
+                warnings.append('%s does not exist, no models to remove' % models)
+            elif confirm != models:
+                errors.append('to delete %s (all models included) pass confirm=%s' % (models, models))
+            else:
+                steps.append({'type': 'remove_tree', 'path': ctx.models_dir, 'models': True,
+                              'argv': ['/bin/rm', '-rf', models],
+                              'description': 'Delete the models directory %s with ALL models' % models,
+                              'effect': 'models are permanently deleted (the directory is not a ZFS dataset)'})
+                irreversible.append('directory %s and every model in it are permanently deleted' % models)
         elif confirm != dataset:
             errors.append('to destroy %s (all models included) pass confirm=%s' % (dataset, dataset))
         else:
@@ -723,6 +752,12 @@ def status(ctx):
     result['racct'] = dict(info['racct_state'])
     del result['racct_state']
     result['rctl_in_jail_conf'] = jail_conf_has_rctl(ctx)
+    from .filepool import state as file_pool_state
+    pool = file_pool_state(ctx)
+    result['file_pool'] = pool if (pool['image_exists'] or pool['pool_imported'] or pool['rc_script']) else None
+    space = common.target_filesystem(ctx, ctx.models_dir)
+    result['models_fs'] = {'fstype': space['fstype'], 'mountpoint': space['mountpoint'],
+                           'shares_var': space['shares_var']}
     result['version'] = None
     result['version_ok'] = None
     result['models'] = []
@@ -748,6 +783,8 @@ def status(ctx):
         result['models'].append({'name': '%s:%s' % (name, tag),
                                  'size': sum(size for _, size in manifest_digests(manifest))})
     warnings = []
+    if space['fstype'] != 'zfs' and space['shares_var']:
+        warnings.append(common.SHARED_DISK_WARNING % (common.system_path(ctx, ctx.models_dir), space['mountpoint']))
     if result.get('warning'):
         warnings.append(result['warning'] + '; stop_runtime stops it')
     if info['jail_conf']:

@@ -35,7 +35,8 @@
     Step types: zfs_create, zfs_destroy, mkdir, rmdir, fetch, unlink, extract,
     write_file, restore_file, chown, restore_owner, mount, umount, run,
     remove_tree, wait_http, wait_ollama, verify_listen, model_pull, model_remove, model_restore,
-    gguf_verify, hf_download (GGUF import, gguf.py).
+    gguf_verify, hf_download (GGUF import, gguf.py), and for the ZFS pool in a file (filepool.py):
+    image_create, image_remove, md_attach, md_detach, zpool_create, zpool_destroy.
 """
 
 import hashlib
@@ -44,10 +45,13 @@ import os
 import shutil
 import time
 
-from . import common
+from . import common, filepool
 from .common import SetupError, Cancelled
 
+BUSY_WAIT_SECONDS = 90          # zfs destroy right after jail -r: wait for the dying jail to release the dataset
+
 ALLOWED_TREE_PREFIXES = ('/var/db/ai/',)
+MODELS_DIR = '/var/db/ai/models'
 
 
 def describe(step):
@@ -61,13 +65,22 @@ def describe(step):
 # ------------------------------------------------------------------ helpers
 
 
-def _guard_tree(ctx, path):
-    """ refuse to delete anything outside the AI area, or with something mounted below it """
+def _guard_tree(ctx, path, models=False):
+    """
+    refuse to delete anything outside the AI area, or with something mounted below it.
+    models=True (uninstall_runtime +remove_dataset on a file system without the dataset) allows exactly
+    /var/db/ai/models itself, never a path below or beside it, and never while it is a mount point.
+    """
     rel = path[len(ctx.root):] if ctx.root and path.startswith(ctx.root) else path
     norm = os.path.normpath(rel)
     if norm != rel.rstrip('/') or not any(norm.startswith(p) for p in ALLOWED_TREE_PREFIXES):
         raise SetupError('refusing to remove %s (outside /var/db/ai)' % path)
-    if norm in ('/var/db/ai/models',) or norm.startswith('/var/db/ai/models/'):
+    if models:
+        if norm != MODELS_DIR:
+            raise SetupError('refusing to remove %s as the models directory' % path)
+        if any(m[1] in (MODELS_DIR, path.rstrip('/')) for m in common.mounts(ctx)):
+            raise SetupError('refusing to remove %s: it is a mount point' % path)
+    elif norm in (MODELS_DIR,) or norm.startswith(MODELS_DIR + '/'):
         raise SetupError('refusing to remove the models directory %s' % path)
     below = common.mounts_below(ctx, path)
     if below:
@@ -194,8 +207,11 @@ def execute_step(ctx, step, progress=None):
         for prop, value in step.get('properties', []):
             argv += ['-o', '%s=%s' % (prop, value)]
         _run_checked(ctx, argv + [step['dataset']])
-        return 'done', [{'type': 'zfs_destroy', 'dataset': step['dataset'],
-                         'description': 'Destroy dataset %s' % step['dataset']}]
+        inverse = {'type': 'zfs_destroy', 'dataset': step['dataset'],
+                   'description': 'Destroy dataset %s' % step['dataset']}
+        if step.get('undo_only_empty'):
+            inverse.update(only_empty=True, description='Destroy dataset %s if it holds no files' % step['dataset'])
+        return 'done', [inverse]
 
     if kind == 'zfs_destroy':
         if not common.dataset_exists(ctx, step['dataset']):
@@ -204,9 +220,20 @@ def execute_step(ctx, step, progress=None):
                                       step['dataset']]).strip()
         if mountpoint.startswith('/') and common.mounts_below(ctx, mountpoint):
             raise SetupError('%s still has file systems mounted below %s' % (step['dataset'], mountpoint))
+        if step.get('only_empty') and mountpoint.startswith('/') and \
+                _has_files(ctx.root + common.system_path(ctx, mountpoint)):
+            raise SetupError('%s holds files (models?): it is kept; remove_file_pool %s deletes it with its content'
+                             % (step['dataset'], filepool.POOL_NAME))
         argv = ['/sbin/zfs', 'destroy'] + (['-r'] if step.get('recursive') else []) + [step['dataset']]
-        _run_checked(ctx, argv)
-        return 'done', []
+        # right after "jail -r" the jail stays dying (jls -d) for up to a minute and its dataset is busy
+        deadline = time.time() + BUSY_WAIT_SECONDS
+        while True:
+            rc, out, err = ctx.runner.run(argv, timeout=120, cancel=getattr(ctx, 'cancel_check', None))
+            if rc == 0:
+                return 'done', []
+            if 'busy' not in (err + out) or time.time() >= deadline:
+                raise SetupError('%s failed: %s' % (' '.join(argv), (err or out).strip()[:300]))
+            time.sleep(3)
 
     if kind == 'mkdir':
         if os.path.isdir(step['path']):
@@ -353,7 +380,7 @@ def execute_step(ctx, step, progress=None):
 
     if kind == 'remove_tree':
         path = step['path']
-        _guard_tree(ctx, path)
+        _guard_tree(ctx, path, models=bool(step.get('models')))
         if not os.path.exists(path):
             return 'skipped', []
         ctx.runner.run(['/bin/chflags', '-R', 'noschg,nouchg', path], timeout=600)
@@ -370,6 +397,9 @@ def execute_step(ctx, step, progress=None):
 
     if kind == 'tunable':
         return _tunable(ctx, step)
+
+    if kind in ('image_create', 'image_remove', 'md_attach', 'md_detach', 'zpool_create', 'zpool_destroy'):
+        return _file_pool_step(ctx, step, progress)
 
     if kind == 'verify_listen':
         bad = foreign_listeners(ctx, step.get('port', 11434))
@@ -530,6 +560,136 @@ def _model_remove(ctx, step):
         return 'done', []
     return 'done', [{'type': 'model_restore', 'model': name, 'tag': tag, 'manifest': raw, 'uid': step.get('uid'),
                      'description': 'Download %s:%s again (same digests)' % (name, tag)}]
+
+
+# ------------------------------------------------------------------ ZFS pool in a file (filepool.py)
+
+
+def _has_files(path):
+    """ anything but empty directories below path (the runtime's own leftovers, such as the jail console log, do not
+        count: they are not models and are recreated by the next install) """
+    return filepool._has_files(path, filepool.LEFTOVER_FILES) if os.path.isdir(path) else False
+
+
+def _guard_image(ctx, path):
+    rel = common.system_path(ctx, path)
+    if not filepool.IMAGE_RE.match(rel) or os.path.normpath(rel) != rel:
+        raise SetupError('refusing to touch %s (not a pool image directly below /var/db)' % path)
+    return rel
+
+
+def _allocate(fd, size, progress=None, ctx=None):
+    """ reserve size bytes for fd: posix_fallocate in 1 GiB chunks (UFS), zeros where it is not supported """
+    chunk = common.GIB
+    done = 0
+    while done < size:
+        length = min(chunk, size - done)
+        try:
+            os.posix_fallocate(fd, done, length)
+        except (AttributeError, OSError):
+            os.lseek(fd, done, os.SEEK_SET)
+            zeros = bytes(4 * common.MIB)
+            left = length
+            while left:
+                left -= os.write(fd, zeros[:min(left, len(zeros))])
+        done += length
+        if progress:
+            progress(done, size)
+        elif ctx is not None:
+            common.check_cancel(ctx)
+    os.fsync(fd)
+
+
+def _file_pool_step(ctx, step, progress):
+    kind = step['type']
+    if kind == 'image_create':
+        path = step['path']
+        _guard_image(ctx, path)
+        if os.path.isfile(path):
+            if os.path.getsize(path) != step['size']:
+                raise SetupError('%s exists with another size (%d bytes)' % (path, os.path.getsize(path)))
+            return 'skipped', []
+        common.ensure_dir(os.path.dirname(path), 0o755)
+        fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+        try:
+            _allocate(fd, step['size'], progress, ctx)
+        except BaseException:
+            os.close(fd)
+            os.unlink(path)
+            raise
+        os.close(fd)
+        return 'done', [{'type': 'image_remove', 'path': path, 'description': 'Delete the pool image %s' % path}]
+
+    if kind == 'image_remove':
+        path = step['path']
+        rel = _guard_image(ctx, path)
+        if not os.path.exists(path):
+            return 'skipped', []
+        attached = [u for u, f in filepool.md_list(ctx).items() if f == rel]
+        if attached:
+            raise SetupError('%s is still attached as md%d' % (rel, attached[0]))
+        os.unlink(path)
+        return 'done', []
+
+    if kind == 'md_attach':
+        rel, unit = step['path'], int(step['unit'])
+        _guard_image(ctx, ctx.root + rel)
+        units = filepool.md_list(ctx)
+        if units.get(unit) == rel:
+            return 'skipped', []
+        if unit in units:
+            raise SetupError('md%d is already in use (%s)' % (unit, units[unit] or 'not a vnode disk'))
+        other = [u for u, f in units.items() if f == rel]
+        if other:
+            raise SetupError('%s is already attached as md%d' % (rel, other[0]))
+        _run_checked(ctx, ['/sbin/mdconfig', '-a', '-t', 'vnode', '-f', rel, '-u', str(unit)])
+        return 'done', [{'type': 'md_detach', 'path': rel, 'unit': unit, 'description': 'Detach md%d' % unit}]
+
+    if kind == 'md_detach':
+        unit = int(step['unit'])
+        units = filepool.md_list(ctx)
+        if unit not in units:
+            return 'skipped', []
+        if step.get('path') and units[unit] != step['path']:
+            raise SetupError('md%d is attached to %s, not to %s: left alone' % (unit, units[unit] or '?',
+                                                                               step['path']))
+        _run_checked(ctx, ['/sbin/mdconfig', '-d', '-u', str(unit)])
+        return 'done', []
+
+    if kind == 'zpool_create':
+        pool = step['pool']
+        if filepool.pool_exists(ctx, pool):
+            return 'skipped', []
+        argv = ['/sbin/zpool', 'create']
+        for prop, value in step.get('properties', []):
+            argv += ['-o', '%s=%s' % (prop, value)]
+        for prop, value in step.get('root_properties', []):
+            argv += ['-O', '%s=%s' % (prop, value)]
+        _run_checked(ctx, argv + [pool, step['device']])
+        return 'done', [{'type': 'zpool_destroy', 'pool': pool, 'only_empty': True,
+                         'description': 'Destroy the pool %s if it holds no files' % pool}]
+
+    if kind == 'zpool_destroy':
+        pool = step['pool']
+        if pool != filepool.POOL_NAME:
+            raise SetupError('refusing to destroy pool %s (only %s is managed here)' % (pool, filepool.POOL_NAME))
+        if not filepool.pool_exists(ctx, pool):
+            return 'skipped', []
+        listing = ctx.runner.read(['/sbin/zfs', 'list', '-H', '-o', 'name,mountpoint', '-r', pool])
+        mountpoints = [line.split('\t')[1] for line in listing.splitlines()
+                       if len(line.split('\t')) == 2 and line.split('\t')[1].startswith('/')]
+        for mountpoint in mountpoints:
+            foreign = [m for m in common.mounts_below(ctx, mountpoint) if not m[0].startswith(pool + '/')]
+            if foreign:
+                raise SetupError('%s is still mounted below %s' % (foreign[0][1], mountpoint))
+        if step.get('only_empty'):
+            snapshots = ctx.runner.read(['/sbin/zfs', 'list', '-H', '-t', 'snapshot', '-o', 'name', '-r', pool])
+            if snapshots.strip() or any(_has_files(ctx.root + common.system_path(ctx, mp)) for mp in mountpoints):
+                raise SetupError('pool %s holds files or snapshots: it is kept; remove_file_pool confirm=%s '
+                                 'deletes it with its content' % (pool, pool))
+        _run_checked(ctx, ['/sbin/zpool', 'destroy', pool])
+        return 'done', []
+    raise SetupError('unknown step type %s' % kind)
 
 
 def _tunable_call(ctx, *args):
@@ -722,6 +882,18 @@ def predict(ctx, step):
             return True             # read only checks, they change nothing
         if kind == 'hf_download':
             return os.path.isfile(step['path']) and os.path.getsize(step['path']) == step.get('size')
+        if kind == 'image_create':
+            return os.path.isfile(step['path']) and os.path.getsize(step['path']) == step['size']
+        if kind == 'image_remove':
+            return not os.path.exists(step['path'])
+        if kind == 'md_attach':
+            return filepool.md_list(ctx).get(int(step['unit'])) == step['path']
+        if kind == 'md_detach':
+            return int(step['unit']) not in filepool.md_list(ctx)
+        if kind == 'zpool_create':
+            return filepool.pool_exists(ctx, step['pool'])
+        if kind == 'zpool_destroy':
+            return not filepool.pool_exists(ctx, step['pool'])
     except (OSError, SetupError, ValueError):
         return False
     return False

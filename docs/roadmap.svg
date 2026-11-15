@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<defs><marker id="a64748b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker><marker id="af97316" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f97316"/></marker><marker id="a2563eb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker><marker id="a059669" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker><marker id="adc2626" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker><marker id="a94a3b8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker><marker id="a0f172a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker><filter id="shadow" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.12"/></filter></defs>
+<rect x="0" y="0" width="1800" height="8" fill="#f97316"/>
+<text xml:space="preserve" x="40" y="54" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="28" font-weight="bold" fill="#0f172a" text-anchor="start">OPNsense Policy Analyzer · AI providers and roadmap</text>
+<text xml:space="preserve" x="40" y="82" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="normal" fill="#475569" text-anchor="start">The AI is optional and only explains findings and writes summaries; it never creates or changes rules. Solid = implemented · dashed = in development (separate pull requests) · dotted = ideas.</text>
+<text xml:space="preserve" x="1760" y="54" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="14" font-weight="bold" fill="#475569" text-anchor="end">os-policyanalyzer · OPNsense 26.7</text>
+<text xml:space="preserve" x="1760" y="76" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#64748b" text-anchor="end">github.com/igortoledo007/opnsense-policyanalyzer</text>
+<rect x="30" y="110" width="470" height="960" rx="16" fill="#fffaf5" stroke="#f97316" stroke-width="2"/>
+<text xml:space="preserve" x="48" y="136" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">OPNsense firewall</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   ZFS or UFS root</tspan></text>
+<rect x="50" y="160" width="430" height="250" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="50" y="170" width="5" height="230" rx="2" fill="#f97316"/>
+<circle cx="76" cy="181" r="11" fill="#f97316"/>
+<text xml:space="preserve" x="76" y="185" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text xml:space="preserve" x="94" y="186" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">AI layer</text>
+<text xml:space="preserve" x="68" y="210" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">router: picks the provider per task</text>
+<text xml:space="preserve" x="68" y="228" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">anonymizer: addresses, names, hostnames</text>
+<text xml:space="preserve" x="68" y="246" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">   replaced before anything leaves the box</text>
+<text xml:space="preserve" x="68" y="264" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">prompt templates per task and language</text>
+<text xml:space="preserve" x="68" y="282" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">validation: JSON shape, refusals, length</text>
+<text xml:space="preserve" x="68" y="300" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">usage log and journal of every request</text>
+<text xml:space="preserve" x="68" y="318" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">benchmark and evaluation per model</text>
+<text xml:space="preserve" x="68" y="336" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">timeouts, retries, no tools for the model</text>
+<rect x="50" y="430" width="430" height="170" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="50" y="440" width="5" height="150" rx="2" fill="#f97316"/>
+<text xml:space="preserve" x="68" y="456" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">What the AI is asked to do</text>
+<text xml:space="preserve" x="68" y="480" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">explain a rule finding in plain language</text>
+<text xml:space="preserve" x="68" y="498" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">summarize incidents and anomalies</text>
+<text xml:space="preserve" x="68" y="516" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">write the executive summary of PDF reports</text>
+<text xml:space="preserve" x="68" y="534" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">answer in the 20 OPNsense languages</text>
+<text xml:space="preserve" x="68" y="552" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">never: create, change or apply rules</text>
+<rect x="50" y="620" width="430" height="200" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="50" y="630" width="5" height="180" rx="2" fill="#059669"/>
+<circle cx="76" cy="641" r="11" fill="#059669"/>
+<text xml:space="preserve" x="76" y="645" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text xml:space="preserve" x="94" y="646" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Local runtime (optional)</text>
+<text xml:space="preserve" x="68" y="670" font-size="12.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">Ollama jail on </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="bold" fill="#059669">127.0.0.1:11434</tspan></text>
+<text xml:space="preserve" x="68" y="688" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">no network access, cpuset, nice, RCTL</text>
+<text xml:space="preserve" x="68" y="706" font-size="12.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">ZFS: </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">zroot/ai</tspan></text>
+<text xml:space="preserve" x="68" y="724" font-size="12.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">UFS: </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/ai</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569"> or a pool in a file</tspan></text>
+<text xml:space="preserve" x="68" y="742" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">free-space guard before every download</text>
+<text xml:space="preserve" x="68" y="760" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">eight-step setup assistant, revertible</text>
+<rect x="50" y="840" width="430" height="210" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="50" y="850" width="5" height="190" rx="2" fill="#0f172a"/>
+<text xml:space="preserve" x="68" y="866" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Same rules for every provider</text>
+<text xml:space="preserve" x="68" y="890" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">opt-in, off by default</text>
+<text xml:space="preserve" x="68" y="908" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">privacy text and data policy shown</text>
+<text xml:space="preserve" x="68" y="926" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">   next to each provider in the settings</text>
+<text xml:space="preserve" x="68" y="944" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">secrets stored like other OPNsense secrets</text>
+<text xml:space="preserve" x="68" y="962" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">test button and benchmark before use</text>
+<text xml:space="preserve" x="68" y="980" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">one switch to turn the AI off again</text>
+<rect x="530" y="110" width="410" height="960" rx="16" fill="#f3fcf8" stroke="#059669" stroke-width="2"/>
+<text xml:space="preserve" x="548" y="136" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Implemented</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   working today</tspan></text>
+<rect x="550" y="160" width="370" height="150" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="550" y="170" width="5" height="130" rx="2" fill="#059669"/>
+<text xml:space="preserve" x="568" y="186" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Ollama, local</text>
+<text xml:space="preserve" x="568" y="210" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">jail on the firewall, models from the</text>
+<text xml:space="preserve" x="568" y="228" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Ollama registry (SHA-256 checked)</text>
+<text xml:space="preserve" x="568" y="246" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">e.g. qwen3:4b · qwen3:8b · qwen3:30b-a3b</text>
+<text xml:space="preserve" x="568" y="264" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">nothing leaves the firewall</text>
+<rect x="550" y="330" width="370" height="130" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="550" y="340" width="5" height="110" rx="2" fill="#059669"/>
+<text xml:space="preserve" x="568" y="356" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Ollama in the LAN</text>
+<text xml:space="preserve" x="568" y="380" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">a GPU box in your network</text>
+<text xml:space="preserve" x="568" y="398" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569">http://&lt;lan-host&gt;:11434</tspan></text>
+<text xml:space="preserve" x="568" y="416" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">data stays in your network</text>
+<rect x="550" y="480" width="370" height="130" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="550" y="490" width="5" height="110" rx="2" fill="#059669"/>
+<text xml:space="preserve" x="568" y="506" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Anthropic API (Claude)</text>
+<text xml:space="preserve" x="568" y="530" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">remote API with your own key</text>
+<text xml:space="preserve" x="568" y="548" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">anonymized input, short answers</text>
+<text xml:space="preserve" x="568" y="566" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">data policy shown in the settings</text>
+<rect x="550" y="630" width="370" height="150" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="550" y="640" width="5" height="130" rx="2" fill="#059669"/>
+<text xml:space="preserve" x="568" y="656" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Claude Code bridge (LAN)</text>
+<text xml:space="preserve" x="568" y="680" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">small HTTP bridge on a LAN machine</text>
+<text xml:space="preserve" x="568" y="698" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">calls the Claude Code CLI, tools off</text>
+<text xml:space="preserve" x="568" y="716" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">token, IP allow-list, timeouts</text>
+<text xml:space="preserve" x="568" y="734" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">subscription instead of an API key</text>
+<rect x="550" y="800" width="370" height="250" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="550" y="810" width="5" height="230" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="568" y="826" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Storage for the local models</text>
+<text xml:space="preserve" x="568" y="850" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">ZFS: datasets with tuned properties</text>
+<text xml:space="preserve" x="568" y="868" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">UFS: plain directory + free-space guard</text>
+<text xml:space="preserve" x="568" y="886" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">UFS opt-in: ZFS pool in a file</text>
+<text xml:space="preserve" x="568" y="904" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">   (fixed size, own rc script)</text>
+<text xml:space="preserve" x="568" y="922" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">tested on two KVM labs (ZFS and UFS)</text>
+<text xml:space="preserve" x="568" y="940" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">pull request #1</text>
+<rect x="970" y="110" width="410" height="960" rx="16" fill="#f5f9ff" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text xml:space="preserve" x="988" y="136" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">In development</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   separate pull requests</tspan></text>
+<rect x="990" y="160" width="370" height="230" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="990" y="170" width="5" height="210" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="1008" y="186" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">OpenAI-compatible APIs</text>
+<text xml:space="preserve" x="1008" y="210" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">one provider with presets:</text>
+<text xml:space="preserve" x="1008" y="228" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">OpenAI · Mistral · xAI · DeepSeek</text>
+<text xml:space="preserve" x="1008" y="246" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Groq · OpenRouter · Together · Fireworks</text>
+<text xml:space="preserve" x="1008" y="264" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Cerebras · Qwen · Moonshot · Zhipu</text>
+<text xml:space="preserve" x="1008" y="282" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Maritaca (Brazil) · custom endpoint</text>
+<text xml:space="preserve" x="1008" y="300" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">any OpenAI-compatible gateway (LiteLLM)</text>
+<text xml:space="preserve" x="1008" y="318" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">pull request: AI providers</text>
+<rect x="990" y="410" width="370" height="170" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="990" y="420" width="5" height="150" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="1008" y="436" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Native APIs</text>
+<text xml:space="preserve" x="1008" y="460" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Google Gemini (generateContent)</text>
+<text xml:space="preserve" x="1008" y="478" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Azure OpenAI (deployment, api-version)</text>
+<text xml:space="preserve" x="1008" y="496" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Cohere (v2 chat)</text>
+<text xml:space="preserve" x="1008" y="514" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">AWS Bedrock (Converse, SigV4 in stdlib)</text>
+<text xml:space="preserve" x="1008" y="532" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">pull request: AI providers</text>
+<rect x="990" y="600" width="370" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="990" y="610" width="5" height="130" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="1008" y="626" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Local/LAN OpenAI-compatible servers</text>
+<text xml:space="preserve" x="1008" y="650" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">LM Studio · llama.cpp server · vLLM</text>
+<text xml:space="preserve" x="1008" y="668" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">LocalAI · Jan · Ollama /v1</text>
+<text xml:space="preserve" x="1008" y="686" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">no key, data stays in the LAN</text>
+<text xml:space="preserve" x="1008" y="704" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">pull request: AI providers</text>
+<rect x="990" y="770" width="370" height="280" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="990" y="780" width="5" height="260" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="1008" y="796" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Agent bridge (LAN), multi-CLI</text>
+<text xml:space="preserve" x="1008" y="820" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">the Claude Code bridge, generalized:</text>
+<text xml:space="preserve" x="1008" y="838" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">claude · goose (tools off, documented)</text>
+<text xml:space="preserve" x="1008" y="856" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">codex · gemini · opencode · copilot ·</text>
+<text xml:space="preserve" x="1008" y="874" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">cursor: experimental, off by default</text>
+<text xml:space="preserve" x="1008" y="892" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">any CLI added by a manifest (no code)</text>
+<text xml:space="preserve" x="1008" y="910" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">one container per backend (Dockerfile</text>
+<text xml:space="preserve" x="1008" y="928" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">   + compose): read-only, no privileges</text>
+<text xml:space="preserve" x="1008" y="946" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">text only: tools off, fixed argv, token,</text>
+<text xml:space="preserve" x="1008" y="964" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">IP allow-list, size limits, GET /backends</text>
+<text xml:space="preserve" x="1008" y="982" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">pull request: agent bridge</text>
+<rect x="1400" y="110" width="370" height="960" rx="16" fill="#fafafa" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 4"/>
+<text xml:space="preserve" x="1418" y="136" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Ideas</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   possible improvements</tspan></text>
+<rect x="1420" y="160" width="330" height="104" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="170" width="5" height="84" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="186" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Routing and fallback</text>
+<text xml:space="preserve" x="1438" y="210" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">per-task provider (local first,</text>
+<text xml:space="preserve" x="1438" y="228" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">remote only when needed)</text>
+<text xml:space="preserve" x="1438" y="246" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">fallback chain on errors</text>
+<rect x="1420" y="278" width="330" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="288" width="5" height="66" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="304" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Budgets and usage</text>
+<text xml:space="preserve" x="1438" y="328" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">token and cost limits per provider</text>
+<text xml:space="preserve" x="1438" y="346" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">monthly usage report</text>
+<rect x="1420" y="378" width="330" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="388" width="5" height="66" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="404" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Response cache</text>
+<text xml:space="preserve" x="1438" y="428" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">same finding, same answer</text>
+<text xml:space="preserve" x="1438" y="446" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">fewer calls and lower cost</text>
+<rect x="1420" y="478" width="330" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="488" width="5" height="66" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="504" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Package repository</text>
+<text xml:space="preserve" x="1438" y="528" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">signed pkg repository for</text>
+<text xml:space="preserve" x="1438" y="546" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">one-command install and updates</text>
+<rect x="1420" y="578" width="330" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="588" width="5" height="66" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="604" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Thinner core</text>
+<text xml:space="preserve" x="1438" y="628" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">split optional parts into</text>
+<text xml:space="preserve" x="1438" y="646" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">smaller packages</text>
+<rect x="1420" y="678" width="330" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="688" width="5" height="66" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="704" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Evaluation per provider</text>
+<text xml:space="preserve" x="1438" y="728" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">the existing benchmark and quality</text>
+<text xml:space="preserve" x="1438" y="746" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">checks run against every provider</text>
+<rect x="1420" y="778" width="330" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="788" width="5" height="66" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="804" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Community translations</text>
+<text xml:space="preserve" x="1438" y="828" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">review of the 20 languages</text>
+<text xml:space="preserve" x="1438" y="846" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">by native speakers</text>
+<rect x="1420" y="878" width="330" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="2 4"/>
+<rect x="1420" y="888" width="5" height="66" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1438" y="904" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Read-only MCP server</text>
+<text xml:space="preserve" x="1438" y="928" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">query findings and reports from</text>
+<text xml:space="preserve" x="1438" y="946" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">your own agent, never write</text>
+<path d="M480 285 L550 235" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#a059669)"/>
+<path d="M480 285 L515 285 L515 395 L550 395" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#a059669)"/>
+<path d="M480 285 L515 285 L515 545 L550 545" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#a059669)"/>
+<rect x="477" y="457" width="76" height="18" rx="9" fill="#ffffff" stroke="#059669" stroke-width="0.8"/>
+<text xml:space="preserve" x="515" y="470" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle">anonymized</text>
+<path d="M480 285 L515 285 L515 705 L550 705" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#a059669)"/>
+<path d="M940 160 L960 160 L960 275 L990 275" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a2563eb)"/>
+<text xml:space="preserve" x="955" y="1090" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">new providers plug into the same AI layer, with the same rules</text>
+<path d="M960 275 L960 495 L990 495" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a2563eb)"/>
+<path d="M960 495 L960 675 L990 675" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a2563eb)"/>
+<path d="M960 675 L960 910 L990 910" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a2563eb)"/>
+</svg>

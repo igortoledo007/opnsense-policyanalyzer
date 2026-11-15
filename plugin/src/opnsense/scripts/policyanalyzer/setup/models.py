@@ -94,12 +94,14 @@ def pull_plan(ctx, args):
     digests = ops.manifest_digests(manifest)
     total = sum(size for _, size in digests)
     missing = sum(size for d, size in digests if not os.path.isfile(ops.blob_path(ctx, d)))
-    free = common.free_bytes(ctx.models_dir)
     if manifest.get('layers') and total > LARGE_MODEL_BYTES and not allow_large:
         errors.append('%s is %s (> 6 GiB); pass large=yes to allow large models on this firewall'
                       % (full, common.fmt_bytes(total)))
-    if free is not None and missing + common.SPACE_MARGIN_BYTES > free:
-        errors.append('not enough space: need %s, %s free' % (common.fmt_bytes(missing), common.fmt_bytes(free)))
+    # blob sizes come from the manifest; the 20 % margin covers the staging copy and Ollama's own files
+    space = common.space_check(ctx, ctx.models_dir, missing, 'model %s' % full)
+    errors += space['errors']
+    warnings += space['warnings']
+    free = space['free']
     if custom:
         warnings.append('custom model outside the recommended list: speed and pt-BR quality not evaluated')
     if not os.path.isdir(ctx.models_dir):

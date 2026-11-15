@@ -39,7 +39,7 @@
 import os
 import time
 
-from . import common, gguf, ops, runtime, models
+from . import common, filepool, gguf, ops, runtime, models
 from .common import SetupError, BusyError
 
 ACTIONS = {
@@ -55,6 +55,8 @@ ACTIONS = {
     'remove_model': models.remove_plan,
     'benchmark': models.benchmark_plan,
     'import_gguf': gguf.import_plan,
+    'create_file_pool': filepool.create_plan,
+    'remove_file_pool': filepool.remove_plan,
 }
 READ_ONLY = ('status_runtime', 'history', 'job', 'hw_profile', 'recommend')
 CONTROL = ('cancel', 'revert')
@@ -69,6 +71,8 @@ POSITIONAL = {
     'install_runtime': ['branch', 'cpus'],
     'recommend': ['budget_pct'],
     'import_gguf': ['source', 'name'],
+    'create_file_pool': ['size', 'arc_mb'],
+    'remove_file_pool': ['confirm'],
 }
 KEYS = {
     'install_runtime': {'branch', 'cpus', 'threads', 'ctx', 'nice', 'mem_gb', 'keep_alive', 'start', 'boot'},
@@ -80,6 +84,8 @@ KEYS = {
     'revert': {'journal', 'keep_models', 'force'},
     'recommend': {'budget_pct'},
     'import_gguf': {'source', 'name', 'sha256', 'template', 'cleanup'},
+    'create_file_pool': {'size', 'arc_mb', 'image'},
+    'remove_file_pool': {'confirm', 'image'},
 }
 
 
@@ -230,7 +236,7 @@ def _finish_plan(ctx, action, raw, args):
     result['warning_actions'] = warning_actions(ctx, result['errors'] + result['warnings'], result['args']
                                                 if isinstance(result['args'], dict) else {})
     for key in ('model', 'space_freed', 'previous', 'target', 'dependents', 'superseded', 'blocked_by',
-                'reboot_required', 'links'):
+                'reboot_required', 'links', 'file_pool'):
         if key in raw:
             result[key] = raw[key]
     return result
