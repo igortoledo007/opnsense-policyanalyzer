@@ -1,0 +1,3 @@
+<12>1 2026-10-26T10:30:00-03:00 fw.example.lan dpinger 27084 - [meta sequenceId="1"] send_interval 1000ms  loss_interval 4000ms  time_period 60000ms
+<165>1 2026-10-26T10:31:00-03:00 fw.example.lan dpinger 50527 - [meta sequenceId="2"] ALERT: WAN_B (Addr: 192.0.2.8 Alarm: none -> down RTT: 0.0 ms RTTd: 0.0 ms Loss: 100.0 %)
+<165>1 2026-10-26T10:35:00-03:00 fw.example.lan dpinger 50527 - [meta sequenceId="3"] ALERT: WAN_B (Addr: 192.0.2.8 Alarm: down -> none RTT: 21.0 ms RTTd: 1.7 ms Loss: 0.0 %)

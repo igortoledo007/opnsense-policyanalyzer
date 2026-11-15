@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- fictional configuration for the AI usage tests -->
+<opnsense>
+  <system><hostname>fw-test</hostname><domain>example.test</domain></system>
+  <interfaces>
+    <wan><if>em0</if><enable>1</enable><ipaddr>dhcp</ipaddr></wan>
+    <lan><if>em1</if><enable>1</enable><ipaddr>192.0.2.1</ipaddr><subnet>24</subnet></lan>
+  </interfaces>
+  <OPNsense>
+    <policyanalyzer>
+      <ai><enabled>1</enabled><provider>claudecode</provider></ai>
+      <claudecode><url>http://bridge.example.test:11436</url><model>sonnet</model></claudecode>
+    </policyanalyzer>
+    <Kea><dhcp4><reservations>
+      <reservation><ip_address>192.0.2.30</ip_address><hw_address>02:00:00:00:00:30</hw_address>
+        <hostname>dev-ws</hostname><description>developer</description></reservation>
+    </reservations></dhcp4></Kea>
+  </OPNsense>
+</opnsense>

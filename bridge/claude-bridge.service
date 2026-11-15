@@ -1,0 +1,16 @@
+[Unit]
+Description=claude-bridge: Claude Code (LAN) for the OPNsense Policy Analyzer
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -I %h/.local/lib/claude-bridge/claude_bridge.py
+Environment=PATH=/opt/bin:/usr/local/bin:/usr/bin:/bin
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=default.target

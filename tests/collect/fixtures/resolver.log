@@ -1,0 +1,4 @@
+<30>1 2026-10-26T10:00:05-03:00 fw.example.lan unbound 17283 - [meta sequenceId="1"] [17283:3] info: . transparent 192.168.1.20@57895 www.example.com. A IN
+<30>1 2026-10-26T10:00:06-03:00 fw.example.lan unbound 17283 - [meta sequenceId="2"] [17283:3] info: ads.example.net. always_nxdomain 192.168.1.20@57896 ads.example.net. A IN
+<30>1 2026-10-26T10:00:07-03:00 fw.example.lan unbound 17283 - [meta sequenceId="3"] [17283:1] info: 192.168.1.21 mail.example.org. AAAA IN
+<30>1 2026-10-26T10:00:08-03:00 fw.example.lan unbound 17283 - [meta sequenceId="4"] [17283:1] info: start of service (unbound 1.24.0).

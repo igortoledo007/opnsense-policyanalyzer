@@ -1,0 +1,8 @@
+*.conflito*
+__pycache__/
+.pytest_cache/
+pyc/
+*.pyc
+*.db
+*.pkg
+work/

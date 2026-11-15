@@ -1,0 +1,892 @@
+/*
+ * Copyright (C) 2026 Igor Toledo <contato@igor.eti.br>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ * AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ * OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+
+/*
+ * AI setup assistant (modal over /ui/policyanalyzer/, PASetup in js/policyanalyzer/setup.js). Layout only, theme
+ * independent: colours come from the Bootstrap classes of the active theme and from --pa-accent / --pa-footer-bg
+ * (set at load time from the theme's primary button and dialog background). Loaded with policyanalyzer.css.
+ *
+ * The dialog uses the height of the screen: header (title, step bar, "?") and footer (buttons) stay fixed, only the
+ * body between them may scroll, and on desktops every step is laid out in two columns so that it fits without.
+ */
+
+/* ---------------------------------------------------------------- dialog frame */
+.pa-setup-dialog.modal .modal-dialog {
+    margin: 8px auto;
+}
+
+@media (min-width: 768px) {
+    .pa-setup-dialog.modal .modal-dialog,
+    .pa-setup-dialog.modal .modal-dialog.modal-lg {
+        width: 94%;
+        max-width: 1180px;
+        margin: 8px auto;
+        height: auto;
+    }
+}
+
+.pa-setup-dialog.modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+    min-height: 0;
+}
+
+.pa-setup-dialog.modal .modal-header {
+    flex: 0 0 auto;
+    padding: 6px 12px;
+}
+
+.pa-setup-dialog.modal .modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    padding: 10px 14px;
+}
+
+.pa-setup-dialog.modal .modal-footer {
+    display: block !important;
+    flex: 0 0 auto;
+    padding: 8px 12px;
+}
+
+/* header: title | step bar | ? | x, in one row */
+.pa-setup-dialog .bootstrap-dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pa-setup-dialog .bootstrap-dialog-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 0;
+    display: flex;                      /* keeps a theme ::before marker on the same line */
+    align-items: center;
+    gap: 6px;
+}
+
+.pa-setup-head {
+    flex: 1 1 auto;
+}
+
+.pa-setup-dialog .bootstrap-dialog-close-button {
+    order: 2;
+    float: none;
+    flex: 0 0 auto;
+}
+
+.pa-setup-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.pa-setup-head .pa-setup-title {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.pa-setup-head .pa-setup-help {
+    flex: 0 0 auto;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    padding: 0;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: none;
+}
+
+.pa-setup {
+    font-size: 13px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.pa-setup * {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------- step bar (thin, in the header) */
+.pa-steps {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.pa-steps li {
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 0;
+    cursor: pointer;
+    opacity: 0.75;
+    white-space: nowrap;
+}
+
+.pa-steps li.active,
+.pa-steps li.done {
+    opacity: 1;
+}
+
+.pa-steps li .pa-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(128, 128, 128, 0.6);
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.pa-steps li.done .pa-step-num {
+    border-color: var(--pa-accent, currentColor);
+    color: var(--pa-accent, inherit);
+}
+
+.pa-steps li.active .pa-step-num {
+    background: var(--pa-accent, currentColor);
+    border-color: var(--pa-accent, currentColor);
+    color: #fff;
+}
+
+.pa-steps li.skipped .pa-step-num {
+    border-style: dashed;
+}
+
+.pa-steps li::after {
+    /* thin connector to the next step, after the label */
+    content: "";
+    flex: 1 1 8px;
+    min-width: 8px;
+    height: 1px;
+    margin: 0 4px;
+    background: rgba(128, 128, 128, 0.35);
+}
+
+.pa-steps li:last-child {
+    flex: 0 0 auto;
+}
+
+.pa-steps li:last-child::after {
+    display: none;
+}
+
+.pa-steps li.done::after {
+    background: var(--pa-accent, currentColor);
+}
+
+.pa-steps li .pa-step-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+    flex: 0 1 auto;
+}
+
+.pa-steps li.active .pa-step-label {
+    font-weight: bold;
+    color: var(--pa-accent, inherit);
+}
+
+.pa-steps li:focus {
+    outline: none;
+}
+
+.pa-steps li:focus-visible .pa-step-num {
+    outline: 2px solid;
+    outline-offset: 2px;
+}
+
+/* compact text above the step on phones ("Step 3 of 8: Storage") */
+.pa-steps-current {
+    display: none;
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------- step: two columns */
+.pa-step > h2 {
+    display: none;                      /* the step bar shows the current step */
+}
+
+.pa-cols {
+    display: grid;
+    grid-template-columns: minmax(260px, 38%) minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+}
+
+.pa-col-left > :last-child,
+.pa-col-right > :last-child {
+    margin-bottom: 0;
+}
+
+.pa-state {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+}
+
+.pa-state .pa-state-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+
+/* key/value facts (hardware check, summaries) */
+.pa-facts {
+    display: grid;
+    grid-template-columns: minmax(120px, 220px) 1fr;
+    gap: 4px 12px;
+    margin: 0;
+}
+
+.pa-facts dt {
+    font-weight: normal;
+    opacity: 0.8;
+    overflow-wrap: anywhere;
+}
+
+.pa-facts dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.pa-facts .label {
+    display: inline-block;
+    margin: 0 2px 2px 0;
+}
+
+/* verdict of the check step */
+.pa-verdict {
+    font-size: 16px;
+}
+
+.pa-verdict ul {
+    margin: 6px 0 0;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+/* generic card lists (installed models, history dialog, actions) */
+.pa-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 0 10px;
+}
+
+.pa-card-item {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+    padding: 10px 12px;
+}
+
+.pa-card-item.pa-selected {
+    border-color: var(--pa-accent, currentColor);
+    box-shadow: 0 0 0 1px var(--pa-accent, currentColor);
+    background-color: color-mix(in srgb, var(--pa-accent, transparent) 10%, transparent);
+}
+
+.pa-card-item .pa-card-title {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.pa-card-item .pa-card-meta {
+    margin: 2px 0 6px;
+    overflow-wrap: anywhere;
+}
+
+.pa-card-item .pa-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pa-card-item .pa-card-actions .btn {
+    min-height: 34px;
+}
+
+/* step forms: one column, labels above inputs, inputs never wider than the panel */
+.pa-form {
+    max-width: 560px;
+}
+
+.pa-form .form-group {
+    margin-bottom: 12px;
+}
+
+.pa-form label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.pa-form .form-control,
+.pa-form select {
+    width: 100%;
+    max-width: 100%;
+}
+
+.pa-form .pa-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pa-form .pa-inline > div {
+    flex: 1 1 120px;
+}
+
+.pa-form .checkbox label,
+.pa-form .radio label {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 0;
+}
+
+.pa-form .checkbox input[type="checkbox"],
+.pa-form .radio input[type="radio"] {
+    position: static;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+}
+
+.pa-form .help-block {
+    margin: 2px 0 0;
+}
+
+.pa-form .pa-future {
+    opacity: 0.6;
+}
+
+/* inline action rows inside a step (start/stop/enable, remove, test buttons) */
+.pa-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+}
+
+.pa-actions .btn {
+    min-height: 38px;
+}
+
+/* benchmark result */
+.pa-bench {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.pa-bench .pa-bench-item {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+    padding: 8px 10px;
+    text-align: center;
+}
+
+.pa-bench .pa-bench-value {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.pa-bench .pa-bench-label {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* footer buttons (Back / Skip / Undo / Simulate / Apply / Next) */
+
+/* ---------------------------------------------------------------- density (13 px text, 15 px headings) */
+.pa-setup h4 {
+    font-size: 15px;
+    margin: 4px 0 6px;
+}
+
+.pa-setup h5 {
+    font-size: 13px;
+    margin: 6px 0 4px;
+}
+
+.pa-setup .pa-step-help {
+    margin: 0 0 8px;
+}
+
+.pa-setup .pa-state {
+    padding: 8px 10px;
+    margin-bottom: 8px;
+}
+
+.pa-setup .pa-facts {
+    grid-template-columns: minmax(100px, 42%) 1fr;
+    gap: 2px 10px;
+}
+
+.pa-setup .alert {
+    padding: 7px 10px;
+    margin-bottom: 8px;
+}
+
+.pa-setup .pa-verdict {
+    font-size: 14px;
+}
+
+.pa-setup .pa-verdict ul {
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.pa-setup .form-group {
+    margin-bottom: 8px;
+}
+
+.pa-setup .help-block {
+    margin: 2px 0 0;
+}
+
+.pa-setup .pa-card-item {
+    padding: 6px 10px;
+}
+
+.pa-setup .pa-cards {
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.pa-setup .pa-actions {
+    margin: 4px 0 8px;
+}
+
+.pa-setup .pa-choices .pa-choice-header {
+    margin: 4px 0 4px;
+}
+
+.pa-setup .pa-choice {
+    margin-bottom: 6px;
+    padding: 7px 10px;
+}
+
+.pa-setup .pa-segment-option {
+    padding: 7px 10px 7px 34px;
+}
+
+.pa-setup .pa-segment-option input[type="radio"] {
+    top: 10px;
+}
+
+.pa-setup .pa-recommend .pa-rec-best {
+    margin-bottom: 4px;
+}
+
+.pa-setup .pa-recommend .panel-body {
+    padding: 8px 10px;
+}
+
+.pa-setup .pa-recommend .pa-rec-item {
+    padding: 3px 0;
+}
+
+.pa-setup .pa-recommend > h5 {
+    margin: 4px 0 2px;
+}
+
+.pa-setup .pa-recommend > p {
+    margin: 2px 0 0;
+}
+
+.pa-setup .pa-bench {
+    margin: 6px 0;
+}
+
+.pa-setup .pa-bench .pa-bench-value {
+    font-size: 18px;
+}
+
+.pa-h-actions .btn-link {
+    font-size: 12px;
+    padding: 0 0 0 8px;
+    vertical-align: baseline;
+}
+
+/* provider cards side by side on desktops */
+@media (min-width: 768px) {
+    .pa-setup .pa-choices {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0 8px;
+        max-width: none;
+    }
+
+    .pa-setup .pa-choices .pa-choice-header {
+        display: none;
+    }
+
+    .pa-setup .pa-choices .pa-choice {
+        flex: 1 1 200px;
+        width: auto;
+    }
+
+    .pa-setup .pa-segment {
+        flex-direction: row;
+        max-width: none;
+    }
+
+    .pa-setup .pa-segment-option {
+        flex: 1 1 0;
+    }
+}
+
+/* ---------------------------------------------------------------- footer (in .modal-footer) */
+.pa-setup-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    text-align: left;
+}
+
+.pa-setup-footer .pa-footer-spacer {
+    flex: 1 1 auto;
+}
+
+.pa-setup-footer .btn {
+    min-height: 34px;
+    margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .pa-setup-footer .pa-footer-primary,
+    .pa-setup-footer .pa-footer-secondary {
+        display: contents;
+    }
+}
+
+/* job banner (background job in progress: install, pull, benchmark) */
+.pa-job {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+}
+
+.pa-job p {
+    margin: 2px 0;
+}
+
+.pa-job .progress {
+    margin: 4px 0;
+    height: 14px;
+}
+
+/* AI answer of the sample explanation (own dialog) */
+.pa-answer {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* ---------------------------------------------------------------- phones: one column, full screen */
+@media (max-width: 767px) {
+    .pa-setup-dialog.modal .modal-dialog,
+    .pa-setup-dialog.modal .modal-dialog.modal-lg {
+        width: auto;
+        height: 100%;
+        margin: 0;
+    }
+
+    .pa-setup-dialog.modal .modal-content {
+        height: 100%;
+        max-height: none;
+        min-height: 0;
+        border-radius: 0;
+        border: 0;
+    }
+
+    .pa-setup-dialog .bootstrap-dialog-header {
+        align-items: flex-start;
+    }
+
+    .pa-setup-head {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .pa-setup-head .pa-steps {
+        order: 3;
+        flex: 1 1 100%;
+    }
+
+    .pa-steps li {
+        gap: 0;
+        padding: 2px 0;
+    }
+
+    .pa-steps li .pa-step-label {
+        display: none;
+    }
+
+    .pa-steps li .pa-step-num {
+        width: 24px;
+        height: 24px;
+    }
+
+    .pa-steps-current {
+        display: block;
+    }
+
+    .pa-step > h2 {
+        display: none;
+    }
+
+    .pa-cols {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .pa-setup .pa-facts {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .pa-setup .pa-facts dt {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+    .pa-setup .btn,
+    .pa-setup-footer .btn,
+    .pa-card-item .pa-card-actions .btn,
+    .pa-actions .btn {
+        min-height: 44px;
+    }
+
+    .pa-card-item .pa-card-actions .btn,
+    .pa-actions .btn {
+        flex: 1 1 140px;
+    }
+
+    .pa-form,
+    .pa-form .pa-inline > div {
+        max-width: 100%;
+    }
+
+    .pa-form input[type="checkbox"],
+    .pa-form input[type="radio"] {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    /* Simulate / Apply on the first row, Back / Skip / Undo / Next below */
+    .pa-setup-dialog.modal .modal-footer {
+        padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .pa-setup-footer .pa-footer-spacer {
+        display: none;
+    }
+
+    .pa-setup-footer .pa-footer-primary,
+    .pa-setup-footer .pa-footer-secondary {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .pa-setup-footer .pa-footer-primary {
+        order: 1;
+    }
+
+    .pa-setup-footer .pa-footer-secondary {
+        order: 2;
+    }
+
+    .pa-setup-footer .pa-footer-primary .btn,
+    .pa-setup-footer .pa-footer-secondary .btn {
+        flex: 1 1 0;
+        padding-left: 4px;
+        padding-right: 4px;
+        white-space: normal;
+        line-height: 1.15;
+    }
+
+    .pa-setup-footer .pa-footer-secondary .btn {
+        min-height: 40px;
+    }
+
+    .pa-setup-footer .pa-footer-secondary:empty {
+        display: none;
+    }
+
+    .pa-bench {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ---------------------------------------------------------------- compact forms: every option visible */
+.pa-setup .pa-form {
+    max-width: none;
+}
+
+.pa-setup .help-block small {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;                /* one line; the full text is the tooltip */
+}
+
+.pa-setup .pa-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 12px;
+}
+
+.pa-setup .pa-inline > .form-group,
+.pa-setup .pa-inline > .checkbox {
+    flex: 1 1 160px;
+    min-width: 0;
+}
+
+.pa-setup .pa-checks > .checkbox {
+    margin: 0 0 6px;
+}
+
+.pa-setup .form-control {
+    height: 30px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.pa-setup .pa-custom .form-group {
+    margin-bottom: 4px;
+}
+
+.pa-setup .pa-remove h4 {
+    margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+    .pa-setup .help-block small {
+        white-space: normal;
+    }
+
+    .pa-setup .form-control {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* step 5: installed models as compact rows, "another model" in one row */
+@media (min-width: 768px) {
+    .pa-setup .pa-card-item .pa-card-actions .btn {
+        min-height: 26px;
+        padding: 2px 10px;
+        font-size: 12px;
+    }
+
+    .pa-setup .pa-custom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 4px 10px;
+    }
+
+    .pa-setup .pa-custom > h4 {
+        flex: 1 1 100%;
+        margin-bottom: 0;
+    }
+
+    .pa-setup .pa-custom > .form-group {
+        flex: 1 1 180px;
+        margin: 0;
+    }
+
+    .pa-setup .pa-custom > .form-group .help-block {
+        display: none;                  /* tooltip of the field */
+    }
+
+    .pa-setup .pa-custom > .checkbox {
+        flex: 0 0 auto;
+        margin: 0 0 6px;
+    }
+
+    .pa-setup .pa-custom > .pa-actions {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .pa-setup .pa-custom .pa-actions .btn,
+    .pa-setup .pa-recommend .btn {
+        min-height: 30px;
+        padding: 3px 10px;
+    }
+
+    /* finish: provider fields two per row */
+    .pa-setup .pa-grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+    }
+}
+
+.pa-setup .pa-col-left .alert {
+    margin-bottom: 6px;
+}
+
+/* quick test (step 7) */
+.pa-quicktest { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pa-quick-answer { font-size: 15px; line-height: 1.5; margin: 8px 0; }

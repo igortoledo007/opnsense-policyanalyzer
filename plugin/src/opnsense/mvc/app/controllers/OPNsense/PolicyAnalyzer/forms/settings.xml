@@ -1,0 +1,27 @@
+<form>
+    <!-- shared AI settings; the provider choice and provider fields are built from the provider registry -->
+    <field>
+        <id>policyanalyzer.ai.enabled</id>
+        <label>Enable AI explanations</label>
+        <type>checkbox</type>
+        <help>Offer "Explain with AI" on the findings. Off by default: without it nothing ever leaves this firewall. The AI only explains and suggests in text, it never changes the configuration.</help>
+    </field>
+    <field>
+        <id>policyanalyzer.ai.anonymize</id>
+        <label>Anonymize data</label>
+        <type>checkbox</type>
+        <help>Replace IP addresses, hostnames, descriptions, alias and user names by placeholders (IP4_PRIV_1, HOST_1, DESC_1, ...) before sending, and put the real values back in the answer. Strongly recommended for providers outside this firewall.</help>
+    </field>
+    <field>
+        <id>policyanalyzer.ai.language</id>
+        <label>Answer language</label>
+        <type>dropdown</type>
+        <help>Language of the explanations; by default the language of your GUI session.</help>
+    </field>
+    <field>
+        <id>policyanalyzer.ai.timeout</id>
+        <label>Timeout (seconds)</label>
+        <type>text</type>
+        <help>Maximum time to wait for an answer. Leave empty for the provider default (Ollama on this firewall 360 s, Ollama on the LAN 120 s, Claude Code (LAN) 300 s, Claude 180 s). Local models on small hardware can need a few minutes.</help>
+    </field>
+</form>

@@ -1,0 +1,72 @@
+<acl>
+    <!-- <authority> is evaluated from OPNsense 27.1 on and ignored by 26.7 -->
+    <page-firewall-policyanalyzer>
+        <name>Firewall: Policy Analyzer</name>
+        <description>View the read-only rule set analysis, its findings, the AI state, the quarantine (state, entries, history, export) and the action history</description>
+        <authority>limited</authority>
+        <patterns>
+            <pattern>ui/policyanalyzer/*</pattern>
+            <pattern>api/policyanalyzer/analysis/*</pattern>
+            <pattern>api/policyanalyzer/ai/status</pattern>
+            <pattern>api/policyanalyzer/ai/providers</pattern>
+            <pattern>api/policyanalyzer/ai/runtime</pattern>
+            <pattern>api/policyanalyzer/ai/job</pattern>
+            <pattern>api/policyanalyzer/ai/recommend*</pattern>
+            <pattern>api/policyanalyzer/ai/hw_profile</pattern>
+            <pattern>api/policyanalyzer/ai/storage*</pattern>
+            <pattern>api/policyanalyzer/setup/*</pattern>
+            <pattern>api/policyanalyzer/change/history</pattern>
+            <pattern>api/policyanalyzer/change/actions</pattern>
+            <pattern>api/policyanalyzer/settings/get</pattern>
+            <pattern>api/policyanalyzer/exposure/report</pattern>
+            <pattern>api/policyanalyzer/quarantine/status</pattern>
+            <pattern>api/policyanalyzer/quarantine/summary</pattern>
+            <pattern>api/policyanalyzer/quarantine/search</pattern>
+            <pattern>api/policyanalyzer/quarantine/history</pattern>
+            <pattern>api/policyanalyzer/quarantine/export</pattern>
+            <pattern>api/policyanalyzer/quarantine/entry</pattern>
+            <pattern>api/policyanalyzer/quarantine/guards</pattern>
+            <pattern>api/policyanalyzer/quarantine/wizard</pattern>
+            <pattern>api/policyanalyzer/quarantine/preview</pattern>
+            <pattern>api/policyanalyzer/incidents/status</pattern>
+            <pattern>api/policyanalyzer/incidents/summary</pattern>
+            <pattern>api/policyanalyzer/incidents/search</pattern>
+            <pattern>api/policyanalyzer/incidents/case</pattern>
+            <pattern>api/policyanalyzer/reports/summary</pattern>
+            <pattern>api/policyanalyzer/reports/history</pattern>
+            <pattern>api/policyanalyzer/reports/message</pattern>
+            <pattern>api/policyanalyzer/reports/notifications</pattern>
+            <pattern>api/policyanalyzer/vulns/summary</pattern>
+            <pattern>api/policyanalyzer/vulns/list</pattern>
+            <pattern>api/policyanalyzer/vulns/cve</pattern>
+            <pattern>api/policyanalyzer/vulns/intel</pattern>
+            <pattern>api/policyanalyzer/devices/summary</pattern>
+            <pattern>api/policyanalyzer/devices/list</pattern>
+            <pattern>api/policyanalyzer/devices/device</pattern>
+            <pattern>api/policyanalyzer/devices/oui</pattern>
+            <pattern>api/policyanalyzer/anomalies/summary</pattern>
+            <pattern>api/policyanalyzer/anomalies/status</pattern>
+            <pattern>api/policyanalyzer/anomalies/search</pattern>
+            <pattern>api/policyanalyzer/anomalies/finding</pattern>
+            <pattern>api/policyanalyzer/anomalies/host</pattern>
+            <pattern>api/policyanalyzer/posture/report</pattern>
+            <pattern>api/policyanalyzer/posture/summary</pattern>
+            <pattern>api/policyanalyzer/posture/history</pattern>
+            <pattern>api/policyanalyzer/posture/checks</pattern>
+            <pattern>api/policyanalyzer/shadowai/report</pattern>
+            <pattern>api/policyanalyzer/shadowai/summary</pattern>
+            <pattern>api/policyanalyzer/shadowai/catalog</pattern>
+            <pattern>api/policyanalyzer/minrule/candidates</pattern>
+            <pattern>api/policyanalyzer/minrule/analyze</pattern>
+        </patterns>
+    </page-firewall-policyanalyzer>
+    <page-firewall-policyanalyzer-admin>
+        <name>Firewall: Policy Analyzer: settings, changes and AI</name>
+        <description>Change the settings, simulate/apply/revert changes (storage, local runtime, quarantine: the setup steps, install, add, release, pause) and send findings to the AI provider</description>
+        <authority>administrative</authority>
+        <patterns>
+            <pattern>ui/policyanalyzer/*</pattern>
+            <pattern>api/policyanalyzer/*</pattern>
+        </patterns>
+    </page-firewall-policyanalyzer-admin>
+</acl>

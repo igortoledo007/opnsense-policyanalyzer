@@ -1,0 +1,5718 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: os-policyanalyzer\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:168
+msgid ""
+"\"Maybe\" reachable counts as reachable and is shown as such. Thresholds: /"
+"var/db/policyanalyzer/vulns-settings.json (epss_high, epss_medium, "
+"cvss_high). KEV and EPSS come from a local cache with its date; they are "
+"downloaded only with \"Update KEV/EPSS\", after the simulation, and EPSS "
+"only receives CVE ids."
+msgstr "\"Maybe\" 도달 가능은 도달 가능으로 간주되어 그대로 표시됩니다. 임계값: /var/db/policyanalyzer/vulns-settings.json (epss_high, epss_medium, cvss_high). KEV와 EPSS는 날짜가 표시된 로컬 캐시에서 가져오며, 시뮬레이션 후 \"Update KEV/EPSS\"를 눌렀을 때만 다운로드됩니다. EPSS에는 CVE ID만 전송됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:81
+#, php-format
+msgid "%b blocked from %s sources in 5 min"
+msgstr "5분 동안 %b건 차단, 출발지 %s개"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:109
+#, php-format
+msgid "%e entries, %o offenses"
+msgstr "항목 %e개, 위반 %o건"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:92
+#, php-format
+msgid "%m active entries (now %n)"
+msgstr "활성 항목 %m개 (현재 %n개)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:178
+#, php-format
+msgid "%o entered, %s sources, %g protected, %d ms"
+msgstr "%o개 진입, 출발지 %s개, 보호됨 %g개, %d ms"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:78
+#, php-format
+msgid "%s selected"
+msgstr "%s개 선택됨"
+
+#: mvc/app/library/OPNsense/PolicyAnalyzer/ViewTranslator.php:32
+msgid "..."
+msgstr "..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:82
+#, php-format
+msgid "1 h: %b / %s"
+msgstr "1시간: %b / %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:246
+msgid "20 = lowest priority, the firewall always wins."
+msgstr "20 = 가장 낮은 우선 순위이며 방화벽이 항상 우선합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:125
+msgid "203.0.113.7 or 203.0.113.0/28"
+msgstr "203.0.113.7 또는 203.0.113.0/28"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:151
+msgid ""
+"A local runtime works, but expect slower answers and plan explanations "
+"outside peak hours. A server in your LAN or an API is the comfortable option."
+msgstr "로컬 런타임도 동작하지만 응답이 느릴 수 있으니 설명은 사용량이 적은 시간에 실행하도록 계획하세요. LAN의 서버나 API를 사용하는 것이 편한 방법입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:106
+msgid "A setup job is running"
+msgstr "설정 작업이 실행 중입니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:47
+msgid ""
+"A setup job is running for this step; its progress is shown above and in the "
+"action history."
+msgstr "이 단계의 설정 작업이 실행 중입니다. 진행 상황은 위와 작업 기록에 표시됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:254
+msgid ""
+"A short benchmark measures the real speed (the model is loaded and the jail "
+"CPUs are busy for one or two minutes). Then explain one finding to see the "
+"result."
+msgstr "짧은 벤치마크로 실제 속도를 측정합니다 (모델이 로드되고 jail의 CPU가 1~2분 동안 사용됩니다). 그런 다음 탐지 결과 하나를 설명하게 하여 결과를 확인하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:152
+msgid "AI"
+msgstr "AI"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "AI Console"
+msgstr "AI 콘솔"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:118
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:86
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:150
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:115
+msgid "AI assistance is disabled in the settings."
+msgstr "설정에서 AI 지원이 비활성화되어 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:84
+msgid "AI assistance is disabled: enable it in the Policy Analyzer settings."
+msgstr "AI 지원이 비활성화되어 있습니다. Policy Analyzer 설정에서 활성화하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:46
+msgid ""
+"AI assistance is disabled: you can still look at the data and at what would "
+"be sent. Enable it in Firewall: Policy Analyzer: Settings."
+msgstr "AI 지원이 비활성화되어 있습니다. 데이터와 전송될 내용은 계속 볼 수 있습니다. 방화벽: Policy Analyzer: 설정에서 활성화하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:45
+msgid "AI disabled"
+msgstr "AI 비활성화됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:304
+msgid "AI enabled"
+msgstr "AI 활성화됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:107
+msgid "AI executive summary"
+msgstr "AI 경영진 요약"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:155
+msgid "AI explanations"
+msgstr "AI 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:284
+msgid ""
+"AI generated text based only on the data above. It can be wrong: verify it "
+"against the evidence. Nothing was changed on this firewall."
+msgstr "위 데이터만을 바탕으로 AI가 생성한 텍스트입니다. 틀릴 수 있으니 근거와 대조하여 확인하세요. 이 방화벽에서는 아무것도 변경되지 않았습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:78
+msgid "AI generated text: verify it before acting on it."
+msgstr "AI가 생성한 텍스트입니다. 조치하기 전에 확인하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:75
+msgid ""
+"AI generated, based only on the evidence collected for the question. It can "
+"be wrong: check the cited evidence. Proposals are text only; nothing is ever "
+"applied from this page."
+msgstr "질문에 대해 수집된 근거만을 바탕으로 AI가 생성했습니다. 틀릴 수 있으니 인용된 근거를 확인하세요. 제안은 텍스트일 뿐이며 이 페이지에서는 아무것도 적용되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1494
+msgid "AI per scenario"
+msgstr "시나리오별 AI"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1477
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1478
+msgid "AI provider"
+msgstr "AI 제공자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1087
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1497
+msgid "AI queue"
+msgstr "AI 대기열"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:53
+msgid "AI services"
+msgstr "AI 서비스"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1260
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:38
+msgid "AI setup"
+msgstr "AI 설정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:88
+msgid "AI suggestion"
+msgstr "AI 제안"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:127
+msgid "AI suggests"
+msgstr "AI 제안"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:99
+#, php-format
+msgid "AI suggests %s"
+msgstr "AI 제안: %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:142
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:166
+msgid "AI summary"
+msgstr "AI 요약"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "AI usage"
+msgstr "AI 사용량"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:115
+msgid "AP/router"
+msgstr "AP/라우터"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:90
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:159
+msgid "API"
+msgstr "API"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1168
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1386
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1426
+msgid "ASN"
+msgstr "ASN"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:168
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:186
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:203
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:215
+msgid "Action"
+msgstr "작업"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:122
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1241
+msgid "Action history"
+msgstr "작업 기록"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:87
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1155
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1428
+msgid "Actions"
+msgstr "작업"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:60
+msgid "Activate"
+msgstr "활성화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1128
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:65
+msgid "Active"
+msgstr "활성화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1330
+msgid "Active entries per level"
+msgstr "레벨별 활성 항목"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:123
+msgid "Add"
+msgstr "추가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1319
+msgid "Add manually"
+msgstr "수동으로 추가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:130
+msgid "Add note"
+msgstr "메모 추가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:49
+msgid "Additional rules"
+msgstr "추가 규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:235
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:82
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1158
+msgid "Address"
+msgstr "주소"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1187
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1388
+msgid "Address or comment"
+msgstr "주소 또는 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1337
+msgid "Address, network, range or ASN"
+msgstr "주소, 네트워크, 범위 또는 ASN"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:96
+msgid "Address, port or title"
+msgstr "주소, 포트 또는 제목"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:107
+msgid "Addresses"
+msgstr "주소"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:238
+msgid "Alerts"
+msgstr "경고"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:56
+msgid "Aliases"
+msgstr "별칭"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:197
+msgid ""
+"Aliases (3): remove pa_quarantine and pa_never_block (its entries are saved "
+"for Undo)"
+msgstr "별칭 (3): pa_quarantine 및 pa_never_block 제거 (항목은 실행 취소를 위해 저장됨)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:144
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:60
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:134
+msgid "All"
+msgstr "모두"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:70
+msgid "All risks"
+msgstr "모든 위험"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:145
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:69
+msgid "All types"
+msgstr "모든 유형"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:233
+msgid "Allow models larger than 6 GiB"
+msgstr "6 GiB보다 큰 모델 허용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:248
+msgid "Allowed hours"
+msgstr "허용 시간대"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:193
+msgid "Allowed traffic on the port of the alert"
+msgstr "경고 포트에서 허용된 트래픽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:189
+msgid "Already contained by the quarantine"
+msgstr "이미 격리로 차단됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:60
+#, php-format
+msgid "Also delete downloaded models (%s)"
+msgstr "다운로드한 모델도 삭제 (%s)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1217
+msgid ""
+"Also delete the history database (every offense of every year). This can not "
+"be undone."
+msgstr "기록 데이터베이스(모든 연도의 모든 위반)도 삭제합니다. 되돌릴 수 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:187
+msgid "Also matched"
+msgstr "함께 일치함"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:163
+msgid "Alternatives"
+msgstr "대안"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:247
+msgid ""
+"Always applied: one request at a time, one model loaded, keep-alive 5 "
+"minutes, listening on 127.0.0.1 only."
+msgstr "항상 적용: 한 번에 요청 하나, 로드된 모델 하나, keep-alive 5분, 127.0.0.1에서만 수신."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Analysis"
+msgstr "분석"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnalysisController.php:52
+msgid "Analysis failed."
+msgstr "분석에 실패했습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1251
+msgid "Analyze"
+msgstr "분석"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:61
+msgid "Analyzing the rule set..."
+msgstr "규칙 세트를 분석하는 중..."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Anomalies"
+msgstr "이상 징후"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid "Anonymize data"
+msgstr "데이터 익명화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:297
+msgid "Anonymize data before sending"
+msgstr "전송 전 데이터 익명화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:230
+msgid "Another model"
+msgstr "다른 모델"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:125
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:126
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:49
+msgid "Answer language"
+msgstr "응답 언어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:232
+msgid ""
+"Any library model, e.g. llama3.2:3b; speed and quality are not evaluated for "
+"it."
+msgstr "라이브러리의 아무 모델 (예: llama3.2:3b). 속도와 품질은 평가되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:113
+msgid "Any proposal above is text only: nothing was changed on this firewall."
+msgstr "위의 모든 제안은 텍스트일 뿐입니다. 이 방화벽에서는 아무것도 변경되지 않았습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:138
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:80
+msgid "Any status"
+msgstr "모든 상태"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:97
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1183
+msgid "Apply"
+msgstr "적용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:119
+#, php-format
+msgid ""
+"Apply creates %p (SQLite, WAL) and remembers the current end of the filter "
+"log and of eve.json: what happened before is not counted."
+msgstr "적용하면 %p (SQLite, WAL)가 생성되고 필터 로그와 eve.json의 현재 끝 위치가 기록됩니다. 그 이전에 일어난 일은 집계되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:174
+msgid ""
+"Apply creates the dataset (if the root is ZFS) and the directory. Simulate "
+"shows the exact commands first."
+msgstr "적용하면 데이터셋(루트가 ZFS인 경우)과 디렉터리가 생성됩니다. 시뮬레이션에서 정확한 명령을 먼저 보여 줍니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:56
+msgid "Apply install"
+msgstr "설치 적용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:252
+msgid "Apply limits"
+msgstr "제한 적용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:299
+msgid ""
+"Apply saves the settings through the normal validation; Undo restores the "
+"previous values."
+msgstr "적용하면 일반 유효성 검사를 거쳐 설정이 저장됩니다. 실행 취소하면 이전 값이 복원됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:63
+msgid "Apply to"
+msgstr "적용 대상"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:150
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:55
+msgid "Ask"
+msgstr "질문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:53
+msgid ""
+"Ask about this firewall in plain words. The question is routed to read-only "
+"data sources (filter log, rules and counters, aliases, quarantine, findings, "
+"exposure, host names, configuration changes, IDS alerts); only that "
+"evidence, anonymized, goes to the AI."
+msgstr "이 방화벽에 대해 평범한 말로 질문하세요. 질문은 읽기 전용 데이터 소스(필터 로그, 규칙과 카운터, 별칭, 격리, 탐지 결과, 노출, 호스트 이름, 설정 변경, IDS 경고)로 전달되며, 익명화된 해당 근거만 AI로 전송됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:260
+msgid "Ask another"
+msgstr "다른 질문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:44
+msgid "Ask the AI"
+msgstr "AI에게 질문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:134
+msgid "Ask the firewall"
+msgstr "방화벽에 질문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:140
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:62
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:279
+msgid "Asking the AI, this can take a while..."
+msgstr "AI에게 질문하는 중입니다. 시간이 걸릴 수 있습니다..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:65
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:73
+msgid "Asking the AI..."
+msgstr "AI에게 질문하는 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:45
+msgid "Asking the AI... (it may take a while)"
+msgstr "AI에게 질문하는 중... (시간이 걸릴 수 있음)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:259
+msgid ""
+"Asks the local AI one short real question about the current date and a "
+"random topic; nothing is changed."
+msgstr "로컬 AI에게 현재 날짜와 임의의 주제에 대한 짧은 실제 질문을 하나 합니다. 아무것도 변경되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:128
+msgid "At most e-mails per hour"
+msgstr "시간당 최대 이메일 수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:200
+msgid ""
+"At most three options can be passed at once: the runtime is installed with "
+"the default cpuset and your value is applied in the Limits step."
+msgstr "한 번에 최대 세 개의 옵션만 전달할 수 있습니다. 런타임은 기본 cpuset으로 설치되고 입력한 값은 제한 단계에서 적용됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:96
+msgid "Attach the report as PDF"
+msgstr "보고서를 PDF로 첨부"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:100
+#, php-format
+msgid "Automatic (%s)"
+msgstr "자동 (%s)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:50
+msgid "Automatic (settings / GUI)"
+msgstr "자동 (설정 / GUI)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:204
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:88
+msgid "Back"
+msgstr "뒤로"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1221
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:153
+msgid "Bait ports (separated by +)"
+msgstr "미끼 포트 (+로 구분)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:146
+msgid "Base: ≥ 1 blocked connection in the window"
+msgstr "기준: 기간 내 차단된 연결 1건 이상"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:60
+msgid "Beaconing"
+msgstr "비컨 통신"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:255
+msgid "Benchmark"
+msgstr "벤치마크"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:47
+msgid "Block proposal"
+msgstr "차단 제안"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:197
+msgid "Blocked DNS queries"
+msgstr "차단된 DNS 쿼리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1165
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1424
+msgid "Blocked for"
+msgstr "차단 기간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:172
+msgid "Boot hook"
+msgstr "부팅 훅"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:127
+msgid "CPU"
+msgstr "CPU"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:198
+#, php-format
+msgid ""
+"CPU numbers or ranges, e.g. 2-3 or 1,3; this system has %n threads. Leave at "
+"least half of them to the firewall."
+msgstr "CPU 번호 또는 범위 (예: 2-3 또는 1,3). 이 시스템에는 스레드가 %n개 있습니다. 최소 절반은 방화벽에 남겨 두세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:141
+msgid "CPU without AVX2: prompt processing is several times slower"
+msgstr "AVX2가 없는 CPU: 프롬프트 처리가 몇 배 느립니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:197
+msgid "CPUs for the jail (cpuset)"
+msgstr "jail용 CPU (cpuset)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:71
+msgid "CVE"
+msgstr "CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:115
+msgid "CVE without score"
+msgstr "점수 없는 CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:60
+msgid "CVEs"
+msgstr "CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:137
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:55
+msgid ""
+"CVEs of the inventory ranked by exposure and real exploitation (KEV, EPSS). "
+"Read only."
+msgstr "노출 수준과 실제 악용 여부(KEV, EPSS)에 따라 순위를 매긴 인벤토리의 CVE. 읽기 전용."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:76
+msgid "CVSS"
+msgstr "CVSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:118
+msgid "Campaign"
+msgstr "캠페인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:133
+msgid "Can not be reverted later"
+msgstr "나중에 되돌릴 수 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:135
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:52
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1090
+msgid "Cancel"
+msgstr "취소"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:149
+msgid "Cancel the running job? It rolls back what it changed so far."
+msgstr "실행 중인 작업을 취소하시겠습니까? 지금까지 변경한 내용은 롤백됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:82
+msgid "Candidates"
+msgstr "후보"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:105
+msgid "Case"
+msgstr "케이스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:163
+msgid "Case created"
+msgstr "케이스가 생성되었습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:60
+msgid "Catalogue"
+msgstr "카탈로그"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:80
+msgid "Category"
+msgstr "카테고리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1201
+msgid "Change"
+msgstr "변경"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:132
+msgid "Change state"
+msgstr "상태 변경"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:99
+msgid "Changed values are applied through a simulation and journaled."
+msgstr "변경된 값은 시뮬레이션을 거쳐 적용되고 기록됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:111
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1463
+msgid "Changes"
+msgstr "변경 사항"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:120
+msgid ""
+"Changes made by this step, newest first. Revert first shows a simulation of "
+"what will be undone."
+msgstr "이 단계에서 변경한 내용 (최신순). 되돌리기는 먼저 취소될 내용을 시뮬레이션으로 보여 줍니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:224
+msgid "Chat template"
+msgstr "채팅 템플릿"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:98
+msgid "Check"
+msgstr "검사"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:131
+msgid "Check sources now"
+msgstr "지금 소스 확인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:251
+msgid "Check the cpuset, threads (1 or more) and nice (0-20)."
+msgstr "cpuset, 스레드(1 이상), nice(0-20)를 확인하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:165
+msgid "Check the highlighted values."
+msgstr "강조 표시된 값을 확인하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Chinese (Simplified)"
+msgstr "중국어 (간체)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:66
+msgid ""
+"Choose a dedicated directory on a local filesystem, for example /var/db/ai/"
+"models."
+msgstr "로컬 파일 시스템의 전용 디렉터리를 선택하세요 (예: /var/db/ai/models)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:152
+msgid ""
+"Choose a model server in your LAN or an API in the next step; the local "
+"runtime steps are skipped."
+msgstr "다음 단계에서 LAN의 모델 서버 또는 API를 선택하세요. 로컬 런타임 단계는 건너뜁니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:37
+msgid "Choose a rule to narrow"
+msgstr "범위를 좁힐 규칙 선택"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:301
+msgid "Choose or download a model first (Model step)."
+msgstr "먼저 모델을 선택하거나 다운로드하세요 (모델 단계)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:212
+msgid "Chosen model"
+msgstr "선택한 모델"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:288
+msgid "Chosen provider"
+msgstr "선택한 제공자"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Claude (Anthropic)"
+msgstr "Claude (Anthropic)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Claude Code (LAN)"
+msgstr "Claude Code (LAN)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:53
+msgid "Clean up partial install"
+msgstr "부분 설치 정리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:156
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:98
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1184
+msgid "Clear"
+msgstr "지우기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:155
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:58
+msgid "Clear conversation"
+msgstr "대화 지우기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:109
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:78
+msgid "Close"
+msgstr "닫기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:96
+msgid "Close finding"
+msgstr "탐지 결과 종료"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:61
+msgid "Collecting the evidence and asking the AI..."
+msgstr "근거를 수집하고 AI에게 질문하는 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:62
+msgid "Collecting the evidence..."
+msgstr "근거를 수집하는 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:80
+msgid "Comma separated"
+msgstr "쉼표로 구분"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:38
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:130
+msgid "Command"
+msgstr "명령"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1296
+msgid "Commands"
+msgstr "명령"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1170
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1346
+msgid "Comment"
+msgstr "설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:125
+msgid "Comment (optional)"
+msgstr "설명 (선택 사항)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:95
+msgid "Comment (why it is expected)"
+msgstr "설명 (예상되는 이유)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:51
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:144
+msgid "Completed steps"
+msgstr "완료된 단계"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:80
+msgid "Component"
+msgstr "구성 요소"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:154
+msgid ""
+"Components the inventory can not map with confidence. The AI may suggest a "
+"mapping; only your decision (with simulation, recorded in the action "
+"history) changes the priority."
+msgstr "인벤토리가 확신을 가지고 매핑할 수 없는 구성 요소입니다. AI가 매핑을 제안할 수 있지만, 우선 순위는 사용자의 결정(시뮬레이션을 거쳐 작업 기록에 기록됨)으로만 변경됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:160
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:162
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:163
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:164
+msgid "Condition"
+msgstr "조건"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:58
+msgid "Confidence"
+msgstr "신뢰도"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:134
+msgid "Confirm"
+msgstr "확인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:123
+msgid "Confirm as a real finding"
+msgstr "실제 탐지 결과로 확인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:114
+msgid "Connect again"
+msgstr "다시 연결"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:292
+msgid "Connection"
+msgstr "연결"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:105
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:306
+msgid "Connection OK"
+msgstr "연결 정상"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:243
+msgid "Context (num_ctx)"
+msgstr "컨텍스트 (num_ctx)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1084
+msgid "Context budget (tokens)"
+msgstr "컨텍스트 예산 (토큰)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:67
+msgid "Copied"
+msgstr "복사됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:66
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:154
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1202
+msgid "Copy"
+msgstr "복사"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:220
+msgid ""
+"Copy the .gguf file to /var/db/ai/models/import/ with scp (or give hf:owner/"
+"repo/file.gguf to download it from Hugging Face), then simulate the import. "
+"Ollama keeps its own copy of the weights."
+msgstr ".gguf 파일을 scp로 /var/db/ai/models/import/에 복사한 다음(또는 hf:owner/repo/file.gguf를 입력하여 Hugging Face에서 다운로드) 가져오기를 시뮬레이션하세요. Ollama는 가중치의 자체 사본을 보관합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1084
+msgid "Correction attempts"
+msgstr "수정 시도 횟수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:68
+msgid "Correlating every 5 minutes"
+msgstr "5분마다 상관 분석 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:100
+msgid "Cost of the last runs"
+msgstr "최근 실행 비용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:74
+msgid "Counted"
+msgstr "집계됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:105
+msgid "Countries"
+msgstr "국가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1167
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1383
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1384
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1421
+msgid "Country"
+msgstr "국가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:76
+msgid ""
+"Counts are DNS queries and TLS connections, not data volume; the content is "
+"never seen."
+msgstr "수치는 DNS 쿼리와 TLS 연결 수이며 데이터 양이 아닙니다. 내용은 절대 보지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:43
+msgid "Coverage of the observed traffic"
+msgstr "관찰된 트래픽의 범위"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:129
+msgid "Create aliases"
+msgstr "별칭 생성"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:118
+msgid "Create the ledger"
+msgstr "원장 생성"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:144
+msgid "Create the rule"
+msgstr "규칙 생성"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:111
+msgid "Created"
+msgstr "생성됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:82
+msgid "Critical"
+msgstr "심각"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:169
+msgid "Cron job"
+msgstr "크론 작업"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1087
+msgid "Cron job of the queue"
+msgstr "대기열의 크론 작업"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:86
+msgid "Current state (detected now)"
+msgstr "현재 상태 (지금 감지됨)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:60
+msgid "DGA domains"
+msgstr "DGA 도메인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:185
+msgid "DNS"
+msgstr "DNS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:65
+msgid "DNS blocklist (Unbound, recommended)"
+msgstr "DNS 차단 목록 (Unbound, 권장)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:63
+msgid "DNS bypass"
+msgstr "DNS 우회"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:50
+msgid "DNS queries"
+msgstr "DNS 쿼리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:104
+msgid "DNS queries per hour"
+msgstr "시간당 DNS 쿼리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:98
+msgid "DNS servers"
+msgstr "DNS 서버"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:61
+msgid "DNS tunnel"
+msgstr "DNS 터널"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:92
+msgid "Daily at"
+msgstr "매일 다음 시각에"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:74
+msgid "Daily digest"
+msgstr "일일 요약"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:170
+msgid "Dataset / filesystem"
+msgstr "데이터셋 / 파일 시스템"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:108
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1460
+msgid "Date"
+msgstr "날짜"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:173
+msgid "Day"
+msgstr "일"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:236
+msgid "Days"
+msgstr "일"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1218
+msgid "Days without offenses before the level goes back to zero"
+msgstr "레벨이 0으로 돌아가기까지 위반이 없는 일수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:90
+msgid "Decide"
+msgstr "결정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:84
+msgid "Decision"
+msgstr "결정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:91
+#, php-format
+msgid "Decision on %s"
+msgstr "%s에 대한 결정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:164
+msgid "Defaults"
+msgstr "기본값"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:116
+msgid "Delete the ledger..."
+msgstr "원장 삭제..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:226
+msgid "Delete the source file after the import (irreversible)"
+msgstr "가져온 후 원본 파일 삭제 (되돌릴 수 없음)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:215
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:98
+msgid "Description"
+msgstr "설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:248
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:95
+msgid "Destination"
+msgstr "목적지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:196
+msgid "Destination in quarantine now"
+msgstr "현재 격리 중인 목적지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1206
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:75
+msgid "Detail"
+msgstr "세부 정보"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:51
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:85
+msgid "Details"
+msgstr "세부 사항"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:110
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:153
+msgid ""
+"Detectors are deterministic and read only; the AI only explains. Nothing is "
+"blocked automatically."
+msgstr "탐지기는 결정론적이며 읽기 전용입니다. AI는 설명만 합니다. 자동으로 차단되는 것은 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:94
+msgid ""
+"Deterministic checks inspired by the CIS Controls v8 and NIST SP "
+"800-41/800-53 (there is no official CIS benchmark for OPNsense). Read only: "
+"every fix is a proposal for you to apply in the GUI."
+msgstr "CIS Controls v8과 NIST SP 800-41/800-53에서 착안한 결정론적 검사입니다 (OPNsense용 공식 CIS 벤치마크는 없음). 읽기 전용: 모든 수정은 GUI에서 직접 적용할 제안입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:102
+msgid "Device"
+msgstr "장치"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:133
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:60
+msgid "Devices"
+msgstr "장치"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:53
+msgid "Diff (for the rule editor)"
+msgstr "Diff (규칙 편집기용)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:187
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:92
+msgid "Dir"
+msgstr "방향"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:173
+msgid "Direction"
+msgstr "방향"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:308
+msgid "Disable AI"
+msgstr "AI 비활성화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:209
+msgid "Disable at boot"
+msgstr "부팅 시 비활성화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:115
+msgid "Disconnect (keep everything)"
+msgstr "연결 해제 (모두 보존)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:112
+msgid "Disconnected ledgers (kept)"
+msgstr "연결 해제된 원장 (보존됨)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:130
+msgid "Disk"
+msgstr "디스크"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:136
+msgid "Disk space"
+msgstr "디스크 공간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:61
+msgid "Domains"
+msgstr "도메인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:142
+msgid "Done"
+msgstr "완료"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:229
+msgid "Download"
+msgstr "다운로드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:97
+msgid "Download PDF"
+msgstr "PDF 다운로드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:59
+msgid "Download the IEEE OUI registry"
+msgstr "IEEE OUI 레지스트리 다운로드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:45
+msgid "Download the chosen model first (Simulate download, then Download)."
+msgstr "먼저 선택한 모델을 다운로드하세요 (다운로드 시뮬레이션 후 다운로드)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:152
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1196
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1342
+msgid "Duration"
+msgstr "지속"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Dutch"
+msgstr "네덜란드어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:174
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:57
+msgid "E-mail channel"
+msgstr "이메일 채널"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:75
+msgid "EPSS"
+msgstr "EPSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:99
+#, php-format
+msgid "EPSS cached for %s of %s CVEs"
+msgstr "CVE %s개 중 %s개의 EPSS가 캐시됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1495
+msgid ""
+"Each AI feature of the plugin is a scenario with its own provider, model and "
+"limits. Empty fields follow the global provider above. Long scenarios on the "
+"local runtime go to a background queue: the page shows the position and the "
+"estimate and receives the answer when it is ready. Every change is simulated "
+"first and recorded in the action history."
+msgstr "플러그인의 각 AI 기능은 자체 제공자, 모델, 제한을 가진 시나리오입니다. 비어 있는 필드는 위의 전역 제공자를 따릅니다. 로컬 런타임에서 오래 걸리는 시나리오는 백그라운드 대기열로 보내지며, 페이지에 순서와 예상 시간이 표시되고 준비되면 응답을 받습니다. 모든 변경은 먼저 시뮬레이션되고 작업 기록에 기록됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:148
+msgid ""
+"Each button opens the action with its simulation; nothing runs by itself."
+msgstr "각 버튼은 시뮬레이션과 함께 작업을 엽니다. 저절로 실행되는 것은 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:90
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1083
+msgid "Edit"
+msgstr "편집"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:42
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:131
+msgid "Effect"
+msgstr "효과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:102
+msgid "Empty: the hostname seen on the network"
+msgstr "비어 있음: 네트워크에서 확인된 호스트 이름"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:300
+msgid "Enable AI"
+msgstr "AI 활성화"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid "Enable AI explanations"
+msgstr "AI 설명 활성화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:74
+msgid "Enable RAM limit"
+msgstr "RAM 제한 활성화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:208
+msgid "Enable at boot"
+msgstr "부팅 시 활성화"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:180
+msgid "Enable the rule Max Cyber IA and reload the rules (it is disabled now)."
+msgstr "Max Cyber IA 규칙을 활성화하고 규칙을 다시 로드합니다 (현재 비활성화됨)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:286
+msgid ""
+"Enables the AI explanations on the Findings page with the provider and model "
+"chosen here. Like every change, it is simulated first and recorded in the "
+"action history."
+msgstr "여기서 선택한 제공자와 모델로 탐지 결과 페이지의 AI 설명을 활성화합니다. 다른 모든 변경과 마찬가지로 먼저 시뮬레이션되고 작업 기록에 기록됩니다."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:52
+msgid "English"
+msgstr "영어"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:199
+msgid "Enter a note."
+msgstr "메모를 입력하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:98
+msgid "Enter an Anthropic API key."
+msgstr "Anthropic API 키를 입력하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:126
+msgid "Enter an address or a network (CIDR)."
+msgstr "주소 또는 네트워크(CIDR)를 입력하세요."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:282
+msgid ""
+"Enter an address, a network (CIDR), a range (first-last) or an ASN (AS64500)."
+msgstr "주소, 네트워크(CIDR), 범위(시작-끝) 또는 ASN(AS64500)을 입력하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:111
+msgid ""
+"Enter the URL of the Claude Code bridge, for example http://"
+"bridge.example.lan:11436."
+msgstr "Claude Code 브리지의 URL을 입력하세요 (예: http://bridge.example.lan:11436)."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:87
+msgid "Enter the URL of the Ollama server."
+msgstr "Ollama 서버의 URL을 입력하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:133
+msgid "Enter the token of the Claude Code bridge."
+msgstr "Claude Code 브리지의 토큰을 입력하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:183
+msgid "Entered"
+msgstr "진입"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:106
+msgid "Entities"
+msgstr "엔터티"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1190
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1440
+msgid "Entries and exits"
+msgstr "진입 및 해제"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:266
+msgid "Entry not found."
+msgstr "항목을 찾을 수 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:109
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:77
+msgid "Error"
+msgstr "오류"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:167
+msgid ""
+"Estimates are rough; run the benchmark in the AI setup for real numbers."
+msgstr "추정치는 대략적입니다. 실제 수치는 AI 설정에서 벤치마크를 실행하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:141
+msgid "Evaluated before"
+msgstr "이전에 평가됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:216
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:99
+msgid "Evaluations"
+msgstr "평가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:122
+msgid "Event"
+msgstr "이벤트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:198
+msgid "Event volume"
+msgstr "이벤트 양"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:177
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:108
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1204
+msgid "Events"
+msgstr "이벤트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:154
+msgid ""
+"Events of the same type inside the throttle window are grouped into one "
+"digest e-mail."
+msgstr "스로틀 기간 내 같은 유형의 이벤트는 하나의 요약 이메일로 묶입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:93
+msgid "Every 6 h only when something happened"
+msgstr "무언가 발생했을 때만 6시간마다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:91
+msgid "Every 6 hours"
+msgstr "6시간마다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1455
+msgid ""
+"Every change made from this page (settings, storage, ...) is recorded here. "
+"Revert first shows a simulation of what will be undone."
+msgstr "이 페이지에서 한 모든 변경(설정, 스토리지 등)이 여기에 기록됩니다. 되돌리기는 먼저 취소될 내용을 시뮬레이션으로 보여 줍니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:165
+msgid "Everything else, typically a library without a listening socket"
+msgstr "그 외 모두, 일반적으로 수신 소켓이 없는 라이브러리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:57
+msgid "Evidence"
+msgstr "근거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:48
+msgid "Exactly what would be sent (anonymised when the option is on)"
+msgstr "전송될 정확한 내용 (옵션이 켜져 있으면 익명화됨)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:120
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:97
+msgid "Exceptions"
+msgstr "예외"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:48
+msgid "Executive summary (AI)"
+msgstr "경영진 요약 (AI)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:94
+msgid "Executive summary by the AI (fixed text when the AI is off)"
+msgstr "AI의 경영진 요약 (AI가 꺼져 있으면 고정 텍스트)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:68
+msgid "Expected usage that would break"
+msgstr "중단될 예상 사용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:88
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:86
+msgid "Explain"
+msgstr "설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:87
+#, php-format
+msgid "Explain %s"
+msgstr "%s 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:49
+msgid "Explain (AI)"
+msgstr "설명 (AI)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:273
+msgid "Explain a sample finding"
+msgstr "샘플 탐지 결과 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1254
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:58
+msgid "Explain all findings with AI"
+msgstr "AI로 모든 탐지 결과 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:89
+#, php-format
+msgid "Explain device %s"
+msgstr "장치 %s 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:82
+msgid "Explain host with AI"
+msgstr "AI로 호스트 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:56
+msgid "Explain risk (AI)"
+msgstr "위험 설명 (AI)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:82
+msgid "Explain this alert"
+msgstr "이 경고 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:80
+msgid "Explain this log event"
+msgstr "이 로그 이벤트 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:81
+msgid "Explain this rule"
+msgstr "이 규칙 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:82
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:277
+msgid "Explain with AI"
+msgstr "AI로 설명"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1188
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1392
+msgid "Export CSV"
+msgstr "CSV 내보내기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:73
+msgid "Exposure"
+msgstr "노출"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:140
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:59
+msgid "Exposure report"
+msgstr "노출 보고서"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:101
+#, php-format
+msgid "Exposure report from %s"
+msgstr "%s 기준 노출 보고서"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1149
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1401
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1403
+msgid "Extend"
+msgstr "연장"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Extra high"
+msgstr "매우 높음"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Fable 5.1 — most capable (US$10/50 per MTok in/out)"
+msgstr "Fable 5.1 — 가장 강력함 (MTok당 입력/출력 US$10/50)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Fable — most capable, uses the quota fastest"
+msgstr "Fable — 가장 강력함, 할당량을 가장 빨리 소모"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:73
+msgid "Factor"
+msgstr "요인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:103
+msgid "Factors"
+msgstr "요인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:62
+msgid "Fail"
+msgstr "실패"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:143
+msgid "Failed"
+msgstr "실패됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1080
+msgid "Fallback provider"
+msgstr "대체 제공자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:89
+msgid "False positive"
+msgstr "오탐"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:201
+msgid "Far above the usual hour"
+msgstr "평소 시간대보다 훨씬 많음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:142
+msgid ""
+"Fewer than 4 CPU threads: the runtime would compete with packet processing"
+msgstr "CPU 스레드가 4개 미만: 런타임이 패킷 처리와 경쟁하게 됩니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:67
+msgid "Field"
+msgstr "필드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:221
+msgid "File in the import directory or hf:owner/repo/file.gguf"
+msgstr "가져오기 디렉터리의 파일 또는 hf:owner/repo/file.gguf"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:85
+msgid "Filter log"
+msgstr "필터 로그"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:99
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1182
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1363
+msgid "Filters"
+msgstr "필터"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1293
+msgid "Finding"
+msgstr "탐지 결과"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnalysisController.php:142
+msgid "Finding not found, run the analysis again."
+msgstr "탐지 결과를 찾을 수 없습니다. 분석을 다시 실행하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:107
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:102
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:219
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1239
+msgid "Findings"
+msgstr "탐지 결과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:61
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:105
+msgid "Finish"
+msgstr "완료"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:60
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:151
+msgid "Finished"
+msgstr "완료됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:66
+msgid "Firewall alias + block rule"
+msgstr "방화벽 별칭 + 차단 규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:135
+msgid "Firewall log"
+msgstr "방화벽 로그"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:84
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1163
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1423
+msgid "First seen"
+msgstr "처음 확인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:54
+msgid "First use"
+msgstr "최초 사용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:147
+msgid "Fit for a local runtime"
+msgstr "로컬 런타임에 적합"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:148
+msgid "Fit with reservations"
+msgstr "조건부 적합"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:52
+msgid "Fix (proposal)"
+msgstr "수정 (제안)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:71
+msgid "Fixed"
+msgstr "수정됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:105
+msgid "Fixed in"
+msgstr "수정된 버전"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:257
+msgid ""
+"Fixed prompt, 128 generated tokens, the configured threads. Nothing is "
+"changed; the report is kept for this page."
+msgstr "고정 프롬프트, 생성 토큰 128개, 설정된 스레드 수. 아무것도 변경되지 않으며 보고서는 이 페이지에 보관됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:104
+msgid "Floating"
+msgstr "플로팅 규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1085
+msgid "Follow the global provider"
+msgstr "전역 제공자 따르기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:171
+msgid "Free space"
+msgstr "여유 공간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:193
+msgid "FreeBSD package branch"
+msgstr "FreeBSD 패키지 브랜치"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "French"
+msgstr "프랑스어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:175
+msgid "Generate again"
+msgstr "다시 생성"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:174
+msgid "Generate with AI"
+msgstr "AI로 생성"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:67
+msgid "Generated"
+msgstr "생성됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:85
+msgid ""
+"Generated by AI from the factors above: it may be wrong. Nothing was changed."
+msgstr "위의 요인을 바탕으로 AI가 생성했습니다. 틀릴 수 있습니다. 아무것도 변경되지 않았습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:149
+msgid ""
+"Generated by the AI from the anonymized case. It may be wrong: check the "
+"timeline."
+msgstr "익명화된 케이스를 바탕으로 AI가 생성했습니다. 틀릴 수 있으니 타임라인을 확인하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "German"
+msgstr "독일어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:80
+#, php-format
+msgid "Go to %s"
+msgstr "%s(으)로 이동"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:162
+msgid "Go to Finish"
+msgstr "완료로 이동"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:93
+msgid "Guards: never quarantined"
+msgstr "보호 대상: 절대 격리하지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:113
+msgid "HTML"
+msgstr "HTML"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Haiku 5.5 — cheapest (US$0.10/0.50)"
+msgstr "Haiku 5.5 — 가장 저렴함 (US$0.10/0.50)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Haiku — fastest, lightest on the quota"
+msgstr "Haiku — 가장 빠름, 할당량 소모가 가장 적음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:133
+msgid "Heavy services"
+msgstr "무거운 서비스"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:126
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:83
+msgid "High"
+msgstr "높음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:202
+msgid "High quarantine level"
+msgstr "높은 격리 레벨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:64
+msgid "High risk"
+msgstr "높은 위험"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1436
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:108
+msgid "History"
+msgstr "기록"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:93
+#, php-format
+msgid "History of %s"
+msgstr "%s 기록"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1153
+msgid "History of this address"
+msgstr "이 주소의 기록"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1169
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1427
+msgid "Hits"
+msgstr "히트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:77
+msgid "Host"
+msgstr "호스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:89
+msgid "Host profile"
+msgstr "호스트 프로필"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:52
+msgid "Hosts"
+msgstr "호스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:68
+msgid "Hosts affected"
+msgstr "영향받는 호스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:48
+msgid "Hosts using AI"
+msgstr "AI를 사용하는 호스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:149
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:69
+msgid "How the priority works"
+msgstr "우선 순위 산정 방식"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:42
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:134
+msgid "How to revert"
+msgstr "되돌리는 방법"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:143
+msgid "Hypothesis"
+msgstr "가설"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:137
+msgid "I reviewed the steps above and want to apply them."
+msgstr "위 단계를 검토했으며 적용하겠습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:138
+msgid ""
+"I understand that part of this can not be undone or that other changes "
+"depend on it."
+msgstr "이 중 일부는 되돌릴 수 없거나 다른 변경이 이에 의존한다는 것을 이해합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1290
+msgid "ID"
+msgstr "ID"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:183
+msgid "IDS"
+msgstr "IDS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:116
+msgid "IDS + allowed traffic"
+msgstr "IDS + 허용된 트래픽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:137
+msgid "IDS alerts"
+msgstr "IDS 경고"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:191
+msgid "IDS severity 1"
+msgstr "IDS 심각도 1"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:192
+msgid "IDS severity 2"
+msgstr "IDS 심각도 2"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:298
+msgid ""
+"IP addresses, hostnames, descriptions and names are replaced by placeholders "
+"and restored in the answer. Strongly recommended for providers outside this "
+"firewall."
+msgstr "IP 주소, 호스트 이름, 설명 및 이름은 자리 표시자로 대체되었다가 응답에서 복원됩니다. 이 방화벽 외부의 제공자에는 사용을 강력히 권장합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:121
+msgid "Ignore for"
+msgstr "무시 기간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:144
+msgid "Impact"
+msgstr "영향"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:219
+msgid "Import a GGUF model"
+msgstr "GGUF 모델 가져오기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:85
+msgid "Import from Monit"
+msgstr "Monit에서 가져오기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:86
+msgid "Import the Monit e-mail settings"
+msgstr "Monit 이메일 설정 가져오기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:61
+msgid "In KEV"
+msgstr "KEV 포함"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:87
+msgid "In analysis"
+msgstr "분석 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:205
+msgid "Incident #{id}"
+msgstr "인시던트 #{id}"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:66
+msgid "Incidents"
+msgstr "인시던트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:64
+msgid ""
+"Independent copy, editable here. The password is kept as a masked secret and "
+"never shown."
+msgstr "여기서 편집할 수 있는 독립 사본입니다. 비밀번호는 마스킹된 비밀로 보관되며 절대 표시되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:58
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1271
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1279
+msgid "Info"
+msgstr "정보"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:70
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1132
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1310
+msgid "Install"
+msgstr "설치"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:66
+msgid "Install (simulate first)"
+msgstr "설치 (먼저 시뮬레이션)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1216
+msgid ""
+"Install opens the quarantine setup: ledger, aliases pa_quarantine and "
+"pa_never_block, the rule Max Cyber IA, scenarios, a cron job every 5 minutes "
+"and the first run, one step at a time; every step is simulated first and can "
+"be undone alone."
+msgstr "설치하면 격리 설정이 열립니다: 원장, 별칭 pa_quarantine 및 pa_never_block, Max Cyber IA 규칙, 시나리오, 5분마다 실행되는 크론 작업과 첫 실행을 한 단계씩 진행합니다. 모든 단계는 먼저 시뮬레이션되며 개별적으로 실행 취소할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:192
+msgid "Install options"
+msgstr "설치 옵션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:204
+msgid "Install runtime"
+msgstr "런타임 설치"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:57
+msgid "Install the runtime first (Simulate install, then Apply install)."
+msgstr "먼저 런타임을 설치하세요 (설치 시뮬레이션 후 설치 적용)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:204
+msgid "Installed"
+msgstr "설치됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:119
+msgid "Installed and running"
+msgstr "설치되어 실행 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:189
+msgid "Installed models"
+msgstr "설치된 모델"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:120
+msgid "Installed, not running"
+msgstr "설치되었으나 실행되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:81
+msgid ""
+"Installing creates the case database and a cron job every 5 minutes. The "
+"simulation shows every step first."
+msgstr "설치하면 케이스 데이터베이스와 5분마다 실행되는 크론 작업이 생성됩니다. 시뮬레이션에서 모든 단계를 먼저 보여 줍니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:40
+msgid ""
+"Installs the automatic quarantine (rule 'Max Cyber IA') step by step. Every "
+"step shows the state detected now; Simulate shows exactly what would change, "
+"Apply asks for confirmation, and Undo reverts that step alone (its entry in "
+"the action history)."
+msgstr "자동 격리(규칙 'Max Cyber IA')를 단계별로 설치합니다. 각 단계는 지금 감지된 상태를 보여 줍니다. 시뮬레이션은 무엇이 바뀔지 정확히 보여 주고, 적용은 확인을 요청하며, 실행 취소는 해당 단계만 되돌립니다 (작업 기록의 해당 항목)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:128
+msgid "Instruction sets"
+msgstr "명령어 집합"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:146
+msgid ""
+"Integrated GPU not used: it shares the memory channel and OPNsense ships no "
+"driver for it."
+msgstr "내장 GPU는 사용하지 않습니다: 메모리 채널을 공유하며 OPNsense에는 해당 드라이버가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:185
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:202
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:214
+msgid "Interface"
+msgstr "인터페이스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:134
+msgid "Interfaces"
+msgstr "인터페이스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:117
+msgid "Internal host to bad destination"
+msgstr "내부 호스트에서 악성 목적지로"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:164
+msgid ""
+"Internal only (LAN/VPN) AND CVSS >= 7, OR EPSS >= 0.1, OR exposed without a "
+"high score"
+msgstr "내부 전용(LAN/VPN) AND CVSS >= 7, OR EPSS >= 0.1, OR 높은 점수 없이 노출됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:63
+msgid "Internal scan"
+msgstr "내부 스캔"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:194
+msgid "Internet reachable service involved"
+msgstr "인터넷에서 접근 가능한 서비스 관련"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/VulnsController.php:71
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/VulnsController.php:86
+msgid "Invalid CVE id."
+msgstr "잘못된 CVE ID입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:184
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:147
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:222
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:55
+msgid "Invalid action."
+msgstr "잘못된 작업입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:111
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:124
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:142
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:215
+msgid "Invalid address."
+msgstr "잘못된 주소입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:192
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:164
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:230
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:63
+msgid "Invalid argument."
+msgstr "잘못된 인수입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:185
+msgid "Invalid case or state."
+msgstr "잘못된 케이스 또는 상태입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:118
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:136
+msgid "Invalid case."
+msgstr "잘못된 케이스입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/PostureController.php:88
+msgid "Invalid check id."
+msgstr "잘못된 검사 ID입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:150
+msgid "Invalid day."
+msgstr "잘못된 날짜입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:285
+msgid "Invalid duration."
+msgstr "잘못된 기간입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:216
+msgid "Invalid entry."
+msgstr "잘못된 항목입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:177
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:189
+msgid "Invalid filter."
+msgstr "잘못된 필터입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:81
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnalysisController.php:134
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:115
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:138
+msgid "Invalid finding id."
+msgstr "잘못된 탐지 결과 ID입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/DevicesController.php:106
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/DevicesController.php:81
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:121
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:145
+msgid "Invalid id."
+msgstr "잘못된 ID입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:167
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:186
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:191
+msgid "Invalid item."
+msgstr "잘못된 항목입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:214
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:240
+msgid "Invalid job id."
+msgstr "잘못된 작업 ID입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:196
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:168
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:71
+msgid "Invalid journal id."
+msgstr "잘못된 기록 ID입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/SetupController.php:67
+msgid "Invalid model name."
+msgstr "잘못된 모델 이름입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ShadowaiController.php:109
+msgid "Invalid network."
+msgstr "잘못된 네트워크입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:255
+msgid "Invalid path."
+msgstr "잘못된 경로입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:222
+msgid "Invalid port."
+msgstr "잘못된 포트입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:145
+msgid "Invalid request."
+msgstr "잘못된 요청입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/MinruleController.php:64
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/MinruleController.php:77
+msgid "Invalid rule id."
+msgstr "잘못된 규칙 ID입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:271
+msgid "Invalid selection."
+msgstr "잘못된 선택입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:96
+msgid "Invalid settings."
+msgstr "잘못된 설정입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:116
+msgid "IoT"
+msgstr "IoT"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:119
+msgid "It runs inside this service (priority follows its exposure)"
+msgstr "이 서비스 내부에서 실행됨 (우선 순위는 해당 서비스의 노출을 따름)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Italian"
+msgstr "이탈리아어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:62
+msgid "JA4 client fingerprints"
+msgstr "JA4 클라이언트 지문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:188
+msgid "Jail dataset"
+msgstr "jail 데이터셋"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Japanese"
+msgstr "일본어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:74
+msgid "KEV"
+msgstr "KEV"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:98
+#, php-format
+msgid "KEV collected %s (%s entries, %s)"
+msgstr "KEV 수집 %s (항목 %s개, %s)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:237
+msgid ""
+"Keeps the runtime small: the jail is pinned to a few CPUs with a low "
+"priority, one request at a time, one model loaded, and a bounded context."
+msgstr "런타임을 작게 유지합니다: jail은 낮은 우선 순위로 소수의 CPU에 고정되고, 한 번에 요청 하나, 로드된 모델 하나, 제한된 컨텍스트를 사용합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1208
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1438
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:151
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:79
+msgid "Kind"
+msgstr "종류"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:147
+msgid "Ladder"
+msgstr "단계표"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:95
+msgid "Language"
+msgstr "언어"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Language of the explanations; by default the language of your GUI session."
+msgstr "설명에 사용할 언어. 기본값은 GUI 세션의 언어입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:127
+msgid "Language: automatic"
+msgstr "언어: 자동"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:234
+msgid "Large models are slow on a firewall; only with this box ticked."
+msgstr "큰 모델은 방화벽에서 느립니다. 이 상자를 선택한 경우에만 허용됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:107
+msgid "Last activity"
+msgstr "마지막 활동"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:64
+msgid "Last analysis"
+msgstr "마지막 분석"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1164
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1422
+msgid "Last offense"
+msgstr "마지막 위반"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:176
+msgid "Last run"
+msgstr "마지막 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:66
+#, php-format
+msgid "Last scan %s"
+msgstr "마지막 스캔 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:85
+msgid "Last seen"
+msgstr "마지막 확인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:54
+msgid "Last use"
+msgstr "마지막 사용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1089
+msgid "Latest jobs"
+msgstr "최근 작업"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:106
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:55
+msgid "Ledger"
+msgstr "원장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:198
+msgid "Ledger (2)"
+msgstr "원장 (2)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:73
+msgid ""
+"Legacy rule: open Firewall: Rules: Migration to convert it before editing"
+msgstr "레거시 규칙: 편집하기 전에 방화벽: 규칙: 마이그레이션에서 변환하세요"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:140
+msgid "Less than 10 GiB free: room for the runtime and one small model only"
+msgstr "여유 공간 10 GiB 미만: 런타임과 작은 모델 하나만 들어갑니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:138
+msgid "Less than 12 GB of RAM: only small models (up to 3B) fit"
+msgstr "RAM 12 GB 미만: 작은 모델(최대 3B)만 들어갑니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:139
+msgid "Less than 4 GiB free: no room for the runtime and a model"
+msgstr "여유 공간 4 GiB 미만: 런타임과 모델을 둘 공간이 없습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:137
+msgid "Less than 8 GB of RAM: a local model would starve the firewall"
+msgstr "RAM 8 GB 미만: 로컬 모델이 방화벽의 자원을 고갈시킵니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1159
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1416
+msgid "Level"
+msgstr "레벨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:91
+msgid "Limit"
+msgstr "제한"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:156
+msgid "Limit of active entries"
+msgstr "활성 항목 한도"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:190
+msgid "Limits"
+msgstr "제한"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:95
+msgid "List models"
+msgstr "모델 목록"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:132
+msgid "Load average (1 / 5 / 15 min)"
+msgstr "부하 평균 (1 / 5 / 15분)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:143
+msgid "Load is high right now; explanations should run outside peak hours"
+msgstr "현재 부하가 높습니다. 설명은 사용량이 적은 시간에 실행하세요"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1194
+msgid "Load more"
+msgstr "더 불러오기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:39
+msgid "Loading..."
+msgstr "불러오는 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:89
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:158
+msgid "Local"
+msgstr "로컬"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:128
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:85
+msgid "Low"
+msgstr "낮음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:102
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:109
+msgid "MAC"
+msgstr "MAC"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1151
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1406
+msgid "Make permanent"
+msgstr "영구로 설정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:81
+msgid "Manufacturer"
+msgstr "제조업체"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:67
+#, php-format
+msgid "Manufacturers: %s (%s entries)"
+msgstr "제조업체: %s (항목 %s개)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:89
+#, php-format
+msgid "Mapping suggestion for %s"
+msgstr "%s에 대한 매핑 제안"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:77
+#, php-format
+msgid "Mark %s device(s)"
+msgstr "장치 %s대 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:90
+msgid "Mark as expected"
+msgstr "예상된 것으로 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:158
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:75
+msgid "Mark as known"
+msgstr "알려진 것으로 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:159
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:76
+msgid "Mark as not known"
+msgstr "알려지지 않은 것으로 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:181
+msgid "Mark the quarantine as running (it is paused now)."
+msgstr "격리를 실행 중으로 표시합니다 (현재 일시 중지됨)."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Max"
+msgstr "최대"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1224
+msgid "Maximum active pf entries"
+msgstr "최대 활성 pf 항목 수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:76
+msgid "Maximum memory of the jail (RCTL)."
+msgstr "jail의 최대 메모리 (RCTL)."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Maximum time to wait for an answer. Leave empty for the provider default "
+"(Ollama on this firewall 360 s, Ollama on the LAN 120 s, Claude Code (LAN) "
+"300 s, Claude 180 s). Local models on small hardware can need a few minutes."
+msgstr "응답을 기다리는 최대 시간입니다. 비워 두면 제공자 기본값을 사용합니다 (이 방화벽의 Ollama 360초, LAN의 Ollama 120초, Claude Code (LAN) 300초, Claude 180초). 작은 하드웨어의 로컬 모델은 몇 분이 걸릴 수 있습니다."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:127
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:84
+msgid "Medium"
+msgstr "중간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:65
+msgid "Medium risk"
+msgstr "중간 위험"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:65
+msgid "Method"
+msgstr "방법"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:407
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:92
+msgid "Minimal rule"
+msgstr "최소 규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:36
+msgid "Minimal rule from the observed traffic"
+msgstr "관찰된 트래픽 기반 최소 규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:73
+msgid "Minimum TLS"
+msgstr "최소 TLS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:125
+msgid "Minimum severity"
+msgstr "최소 심각도"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1083
+msgid "Mode"
+msgstr "모드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1082
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:102
+msgid "Model"
+msgstr "모델"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:222
+msgid "Model name (name:tag)"
+msgstr "모델 이름 (name:tag)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:231
+msgid "Model name from the Ollama library"
+msgstr "Ollama 라이브러리의 모델 이름"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:293
+msgid "Model name used by the local runtime (chosen in the Model step)."
+msgstr "로컬 런타임이 사용하는 모델 이름 (모델 단계에서 선택)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:256
+msgid "Model to measure"
+msgstr "측정할 모델"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:164
+msgid ""
+"Models are stored below /var/db/ai (a ZFS dataset on ZFS systems). The "
+"directory comes from the Settings (Models directory)."
+msgstr "모델은 /var/db/ai 아래에 저장됩니다 (ZFS 시스템에서는 ZFS 데이터셋). 디렉터리는 설정(모델 디렉터리)에서 가져옵니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:165
+msgid "Models directory"
+msgstr "모델 디렉터리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:82
+msgid "Monit has no mail server configured (Services > Monit > Settings)."
+msgstr "Monit에 메일 서버가 설정되어 있지 않습니다 (서비스 > Monit > 설정)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:109
+msgid "More"
+msgstr "더 보기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:180
+msgid "Most relevant cases"
+msgstr "가장 관련성 높은 케이스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:63
+msgid "N/A"
+msgstr "없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:81
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:283
+msgid "NOT anonymized"
+msgstr "익명화되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:99
+msgid "NTP servers"
+msgstr "NTP 서버"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:111
+msgid "NVR/DVR"
+msgstr "NVR/DVR"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:104
+msgid "NXDOMAIN per hour"
+msgstr "시간당 NXDOMAIN"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:79
+msgid "Name"
+msgstr "이름"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:77
+msgid "Needs the RAM limit enabled (button below, then a reboot)."
+msgstr "RAM 제한을 활성화해야 합니다 (아래 버튼 후 재부팅)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:60
+msgid "NetFlow (approximate)"
+msgstr "NetFlow (근사치)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1152
+msgid "Never block (pa_never_block)"
+msgstr "차단 안 함 (pa_never_block)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:151
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:86
+msgid "New"
+msgstr "신규"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:49
+msgid "New (3 days)"
+msgstr "신규 (3일)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:62
+msgid "New (7 days)"
+msgstr "신규 (7일)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:48
+msgid "New aliases"
+msgstr "새 별칭"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:62
+msgid "New device"
+msgstr "새 장치"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:64
+msgid "New domain"
+msgstr "새 도메인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:70
+msgid "New problem"
+msgstr "새 문제"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:112
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1193
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:93
+msgid "Next"
+msgstr "다음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1150
+msgid "Next level"
+msgstr "다음 레벨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:171
+msgid "Next run"
+msgstr "다음 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:145
+msgid "Next steps"
+msgstr "다음 단계"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:160
+msgid "Next: storage, runtime, model, limits and test on this firewall."
+msgstr "다음: 이 방화벽의 스토리지, 런타임, 모델, 제한, 테스트."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:88
+msgid "No AI provider: nothing ever leaves this firewall."
+msgstr "AI 제공자 없음: 어떤 데이터도 이 방화벽을 벗어나지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:59
+msgid "No AI service seen in this window."
+msgstr "이 기간에 확인된 AI 서비스가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:80
+msgid "No WAN interface found."
+msgstr "WAN 인터페이스를 찾을 수 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:274
+msgid "No analysis report yet: run Analyze on the Findings page first."
+msgstr "아직 분석 보고서가 없습니다. 먼저 탐지 결과 페이지에서 분석을 실행하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:63
+msgid "No analysis yet. Click Analyze to review the rule set."
+msgstr "아직 분석이 없습니다. 분석을 클릭하여 규칙 세트를 검토하세요."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ApiHelperTrait.php:71
+msgid ""
+"No answer from the backend (timeout or script error), see the system log."
+msgstr "백엔드에서 응답이 없습니다 (시간 초과 또는 스크립트 오류). 시스템 로그를 확인하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:109
+msgid "No cases match the filters."
+msgstr "필터와 일치하는 케이스가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:107
+msgid "No changes to save."
+msgstr "저장할 변경 사항이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:302
+msgid "No changes to save: the settings already match."
+msgstr "저장할 변경 사항이 없습니다. 설정이 이미 일치합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:72
+msgid "No check matches the filter."
+msgstr "필터와 일치하는 검사가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:71
+msgid ""
+"No data yet: the first run learns the network, findings appear after it."
+msgstr "아직 데이터가 없습니다. 첫 실행에서 네트워크를 학습하며, 그 이후에 탐지 결과가 나타납니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:176
+msgid "No digest for this day yet."
+msgstr "이 날짜의 요약이 아직 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1195
+msgid "No entries match the filters."
+msgstr "필터와 일치하는 항목이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:97
+msgid "No exceptions."
+msgstr "예외가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:102
+msgid ""
+"No exposure report yet: run it in the Exposure tab of the Policy Analyzer."
+msgstr "아직 노출 보고서가 없습니다. Policy Analyzer의 노출 탭에서 실행하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:70
+msgid "No findings match the filters."
+msgstr "필터와 일치하는 탐지 결과가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:112
+msgid "No findings match the selected filters."
+msgstr "선택한 필터와 일치하는 탐지 결과가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:218
+msgid "No model downloaded yet."
+msgstr "아직 다운로드한 모델이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:157
+msgid ""
+"No model fits this hardware as a local runtime: use a model server in your "
+"network."
+msgstr "이 하드웨어에서 로컬 런타임으로 적합한 모델이 없습니다. 네트워크의 모델 서버를 사용하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:100
+msgid "No network is used unless you click Update (simulation first)."
+msgstr "업데이트를 클릭하지 않는 한 네트워크를 사용하지 않습니다 (먼저 시뮬레이션)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:120
+msgid "No network path (library only)"
+msgstr "네트워크 경로 없음 (라이브러리만)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:63
+msgid "No permissive pass rule found."
+msgstr "허용 범위가 넓은 통과 규칙이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:84
+msgid "No posture report yet."
+msgstr "아직 보안 태세 보고서가 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:291
+msgid "No provider chosen yet: go back to the Provider step."
+msgstr "아직 선택한 제공자가 없습니다. 제공자 단계로 돌아가세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:124
+msgid "No scan yet: click Scan now."
+msgstr "아직 스캔하지 않았습니다. 지금 스캔을 클릭하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:61
+msgid "No traffic attributed to this rule in the window."
+msgstr "이 기간에 이 규칙에 해당하는 트래픽이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:167
+msgid "No value changed yet: edit a field to simulate."
+msgstr "아직 변경된 값이 없습니다. 필드를 편집하면 시뮬레이션됩니다."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "None"
+msgstr "없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:87
+msgid "None (AI disabled)"
+msgstr "없음 (AI 비활성화)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:89
+msgid "Normal for this host"
+msgstr "이 호스트에서는 정상"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1127
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:205
+msgid "Not installed"
+msgstr "설치되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:118
+msgid "Not installed yet: use the AI setup to install it."
+msgstr "아직 설치되지 않았습니다. AI 설정에서 설치하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:152
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:72
+msgid "Not known"
+msgstr "알려지지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:63
+msgid "Not marked known"
+msgstr "알려진 것으로 표시되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:149
+msgid "Not recommended for a local runtime"
+msgstr "로컬 런타임에는 권장하지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:165
+msgid "Note"
+msgstr "참고"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:133
+msgid "Note (optional)"
+msgstr "메모 (선택 사항)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:128
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:52
+msgid "Notes"
+msgstr "메모"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:87
+msgid "Nothing found for these filters."
+msgstr "이 필터에 대해 찾은 항목이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:51
+msgid "Nothing observed would be blocked."
+msgstr "관찰된 트래픽 중 차단될 것은 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:88
+msgid ""
+"Nothing runs by itself: changes open a simulation first and are journaled."
+msgstr "저절로 실행되는 것은 없습니다. 변경은 먼저 시뮬레이션을 열고 기록됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:36
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:128
+msgid "Nothing to do: the system is already in the requested state."
+msgstr "할 일이 없습니다. 시스템이 이미 요청한 상태입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:161
+msgid ""
+"Nothing to install on this firewall: the next step collects the connection "
+"details and enables the AI."
+msgstr "이 방화벽에 설치할 것이 없습니다. 다음 단계에서 연결 정보를 입력받고 AI를 활성화합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:203
+msgid "Nothing to remove."
+msgstr "제거할 것이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:41
+msgid "Nothing to show."
+msgstr "표시할 항목이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:118
+msgid "Notification center enabled"
+msgstr "알림 센터 활성화됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:176
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:59
+msgid "Notifications"
+msgstr "알림"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:106
+msgid "Notifications sent"
+msgstr "보낸 알림"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:90
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:46
+msgid "Now"
+msgstr "지금"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:42
+msgid "Observed"
+msgstr "관찰됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:50
+msgid "Observed traffic the proposal would block"
+msgstr "제안 적용 시 차단될 관찰된 트래픽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:76
+msgid "Occurrences"
+msgstr "발생 횟수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1141
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1420
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1439
+msgid "Offenses"
+msgstr "위반"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Offer \"Explain with AI\" on the findings. Off by default: without it "
+"nothing ever leaves this firewall. The AI only explains and suggests in "
+"text, it never changes the configuration."
+msgstr "탐지 결과에 \"AI로 설명\"을 제공합니다. 기본값은 꺼짐이며, 꺼져 있으면 어떤 데이터도 이 방화벽을 벗어나지 않습니다. AI는 텍스트로 설명하고 제안만 할 뿐 설정을 절대 변경하지 않습니다."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Ollama"
+msgstr "Ollama"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:178
+msgid ""
+"Ollama runs in an isolated FreeBSD jail below /var/db/ai/jail, without "
+"network access, listening on 127.0.0.1:11434 only. The package database of "
+"OPNsense is not touched."
+msgstr "Ollama는 /var/db/ai/jail 아래의 격리된 FreeBSD jail에서 네트워크 접근 없이 실행되며 127.0.0.1:11434에서만 수신합니다. OPNsense의 패키지 데이터베이스는 건드리지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:185
+msgid "Ollama version"
+msgstr "Ollama 버전"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "On a server in my LAN"
+msgstr "내 LAN의 서버에서"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "On this firewall (local)"
+msgstr "이 방화벽에서 (로컬)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:148
+msgid "Open"
+msgstr "열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:90
+msgid "Open (new + in analysis)"
+msgstr "열림 (신규 + 분석 중)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:113
+msgid "Open AI setup"
+msgstr "AI 설정 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:275
+msgid "Open Findings"
+msgstr "탐지 결과 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:79
+msgid "Open Settings"
+msgstr "설정 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:111
+msgid "Open in Firewall: Rules"
+msgstr "방화벽: 규칙에서 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:153
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1154
+msgid "Open in Live View"
+msgstr "실시간 보기에서 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:69
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:53
+msgid "Open page"
+msgstr "페이지 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:54
+msgid "Open rule"
+msgstr "규칙 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:191
+msgid "Open the Quarantine tab"
+msgstr "격리 탭 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:84
+msgid "Open the action history"
+msgstr "작업 기록 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:124
+msgid "Open the full action history"
+msgstr "전체 작업 기록 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:74
+msgid "Open the rule in Firewall: Rules (new tab)"
+msgstr "방화벽: 규칙에서 규칙 열기 (새 탭)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Opus 5.5 — balanced (US$4/20)"
+msgstr "Opus 5.5 — 균형형 (US$4/20)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Opus — balanced, uses the quota fast"
+msgstr "Opus — 균형형, 할당량을 빠르게 소모"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1379
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1380
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1425
+msgid "Origin"
+msgstr "출처"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:56
+msgid "Other"
+msgstr "기타"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:61
+msgid "Outbound volume"
+msgstr "아웃바운드 양"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:63
+msgid "Own settings (imported from Monit or typed)"
+msgstr "자체 설정 (Monit에서 가져오거나 직접 입력)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:63
+msgid "P1 critical"
+msgstr "P1 심각"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:64
+msgid "P2 high"
+msgstr "P2 높음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:65
+msgid "P3 medium"
+msgstr "P3 중간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:66
+msgid "P4 low"
+msgstr "P4 낮음"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:134
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:225
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:236
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:77
+msgid "POST required"
+msgstr "POST가 필요합니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:72
+msgid "Package"
+msgstr "패키지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:100
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:217
+msgid "Packets"
+msgstr "패킷"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:121
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:98
+msgid "Parameters"
+msgstr "매개변수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:200
+msgid "Part of it was allowed"
+msgstr "일부 허용됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:62
+msgid "Pass"
+msgstr "통과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:134
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:55
+msgid "Passive inventory of the local network: nothing is sent to the devices."
+msgstr "로컬 네트워크의 수동 인벤토리: 장치에 아무것도 전송하지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:75
+msgid "Password"
+msgstr "비밀번호"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1134
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1315
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:185
+msgid "Pause"
+msgstr "일시 중지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:175
+msgid "Paused"
+msgstr "일시 중지됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:51
+msgid "Per day (DNS queries + TLS connections)"
+msgstr "일별 (DNS 쿼리 + TLS 연결)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1191
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1210
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1441
+msgid "Per year"
+msgstr "연간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:95
+msgid "Period"
+msgstr "기간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:175
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:58
+msgid "Periodic report"
+msgstr "정기 보고서"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:211
+msgid ""
+"Pick the model the explanations will use. The recommendation is computed "
+"from this hardware; the download is verified (SHA256) and can be cancelled."
+msgstr "설명에 사용할 모델을 선택하세요. 권장 모델은 이 하드웨어를 기준으로 계산됩니다. 다운로드는 검증(SHA256)되며 취소할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1038
+msgid "Please correct the highlighted fields."
+msgstr "강조 표시된 필드를 수정하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Policy Analyzer"
+msgstr "Policy Analyzer"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:102
+msgid "Policy Analyzer findings"
+msgstr "Policy Analyzer 탐지 결과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:167
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:70
+msgid "Port"
+msgstr "포트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1219
+msgid "Port scan: distinct destination ports"
+msgstr "포트 스캔: 서로 다른 목적지 포트 수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:151
+msgid "Port scan: distinct ports"
+msgstr "포트 스캔: 서로 다른 포트 수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:152
+msgid "Port scan: window (s)"
+msgstr "포트 스캔: 기간 (초)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1220
+msgid "Port scan: window (seconds)"
+msgstr "포트 스캔: 기간 (초)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:120
+msgid "Port spike"
+msgstr "포트 급증"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1205
+msgid "Ports"
+msgstr "포트"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:51
+msgid "Portuguese (Brazil)"
+msgstr "포르투갈어 (브라질)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Portuguese (Portugal)"
+msgstr "포르투갈어 (포르투갈)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:139
+msgid "Position"
+msgstr "순서"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Posture"
+msgstr "보안 태세"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:100
+msgid "Posture (exposure)"
+msgstr "보안 태세 (노출)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:66
+msgid "Posture score"
+msgstr "보안 태세 점수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:98
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:176
+msgid "Prepare storage"
+msgstr "스토리지 준비"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:46
+msgid "Prepare the storage first (Simulate prepare, then Prepare storage)."
+msgstr "먼저 스토리지를 준비하세요 (준비 시뮬레이션 후 스토리지 준비)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:39
+msgid ""
+"Prepares the optional AI explanations step by step. Every step shows the "
+"state detected now; Simulate shows exactly what would change, Apply asks for "
+"confirmation, and every change can be reverted from the action history. "
+"Nothing is ever applied without its simulation."
+msgstr "선택 사항인 AI 설명을 단계별로 준비합니다. 각 단계는 지금 감지된 상태를 보여 줍니다. 시뮬레이션은 무엇이 바뀔지 정확히 보여 주고, 적용은 확인을 요청하며, 모든 변경은 작업 기록에서 되돌릴 수 있습니다. 시뮬레이션 없이 적용되는 것은 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:153
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:73
+msgid "Present"
+msgstr "있음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:61
+msgid "Present now"
+msgstr "현재 있음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1079
+msgid "Presets"
+msgstr "사전 설정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:153
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:109
+msgid "Preview"
+msgstr "미리 보기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:110
+msgid "Preview with AI summary"
+msgstr "AI 요약 포함 미리 보기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:158
+#, php-format
+msgid "Preview: with the logs of the last 5 min, %n address(es) would enter"
+msgstr "미리 보기: 최근 5분의 로그 기준으로 주소 %n개가 진입합니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:111
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1192
+msgid "Previous"
+msgstr "이전"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:67
+msgid "Prioritised"
+msgstr "우선 처리됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:160
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:162
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:163
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:164
+msgid "Priority"
+msgstr "우선 순위"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:245
+msgid "Priority (nice)"
+msgstr "우선 순위 (nice)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:70
+msgid "Proposal only: nothing is applied from here."
+msgstr "제안일 뿐입니다. 여기서는 아무것도 적용되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:79
+msgid ""
+"Proposal only: nothing is changed from here. Change it on the page, then run "
+"the checks again."
+msgstr "제안일 뿐입니다. 여기서는 아무것도 변경되지 않습니다. 해당 페이지에서 변경한 다음 검사를 다시 실행하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:69
+msgid ""
+"Proposal only: open the rule and change it yourself; nothing is applied from "
+"here."
+msgstr "제안일 뿐입니다. 규칙을 열어 직접 변경하세요. 여기서는 아무것도 적용되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:47
+msgid "Proposed"
+msgstr "제안됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:44
+msgid "Proposed changes"
+msgstr "제안된 변경 사항"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1199
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1321
+msgid "Protected addresses"
+msgstr "보호된 주소"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:188
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:93
+msgid "Proto"
+msgstr "프로토콜"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1082
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:99
+msgid "Provider"
+msgstr "제공자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:151
+msgid "Put {ip} in quarantine"
+msgstr "{ip} 격리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:150
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1240
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:101
+msgid "Quarantine"
+msgstr "격리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:37
+msgid "Quarantine setup"
+msgstr "격리 설정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:146
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:261
+msgid "Question"
+msgstr "질문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:133
+msgid "Queue and history"
+msgstr "대기열 및 기록"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:258
+msgid "Quick test"
+msgstr "빠른 테스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:159
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:129
+msgid "RAM"
+msgstr "RAM"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:75
+msgid "RAM limit (GB)"
+msgstr "RAM 제한 (GB)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:72
+msgid ""
+"RAM limit enabled: it becomes active after the next reboot of the firewall."
+msgstr "RAM 제한이 활성화되었습니다. 다음 방화벽 재부팅 후 적용됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:267
+msgid "RAM used"
+msgstr "사용 중인 RAM"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:62
+msgid "Rare destination"
+msgstr "드문 목적지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:162
+msgid "Reachable from the internet AND (in CISA KEV OR EPSS >= 0.5)"
+msgstr "인터넷에서 접근 가능 AND (CISA KEV 포함 OR EPSS >= 0.5)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:163
+msgid "Reachable from the internet AND CVSS >= 7, OR in KEV while not exposed"
+msgstr "인터넷에서 접근 가능 AND CVSS >= 7, OR 노출되지 않았지만 KEV 포함"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:190
+msgid "Reached an internal host"
+msgstr "내부 호스트에 도달함"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:124
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:44
+msgid "Read only"
+msgstr "읽기 전용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:58
+msgid "Reading DNS and TLS data..."
+msgstr "DNS 및 TLS 데이터를 읽는 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:42
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:87
+msgid "Reading the current state..."
+msgstr "현재 상태를 읽는 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:40
+msgid "Reading the filter log / NetFlow of the rule..."
+msgstr "규칙의 필터 로그 / NetFlow를 읽는 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1161
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1374
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1375
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1418
+msgid "Reason"
+msgstr "사유"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:79
+msgid "Recipients"
+msgstr "수신자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:81
+msgid "Recipients (empty: the Monit alert recipients)"
+msgstr "수신자 (비어 있음: Monit 경고 수신자)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1295
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:58
+msgid "Recommendation"
+msgstr "권장 사항"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:168
+msgid ""
+"Recommendations are not available (the AI setup component is not installed)."
+msgstr "권장 사항을 사용할 수 없습니다 (AI 설정 구성 요소가 설치되지 않음)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:156
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:228
+msgid "Recommended for this hardware"
+msgstr "이 하드웨어에 권장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:52
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:145
+msgid "Recorded in the action history, it can be reverted from there."
+msgstr "작업 기록에 기록되며 그곳에서 되돌릴 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:170
+msgid "Recorded in the action history, it can be reverted there."
+msgstr "작업 기록에 기록되며 그곳에서 되돌릴 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:188
+msgid "Recurrence"
+msgstr "재발"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:106
+msgid "References"
+msgstr "참조"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:179
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:208
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:240
+msgid "Refresh"
+msgstr "새로 고침"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:161
+msgid "Refresh preview"
+msgstr "미리 보기 새로 고침"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1399
+msgid "Release"
+msgstr "해제"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:104
+msgid "Relevant CVEs"
+msgstr "관련 CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1160
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1417
+msgid "Remaining"
+msgstr "남음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:98
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1133
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1325
+msgid "Remove"
+msgstr "제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:124
+#, php-format
+msgid "Remove %s"
+msgstr "%s 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:193
+msgid "Remove all"
+msgstr "모두 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:192
+msgid "Remove all (step by step)"
+msgstr "모두 제거 (단계별)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:58
+msgid "Remove local AI"
+msgstr "로컬 AI 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:59
+msgid ""
+"Remove local AI undoes the installation with one click; downloaded models "
+"are kept unless you choose to delete them."
+msgstr "로컬 AI 제거는 한 번의 클릭으로 설치를 취소합니다. 다운로드한 모델은 삭제를 선택하지 않는 한 유지됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:124
+msgid "Remove my decision (back to pending)"
+msgstr "내 결정 제거 (보류 상태로 복귀)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:173
+msgid "Remove schedule"
+msgstr "스케쥴 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:130
+msgid "Remove the aliases"
+msgstr "별칭 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:143
+msgid "Remove the rule"
+msgstr "규칙 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1312
+msgid "Reopen the quarantine setup at the current step"
+msgstr "현재 단계에서 격리 설정 다시 열기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:119
+msgid "Repeat offender"
+msgstr "반복 위반자"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Replace IP addresses, hostnames, descriptions, alias and user names by "
+"placeholders (IP4_PRIV_1, HOST_1, DESC_1, ...) before sending, and put the "
+"real values back in the answer. Strongly recommended for providers outside "
+"this firewall."
+msgstr "전송하기 전에 IP 주소, 호스트 이름, 설명, 별칭 및 사용자 이름을 자리 표시자(IP4_PRIV_1, HOST_1, DESC_1, ...)로 대체하고 응답에서 실제 값을 복원합니다. 이 방화벽 외부의 제공자에는 사용을 강력히 권장합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:67
+msgid "Replay over the window"
+msgstr "기간 전체 재실행"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:165
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:54
+msgid "Reports and notifications"
+msgstr "보고서 및 알림"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:146
+msgid "Resend"
+msgstr "재전송"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:150
+msgid "Reset after (days without offenses)"
+msgstr "초기화 기준 (위반 없는 일수)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:88
+msgid "Resolved"
+msgstr "해결됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:134
+msgid "Resource accounting (kern.racct.enable)"
+msgstr "자원 계정 (kern.racct.enable)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:110
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1462
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:80
+msgid "Result"
+msgstr "결과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:179
+msgid "Result of the first run"
+msgstr "첫 실행 결과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1135
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1317
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:186
+msgid "Resume"
+msgstr "재개"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:54
+msgid "Resume download"
+msgstr "다운로드 재개"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:52
+msgid "Resume installation"
+msgstr "설치 재개"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:85
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:123
+msgid "Revert"
+msgstr "되돌리기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:994
+msgid "Revert from the action history restores the previous value."
+msgstr "작업 기록에서 되돌리면 이전 값이 복원됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1030
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:303
+msgid "Revert from the action history restores the previous values."
+msgstr "작업 기록에서 되돌리면 이전 값들이 복원됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:146
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:46
+msgid "Risk"
+msgstr "위험"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:162
+msgid ""
+"Risk is inferred without the firmware version (manufacturer history, CISA "
+"KEV entries of the manufacturer, port forwards, new device): it is a hint, "
+"never a confirmed vulnerability. Isolating a device is a suggestion of the "
+"AI; do it yourself in Firewall > Rules."
+msgstr "위험은 펌웨어 버전 없이 추론됩니다 (제조업체 이력, 해당 제조업체의 CISA KEV 항목, 포트 포워딩, 새 장치). 이는 단서일 뿐 확인된 취약점이 아닙니다. 장치 격리는 AI의 제안이며, 방화벽 > 규칙에서 직접 수행하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:94
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:41
+msgid "Rule"
+msgstr "규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:196
+msgid "Rule (4): end the active quarantines, remove the rule"
+msgstr "규칙 (4): 활성 격리를 종료하고 규칙 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1294
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:66
+msgid "Rules"
+msgstr "규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:81
+msgid "Run analysis now"
+msgstr "지금 분석 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:264
+msgid "Run benchmark"
+msgstr "벤치마크 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:119
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:69
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:72
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:46
+msgid "Run now"
+msgstr "지금 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:182
+msgid ""
+"Run the quarantine once now; Simulate shows who would enter (read from the "
+"logs since the ledger was created)."
+msgstr "지금 격리를 한 번 실행합니다. 시뮬레이션은 누가 진입할지 보여 줍니다 (원장 생성 이후의 로그 기준)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1088
+msgid "Run the queue now"
+msgstr "지금 대기열 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:58
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:147
+msgid "Running in the background"
+msgstr "백그라운드에서 실행 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:47
+msgid "Running the checks..."
+msgstr "검사 실행 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:69
+msgid "Running..."
+msgstr "실행 중..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:168
+msgid ""
+"Runs the quarantine every 5 minutes (System: Settings: Cron) and rebuilds "
+"the pf table from the ledger after a reboot (boot hook)."
+msgstr "5분마다 격리를 실행하고 (시스템: 설정: 크론) 재부팅 후 원장으로부터 pf 테이블을 다시 만듭니다 (부팅 훅)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:179
+msgid "Runtime"
+msgstr "런타임"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:183
+msgid "Runtime state not available (is the setup component installed?)."
+msgstr "런타임 상태를 사용할 수 없습니다 (설정 구성 요소가 설치되어 있습니까?)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:117
+msgid "Runtime state not available."
+msgstr "런타임 상태를 사용할 수 없습니다."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Russian"
+msgstr "러시아어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:223
+msgid "SHA-256 (required for a local file)"
+msgstr "SHA-256 (로컬 파일에는 필수)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:69
+msgid "SMTP server"
+msgstr "SMTP 서버"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Same as the GUI"
+msgstr "GUI와 동일"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1486
+msgid "Save"
+msgstr "저장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:84
+msgid "Save channel"
+msgstr "채널 저장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:130
+msgid "Save notification settings"
+msgstr "알림 설정 저장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:108
+msgid "Save report settings"
+msgstr "보고서 설정 저장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:89
+msgid "Save reports and notifications settings"
+msgstr "보고서 및 알림 설정 저장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:103
+msgid "Save settings"
+msgstr "설정 저장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:97
+msgid "Save the settings first, this uses the saved values."
+msgstr "먼저 설정을 저장하세요. 저장된 값을 사용합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:157
+msgid "Saved provider"
+msgstr "저장된 제공자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1490
+msgid ""
+"Saving first shows the changes; every save is recorded in the action history "
+"and can be reverted. Test connection and List models use the saved settings "
+"and never send findings."
+msgstr "저장하면 먼저 변경 사항이 표시됩니다. 모든 저장은 작업 기록에 기록되며 되돌릴 수 있습니다. 연결 테스트와 모델 목록은 저장된 설정을 사용하며 탐지 결과를 절대 전송하지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:138
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:56
+msgid "Scan now"
+msgstr "지금 스캔"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:115
+msgid "Scan then allowed"
+msgstr "스캔 후 허용됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1082
+msgid "Scenario"
+msgstr "시나리오"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:58
+msgid "Scenarios"
+msgstr "시나리오"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:59
+msgid "Schedule"
+msgstr "스케쥴"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:195
+msgid "Schedule (6): remove the cron job and the boot hook"
+msgstr "스케쥴 (6): 크론 작업과 부팅 훅 제거"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:67
+msgid "Scheduled every 15 minutes"
+msgstr "15분마다 예약됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:115
+msgid "Scheduled jobs (System > Settings > Cron)"
+msgstr "예약된 작업 (시스템 > 설정 > 크론)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:108
+msgid "Score"
+msgstr "점수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:69
+msgid "Score trend (90 days)"
+msgstr "점수 추이 (90일)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:201
+msgid "Search"
+msgstr "검색"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:61
+msgid "Search checks"
+msgstr "검사 검색"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:146
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:79
+msgid "Search host, domain, port..."
+msgstr "호스트, 도메인, 포트 검색..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:154
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:74
+msgid "Search name, vendor, IP, MAC"
+msgstr "이름, 벤더, IP, MAC 검색"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1226
+msgid "Seconds per run"
+msgstr "실행당 초"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:99
+msgid "Sections"
+msgstr "섹션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:71
+msgid "Security"
+msgstr "보안"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:55
+msgid ""
+"Security report every 6 h / daily and e-mail alerts, through the e-mail "
+"setup of Monit."
+msgstr "6시간마다 / 매일 보안 보고서 및 이메일 경고 (Monit의 이메일 설정 사용)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:94
+msgid "See all"
+msgstr "모두 보기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:82
+msgid "See all models"
+msgstr "모든 모델 보기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:110
+msgid "Select a case to see its timeline."
+msgstr "타임라인을 보려면 케이스를 선택하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:72
+msgid "Select a finding to see its factors."
+msgstr "요인을 보려면 탐지 결과를 선택하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:52
+msgid "Select a provider to enable AI assistance."
+msgstr "AI 지원을 활성화하려면 제공자를 선택하세요."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ShadowaiController.php:95
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:72
+msgid "Select at least one service."
+msgstr "서비스를 하나 이상 선택하세요."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:90
+msgid "Select or enter a model."
+msgstr "모델을 선택하거나 입력하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:88
+msgid "Send a test e-mail"
+msgstr "테스트 이메일 보내기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:111
+msgid "Send report now"
+msgstr "지금 보고서 보내기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:87
+msgid "Send test"
+msgstr "테스트 보내기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:90
+msgid "Send the periodic report"
+msgstr "정기 보고서 보내기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:112
+msgid "Send the report now"
+msgstr "지금 보고서 보내기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:147
+msgid "Send this notification again now (an e-mail can not be unsent)?"
+msgstr "이 알림을 지금 다시 보내시겠습니까? (이메일은 보낸 후 취소할 수 없습니다)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:78
+msgid "Sender"
+msgstr "발송자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:278
+msgid ""
+"Sending needs the AI enabled with the saved settings: finish the setup, then "
+"come back to this step."
+msgstr "보내려면 저장된 설정으로 AI가 활성화되어 있어야 합니다. 설정을 마친 후 이 단계로 돌아오세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:177
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:60
+msgid "Sent e-mails"
+msgstr "보낸 이메일"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:242
+msgid "Sent with every request; at most the CPUs in the set."
+msgstr "모든 요청과 함께 전송됩니다. 최대값은 cpuset의 CPU 수입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:133
+msgid "Sequence"
+msgstr "시퀀스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:62
+msgid ""
+"Server, port, TLS, user, password, sender and recipients are read from "
+"Services > Monit at every send: always in sync, nothing is copied."
+msgstr "서버, 포트, TLS, 사용자, 비밀번호, 발송자 및 수신자는 전송할 때마다 서비스 > Monit에서 읽어 옵니다. 항상 동기화되며 아무것도 복사되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:205
+msgid "Service"
+msgstr "서비스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:145
+msgid "Service competing for CPU and memory"
+msgstr "CPU와 메모리를 두고 경쟁하는 서비스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:104
+msgid "Services"
+msgstr "서비스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:52
+msgid "Services by use"
+msgstr "용도별 서비스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1200
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1242
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1323
+msgid "Settings"
+msgstr "설정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:104
+msgid "Settings change"
+msgstr "설정 변경"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1313
+msgid "Setup"
+msgstr "설정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:246
+msgid "Sev"
+msgstr "심각도"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:105
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:230
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:93
+msgid "Severity"
+msgstr "심각도"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:167
+msgid "Severity raised"
+msgstr "심각도 상승"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:129
+msgid "Short AI summary in each alert (fixed text when the AI is off)"
+msgstr "각 경고에 포함되는 짧은 AI 요약 (AI가 꺼져 있으면 고정 텍스트)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:164
+msgid "Show all {n} alternatives"
+msgstr "대안 {n}개 모두 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:50
+msgid "Show data sent"
+msgstr "전송된 데이터 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:66
+msgid "Show plan"
+msgstr "계획 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:43
+msgid "Show what is sent"
+msgstr "전송되는 내용 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:63
+msgid "Show what was sent"
+msgstr "전송된 내용 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:152
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:139
+msgid "Show what would be sent"
+msgstr "전송될 내용 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:106
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:247
+msgid "Signature"
+msgstr "시그니처"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:66
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:95
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1085
+msgid "Simulate"
+msgstr "시뮬레이션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:43
+msgid "Simulate download"
+msgstr "다운로드 시뮬레이션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:55
+msgid "Simulate install"
+msgstr "설치 시뮬레이션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:78
+msgid "Simulate limits"
+msgstr "제한 시뮬레이션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:44
+msgid "Simulate prepare"
+msgstr "준비 시뮬레이션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:203
+msgid ""
+"Simulate shows the download size (FreeBSD base and packages), the disk "
+"space, every command, the ports and how to undo it. Apply runs in the "
+"background with progress and Cancel."
+msgstr "시뮬레이션은 다운로드 크기(FreeBSD base 및 패키지), 디스크 공간, 모든 명령, 포트, 되돌리는 방법을 보여 줍니다. 적용은 진행 상황과 취소 버튼과 함께 백그라운드에서 실행됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:227
+msgid "Simulate the import"
+msgstr "가져오기 시뮬레이션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:35
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:38
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:127
+msgid "Simulation"
+msgstr "시뮬레이션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:107
+msgid "Size"
+msgstr "크기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:89
+msgid "Skip"
+msgstr "건너뛰기"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Sonnet 5.5 — fast (US$2/10)"
+msgstr "Sonnet 5.5 — 빠름 (US$2/10)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Sonnet — fast (recommended)"
+msgstr "Sonnet — 빠름 (권장)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:247
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:94
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:123
+msgid "Source"
+msgstr "출발지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:100
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:68
+msgid "Sources"
+msgstr "출발지"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Spanish"
+msgstr "스페인어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:202
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:206
+msgid "Start"
+msgstr "시작"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:187
+msgid "Start at boot"
+msgstr "부팅 시 시작"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:201
+msgid "Start the runtime after installing"
+msgstr "설치 후 런타임 시작"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:202
+msgid "Start the runtime at boot"
+msgstr "부팅 시 런타임 시작"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1162
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1367
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1368
+msgid "State"
+msgstr "상태"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:164
+msgid "State changed"
+msgstr "상태 변경됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:218
+msgid "States"
+msgstr "상태"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1089
+msgid "Statistics per scenario and model (90 days)"
+msgstr "시나리오 및 모델별 통계 (90일)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:144
+msgid "Status"
+msgstr "상태"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:61
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:152
+msgid "Step"
+msgstr "단계"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:52
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:97
+#, php-format
+msgid "Step %n of %t"
+msgstr "단계 %n / %t"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:37
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:40
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:38
+msgid "Steps"
+msgstr "단계"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:207
+msgid "Stop"
+msgstr "중지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:108
+msgid "Stop the schedule"
+msgstr "스케쥴 중지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:100
+msgid "Storage"
+msgstr "스토리지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:50
+msgid "Stored answer from"
+msgstr "저장된 응답 기준"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:149
+msgid "Subject"
+msgstr "제목"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:124
+msgid "Subscribe"
+msgstr "구독"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:239
+msgid "Suggested"
+msgstr "제안됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:87
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:147
+msgid "Suggested actions"
+msgstr "제안된 조치"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:165
+msgid "Suggested settings"
+msgstr "제안된 설정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:60
+msgid "Suggestions"
+msgstr "제안"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:138
+msgid "Summarize again"
+msgstr "다시 요약"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:137
+msgid "Summarize with AI"
+msgstr "AI로 요약"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:188
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:287
+msgid "Summary"
+msgstr "요약"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:88
+msgid "Suricata"
+msgstr "Suricata"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:144
+msgid "Suricata in IPS mode: inference competes with inline inspection"
+msgstr "IPS 모드의 Suricata: 추론이 인라인 검사와 경쟁합니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:112
+msgid "Suricata is not writing alerts (eve.json) on this firewall."
+msgstr "이 방화벽에서 Suricata가 경고(eve.json)를 기록하고 있지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:107
+msgid "Suricata rules"
+msgstr "Suricata 규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:155
+msgid "Suricata severity up to"
+msgstr "Suricata 심각도 상한"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1223
+msgid ""
+"Suricata: highest severity number that counts (1 = only the most severe)"
+msgstr "Suricata: 집계되는 가장 높은 심각도 번호 (1 = 가장 심각한 것만)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:126
+msgid "System"
+msgstr "시스템"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:73
+msgid "System: Power: Reboot"
+msgstr "시스템: 전원: 재부팅"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1225
+msgid "TCP: count only connection attempts (1/0)"
+msgstr "TCP: 연결 시도만 집계 (1/0)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:157
+msgid "TCP: only connection attempts (SYN)"
+msgstr "TCP: 연결 시도(SYN)만"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:64
+msgid "TLS"
+msgstr "TLS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:50
+msgid "TLS connections"
+msgstr "TLS 연결"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:107
+msgid "TLS fingerprints"
+msgstr "TLS 지문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:61
+msgid "TLS server names"
+msgstr "TLS 서버 이름"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:112
+msgid "TV"
+msgstr "TV"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:101
+msgid "Tailscale peers"
+msgstr "Tailscale 피어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:150
+msgid "Technical details"
+msgstr "기술 세부 정보"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:104
+msgid "Test"
+msgstr "테스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1488
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:305
+msgid "Test connection"
+msgstr "연결 테스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:114
+msgid "Text"
+msgstr "텍스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:46
+msgid "The AI is disabled in the Policy Analyzer settings."
+msgstr "Policy Analyzer 설정에서 AI가 비활성화되어 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:47
+msgid ""
+"The AI only explains and suggests: nothing is changed. Apply any change "
+"yourself, with its simulation."
+msgstr "AI는 설명하고 제안만 합니다. 아무것도 변경되지 않습니다. 변경은 시뮬레이션을 거쳐 직접 적용하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:188
+msgid ""
+"The AI only summarises and recommends. Saving, importing and sending always "
+"show a simulation first; saved settings are recorded in the action history "
+"of the Policy Analyzer and can be reverted there. The Monit password is "
+"never shown, copied to the browser or written to a log."
+msgstr "AI는 요약하고 권장만 합니다. 저장, 가져오기, 전송은 항상 먼저 시뮬레이션을 보여 줍니다. 저장된 설정은 Policy Analyzer의 작업 기록에 기록되며 그곳에서 되돌릴 수 있습니다. Monit 비밀번호는 절대 표시되거나 브라우저로 복사되거나 로그에 기록되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:135
+msgid "The FreeBSD Ollama package only exists for amd64"
+msgstr "FreeBSD Ollama 패키지는 amd64용만 있습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:70
+msgid "The RAM limit of the local AI is off (kern.racct.enable=0)."
+msgstr "로컬 AI의 RAM 제한이 꺼져 있습니다 (kern.racct.enable=0)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1264
+msgid ""
+"The analysis is read only: it never changes rules or settings. Links open "
+"the rule in Firewall: Rules where you decide what to change."
+msgstr "분석은 읽기 전용입니다. 규칙이나 설정을 절대 변경하지 않습니다. 링크를 누르면 방화벽: 규칙에서 해당 규칙이 열리며, 무엇을 변경할지는 사용자가 결정합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:65
+msgid "The anomaly detection is not scheduled yet."
+msgstr "이상 징후 탐지가 아직 예약되지 않았습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:82
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:281
+msgid "The answer was cut off at the maximum length."
+msgstr "응답이 최대 길이에서 잘렸습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:83
+msgid ""
+"The assistant was closed, the background job keeps running (closing does not "
+"cancel it). Its progress and Cancel button are at the top of the Action "
+"history."
+msgstr "도우미가 닫혔지만 백그라운드 작업은 계속 실행됩니다 (닫아도 취소되지 않음). 진행 상황과 취소 버튼은 작업 기록 상단에 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:263
+msgid "The benchmark needs the runtime running and at least one model."
+msgstr "벤치마크를 실행하려면 런타임이 실행 중이고 모델이 하나 이상 있어야 합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:83
+#, php-format
+msgid "The channel is not usable yet: %s"
+msgstr "채널을 아직 사용할 수 없습니다: %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:123
+msgid "The console only reads data and shows text."
+msgstr "콘솔은 데이터를 읽고 텍스트만 표시합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:51
+#, php-format
+msgid "The download of %s did not finish."
+msgstr "%s 다운로드가 완료되지 않았습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:150
+msgid ""
+"The following steps install an isolated Ollama runtime on this firewall. You "
+"can still choose a server in your LAN or an API instead."
+msgstr "다음 단계에서는 이 방화벽에 격리된 Ollama 런타임을 설치합니다. 대신 LAN의 서버나 API를 선택할 수도 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1354
+msgid ""
+"The guards apply here too: private, own and protected addresses are refused, "
+"protected addresses inside a network stay reachable. Networks bigger than /"
+"16 (IPv4) or /32 (IPv6), ASNs with many prefixes and permanent entries ask "
+"for a second confirmation."
+msgstr "여기에도 보호 규칙이 적용됩니다: 사설, 자체 및 보호된 주소는 거부되며, 네트워크 안의 보호된 주소는 계속 접근 가능합니다. /16(IPv4) 또는 /32(IPv6)보다 큰 네트워크, 프리픽스가 많은 ASN, 영구 항목은 두 번째 확인을 요청합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:48
+msgid "The installation of the local AI did not finish: part of it is on disk."
+msgstr "로컬 AI 설치가 완료되지 않았습니다. 일부가 디스크에 남아 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:194
+msgid ""
+"The inverse steps run one by one, each with its own simulation and "
+"confirmation and its own entry in the action history (each can be undone)."
+msgstr "역방향 단계가 하나씩 실행되며, 각 단계마다 자체 시뮬레이션, 확인, 작업 기록 항목이 있습니다 (각각 실행 취소 가능)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:184
+msgid "The jail is running but Ollama does not answer on 127.0.0.1:11434 yet."
+msgstr "jail은 실행 중이지만 Ollama가 아직 127.0.0.1:11434에서 응답하지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:49
+msgid "The last installation of the local AI failed and was rolled back."
+msgstr "로컬 AI의 마지막 설치가 실패하여 롤백되었습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:113
+msgid "The ledger exists; nothing to create."
+msgstr "원장이 이미 있습니다. 생성할 것이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:105
+msgid ""
+"The ledger is the SQLite database of the quarantine: every offense, entry "
+"and exit, kept forever, plus the settings of the scenarios. Reading starts "
+"at the current end of the logs."
+msgstr "원장은 격리의 SQLite 데이터베이스로, 모든 위반, 진입 및 해제를 영구 보관하고 시나리오 설정도 담습니다. 읽기는 로그의 현재 끝에서 시작합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:127
+msgid "The list can be edited once the aliases exist (Apply)."
+msgstr "별칭이 생성된 후(적용) 목록을 편집할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:50
+msgid "The local AI is installed but not running."
+msgstr "로컬 AI가 설치되었지만 실행되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:62
+msgid ""
+"The local AI is removed and the firewall goes back to how it was before the "
+"installation. This removal is recorded too and can be undone from the action "
+"history (it installs the local AI again)."
+msgstr "로컬 AI가 제거되고 방화벽은 설치 전 상태로 돌아갑니다. 이 제거도 기록되며 작업 기록에서 실행 취소할 수 있습니다 (로컬 AI를 다시 설치함)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:294
+msgid ""
+"The local runtime is not installed: the explanations will fail until the "
+"Runtime step is applied."
+msgstr "로컬 런타임이 설치되지 않았습니다. 런타임 단계를 적용할 때까지 설명이 실패합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:136
+msgid "The local runtime targets FreeBSD 15"
+msgstr "로컬 런타임은 FreeBSD 15를 대상으로 합니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:280
+msgid "The model declined to answer"
+msgstr "모델이 응답을 거부했습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:91
+msgid ""
+"The model server on this firewall is prepared by the AI setup (storage, "
+"runtime, model)."
+msgstr "이 방화벽의 모델 서버는 AI 설정(스토리지, 런타임, 모델)에서 준비합니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:98
+msgid "The previous values do not validate anymore."
+msgstr "이전 값이 더 이상 유효성 검사를 통과하지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:187
+msgid ""
+"The quarantine is ready when every step is done. Each step can be undone "
+"alone; Remove all goes through the inverse steps one by one and keeps the "
+"ledger unless you choose otherwise."
+msgstr "모든 단계가 완료되면 격리가 준비됩니다. 각 단계는 개별적으로 실행 취소할 수 있습니다. 모두 제거는 역방향 단계를 하나씩 거치며, 다르게 선택하지 않는 한 원장은 유지됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:131
+msgid ""
+"The rule 'Max Cyber IA' blocks (quick, logged, IPv4+IPv6) inbound traffic "
+"from pa_quarantine on the WAN interfaces, before every other rule of its "
+"group."
+msgstr "'Max Cyber IA' 규칙은 WAN 인터페이스에서 pa_quarantine으로부터 들어오는 인바운드 트래픽을 그룹의 다른 모든 규칙보다 먼저 차단합니다 (quick, 로그 기록, IPv4+IPv6)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:66
+msgid "The rule already matches only what was observed."
+msgstr "규칙이 이미 관찰된 트래픽만 일치시킵니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:214
+msgid ""
+"The runtime is not installed yet: a model can be downloaded now and becomes "
+"usable once it is."
+msgstr "런타임이 아직 설치되지 않았습니다. 지금 모델을 다운로드할 수 있으며 런타임이 설치되면 사용할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:240
+msgid ""
+"The runtime is not installed: limits can be applied after the Runtime step."
+msgstr "런타임이 설치되지 않았습니다. 제한은 런타임 단계 이후에 적용할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:166
+msgid "The scenarios are stored in the ledger: create it first (step 2)."
+msgstr "시나리오는 원장에 저장됩니다. 먼저 원장을 생성하세요 (2단계)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:72
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:107
+msgid "The state could not be read (see the system log)."
+msgstr "상태를 읽을 수 없습니다 (시스템 로그 참조)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:173
+msgid "The storage is ready; nothing to do here."
+msgstr "스토리지가 준비되었습니다. 여기서 할 일이 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:116
+msgid ""
+"This does not look like a private or LAN address: the data would leave your "
+"network."
+msgstr "사설 주소나 LAN 주소가 아닌 것 같습니다. 데이터가 네트워크 밖으로 나가게 됩니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:290
+msgid "This is the address of your own session."
+msgstr "현재 세션의 주소입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:63
+msgid ""
+"This removal is recorded and can be undone from the action history with one "
+"click (the local AI is installed again; deleted models are not restored)."
+msgstr "이 제거는 기록되며 작업 기록에서 한 번의 클릭으로 실행 취소할 수 있습니다 (로컬 AI가 다시 설치되지만 삭제된 모델은 복원되지 않음)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:74
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:121
+msgid "This step has not changed anything yet."
+msgstr "이 단계에서는 아직 아무것도 변경하지 않았습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:108
+msgid "This step only reads the system; nothing is changed."
+msgstr "이 단계는 시스템을 읽기만 합니다. 아무것도 변경되지 않습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:69
+msgid ""
+"This undo is recorded too and can itself be undone from the action history."
+msgstr "이 실행 취소도 기록되며 작업 기록에서 다시 실행 취소할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:71
+msgid "This version of the setup component can not change it yet."
+msgstr "이 버전의 설정 구성 요소로는 아직 변경할 수 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:241
+msgid "Threads (num_thread)"
+msgstr "스레드 (num_thread)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:74
+msgid "Threshold"
+msgstr "임계값"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:126
+msgid "Throttle (min)"
+msgstr "스로틀 (분)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:185
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:246
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:89
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1203
+msgid "Time"
+msgstr "시간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:127
+msgid "Timeline"
+msgstr "타임라인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1083
+msgid "Timeout (s)"
+msgstr "시간 초과 (초)"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid "Timeout (seconds)"
+msgstr "시간 초과 (초)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:143
+msgid "Title"
+msgstr "제목"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:150
+msgid "To"
+msgstr "받는 사람"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:175
+msgid ""
+"To use another directory change the Models directory in the Settings first, "
+"then come back here."
+msgstr "다른 디렉터리를 사용하려면 먼저 설정에서 모델 디렉터리를 변경한 다음 여기로 돌아오세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:244
+msgid "Tokens of context; 8192 fits one finding with room to spare."
+msgstr "컨텍스트 토큰 수. 8192면 탐지 결과 하나를 여유 있게 담을 수 있습니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:188
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:160
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:226
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:59
+msgid "Too many arguments."
+msgstr "인수가 너무 많습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1146
+msgid "Top ASNs"
+msgstr "상위 ASN"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:103
+msgid "Top blocks, ports and countries"
+msgstr "상위 차단, 포트 및 국가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1145
+msgid "Top countries"
+msgstr "상위 국가"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:105
+msgid "Top destinations (24 h)"
+msgstr "상위 목적지 (24시간)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:53
+msgid "Total"
+msgstr "합계"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:195
+msgid "Traffic to a quarantined address was allowed"
+msgstr "격리된 주소로 가는 트래픽이 허용되었습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:174
+msgid ""
+"Turns the rule on (if it was created disabled), marks the quarantine as "
+"running and runs it once now. Undo pauses it: the rule is disabled and the "
+"ledger keeps recording."
+msgstr "규칙을 켜고 (비활성 상태로 생성된 경우), 격리를 실행 중으로 표시한 뒤 지금 한 번 실행합니다. 실행 취소하면 일시 중지됩니다: 규칙은 비활성화되고 원장은 계속 기록합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:145
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1281
+msgid "Type"
+msgstr "유형"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:111
+msgid "Type a question."
+msgstr "질문을 입력하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:91
+#, php-format
+msgid "Type and name of %s"
+msgstr "%s의 유형 및 이름"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:98
+msgid "Unable to build the PDF."
+msgstr "PDF를 생성할 수 없습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:62
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:68
+msgid "Under review"
+msgstr "검토 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:90
+msgid "Undo"
+msgstr "실행 취소"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:78
+msgid ""
+"Undo of this step: the button Undo of the assistant, or Revert in the action "
+"history."
+msgstr "이 단계의 실행 취소: 도우미의 실행 취소 버튼 또는 작업 기록의 되돌리기."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:117
+msgid ""
+"Undo removes an empty ledger. A ledger with history is only disconnected "
+"(renamed and kept); deleting it is a separate, explicit option with a double "
+"confirmation."
+msgstr "실행 취소하면 빈 원장이 제거됩니다. 기록이 있는 원장은 연결만 해제됩니다 (이름이 바뀌고 보존됨). 삭제는 이중 확인이 필요한 별도의 명시적 옵션입니다."
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ApiHelperTrait.php:72
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:96
+msgid "Unexpected answer from the backend."
+msgstr "백엔드에서 예상치 못한 응답이 왔습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:49
+msgid "Unexpected hosts"
+msgstr "예상치 못한 호스트"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/SettingsController.php:87
+msgid "Unknown field."
+msgstr "알 수 없는 필드입니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:207
+msgid "Unused only (0 packets)"
+msgstr "미사용만 (패킷 0개)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:58
+msgid "Update CISA KEV and FIRST EPSS"
+msgstr "CISA KEV 및 FIRST EPSS 업데이트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:57
+msgid "Update KEV/EPSS"
+msgstr "KEV/EPSS 업데이트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:58
+msgid "Update manufacturer database"
+msgstr "제조업체 데이터베이스 업데이트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:216
+msgid "Use"
+msgstr "사용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:199
+msgid "Use CPU numbers or ranges such as 2-3 or 1,3."
+msgstr "2-3 또는 1,3과 같은 CPU 번호 또는 범위를 사용하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:61
+msgid "Use Monit settings"
+msgstr "Monit 설정 사용"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/SetupController.php:63
+msgid "Use POST."
+msgstr "POST를 사용하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:154
+msgid "Use Suricata alerts"
+msgstr "Suricata 경고 사용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1222
+msgid "Use Suricata alerts (1/0)"
+msgstr "Suricata 경고 사용 (1/0)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:123
+msgid "Use http(s)://host[:port] without credentials, query or fragment."
+msgstr "자격 증명, 쿼리, 프래그먼트 없이 http(s)://host[:port] 형식을 사용하세요."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:235
+msgid "Use the model name as shown by the Ollama library, e.g. llama3.2:3b."
+msgstr "Ollama 라이브러리에 표시된 모델 이름을 사용하세요 (예: llama3.2:3b)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:162
+msgid "Use this model"
+msgstr "이 모델 사용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1081
+msgid ""
+"Used when the provider of a scenario fails (bridge down, timeout). auto: the "
+"Ollama of this firewall, when the AI setup installed it."
+msgstr "시나리오의 제공자가 실패할 때(브리지 다운, 시간 초과) 사용됩니다. auto: AI 설정으로 설치된 경우 이 방화벽의 Ollama."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:74
+msgid "User"
+msgstr "사용자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:68
+msgid "Value"
+msgstr "값"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:102
+msgid "Vendor"
+msgstr "벤더"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:72
+msgid "Verify certificate"
+msgstr "인증서 확인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:153
+msgid "View"
+msgstr "보기"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:54
+msgid "Vulnerabilities"
+msgstr "취약점"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:142
+msgid "WAN pass rules after it"
+msgstr "그 뒤의 WAN 통과 규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:62
+msgid "Warn"
+msgstr "경고"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:40
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:132
+msgid "Warnings"
+msgstr "경고"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:41
+msgid "What does the AI setup do?"
+msgstr "AI 설정은 무엇을 하나요?"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:39
+msgid "What does the quarantine setup do?"
+msgstr "격리 설정은 무엇을 하나요?"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:91
+msgid "What is expected"
+msgstr "예상되는 것"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:79
+msgid ""
+"What the quarantine would see on this firewall right now: the WAN "
+"interfaces, how many external sources the filter blocks there, the sources "
+"of events and the addresses that are never quarantined."
+msgstr "지금 이 방화벽에서 격리가 보게 될 내용: WAN 인터페이스, 그곳에서 필터가 차단하는 외부 출발지 수, 이벤트 소스, 절대 격리되지 않는 주소."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:132
+msgid "What the sources see now (nothing is queued or sent)"
+msgstr "현재 소스에서 보이는 내용 (대기열에 넣거나 전송하지 않음)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:64
+msgid "What was sent to the AI"
+msgstr "AI에 전송된 내용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:65
+msgid "What would be sent to the AI"
+msgstr "AI에 전송될 내용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:131
+msgid "What you checked, who you called, what you decided..."
+msgstr "확인한 내용, 연락한 사람, 결정한 내용..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:140
+msgid "When"
+msgstr "시점"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:145
+msgid ""
+"When an external address enters the quarantine. Fixed by design: the base "
+"trigger (1 or more blocked inbound connections in the 5-minute window) and "
+"the ladder of durations; the rest is adjustable."
+msgstr "외부 주소가 격리에 진입하는 시점. 설계상 고정: 기본 트리거(5분 기간 내 차단된 인바운드 연결 1건 이상)와 기간 단계표. 나머지는 조정할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:154
+msgid ""
+"Where should the explanations come from? Ollama keeps the data in your "
+"network; Claude Code (LAN) sends it to a computer in your network that "
+"passes it on to Anthropic with its Claude Code subscription; an API sends "
+"anonymized findings to the provider."
+msgstr "설명을 어디에서 가져올까요? Ollama는 데이터를 네트워크 안에 유지합니다. Claude Code (LAN)는 데이터를 네트워크 안의 컴퓨터로 보내고, 그 컴퓨터가 자신의 Claude Code 구독으로 Anthropic에 전달합니다. API는 익명화된 탐지 결과를 제공자에게 보냅니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:196
+msgid "Which FreeBSD package repository the jail installs misc/ollama from."
+msgstr "jail이 misc/ollama를 설치할 FreeBSD 패키지 저장소."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:62
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:77
+msgid "Why"
+msgstr "이유"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:62
+msgid "Why expected"
+msgstr "예상되는 이유"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:81
+msgid "Why it is here"
+msgstr "여기에 있는 이유"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:105
+msgid "Why this risk"
+msgstr "이 위험의 이유"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:126
+msgid "Why this score"
+msgstr "이 점수의 이유"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:104
+msgid "Why this type"
+msgstr "이 유형의 이유"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:199
+msgid "Wide port scan"
+msgstr "광범위 포트 스캔"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:38
+msgid "Window"
+msgstr "기간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:102
+msgid "WireGuard clients (24 h)"
+msgstr "WireGuard 클라이언트 (24시간)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:100
+msgid "WireGuard peers"
+msgstr "WireGuard 피어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:83
+msgid "Would enter (estimate)"
+msgstr "진입 예상 (추정)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1185
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1365
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1366
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1442
+msgid "Year"
+msgstr "연도"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:61
+msgid ""
+"You can undo this at any time with one click: the local AI is removed and "
+"the firewall goes back to how it was. Downloaded models are kept unless you "
+"choose to delete them."
+msgstr "언제든지 한 번의 클릭으로 취소할 수 있습니다. 로컬 AI가 제거되고 방화벽은 원래 상태로 돌아갑니다. 다운로드한 모델은 삭제를 선택하지 않는 한 유지됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:64
+msgid "You can undo this with one click from the action history."
+msgstr "작업 기록에서 한 번의 클릭으로 취소할 수 있습니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:66
+msgid ""
+"You can undo this with one click while the storage is empty: the folders "
+"(and the dataset) created here are removed."
+msgstr "스토리지가 비어 있는 동안에는 한 번의 클릭으로 취소할 수 있습니다. 여기서 생성된 폴더(및 데이터셋)가 제거됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:65
+msgid "You can undo this with one click: the model is deleted again."
+msgstr "한 번의 클릭으로 취소할 수 있습니다. 모델이 다시 삭제됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:67
+msgid "You can undo this with one click: the previous limits come back."
+msgstr "한 번의 클릭으로 취소할 수 있습니다. 이전 제한이 복원됩니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:68
+msgid ""
+"You can undo this with one click: the tunable goes back to its previous "
+"value (effective after the next reboot)."
+msgstr "한 번의 클릭으로 취소할 수 있습니다. 튜너블이 이전 값으로 돌아갑니다 (다음 재부팅 후 적용)."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1173
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1370
+msgid "active"
+msgstr "활성"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:80
+msgid "active in 24 h"
+msgstr "24시간 내 활성"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:104
+msgid "admin sessions"
+msgstr "관리자 세션"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:114
+msgid "advisory unclear"
+msgstr "권고 불명확"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:70
+msgid "affected"
+msgstr "영향받음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:68
+msgid "ago"
+msgstr "전"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:231
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:104
+msgid "all"
+msgstr "모두"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:162
+msgid "already in quarantine"
+msgstr "이미 격리됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:95
+msgid "always"
+msgstr "항상"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:80
+msgid "anonymized"
+msgstr "익명화됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:169
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:174
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:202
+msgid "any"
+msgstr "모두"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1157
+msgid "at most {n} at a time"
+msgstr "한 번에 최대 {n}개"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:97
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1171
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1381
+msgid "automatic"
+msgstr "자동"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:118
+msgid "available"
+msgstr "사용 가능"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:161
+msgid "backend"
+msgstr "백엔드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1086
+msgid "background queue"
+msgstr "백그라운드 대기열"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1179
+msgid "bait"
+msgstr "미끼"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1177
+msgid "base"
+msgstr "기준"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:81
+msgid "baseline"
+msgstr "기준선"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:113
+msgid "binary without package"
+msgstr "패키지 없는 바이너리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1369
+msgid "blocked now"
+msgstr "현재 차단됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:184
+msgid "by reason"
+msgstr "사유별"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:179
+msgid "by rule"
+msgstr "규칙별"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:72
+msgid "bytes"
+msgstr "바이트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:74
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:72
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:77
+msgid "cached"
+msgstr "캐시됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:110
+msgid "camera"
+msgstr "카메라"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:177
+msgid "cases"
+msgstr "케이스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:213
+msgid "chosen"
+msgstr "선택됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:114
+msgid "computer"
+msgstr "컴퓨터"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:146
+msgid "confidence"
+msgstr "신뢰도"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:295
+msgid "configured"
+msgstr "설정됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:109
+msgid "confirmed finding"
+msgstr "확인된 탐지 결과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:118
+msgid "console"
+msgstr "콘솔"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:71
+msgid "context trimmed to fit"
+msgstr "맞추기 위해 컨텍스트가 잘림"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:116
+msgid "cores"
+msgstr "코어"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:160
+msgid "count"
+msgstr "개수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:109
+msgid "counters since"
+msgstr "카운터 기준 시점"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:71
+msgid "covered by"
+msgstr "다음에 포함됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:161
+msgid "created"
+msgstr "생성됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:148
+msgid "custom"
+msgstr "사용자 지정"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:142
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:143
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:81
+msgid "days"
+msgstr "일"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:117
+msgid "decided"
+msgstr "결정됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:118
+msgid "decision expired"
+msgstr "결정 만료됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:149
+msgid "default"
+msgstr "기본"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:238
+msgid "defaults"
+msgstr "기본값"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:201
+msgid "delete it with its history (double confirmation, irreversible)"
+msgstr "기록과 함께 삭제 (이중 확인, 되돌릴 수 없음)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:111
+msgid "dependency only"
+msgstr "의존성 전용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:120
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:112
+msgid "disabled"
+msgstr "비활성화됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:138
+msgid "disabled (turned on in step 7, recommended)"
+msgstr "비활성화됨 (7단계에서 켜짐, 권장)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:200
+msgid "disconnect it (renamed, kept)"
+msgstr "연결 해제 (이름 변경, 보존)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:100
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:168
+msgid "does not exist yet"
+msgstr "아직 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:106
+msgid "domains"
+msgstr "도메인"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:189
+msgid "done"
+msgstr "완료"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:160
+msgid "download"
+msgstr "다운로드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:250
+msgid ""
+"e.g. only outside peak hours when Suricata runs in IPS mode (not available "
+"yet)"
+msgstr "예: Suricata가 IPS 모드로 실행될 때 사용량이 적은 시간에만 (아직 사용할 수 없음)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:54
+msgid ""
+"e.g. why can host 192.168.1.50 not reach example.com? / what changed since "
+"yesterday?"
+msgstr "예: 호스트 192.168.1.50이 example.com에 접근할 수 없는 이유는? / 어제 이후 무엇이 바뀌었나?"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:84
+msgid "earlier questions sent"
+msgstr "이전에 보낸 질문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:56
+msgid "elevated risk"
+msgstr "높아진 위험"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:225
+msgid "embedded in the file"
+msgstr "파일에 포함됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:122
+msgid "empty"
+msgstr "비어 있음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:76
+#, php-format
+msgid "empty: keep %s"
+msgstr "비어 있음: %s 유지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:77
+msgid "empty: no password"
+msgstr "비어 있음: 비밀번호 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:119
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:111
+msgid "enabled"
+msgstr "활성화됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:137
+msgid "enabled now"
+msgstr "지금 활성화됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:156
+msgid "enabled with"
+msgstr "활성화됨:"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:42
+msgid "enabled, pending reboot"
+msgstr "활성화됨, 재부팅 대기 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:186
+msgid "engine"
+msgstr "엔진"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:128
+msgid "entries"
+msgstr "항목"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:89
+msgid "eve.json"
+msgstr "eve.json"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:155
+msgid "events"
+msgstr "이벤트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:170
+msgid "every"
+msgstr "매"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:63
+msgid "every client"
+msgstr "모든 클라이언트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:93
+msgid "every finding of this kind for this host"
+msgstr "이 호스트에 대한 이 종류의 모든 탐지 결과"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:94
+msgid "everything from this host"
+msgstr "이 호스트의 모든 것"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:114
+msgid "evidence collected in"
+msgstr "근거 수집 소요 시간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:167
+msgid "exists"
+msgstr "있음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:169
+msgid "exists but is not writable"
+msgstr "있지만 쓸 수 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:59
+msgid "expected"
+msgstr "예상됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1174
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1372
+msgid "expired"
+msgstr "만료됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1144
+msgid "expired in 24 h"
+msgstr "24시간 내 만료됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:121
+msgid "external"
+msgstr "외부"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:138
+msgid "failed"
+msgstr "실패"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:182
+msgid "filter"
+msgstr "필터"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:59
+msgid "filter log (exact)"
+msgstr "필터 로그 (정확)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:123
+msgid "firewall"
+msgstr "방화벽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:158
+msgid "first"
+msgstr "처음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1211
+msgid "first / last"
+msgstr "처음 / 마지막"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:135
+msgid "floating"
+msgstr "플로팅"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:115
+msgid "follow-up of the previous question"
+msgstr "이전 질문의 후속 질문"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:131
+msgid "free for"
+msgstr "여유, 경로:"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:99
+msgid "free on"
+msgstr "여유, 경로:"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:249
+msgid "future"
+msgstr "향후"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:97
+msgid "gateways"
+msgstr "게이트웨이"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:181
+msgid "generated"
+msgstr "생성됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:266
+msgid "generation tokens/s"
+msgstr "생성 토큰/초"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:136
+msgid "held (throttle)"
+msgstr "보류됨 (스로틀)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:232
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:120
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:67
+msgid "high"
+msgstr "높음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:155
+msgid "in quarantine"
+msgstr "격리 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:123
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:149
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:65
+msgid "info"
+msgstr "정보"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:180
+msgid "installed and running"
+msgstr "설치되어 실행 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:69
+msgid "installed, but the cron job is missing"
+msgstr "설치되었지만 크론 작업이 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:181
+msgid "installed, not running"
+msgstr "설치되었으나 실행되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:122
+msgid "internal"
+msgstr "내부"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:94
+msgid "internal only"
+msgstr "내부 전용"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:92
+msgid "internet"
+msgstr "인터넷"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:93
+msgid "internet (maybe)"
+msgstr "인터넷 (가능성)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:272
+msgid "jail RSS"
+msgstr "jail RSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:206
+msgid "just now"
+msgstr "방금"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:199
+msgid "keep it (default)"
+msgstr "유지 (기본값)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1436
+msgid "kept forever: every offense and every entry and exit, by year"
+msgstr "영구 보관: 모든 위반, 모든 진입 및 해제, 연도별"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:94
+msgid "known"
+msgstr "알려짐"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1197
+msgid "ladder (automatic)"
+msgstr "단계표 (자동)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:159
+msgid "last"
+msgstr "마지막"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:100
+msgid "last 24 h"
+msgstr "최근 24시간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:102
+msgid "last 30 days"
+msgstr "최근 30일"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:101
+msgid "last 7 days"
+msgstr "최근 7일"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1138
+msgid "last run"
+msgstr "마지막 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:121
+#, php-format
+msgid "last run %s"
+msgstr "마지막 실행 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:103
+msgid "last year"
+msgstr "작년"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:195
+msgid "latest (newer Ollama)"
+msgstr "latest (최신 Ollama)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:106
+msgid "learned"
+msgstr "학습됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:72
+msgid "legacy"
+msgstr "레거시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:156
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:163
+msgid "level"
+msgstr "레벨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:122
+msgid "limits"
+msgstr "제한"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:107
+msgid "lines read"
+msgstr "읽은 줄 수"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:215
+msgid "loaded in RAM"
+msgstr "RAM에 로드됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:74
+msgid "logs"
+msgstr "로그"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:122
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:64
+msgid "low"
+msgstr "낮음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1181
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1382
+msgid "manual"
+msgstr "수동"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:108
+msgid "mapped by you"
+msgstr "사용자가 매핑함"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:169
+msgid "matches absorbed as false positive"
+msgstr "오탐으로 흡수된 일치 항목"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1212
+msgid "max level"
+msgstr "최대 레벨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:121
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:64
+msgid "medium"
+msgstr "중간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:66
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:87
+msgid "missing"
+msgstr "누락"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:262
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:271
+msgid "model load"
+msgstr "모델 로드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:121
+msgid "models"
+msgstr "모델"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:127
+msgid "module not installed"
+msgstr "모듈이 설치되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:51
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1139
+msgid "never"
+msgstr "안 함"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:95
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:178
+msgid "new"
+msgstr "신규"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:108
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1142
+msgid "new in 24 h"
+msgstr "24시간 내 신규"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1137
+msgid "next run"
+msgstr "다음 실행"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:63
+msgid "no"
+msgstr "아니요"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:96
+msgid "no KEV cache: the KEV signal is missing"
+msgstr "KEV 캐시 없음: KEV 신호가 누락됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:70
+msgid "no data"
+msgstr "데이터 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:95
+msgid "no listener"
+msgstr "수신 대기 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:74
+msgid "no log"
+msgstr "로그 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:159
+msgid "nobody"
+msgstr "없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:64
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:116
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:156
+msgid "none"
+msgstr "없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:102
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:172
+msgid "not a local filesystem"
+msgstr "로컬 파일 시스템이 아님"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:76
+msgid "not anonymized"
+msgstr "익명화되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:93
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:296
+msgid "not configured"
+msgstr "설정되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:190
+msgid "not done"
+msgstr "완료되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:182
+msgid "not installed"
+msgstr "설치되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:171
+msgid "not recommended"
+msgstr "권장하지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:70
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:114
+msgid "not running"
+msgstr "실행되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:191
+msgid "not set"
+msgstr "설정되지 않음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:101
+msgid "not writable"
+msgstr "쓸 수 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1090
+msgid "nothing yet"
+msgstr "아직 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:81
+msgid "now"
+msgstr "지금"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:114
+msgid "of"
+msgstr "/"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1140
+msgid "offenses"
+msgstr "위반"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1143
+msgid "offenses in 24 h"
+msgstr "24시간 내 위반"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:101
+msgid "ok"
+msgstr "정상"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:186
+msgid "older than the minimum supported version"
+msgstr "지원되는 최소 버전보다 오래됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:290
+msgid "on this firewall"
+msgstr "이 방화벽에서"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:108
+msgid "only part of the log was read within the time budget"
+msgstr "시간 예산 내에 로그의 일부만 읽었습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:92
+msgid "only this finding (same kind, host and key)"
+msgstr "이 탐지 결과만 (같은 종류, 호스트, 키)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:135
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:78
+msgid "open"
+msgstr "열림"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:103
+msgid "outbound this hour"
+msgstr "이번 시간 아웃바운드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:121
+msgid "pa_never_block"
+msgstr "pa_never_block"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:120
+msgid ""
+"pa_quarantine (External) holds the quarantined addresses as a pf table "
+"filled at run time; pa_never_block (Network) lists what you never want "
+"quarantined."
+msgstr "pa_quarantine(외부)은 실행 시 채워지는 pf 테이블로 격리된 주소를 담고, pa_never_block(네트워크)은 절대 격리하지 않을 대상을 나열합니다."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:110
+msgid "package without service"
+msgstr "서비스 없는 패키지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:113
+msgid "page"
+msgstr "페이지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:69
+msgid "partial"
+msgstr "부분"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:60
+msgid "partial (time budget)"
+msgstr "부분 (시간 예산)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:116
+msgid "pending"
+msgstr "보류"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:269
+msgid "per finding"
+msgstr "탐지 결과당"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:268
+msgid "per finding (estimate)"
+msgstr "탐지 결과당 (추정)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1176
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1371
+msgid "permanent"
+msgstr "영구"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:113
+msgid "phone"
+msgstr "휴대폰"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:73
+msgid "placeholders"
+msgstr "자리 표시자"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:124
+msgid "port"
+msgstr "포트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:170
+msgid "possible"
+msgstr "가능성 있음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1209
+msgid "prefixes"
+msgstr "프리픽스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:65
+msgid "present"
+msgstr "있음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:168
+msgid "previous case"
+msgstr "이전 케이스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:117
+msgid "printer"
+msgstr "프린터"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:265
+msgid "prompt tokens/s"
+msgstr "프롬프트 토큰/초"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:184
+msgid "quarantine"
+msgstr "격리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:157
+msgid "quarantined recently"
+msgstr "최근 격리됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:194
+msgid "quarterly (stable, default)"
+msgstr "분기별 (안정, 기본값)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:77
+msgid "queries without a client address"
+msgstr "클라이언트 주소 없는 쿼리"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:135
+msgid "queued"
+msgstr "대기 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:106
+msgid "random MAC"
+msgstr "임의 MAC"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:169
+msgid "recommended"
+msgstr "권장"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1175
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1373
+msgid "released"
+msgstr "해제됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:137
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:59
+msgid "resolved"
+msgstr "해결됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:122
+msgid "reverted"
+msgstr "되돌려짐"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:125
+msgid "rule"
+msgstr "규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:83
+msgid "rule analysis from"
+msgstr "규칙 분석 기준"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:110
+msgid "rule counters not available"
+msgstr "규칙 카운터를 사용할 수 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:69
+msgid "rule counters not available, usage based findings are skipped"
+msgstr "규칙 카운터를 사용할 수 없어 사용량 기반 탐지 결과를 건너뜁니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:68
+msgid "rule counters since"
+msgstr "규칙 카운터 기준 시점"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1131
+msgid "rule off"
+msgstr "규칙 꺼짐"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1130
+msgid "rule on"
+msgstr "규칙 켜짐"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:65
+msgid "rules"
+msgstr "규칙"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:82
+msgid "run the checks on other days to see the trend"
+msgstr "추이를 보려면 다른 날에도 검사를 실행하세요"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:123
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:69
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:113
+msgid "running"
+msgstr "실행 중"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:74
+msgid "s"
+msgstr "초"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:158
+msgid "s per finding"
+msgstr "탐지 결과당 초"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:117
+msgid "saving will change the jobs"
+msgstr "저장하면 작업이 변경됩니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1178
+msgid "scan"
+msgstr "스캔"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:90
+msgid "scenario disabled in the settings"
+msgstr "설정에서 비활성화된 시나리오"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1156
+msgid "selected"
+msgstr "선택됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:137
+msgid "sent"
+msgstr "전송됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:140
+#, php-format
+msgid "sequence %s, %t, among %n enabled rules"
+msgstr "순서 %s, %t (활성화된 규칙 %n개 중)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:289
+msgid "server in the LAN"
+msgstr "LAN의 서버"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:98
+msgid "set by you"
+msgstr "사용자가 설정함"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:203
+msgid "showing {n} of {total} evidence lines"
+msgstr "근거 {total}줄 중 {n}줄 표시"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:110
+msgid "since"
+msgstr "이후"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:68
+msgid "since the previous run"
+msgstr "이전 실행 이후"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:162
+msgid "state"
+msgstr "상태"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:139
+msgid "suppressed"
+msgstr "억제됨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1180
+msgid "suricata"
+msgstr "suricata"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1086
+msgid "synchronous"
+msgstr "동기"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:97
+#, php-format
+msgid "the KEV cache is %s days old"
+msgstr "KEV 캐시가 %s일 지났습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:86
+#, php-format
+msgid "the last %m min were read"
+msgstr "최근 %m분을 읽었습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:160
+#, php-format
+msgid "the log covers only %s s"
+msgstr "로그가 %s초만 포함합니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:106
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:307
+msgid "the selected model is not available on the server"
+msgstr "선택한 모델을 서버에서 사용할 수 없습니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:96
+msgid "this firewall"
+msgstr "이 방화벽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:114
+msgid "this firewall uses {used} of RAM right now"
+msgstr "현재 이 방화벽은 RAM {used}을(를) 사용 중입니다"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:64
+msgid "this host"
+msgstr "이 호스트"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:64
+msgid "this network (CIDR)"
+msgstr "이 네트워크 (CIDR)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:115
+msgid "threads"
+msgstr "스레드"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:115
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:117
+msgid "total"
+msgstr "합계"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:119
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:110
+msgid "unknown"
+msgstr "알 수 없음"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:112
+msgid "unknown service"
+msgstr "알 수 없는 서비스"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1215
+msgid "until"
+msgstr "까지"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:103
+msgid "usual for this hour"
+msgstr "이 시간대에 일반적"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:270
+msgid "wall time"
+msgstr "경과 시간"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:67
+msgid "would have been blocked"
+msgstr "차단되었을 것"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:62
+msgid "yes"
+msgstr "예"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:209
+msgid "{n} d ago"
+msgstr "{n}일 전"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:208
+msgid "{n} h ago"
+msgstr "{n}시간 전"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:207
+msgid "{n} min ago"
+msgstr "{n}분 전"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:84
+#, php-format
+msgid "≈ %a per 5 min · %b per hour"
+msgstr "≈ 5분당 %a · 시간당 %b"

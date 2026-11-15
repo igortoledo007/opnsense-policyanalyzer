@@ -1,0 +1,18 @@
+The Policy Analyzer reviews the firewall rule set without changing it:
+shadowed, redundant, duplicate and unused rules, overly permissive and
+WAN exposed rules, rules that never match or are inactive, disabled
+rules, missing descriptions and empty or unused aliases.  Every finding
+links to the rule in Firewall: Rules, where the administrator decides
+what to change.
+
+Optionally, an AI provider (Ollama on this firewall or in the network,
+or the Anthropic Claude API) explains findings in plain language.  This
+is opt-in, data is anonymized before it is sent by default, every request
+is audited and the AI never applies changes.
+
+Plugin Changelog
+================
+
+0.1
+
+* Initial development release

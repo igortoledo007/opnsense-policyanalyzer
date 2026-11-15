@@ -1,0 +1,7 @@
+<30>1 2026-10-26T10:00:05-03:00 fw.example.lan dnsmasq 69380 - [meta sequenceId="1"] query[A] www.example.com from 192.168.1.20
+<30>1 2026-10-26T10:00:05-03:00 fw.example.lan dnsmasq 69380 - [meta sequenceId="2"] forwarded www.example.com to 192.0.2.53
+<30>1 2026-10-26T10:00:06-03:00 fw.example.lan dnsmasq 69380 - [meta sequenceId="3"] query[A] tracker.example.net from 192.168.1.21
+<30>1 2026-10-26T10:00:06-03:00 fw.example.lan dnsmasq 69380 - [meta sequenceId="4"] config tracker.example.net is 0.0.0.0
+<30>1 2026-10-26T10:00:07-03:00 fw.example.lan dnsmasq 69380 - [meta sequenceId="5"] query[AAAA] nope.example.org from 192.168.1.21
+<30>1 2026-10-26T10:00:07-03:00 fw.example.lan dnsmasq 69380 - [meta sequenceId="6"] reply nope.example.org is NXDOMAIN
+<30>1 2026-10-26T10:00:08-03:00 fw.example.lan dnsmasq-dhcp 69380 - [meta sequenceId="7"] RTR-SOLICIT(igc0) 00:00:5e:00:53:01

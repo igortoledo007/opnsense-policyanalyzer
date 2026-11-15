@@ -1,0 +1,36 @@
+<menu>
+    <Firewall>
+        <PolicyAnalyzer VisibleName="Policy Analyzer" order="190" cssClass="fa fa-stethoscope fa-fw">
+            <Analysis VisibleName="Analysis" order="10" url="/ui/policyanalyzer/">
+                <Tabs url="/ui/policyanalyzer/#*" visibility="hidden"/>
+            </Analysis>
+            <Console VisibleName="AI Console" order="20" url="/ui/policyanalyzer/console">
+                <Tabs url="/ui/policyanalyzer/console#*" visibility="hidden"/>
+            </Console>
+            <Incidents VisibleName="Incidents" order="30" url="/ui/policyanalyzer/incidents">
+                <Tabs url="/ui/policyanalyzer/incidents#*" visibility="hidden"/>
+            </Incidents>
+            <Anomalies VisibleName="Anomalies" order="35" url="/ui/policyanalyzer/anomalies">
+                <Tabs url="/ui/policyanalyzer/anomalies#*" visibility="hidden"/>
+            </Anomalies>
+            <Posture VisibleName="Posture" order="36" url="/ui/policyanalyzer/posture">
+                <Tabs url="/ui/policyanalyzer/posture#*" visibility="hidden"/>
+            </Posture>
+            <AiUsage VisibleName="AI usage" order="37" url="/ui/policyanalyzer/aiusage">
+                <Tabs url="/ui/policyanalyzer/aiusage#*" visibility="hidden"/>
+            </AiUsage>
+            <Vulns VisibleName="Vulnerabilities" order="40" url="/ui/policyanalyzer/vulns">
+                <Tabs url="/ui/policyanalyzer/vulns#*" visibility="hidden"/>
+            </Vulns>
+            <Devices VisibleName="Devices" order="50" url="/ui/policyanalyzer/devices">
+                <Tabs url="/ui/policyanalyzer/devices#*" visibility="hidden"/>
+            </Devices>
+            <Reports VisibleName="Reports and notifications" order="60" url="/ui/policyanalyzer/reports">
+                <Tabs url="/ui/policyanalyzer/reports#*" visibility="hidden"/>
+            </Reports>
+            <Setup VisibleName="AI setup" order="5" url="/ui/policyanalyzer/setup">
+                <Pages url="/ui/policyanalyzer/setup*" visibility="hidden"/>
+            </Setup>
+        </PolicyAnalyzer>
+    </Firewall>
+</menu>

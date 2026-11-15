@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<opnsense>
+  <system>
+    <hostname>fw</hostname>
+    <webgui>
+      <protocol>https</protocol>
+      <port>8443</port>
+    </webgui>
+    <ssh>
+      <enabled>enabled</enabled>
+      <port>22</port>
+    </ssh>
+  </system>
+  <interfaces>
+    <wan>
+      <enable>1</enable>
+      <if>vtnet0</if>
+      <descr>WAN</descr>
+      <ipaddr>198.51.100.2</ipaddr>
+      <subnet>24</subnet>
+      <gateway>WAN_GW</gateway>
+      <blockpriv>1</blockpriv>
+    </wan>
+    <lan>
+      <enable>1</enable>
+      <if>vtnet1</if>
+      <descr>LAN</descr>
+      <ipaddr>192.0.2.1</ipaddr>
+      <subnet>25</subnet>
+      <ipaddrv6>2001:db8:10::1</ipaddrv6>
+      <subnetv6>64</subnetv6>
+    </lan>
+    <opt1>
+      <enable>1</enable>
+      <if>vtnet2</if>
+      <descr>DMZ</descr>
+      <ipaddr>192.0.2.129</ipaddr>
+      <subnet>26</subnet>
+    </opt1>
+    <opt2>
+      <enable>1</enable>
+      <if>vtnet3</if>
+      <descr>GUEST</descr>
+      <ipaddr>192.0.2.193</ipaddr>
+      <subnet>26</subnet>
+    </opt2>
+    <opt3>
+      <enable>1</enable>
+      <if>wg0</if>
+      <descr>VPN</descr>
+    </opt3>
+    <wireguard>
+      <internal_dynamic>1</internal_dynamic>
+      <descr>WireGuard (Group)</descr>
+      <if>wireguard</if>
+      <virtual>1</virtual>
+      <enable>1</enable>
+      <type>group</type>
+    </wireguard>
+    <lo0>
+      <internal_dynamic>1</internal_dynamic>
+      <descr>Loopback</descr>
+      <enable>1</enable>
+      <if>lo0</if>
+      <ipaddr>127.0.0.1</ipaddr>
+      <ipaddrv6>::1</ipaddrv6>
+      <subnet>8</subnet>
+      <subnetv6>128</subnetv6>
+      <type>none</type>
+      <virtual>1</virtual>
+    </lo0>
+  </interfaces>
+  <ifgroups version="1.0.0">
+    <ifgroupentry uuid="0f000000-0000-4000-8000-000000000001">
+      <ifname>INTERNAL</ifname>
+      <members>lan,opt1</members>
+      <nogroup>0</nogroup>
+      <sequence>10</sequence>
+      <descr>internal networks</descr>
+    </ifgroupentry>
+  </ifgroups>
+  <virtualip>
+    <vip>
+      <interface>opt1</interface>
+      <mode>ipalias</mode>
+      <subnet>192.0.2.130</subnet>
+      <subnet_bits>26</subnet_bits>
+      <descr>dmz alias</descr>
+    </vip>
+  </virtualip>
+  <filter>
+    <rule uuid="00000000-0000-4000-8000-d860a8dc1f81">
+      <type>pass</type>
+      <interface>opt1</interface>
+      <ipprotocol>inet</ipprotocol>
+      <statetype>keep state</statetype>
+      <descr>Legacy DMZ pass</descr>
+      <source>
+        <network>opt1</network>
+      </source>
+      <destination>
+        <any/>
+      </destination>
+    </rule>
+  </filter>
+  <OPNsense>
+    <Firewall>
+      <Alias version="1.0.1">
+        <geoip>
+          <url/>
+        </geoip>
+        <aliases>
+          <alias uuid="00000000-0000-4000-8000-333d3d2487f6">
+            <enabled>1</enabled>
+            <name>SERVERS</name>
+            <type>host</type>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>192.0.2.10
+192.0.2.11</content>
+            <description>SERVERS alias</description>
+          </alias>
+          <alias uuid="00000000-0000-4000-8000-acd7545182ac">
+            <enabled>1</enabled>
+            <name>WEB</name>
+            <type>port</type>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>80
+443</content>
+            <description>WEB alias</description>
+          </alias>
+          <alias uuid="00000000-0000-4000-8000-bfe1cc083fc5">
+            <enabled>1</enabled>
+            <name>COUNTRIES</name>
+            <type>geoip</type>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>NL</content>
+            <description>COUNTRIES alias</description>
+          </alias>
+          <alias uuid="00000000-0000-4000-8000-4d3f7868f69d">
+            <enabled>1</enabled>
+            <name>EMPTY_HOSTS</name>
+            <type>host</type>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content/>
+            <description>EMPTY_HOSTS alias</description>
+          </alias>
+          <alias uuid="00000000-0000-4000-8000-de8eb6c61729">
+            <enabled>1</enabled>
+            <name>ORPHAN</name>
+            <type>network</type>
+            <proto/>
+            <interface/>
+            <counters>0</counters>
+            <updatefreq/>
+            <content>198.51.100.64/26</content>
+            <description>ORPHAN alias</description>
+          </alias>
+        </aliases>
+      </Alias>
+      <Filter version="1.0.6">
+        <rules>
+          <rule uuid="00000000-0000-4000-8000-e352e625d911">
+            <enabled>1</enabled>
+            <action>block</action>
+            <quick>1</quick>
+            <interface>opt2</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>any</protocol>
+            <source_net>any</source_net>
+            <destination_net>INTERNAL</destination_net>
+            <description>Block guests to internal</description>
+            <sequence>10</sequence>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-18ec070bdc3c">
+            <enabled>1</enabled>
+            <action>pass</action>
+            <quick>1</quick>
+            <interface>lan</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>any</protocol>
+            <source_net>lan</source_net>
+            <destination_net>any</destination_net>
+            <description>Allow LAN to any</description>
+            <sequence>20</sequence>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-e8c2a9b18cef">
+            <enabled>1</enabled>
+            <action>pass</action>
+            <quick>1</quick>
+            <interface>lan</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>TCP</protocol>
+            <source_net>SERVERS</source_net>
+            <destination_net>any</destination_net>
+            <description>Allow servers web</description>
+            <sequence>30</sequence>
+            <destination_port>WEB</destination_port>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-7303a83813d4">
+            <enabled>1</enabled>
+            <action>block</action>
+            <quick>1</quick>
+            <interface>lan</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>any</protocol>
+            <source_net>192.0.2.10</source_net>
+            <destination_net>any</destination_net>
+            <description>Block LAN host</description>
+            <sequence>40</sequence>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-c2e392e1ba11">
+            <enabled>1</enabled>
+            <action>pass</action>
+            <quick>1</quick>
+            <interface>wan</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>TCP</protocol>
+            <source_net>any</source_net>
+            <destination_net>wanip</destination_net>
+            <description>WAN GUI</description>
+            <sequence>50</sequence>
+            <destination_port>8443</destination_port>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-f696019a9453">
+            <enabled>1</enabled>
+            <action>pass</action>
+            <quick>1</quick>
+            <interface>wan</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>TCP</protocol>
+            <source_net>COUNTRIES</source_net>
+            <destination_net>192.0.2.140</destination_net>
+            <description>WAN allow countries</description>
+            <sequence>60</sequence>
+            <destination_port>443</destination_port>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-f7d64935e22c">
+            <enabled>1</enabled>
+            <action>pass</action>
+            <quick>1</quick>
+            <interface>opt1</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>any</protocol>
+            <source_net>EMPTY_HOSTS</source_net>
+            <destination_net>any</destination_net>
+            <description>Uses empty</description>
+            <sequence>70</sequence>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-3f335aed84f0">
+            <enabled>0</enabled>
+            <action>pass</action>
+            <quick>1</quick>
+            <interface>lan</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>any</protocol>
+            <source_net>any</source_net>
+            <destination_net>any</destination_net>
+            <description>Old test rule</description>
+            <sequence>80</sequence>
+            <audit>eyJ1cGRhdGVkIjogeyJ0aW1lIjogMTc1ODQ0MDAwMC4wfX0=</audit>
+          </rule>
+          <rule uuid="00000000-0000-4000-8000-d41d8cd98f00">
+            <enabled>1</enabled>
+            <action>pass</action>
+            <quick>1</quick>
+            <interface>opt1</interface>
+            <direction>in</direction>
+            <ipprotocol>inet</ipprotocol>
+            <protocol>UDP</protocol>
+            <source_net>opt1</source_net>
+            <destination_net>any</destination_net>
+            <description/>
+            <sequence>90</sequence>
+            <destination_port>123</destination_port>
+          </rule>
+        </rules>
+      </Filter>
+    </Firewall>
+  </OPNsense>
+</opnsense>

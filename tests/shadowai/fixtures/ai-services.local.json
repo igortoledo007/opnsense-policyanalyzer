@@ -1,0 +1,13 @@
+{
+  "version": "test-local-1",
+  "services": [
+    {"id": "openai", "domains": ["openai-proxy.example.test"]},
+    {"id": "corp_llm", "name": "Corporate LLM gateway", "vendor": "Example Corp", "category": "api",
+     "domains": ["llm.example.test"]}
+  ],
+  "disabled": ["midjourney"],
+  "known": [
+    {"description": "developer workstation, coding assistants approved", "match": {"ip": "192.0.2.30"},
+     "services": ["github_copilot"]}
+  ]
+}

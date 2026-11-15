@@ -1,0 +1,278 @@
+/*
+ * Copyright (C) 2026 Igor Toledo <contato@igor.eti.br>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ * AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ * OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/* Quarantine setup assistant (js/policyanalyzer/quarantine-setup.js). The frame, step bar, columns, state box and
+ * footer come from setup.css (.pa-setup-dialog, .pa-setup, .pa-steps, .pa-cols, .pa-state, .pa-setup-footer);
+ * only what is specific to the quarantine steps is here. No fixed colours: the theme decides. */
+
+.paq-setup .paq-small {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+.paq-setup h4 {
+    margin: 2px 0 6px;
+    font-size: 14px;
+}
+
+.paq-setup .paq-notice {
+    padding: 6px 10px;
+    margin-bottom: 6px;
+}
+
+.paq-setup .paq-notice .btn {
+    margin-left: 6px;
+    vertical-align: baseline;
+}
+
+/* chips: guards with their counts, pa_never_block entries, preview addresses */
+.paq-chips,
+.paq-preview-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    margin-bottom: 6px;
+}
+
+.paq-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 12px;
+    padding: 1px 8px;
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.paq-chip b {
+    font-weight: bold;
+}
+
+.paq-chip-zero {
+    opacity: 0.55;
+}
+
+.paq-chip code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+}
+
+.paq-chip .paq-chip-x {
+    padding: 0 2px;
+    line-height: 18px;
+    min-height: 0;
+}
+
+.paq-inline {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.paq-inline .form-control {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.paq-err {
+    display: block;
+    min-height: 16px;
+}
+
+/* step 2: disconnected ledgers */
+.paq-setup .paq-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+}
+
+/* step 4: rule position */
+.paq-table {
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.paq-table caption {
+    padding: 0 0 2px;
+    font-weight: bold;
+    color: inherit;
+    text-align: left;
+    caption-side: top;
+}
+
+.paq-table td {
+    padding: 2px 6px !important;
+}
+
+.paq-table td:first-child {
+    width: 60px;
+    text-align: right;
+}
+
+.paq-setup .paq-radio .radio {
+    margin: 2px 0;
+}
+
+/* step 5: scenario form, two (desktop) or one (phone) column */
+.paq-scen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+}
+
+.paq-scen .form-group {
+    margin-bottom: 6px;
+}
+
+.paq-scen label {
+    font-size: 12px;
+    margin-bottom: 1px;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.paq-scen .form-control {
+    height: 28px;
+    padding: 2px 8px;
+}
+
+.paq-scen .paq-check {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+}
+
+.paq-scen .paq-check label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.paq-scen .paq-check input {
+    margin: 0;
+}
+
+.paq-preview {
+    border: 1px dashed rgba(128, 128, 128, 0.5);
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 4px 0 6px;
+    min-height: 52px;
+}
+
+.paq-preview.paq-busy {
+    opacity: 0.6;
+}
+
+.paq-preview-head {
+    margin-bottom: 4px;
+}
+
+.paq-scen-actions {
+    justify-content: space-between;
+}
+
+/* step 6 */
+.paq-list {
+    padding-left: 18px;
+    margin-bottom: 8px;
+}
+
+.paq-list li {
+    margin-bottom: 2px;
+    overflow-wrap: anywhere;
+}
+
+/* step 7: result of the first run (pa-bench cards of setup.css) */
+.paq-result {
+    margin: 6px 0;
+}
+
+.paq-finish .btn {
+    margin-bottom: 4px;
+}
+
+.paq-remove .radio,
+.paq-remove .checkbox {
+    margin: 4px 0;
+}
+
+@media (min-width: 768px) {
+    /* the state box of the quarantine is narrower than the AI one: the right column has the forms */
+    .paq-setup .pa-cols {
+        grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
+    }
+
+    .paq-setup .pa-facts {
+        grid-template-columns: minmax(110px, 170px) 1fr;
+        gap: 2px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .paq-scen {
+        grid-template-columns: 1fr;
+    }
+
+    .paq-scen .form-control {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .paq-scen label {
+        white-space: normal;
+    }
+
+    .paq-chip {
+        line-height: 28px;
+    }
+
+    .paq-chip .paq-chip-x {
+        min-width: 32px;
+        min-height: 32px;
+    }
+
+    .paq-setup .paq-row {
+        flex-wrap: wrap;
+    }
+
+    .paq-setup .paq-row .btn {
+        min-height: 40px;
+    }
+}

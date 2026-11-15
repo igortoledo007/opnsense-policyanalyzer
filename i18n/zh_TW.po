@@ -1,0 +1,5717 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: os-policyanalyzer\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:168
+msgid ""
+"\"Maybe\" reachable counts as reachable and is shown as such. Thresholds: /"
+"var/db/policyanalyzer/vulns-settings.json (epss_high, epss_medium, "
+"cvss_high). KEV and EPSS come from a local cache with its date; they are "
+"downloaded only with \"Update KEV/EPSS\", after the simulation, and EPSS "
+"only receives CVE ids."
+msgstr "「可能」可達視同可達，並如此顯示。閾值：/var/db/policyanalyzer/vulns-settings.json（epss_high、epss_medium、cvss_high）。KEV 與 EPSS 來自附有日期的本機快取；只有在模擬之後按下「Update KEV/EPSS」才會下載，且 EPSS 只會收到 CVE 編號。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:81
+#, php-format
+msgid "%b blocked from %s sources in 5 min"
+msgstr "已封鎖 %b 次，來自 %s 個來源（5 分鐘內）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:109
+#, php-format
+msgid "%e entries, %o offenses"
+msgstr "%e 個項目，%o 次違規"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:92
+#, php-format
+msgid "%m active entries (now %n)"
+msgstr "%m 個使用中項目（目前 %n）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:178
+#, php-format
+msgid "%o entered, %s sources, %g protected, %d ms"
+msgstr "進入 %o 個，來源 %s 個，受保護 %g 個，耗時 %d ms"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:78
+#, php-format
+msgid "%s selected"
+msgstr "已選取 %s 項"
+
+#: mvc/app/library/OPNsense/PolicyAnalyzer/ViewTranslator.php:32
+msgid "..."
+msgstr "..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:82
+#, php-format
+msgid "1 h: %b / %s"
+msgstr "1 小時：%b / %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:246
+msgid "20 = lowest priority, the firewall always wins."
+msgstr "20 = 最低優先權，防火牆永遠優先。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:125
+msgid "203.0.113.7 or 203.0.113.0/28"
+msgstr "203.0.113.7 或 203.0.113.0/28"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:151
+msgid ""
+"A local runtime works, but expect slower answers and plan explanations "
+"outside peak hours. A server in your LAN or an API is the comfortable option."
+msgstr "本機執行環境可以使用，但回答會較慢，請將解釋安排在尖峰時段之外。區域網路中的伺服器或 API 是較舒適的選擇。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:106
+msgid "A setup job is running"
+msgstr "有一個設定工作正在執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:47
+msgid ""
+"A setup job is running for this step; its progress is shown above and in the "
+"action history."
+msgstr "此步驟有一個設定工作正在執行；進度顯示於上方及操作歷程記錄中。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:254
+msgid ""
+"A short benchmark measures the real speed (the model is loaded and the jail "
+"CPUs are busy for one or two minutes). Then explain one finding to see the "
+"result."
+msgstr "簡短的效能測試會測量實際速度（模型會被載入，jail 的 CPU 會忙碌一到兩分鐘）。接著解釋一個發現項目以查看結果。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:152
+msgid "AI"
+msgstr "AI"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "AI Console"
+msgstr "AI 主控台"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:118
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:86
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:150
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:115
+msgid "AI assistance is disabled in the settings."
+msgstr "設定中已停用 AI 輔助。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:84
+msgid "AI assistance is disabled: enable it in the Policy Analyzer settings."
+msgstr "AI 輔助已停用：請在 Policy Analyzer 設定中啟用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:46
+msgid ""
+"AI assistance is disabled: you can still look at the data and at what would "
+"be sent. Enable it in Firewall: Policy Analyzer: Settings."
+msgstr "AI 輔助已停用：您仍可查看資料以及將會傳送的內容。請在 防火牆：Policy Analyzer：設定 中啟用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:45
+msgid "AI disabled"
+msgstr "AI 已停用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:304
+msgid "AI enabled"
+msgstr "AI 已啟用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:107
+msgid "AI executive summary"
+msgstr "AI 執行摘要"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:155
+msgid "AI explanations"
+msgstr "AI 解釋"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:284
+msgid ""
+"AI generated text based only on the data above. It can be wrong: verify it "
+"against the evidence. Nothing was changed on this firewall."
+msgstr "AI 僅根據上方資料產生的文字。內容可能有誤：請對照證據核實。此防火牆上未做任何變更。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:78
+msgid "AI generated text: verify it before acting on it."
+msgstr "AI 產生的文字：採取行動前請先核實。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:75
+msgid ""
+"AI generated, based only on the evidence collected for the question. It can "
+"be wrong: check the cited evidence. Proposals are text only; nothing is ever "
+"applied from this page."
+msgstr "由 AI 產生，僅根據為此問題收集的證據。內容可能有誤：請檢查所引用的證據。建議僅為文字；此頁面永遠不會套用任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1494
+msgid "AI per scenario"
+msgstr "依場景區分的 AI"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1477
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1478
+msgid "AI provider"
+msgstr "AI 提供者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1087
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1497
+msgid "AI queue"
+msgstr "AI 佇列"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:53
+msgid "AI services"
+msgstr "AI 服務"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1260
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:38
+msgid "AI setup"
+msgstr "AI 設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:88
+msgid "AI suggestion"
+msgstr "AI 建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:127
+msgid "AI suggests"
+msgstr "AI 建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:99
+#, php-format
+msgid "AI suggests %s"
+msgstr "AI 建議：%s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:142
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:166
+msgid "AI summary"
+msgstr "AI 摘要"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "AI usage"
+msgstr "AI 使用情況"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:115
+msgid "AP/router"
+msgstr "AP/路由器"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:90
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:159
+msgid "API"
+msgstr "API"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1168
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1386
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1426
+msgid "ASN"
+msgstr "ASN"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:168
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:186
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:203
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:215
+msgid "Action"
+msgstr "動作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:122
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1241
+msgid "Action history"
+msgstr "操作歷程記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:87
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1155
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1428
+msgid "Actions"
+msgstr "動作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:60
+msgid "Activate"
+msgstr "啟用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1128
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:65
+msgid "Active"
+msgstr "使用中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1330
+msgid "Active entries per level"
+msgstr "各等級的使用中項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:123
+msgid "Add"
+msgstr "新增"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1319
+msgid "Add manually"
+msgstr "手動新增"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:130
+msgid "Add note"
+msgstr "新增備註"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:49
+msgid "Additional rules"
+msgstr "其他規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:235
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:82
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1158
+msgid "Address"
+msgstr "位址"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1187
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1388
+msgid "Address or comment"
+msgstr "位址或註解"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1337
+msgid "Address, network, range or ASN"
+msgstr "位址、網路、範圍或 ASN"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:96
+msgid "Address, port or title"
+msgstr "位址、通訊埠或標題"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:107
+msgid "Addresses"
+msgstr "位址"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:238
+msgid "Alerts"
+msgstr "警示"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:56
+msgid "Aliases"
+msgstr "別名"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:197
+msgid ""
+"Aliases (3): remove pa_quarantine and pa_never_block (its entries are saved "
+"for Undo)"
+msgstr "別名 (3)：移除 pa_quarantine 與 pa_never_block（其項目會保存以便復原）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:144
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:60
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:134
+msgid "All"
+msgstr "全部"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:70
+msgid "All risks"
+msgstr "所有風險"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:145
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:69
+msgid "All types"
+msgstr "所有類型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:233
+msgid "Allow models larger than 6 GiB"
+msgstr "允許大於 6 GiB 的模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:248
+msgid "Allowed hours"
+msgstr "允許的時段"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:193
+msgid "Allowed traffic on the port of the alert"
+msgstr "警示通訊埠上被放行的流量"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:189
+msgid "Already contained by the quarantine"
+msgstr "已被隔離所圍堵"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:60
+#, php-format
+msgid "Also delete downloaded models (%s)"
+msgstr "同時刪除已下載的模型（%s）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1217
+msgid ""
+"Also delete the history database (every offense of every year). This can not "
+"be undone."
+msgstr "同時刪除歷史資料庫（每一年的每一次違規）。此操作無法復原。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:187
+msgid "Also matched"
+msgstr "同時符合"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:163
+msgid "Alternatives"
+msgstr "替代方案"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:247
+msgid ""
+"Always applied: one request at a time, one model loaded, keep-alive 5 "
+"minutes, listening on 127.0.0.1 only."
+msgstr "一律套用：一次一個請求，只載入一個模型，keep-alive 5 分鐘，僅監聽 127.0.0.1。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Analysis"
+msgstr "分析"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnalysisController.php:52
+msgid "Analysis failed."
+msgstr "分析失敗。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1251
+msgid "Analyze"
+msgstr "分析"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:61
+msgid "Analyzing the rule set..."
+msgstr "正在分析規則集..."
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Anomalies"
+msgstr "異常"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid "Anonymize data"
+msgstr "匿名化資料"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:297
+msgid "Anonymize data before sending"
+msgstr "傳送前匿名化資料"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:230
+msgid "Another model"
+msgstr "其他模型"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:125
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:126
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:49
+msgid "Answer language"
+msgstr "回答語言"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:232
+msgid ""
+"Any library model, e.g. llama3.2:3b; speed and quality are not evaluated for "
+"it."
+msgstr "任一模型庫中的模型，例如 llama3.2:3b；不會評估其速度與品質。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:113
+msgid "Any proposal above is text only: nothing was changed on this firewall."
+msgstr "上方的任何建議都僅為文字：此防火牆上未做任何變更。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:138
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:80
+msgid "Any status"
+msgstr "任何狀態"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:97
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1183
+msgid "Apply"
+msgstr "套用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:119
+#, php-format
+msgid ""
+"Apply creates %p (SQLite, WAL) and remembers the current end of the filter "
+"log and of eve.json: what happened before is not counted."
+msgstr "套用會建立 %p（SQLite，WAL），並記住過濾記錄與 eve.json 的目前結尾：先前發生的事不會列入計算。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:174
+msgid ""
+"Apply creates the dataset (if the root is ZFS) and the directory. Simulate "
+"shows the exact commands first."
+msgstr "套用會建立資料集（若根目錄為 ZFS）與目錄。模擬會先顯示確切的命令。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:56
+msgid "Apply install"
+msgstr "套用安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:252
+msgid "Apply limits"
+msgstr "套用限制"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:299
+msgid ""
+"Apply saves the settings through the normal validation; Undo restores the "
+"previous values."
+msgstr "套用會透過一般驗證儲存設定；復原會還原先前的值。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:63
+msgid "Apply to"
+msgstr "套用至"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:150
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:55
+msgid "Ask"
+msgstr "提問"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:53
+msgid ""
+"Ask about this firewall in plain words. The question is routed to read-only "
+"data sources (filter log, rules and counters, aliases, quarantine, findings, "
+"exposure, host names, configuration changes, IDS alerts); only that "
+"evidence, anonymized, goes to the AI."
+msgstr "用淺白的話詢問有關此防火牆的問題。問題會被導向唯讀資料來源（過濾記錄、規則與計數器、別名、隔離、發現項目、曝險、主機名稱、設定變更、IDS 警示）；只有這些經過匿名化的證據會傳送給 AI。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:260
+msgid "Ask another"
+msgstr "再問一個"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:44
+msgid "Ask the AI"
+msgstr "詢問 AI"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:134
+msgid "Ask the firewall"
+msgstr "詢問防火牆"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:140
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:62
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:279
+msgid "Asking the AI, this can take a while..."
+msgstr "正在詢問 AI，這可能需要一些時間..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:65
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:73
+msgid "Asking the AI..."
+msgstr "正在詢問 AI..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:45
+msgid "Asking the AI... (it may take a while)"
+msgstr "正在詢問 AI...（可能需要一些時間）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:259
+msgid ""
+"Asks the local AI one short real question about the current date and a "
+"random topic; nothing is changed."
+msgstr "向本機 AI 提出一個關於目前日期與隨機主題的簡短真實問題；不會變更任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:128
+msgid "At most e-mails per hour"
+msgstr "每小時最多電子郵件數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:200
+msgid ""
+"At most three options can be passed at once: the runtime is installed with "
+"the default cpuset and your value is applied in the Limits step."
+msgstr "一次最多只能傳遞三個選項：執行環境以預設 cpuset 安裝，您的值會在「限制」步驟中套用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:96
+msgid "Attach the report as PDF"
+msgstr "以 PDF 附加報表"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:100
+#, php-format
+msgid "Automatic (%s)"
+msgstr "自動（%s）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:50
+msgid "Automatic (settings / GUI)"
+msgstr "自動（設定 / GUI）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:204
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:88
+msgid "Back"
+msgstr "返回"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1221
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:153
+msgid "Bait ports (separated by +)"
+msgstr "誘餌通訊埠（以 + 分隔）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:146
+msgid "Base: ≥ 1 blocked connection in the window"
+msgstr "基礎：時間窗內 ≥ 1 次被封鎖的連線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:60
+msgid "Beaconing"
+msgstr "信標通訊"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:255
+msgid "Benchmark"
+msgstr "效能測試"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:47
+msgid "Block proposal"
+msgstr "封鎖建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:197
+msgid "Blocked DNS queries"
+msgstr "被封鎖的 DNS 查詢"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1165
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1424
+msgid "Blocked for"
+msgstr "封鎖時長"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:172
+msgid "Boot hook"
+msgstr "開機掛鉤"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:127
+msgid "CPU"
+msgstr "CPU"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:198
+#, php-format
+msgid ""
+"CPU numbers or ranges, e.g. 2-3 or 1,3; this system has %n threads. Leave at "
+"least half of them to the firewall."
+msgstr "CPU 編號或範圍，例如 2-3 或 1,3；本系統有 %n 個執行緒。請至少保留一半給防火牆。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:141
+msgid "CPU without AVX2: prompt processing is several times slower"
+msgstr "CPU 不支援 AVX2：提示詞處理會慢好幾倍"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:197
+msgid "CPUs for the jail (cpuset)"
+msgstr "jail 使用的 CPU（cpuset）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:71
+msgid "CVE"
+msgstr "CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:115
+msgid "CVE without score"
+msgstr "無評分的 CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:60
+msgid "CVEs"
+msgstr "CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:137
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:55
+msgid ""
+"CVEs of the inventory ranked by exposure and real exploitation (KEV, EPSS). "
+"Read only."
+msgstr "依曝險與實際遭利用情況（KEV、EPSS）排序的資產清冊 CVE。唯讀。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:76
+msgid "CVSS"
+msgstr "CVSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:118
+msgid "Campaign"
+msgstr "攻擊活動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:133
+msgid "Can not be reverted later"
+msgstr "之後無法還原"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:135
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:52
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1090
+msgid "Cancel"
+msgstr "取消"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:149
+msgid "Cancel the running job? It rolls back what it changed so far."
+msgstr "取消正在執行的工作？它會復原目前為止所做的變更。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:82
+msgid "Candidates"
+msgstr "候選項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:105
+msgid "Case"
+msgstr "案例"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:163
+msgid "Case created"
+msgstr "已建立案例"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:60
+msgid "Catalogue"
+msgstr "目錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:80
+msgid "Category"
+msgstr "類別"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1201
+msgid "Change"
+msgstr "變更"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:132
+msgid "Change state"
+msgstr "變更狀態"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:99
+msgid "Changed values are applied through a simulation and journaled."
+msgstr "變更的值會透過模擬套用並記錄於日誌中。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:111
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1463
+msgid "Changes"
+msgstr "變更"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:120
+msgid ""
+"Changes made by this step, newest first. Revert first shows a simulation of "
+"what will be undone."
+msgstr "此步驟所做的變更，最新的在前。還原會先以模擬顯示將被復原的內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:224
+msgid "Chat template"
+msgstr "聊天範本"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:98
+msgid "Check"
+msgstr "檢查"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:131
+msgid "Check sources now"
+msgstr "立即檢查來源"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:251
+msgid "Check the cpuset, threads (1 or more) and nice (0-20)."
+msgstr "請檢查 cpuset、執行緒數（1 或以上）與 nice（0-20）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:165
+msgid "Check the highlighted values."
+msgstr "請檢查醒目標示的值。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Chinese (Simplified)"
+msgstr "簡體中文"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:66
+msgid ""
+"Choose a dedicated directory on a local filesystem, for example /var/db/ai/"
+"models."
+msgstr "請選擇本機檔案系統上的專用目錄，例如 /var/db/ai/models。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:152
+msgid ""
+"Choose a model server in your LAN or an API in the next step; the local "
+"runtime steps are skipped."
+msgstr "請在下一步選擇區域網路中的模型伺服器或 API；將略過本機執行環境的步驟。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:37
+msgid "Choose a rule to narrow"
+msgstr "選擇要縮限的規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:301
+msgid "Choose or download a model first (Model step)."
+msgstr "請先選擇或下載模型（「模型」步驟）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:212
+msgid "Chosen model"
+msgstr "已選模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:288
+msgid "Chosen provider"
+msgstr "已選提供者"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Claude (Anthropic)"
+msgstr "Claude (Anthropic)"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Claude Code (LAN)"
+msgstr "Claude Code（區域網路）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:53
+msgid "Clean up partial install"
+msgstr "清除未完成的安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:156
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:98
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1184
+msgid "Clear"
+msgstr "清除"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:155
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:58
+msgid "Clear conversation"
+msgstr "清除對話"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:109
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:78
+msgid "Close"
+msgstr "關閉"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:96
+msgid "Close finding"
+msgstr "關閉發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:61
+msgid "Collecting the evidence and asking the AI..."
+msgstr "正在收集證據並詢問 AI..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:62
+msgid "Collecting the evidence..."
+msgstr "正在收集證據..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:80
+msgid "Comma separated"
+msgstr "以逗號分隔"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:38
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:130
+msgid "Command"
+msgstr "命令"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1296
+msgid "Commands"
+msgstr "命令"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1170
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1346
+msgid "Comment"
+msgstr "註解"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:125
+msgid "Comment (optional)"
+msgstr "註解（選填）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:95
+msgid "Comment (why it is expected)"
+msgstr "註解（為何屬於預期）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:51
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:144
+msgid "Completed steps"
+msgstr "已完成的步驟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:80
+msgid "Component"
+msgstr "元件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:154
+msgid ""
+"Components the inventory can not map with confidence. The AI may suggest a "
+"mapping; only your decision (with simulation, recorded in the action "
+"history) changes the priority."
+msgstr "資產清冊無法可靠對應的元件。AI 可能會建議對應；只有您的決定（經過模擬並記錄於操作歷程記錄中）才會改變優先順序。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:160
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:162
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:163
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:164
+msgid "Condition"
+msgstr "條件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:58
+msgid "Confidence"
+msgstr "信賴度"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:134
+msgid "Confirm"
+msgstr "確認"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:123
+msgid "Confirm as a real finding"
+msgstr "確認為真實發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:114
+msgid "Connect again"
+msgstr "重新連線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:292
+msgid "Connection"
+msgstr "連線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:105
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:306
+msgid "Connection OK"
+msgstr "連線正常"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:243
+msgid "Context (num_ctx)"
+msgstr "上下文（num_ctx）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1084
+msgid "Context budget (tokens)"
+msgstr "上下文預算（token）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:67
+msgid "Copied"
+msgstr "已複製"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:66
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:154
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1202
+msgid "Copy"
+msgstr "複製"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:220
+msgid ""
+"Copy the .gguf file to /var/db/ai/models/import/ with scp (or give hf:owner/"
+"repo/file.gguf to download it from Hugging Face), then simulate the import. "
+"Ollama keeps its own copy of the weights."
+msgstr "使用 scp 將 .gguf 檔案複製到 /var/db/ai/models/import/（或填寫 hf:owner/repo/file.gguf 從 Hugging Face 下載），然後模擬匯入。Ollama 會保留自己的一份權重副本。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1084
+msgid "Correction attempts"
+msgstr "修正嘗試次數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:68
+msgid "Correlating every 5 minutes"
+msgstr "每 5 分鐘關聯一次"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:100
+msgid "Cost of the last runs"
+msgstr "最近幾次執行的成本"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:74
+msgid "Counted"
+msgstr "已計數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:105
+msgid "Countries"
+msgstr "國家"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1167
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1383
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1384
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1421
+msgid "Country"
+msgstr "國家"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:76
+msgid ""
+"Counts are DNS queries and TLS connections, not data volume; the content is "
+"never seen."
+msgstr "計數為 DNS 查詢與 TLS 連線數，而非資料量；永不查看內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:43
+msgid "Coverage of the observed traffic"
+msgstr "已觀測流量的涵蓋率"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:129
+msgid "Create aliases"
+msgstr "建立別名"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:118
+msgid "Create the ledger"
+msgstr "建立記錄簿"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:144
+msgid "Create the rule"
+msgstr "建立規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:111
+msgid "Created"
+msgstr "建立於"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:82
+msgid "Critical"
+msgstr "嚴重"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:169
+msgid "Cron job"
+msgstr "Cron 工作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1087
+msgid "Cron job of the queue"
+msgstr "佇列的 Cron 工作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:86
+msgid "Current state (detected now)"
+msgstr "目前狀態（剛偵測到）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:60
+msgid "DGA domains"
+msgstr "DGA 網域"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:185
+msgid "DNS"
+msgstr "DNS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:65
+msgid "DNS blocklist (Unbound, recommended)"
+msgstr "DNS 封鎖清單（Unbound，建議）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:63
+msgid "DNS bypass"
+msgstr "DNS 繞過"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:50
+msgid "DNS queries"
+msgstr "DNS 查詢"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:104
+msgid "DNS queries per hour"
+msgstr "每小時 DNS 查詢數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:98
+msgid "DNS servers"
+msgstr "DNS 伺服器"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:61
+msgid "DNS tunnel"
+msgstr "DNS 通道"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:92
+msgid "Daily at"
+msgstr "每天於"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:74
+msgid "Daily digest"
+msgstr "每日摘要"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:170
+msgid "Dataset / filesystem"
+msgstr "資料集 / 檔案系統"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:108
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1460
+msgid "Date"
+msgstr "日期"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:173
+msgid "Day"
+msgstr "日"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:236
+msgid "Days"
+msgstr "天"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1218
+msgid "Days without offenses before the level goes back to zero"
+msgstr "無違規多少天後等級歸零"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:90
+msgid "Decide"
+msgstr "決定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:84
+msgid "Decision"
+msgstr "決定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:91
+#, php-format
+msgid "Decision on %s"
+msgstr "關於 %s 的決定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:164
+msgid "Defaults"
+msgstr "預設"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:116
+msgid "Delete the ledger..."
+msgstr "刪除記錄簿..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:226
+msgid "Delete the source file after the import (irreversible)"
+msgstr "匯入後刪除來源檔案（不可逆）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:215
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:98
+msgid "Description"
+msgstr "說明"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:248
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:95
+msgid "Destination"
+msgstr "目的"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:196
+msgid "Destination in quarantine now"
+msgstr "目前在隔離中的目的"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1206
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:75
+msgid "Detail"
+msgstr "詳細"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:51
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:85
+msgid "Details"
+msgstr "詳細資料"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:110
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:153
+msgid ""
+"Detectors are deterministic and read only; the AI only explains. Nothing is "
+"blocked automatically."
+msgstr "偵測器是確定性的且唯讀；AI 只負責解釋。不會自動封鎖任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:94
+msgid ""
+"Deterministic checks inspired by the CIS Controls v8 and NIST SP "
+"800-41/800-53 (there is no official CIS benchmark for OPNsense). Read only: "
+"every fix is a proposal for you to apply in the GUI."
+msgstr "受 CIS Controls v8 與 NIST SP 800-41/800-53 啟發的確定性檢查（OPNsense 沒有官方的 CIS 基準）。唯讀：每項修正都是建議，由您在 GUI 中套用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:102
+msgid "Device"
+msgstr "裝置"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:133
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:60
+msgid "Devices"
+msgstr "裝置"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:53
+msgid "Diff (for the rule editor)"
+msgstr "差異（供規則編輯器使用）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:187
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:92
+msgid "Dir"
+msgstr "方向"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:173
+msgid "Direction"
+msgstr "方向"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:308
+msgid "Disable AI"
+msgstr "停用 AI"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:209
+msgid "Disable at boot"
+msgstr "開機時停用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:115
+msgid "Disconnect (keep everything)"
+msgstr "中斷連線（保留所有內容）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:112
+msgid "Disconnected ledgers (kept)"
+msgstr "已中斷的記錄簿（已保留）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:130
+msgid "Disk"
+msgstr "磁碟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:136
+msgid "Disk space"
+msgstr "磁碟空間"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:61
+msgid "Domains"
+msgstr "網域"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:142
+msgid "Done"
+msgstr "完成"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:229
+msgid "Download"
+msgstr "下載"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:97
+msgid "Download PDF"
+msgstr "下載 PDF"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:59
+msgid "Download the IEEE OUI registry"
+msgstr "下載 IEEE OUI 登錄資料"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:45
+msgid "Download the chosen model first (Simulate download, then Download)."
+msgstr "請先下載所選模型（先模擬下載，再下載）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:152
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1196
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1342
+msgid "Duration"
+msgstr "期間"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Dutch"
+msgstr "荷蘭文"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:174
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:57
+msgid "E-mail channel"
+msgstr "電子郵件通道"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:75
+msgid "EPSS"
+msgstr "EPSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:99
+#, php-format
+msgid "EPSS cached for %s of %s CVEs"
+msgstr "已快取 %s / %s 個 CVE 的 EPSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1495
+msgid ""
+"Each AI feature of the plugin is a scenario with its own provider, model and "
+"limits. Empty fields follow the global provider above. Long scenarios on the "
+"local runtime go to a background queue: the page shows the position and the "
+"estimate and receives the answer when it is ready. Every change is simulated "
+"first and recorded in the action history."
+msgstr "外掛的每個 AI 功能都是一個場景，有自己的提供者、模型與限制。留空的欄位依循上方的全域提供者。本機執行環境上耗時較長的場景會進入背景佇列：頁面會顯示排隊位置與預估時間，並在回答完成時接收。每項變更都會先模擬，並記錄於操作歷程記錄中。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:148
+msgid ""
+"Each button opens the action with its simulation; nothing runs by itself."
+msgstr "每個按鈕都會開啟對應動作及其模擬；不會自動執行任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:90
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1083
+msgid "Edit"
+msgstr "編輯"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:42
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:131
+msgid "Effect"
+msgstr "影響"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:102
+msgid "Empty: the hostname seen on the network"
+msgstr "留空：使用網路上看到的主機名稱"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:300
+msgid "Enable AI"
+msgstr "啟用 AI"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid "Enable AI explanations"
+msgstr "啟用 AI 解釋"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:74
+msgid "Enable RAM limit"
+msgstr "啟用記憶體限制"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:208
+msgid "Enable at boot"
+msgstr "開機時啟用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:180
+msgid "Enable the rule Max Cyber IA and reload the rules (it is disabled now)."
+msgstr "啟用規則 Max Cyber IA 並重新載入規則（目前為停用狀態）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:286
+msgid ""
+"Enables the AI explanations on the Findings page with the provider and model "
+"chosen here. Like every change, it is simulated first and recorded in the "
+"action history."
+msgstr "使用此處選擇的提供者與模型，在「發現項目」頁面上啟用 AI 解釋。如同每項變更，它會先模擬並記錄於操作歷程記錄中。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:52
+msgid "English"
+msgstr "英文"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:199
+msgid "Enter a note."
+msgstr "請輸入備註。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:98
+msgid "Enter an Anthropic API key."
+msgstr "請輸入 Anthropic API 金鑰。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:126
+msgid "Enter an address or a network (CIDR)."
+msgstr "請輸入位址或網路（CIDR）。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:282
+msgid ""
+"Enter an address, a network (CIDR), a range (first-last) or an ASN (AS64500)."
+msgstr "請輸入位址、網路（CIDR）、範圍（起始-結束）或 ASN（AS64500）。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:111
+msgid ""
+"Enter the URL of the Claude Code bridge, for example http://"
+"bridge.example.lan:11436."
+msgstr "請輸入 Claude Code 橋接的 URL，例如 http://bridge.example.lan:11436。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:87
+msgid "Enter the URL of the Ollama server."
+msgstr "請輸入 Ollama 伺服器的 URL。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:133
+msgid "Enter the token of the Claude Code bridge."
+msgstr "請輸入 Claude Code 橋接的權杖。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:183
+msgid "Entered"
+msgstr "已進入"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:106
+msgid "Entities"
+msgstr "實體"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1190
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1440
+msgid "Entries and exits"
+msgstr "進入與退出"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:266
+msgid "Entry not found."
+msgstr "找不到項目。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:109
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:77
+msgid "Error"
+msgstr "錯誤"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:167
+msgid ""
+"Estimates are rough; run the benchmark in the AI setup for real numbers."
+msgstr "估算較粗略；請在 AI 設定中執行效能測試以取得真實數據。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:141
+msgid "Evaluated before"
+msgstr "之前評估"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:216
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:99
+msgid "Evaluations"
+msgstr "評估次數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:122
+msgid "Event"
+msgstr "事件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:198
+msgid "Event volume"
+msgstr "事件量"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:177
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:108
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1204
+msgid "Events"
+msgstr "事件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:154
+msgid ""
+"Events of the same type inside the throttle window are grouped into one "
+"digest e-mail."
+msgstr "節流時間窗內同一類型的事件會合併為一封摘要電子郵件。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:93
+msgid "Every 6 h only when something happened"
+msgstr "每 6 小時（僅在有事件發生時）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:91
+msgid "Every 6 hours"
+msgstr "每 6 小時"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1455
+msgid ""
+"Every change made from this page (settings, storage, ...) is recorded here. "
+"Revert first shows a simulation of what will be undone."
+msgstr "在此頁面所做的每項變更（設定、儲存空間……）都記錄在這裡。還原會先以模擬顯示將被復原的內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:165
+msgid "Everything else, typically a library without a listening socket"
+msgstr "其他所有情況，通常是沒有監聽 socket 的函式庫"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:57
+msgid "Evidence"
+msgstr "證據"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:48
+msgid "Exactly what would be sent (anonymised when the option is on)"
+msgstr "將傳送的確切內容（啟用該選項時已匿名化）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:120
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:97
+msgid "Exceptions"
+msgstr "例外"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:48
+msgid "Executive summary (AI)"
+msgstr "執行摘要（AI）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:94
+msgid "Executive summary by the AI (fixed text when the AI is off)"
+msgstr "AI 產生的執行摘要（AI 關閉時為固定文字）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:68
+msgid "Expected usage that would break"
+msgstr "會被破壞的預期用途"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:88
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:86
+msgid "Explain"
+msgstr "解釋"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:87
+#, php-format
+msgid "Explain %s"
+msgstr "解釋 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:49
+msgid "Explain (AI)"
+msgstr "解釋（AI）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:273
+msgid "Explain a sample finding"
+msgstr "解釋一個範例發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1254
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:58
+msgid "Explain all findings with AI"
+msgstr "用 AI 解釋所有發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:89
+#, php-format
+msgid "Explain device %s"
+msgstr "解釋裝置 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:82
+msgid "Explain host with AI"
+msgstr "用 AI 解釋主機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:56
+msgid "Explain risk (AI)"
+msgstr "解釋風險（AI）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:82
+msgid "Explain this alert"
+msgstr "解釋此警示"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:80
+msgid "Explain this log event"
+msgstr "解釋此記錄事件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:81
+msgid "Explain this rule"
+msgstr "解釋此規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:82
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:277
+msgid "Explain with AI"
+msgstr "用 AI 解釋"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1188
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1392
+msgid "Export CSV"
+msgstr "匯出 CSV"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:73
+msgid "Exposure"
+msgstr "曝險"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:140
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:59
+msgid "Exposure report"
+msgstr "曝險報表"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:101
+#, php-format
+msgid "Exposure report from %s"
+msgstr "來自 %s 的曝險報表"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1149
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1401
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1403
+msgid "Extend"
+msgstr "延長"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Extra high"
+msgstr "極高"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Fable 5.1 — most capable (US$10/50 per MTok in/out)"
+msgstr "Fable 5.1 — 能力最強（輸入/輸出每 MTok US$10/50）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Fable — most capable, uses the quota fastest"
+msgstr "Fable — 能力最強，配額消耗最快"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:73
+msgid "Factor"
+msgstr "因素"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:103
+msgid "Factors"
+msgstr "因素"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:62
+msgid "Fail"
+msgstr "失敗"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:143
+msgid "Failed"
+msgstr "失敗"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1080
+msgid "Fallback provider"
+msgstr "備援提供者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:89
+msgid "False positive"
+msgstr "誤報"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:201
+msgid "Far above the usual hour"
+msgstr "遠高於平常該時段"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:142
+msgid ""
+"Fewer than 4 CPU threads: the runtime would compete with packet processing"
+msgstr "CPU 執行緒少於 4 個：執行環境會與封包處理爭搶資源"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:67
+msgid "Field"
+msgstr "欄位"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:221
+msgid "File in the import directory or hf:owner/repo/file.gguf"
+msgstr "匯入目錄中的檔案或 hf:owner/repo/file.gguf"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:85
+msgid "Filter log"
+msgstr "過濾記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:99
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1182
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1363
+msgid "Filters"
+msgstr "篩選器"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1293
+msgid "Finding"
+msgstr "發現項目"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnalysisController.php:142
+msgid "Finding not found, run the analysis again."
+msgstr "找不到發現項目，請重新執行分析。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:107
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:102
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:219
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1239
+msgid "Findings"
+msgstr "發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:61
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:105
+msgid "Finish"
+msgstr "完成"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:60
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:151
+msgid "Finished"
+msgstr "已完成"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:66
+msgid "Firewall alias + block rule"
+msgstr "防火牆別名 + 封鎖規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:135
+msgid "Firewall log"
+msgstr "防火牆記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:84
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1163
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1423
+msgid "First seen"
+msgstr "首次出現"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:54
+msgid "First use"
+msgstr "首次使用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:147
+msgid "Fit for a local runtime"
+msgstr "適合本機執行環境"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:148
+msgid "Fit with reservations"
+msgstr "有條件適合"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:52
+msgid "Fix (proposal)"
+msgstr "修正（建議）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:71
+msgid "Fixed"
+msgstr "已修正"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:105
+msgid "Fixed in"
+msgstr "修正版本"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:257
+msgid ""
+"Fixed prompt, 128 generated tokens, the configured threads. Nothing is "
+"changed; the report is kept for this page."
+msgstr "固定提示詞，產生 128 個 token，使用已設定的執行緒數。不會變更任何內容；報表會保留於此頁面。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:104
+msgid "Floating"
+msgstr "浮動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1085
+msgid "Follow the global provider"
+msgstr "依循全域提供者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:171
+msgid "Free space"
+msgstr "可用空間"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:193
+msgid "FreeBSD package branch"
+msgstr "FreeBSD 套件分支"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "French"
+msgstr "法文"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:175
+msgid "Generate again"
+msgstr "重新產生"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:174
+msgid "Generate with AI"
+msgstr "用 AI 產生"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:67
+msgid "Generated"
+msgstr "已產生"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:85
+msgid ""
+"Generated by AI from the factors above: it may be wrong. Nothing was changed."
+msgstr "由 AI 根據上方因素產生：可能有誤。未做任何變更。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:149
+msgid ""
+"Generated by the AI from the anonymized case. It may be wrong: check the "
+"timeline."
+msgstr "由 AI 根據匿名化的案例產生。可能有誤：請檢查時間軸。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "German"
+msgstr "德文"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:80
+#, php-format
+msgid "Go to %s"
+msgstr "前往 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:162
+msgid "Go to Finish"
+msgstr "前往「完成」"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:93
+msgid "Guards: never quarantined"
+msgstr "防護：永不隔離"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:113
+msgid "HTML"
+msgstr "HTML"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Haiku 5.5 — cheapest (US$0.10/0.50)"
+msgstr "Haiku 5.5 — 最便宜（US$0.10/0.50）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Haiku — fastest, lightest on the quota"
+msgstr "Haiku — 最快，配額消耗最少"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:133
+msgid "Heavy services"
+msgstr "重負載服務"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:126
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:83
+msgid "High"
+msgstr "高"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:202
+msgid "High quarantine level"
+msgstr "隔離等級高"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:64
+msgid "High risk"
+msgstr "高風險"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1436
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:108
+msgid "History"
+msgstr "歷程記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:93
+#, php-format
+msgid "History of %s"
+msgstr "%s 的歷程記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1153
+msgid "History of this address"
+msgstr "此位址的歷程記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1169
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1427
+msgid "Hits"
+msgstr "命中次數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:53
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:77
+msgid "Host"
+msgstr "主機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:89
+msgid "Host profile"
+msgstr "主機概況"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:52
+msgid "Hosts"
+msgstr "主機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:68
+msgid "Hosts affected"
+msgstr "受影響的主機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:48
+msgid "Hosts using AI"
+msgstr "使用 AI 的主機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:149
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:69
+msgid "How the priority works"
+msgstr "優先順序的計算方式"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:42
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:134
+msgid "How to revert"
+msgstr "如何還原"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:143
+msgid "Hypothesis"
+msgstr "假設"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:137
+msgid "I reviewed the steps above and want to apply them."
+msgstr "我已檢查上述步驟並希望套用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:138
+msgid ""
+"I understand that part of this can not be undone or that other changes "
+"depend on it."
+msgstr "我了解其中部分操作無法復原，或有其他變更依賴於它。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1290
+msgid "ID"
+msgstr "ID"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:183
+msgid "IDS"
+msgstr "IDS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:116
+msgid "IDS + allowed traffic"
+msgstr "IDS + 放行的流量"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:137
+msgid "IDS alerts"
+msgstr "IDS 警示"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:191
+msgid "IDS severity 1"
+msgstr "IDS 嚴重性 1"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:192
+msgid "IDS severity 2"
+msgstr "IDS 嚴重性 2"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:298
+msgid ""
+"IP addresses, hostnames, descriptions and names are replaced by placeholders "
+"and restored in the answer. Strongly recommended for providers outside this "
+"firewall."
+msgstr "IP 位址、主機名稱、說明與名稱會被替換為預留位置，並在回答中還原。強烈建議用於此防火牆以外的提供者。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:121
+msgid "Ignore for"
+msgstr "忽略時長"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:144
+msgid "Impact"
+msgstr "影響"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:219
+msgid "Import a GGUF model"
+msgstr "匯入 GGUF 模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:85
+msgid "Import from Monit"
+msgstr "從 Monit 匯入"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:86
+msgid "Import the Monit e-mail settings"
+msgstr "匯入 Monit 的電子郵件設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:61
+msgid "In KEV"
+msgstr "列於 KEV"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:87
+msgid "In analysis"
+msgstr "分析中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:205
+msgid "Incident #{id}"
+msgstr "資安事件 #{id}"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:66
+msgid "Incidents"
+msgstr "資安事件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:64
+msgid ""
+"Independent copy, editable here. The password is kept as a masked secret and "
+"never shown."
+msgstr "獨立副本，可在此編輯。密碼以遮罩形式保存為機密，永不顯示。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:58
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1271
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1279
+msgid "Info"
+msgstr "資訊"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:70
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1132
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1310
+msgid "Install"
+msgstr "安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:66
+msgid "Install (simulate first)"
+msgstr "安裝（先模擬）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1216
+msgid ""
+"Install opens the quarantine setup: ledger, aliases pa_quarantine and "
+"pa_never_block, the rule Max Cyber IA, scenarios, a cron job every 5 minutes "
+"and the first run, one step at a time; every step is simulated first and can "
+"be undone alone."
+msgstr "安裝會開啟隔離設定：記錄簿、別名 pa_quarantine 與 pa_never_block、規則 Max Cyber IA、場景、每 5 分鐘一次的 Cron 工作以及首次執行，一次一個步驟；每個步驟都會先模擬，並可單獨復原。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:192
+msgid "Install options"
+msgstr "安裝選項"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:204
+msgid "Install runtime"
+msgstr "安裝執行環境"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:57
+msgid "Install the runtime first (Simulate install, then Apply install)."
+msgstr "請先安裝執行環境（先模擬安裝，再套用安裝）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:204
+msgid "Installed"
+msgstr "已安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:119
+msgid "Installed and running"
+msgstr "已安裝並執行中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:189
+msgid "Installed models"
+msgstr "已安裝的模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:120
+msgid "Installed, not running"
+msgstr "已安裝，未執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:81
+msgid ""
+"Installing creates the case database and a cron job every 5 minutes. The "
+"simulation shows every step first."
+msgstr "安裝會建立案例資料庫與每 5 分鐘一次的 Cron 工作。模擬會先顯示每個步驟。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:40
+msgid ""
+"Installs the automatic quarantine (rule 'Max Cyber IA') step by step. Every "
+"step shows the state detected now; Simulate shows exactly what would change, "
+"Apply asks for confirmation, and Undo reverts that step alone (its entry in "
+"the action history)."
+msgstr "逐步安裝自動隔離（規則「Max Cyber IA」）。每個步驟都會顯示剛偵測到的狀態；模擬會準確顯示將變更的內容，套用前會要求確認，復原僅還原該步驟（其在操作歷程記錄中的項目）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:128
+msgid "Instruction sets"
+msgstr "指令集"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:146
+msgid ""
+"Integrated GPU not used: it shares the memory channel and OPNsense ships no "
+"driver for it."
+msgstr "不使用內建 GPU：它共用記憶體通道，且 OPNsense 未提供其驅動程式。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:185
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:202
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:214
+msgid "Interface"
+msgstr "介面"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:134
+msgid "Interfaces"
+msgstr "介面"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:117
+msgid "Internal host to bad destination"
+msgstr "內部主機連往惡意目的地"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:164
+msgid ""
+"Internal only (LAN/VPN) AND CVSS >= 7, OR EPSS >= 0.1, OR exposed without a "
+"high score"
+msgstr "僅內部（LAN/VPN）且 CVSS >= 7，或 EPSS >= 0.1，或已曝露但評分不高"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:63
+msgid "Internal scan"
+msgstr "內部掃描"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:194
+msgid "Internet reachable service involved"
+msgstr "涉及可從網際網路存取的服務"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/VulnsController.php:71
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/VulnsController.php:86
+msgid "Invalid CVE id."
+msgstr "無效的 CVE 編號。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:184
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:147
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:222
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:55
+msgid "Invalid action."
+msgstr "無效的動作。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:111
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:124
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:142
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:215
+msgid "Invalid address."
+msgstr "無效的位址。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:192
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:164
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:230
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:63
+msgid "Invalid argument."
+msgstr "無效的參數。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:185
+msgid "Invalid case or state."
+msgstr "無效的案例或狀態。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:118
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:136
+msgid "Invalid case."
+msgstr "無效的案例。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/PostureController.php:88
+msgid "Invalid check id."
+msgstr "無效的檢查編號。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:150
+msgid "Invalid day."
+msgstr "無效的日期。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:285
+msgid "Invalid duration."
+msgstr "無效的時長。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:216
+msgid "Invalid entry."
+msgstr "無效的項目。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:177
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:189
+msgid "Invalid filter."
+msgstr "無效的篩選器。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:81
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnalysisController.php:134
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:115
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:138
+msgid "Invalid finding id."
+msgstr "無效的發現項目編號。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/DevicesController.php:106
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/DevicesController.php:81
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:121
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:145
+msgid "Invalid id."
+msgstr "無效的編號。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:167
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:186
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:191
+msgid "Invalid item."
+msgstr "無效的項目。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:214
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:240
+msgid "Invalid job id."
+msgstr "無效的工作編號。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:196
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:168
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:71
+msgid "Invalid journal id."
+msgstr "無效的日誌編號。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/SetupController.php:67
+msgid "Invalid model name."
+msgstr "無效的模型名稱。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ShadowaiController.php:109
+msgid "Invalid network."
+msgstr "無效的網路。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:255
+msgid "Invalid path."
+msgstr "無效的路徑。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:222
+msgid "Invalid port."
+msgstr "無效的通訊埠。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:145
+msgid "Invalid request."
+msgstr "無效的請求。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/MinruleController.php:64
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/MinruleController.php:77
+msgid "Invalid rule id."
+msgstr "無效的規則編號。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:271
+msgid "Invalid selection."
+msgstr "無效的選擇。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:96
+msgid "Invalid settings."
+msgstr "無效的設定。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:116
+msgid "IoT"
+msgstr "IoT"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:119
+msgid "It runs inside this service (priority follows its exposure)"
+msgstr "它在此服務內執行（優先順序取決於該服務的曝險）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Italian"
+msgstr "義大利文"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:62
+msgid "JA4 client fingerprints"
+msgstr "JA4 用戶端指紋"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:188
+msgid "Jail dataset"
+msgstr "jail 資料集"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Japanese"
+msgstr "日文"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:74
+msgid "KEV"
+msgstr "KEV"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:98
+#, php-format
+msgid "KEV collected %s (%s entries, %s)"
+msgstr "KEV 收集於 %s（%s 個項目，%s）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:237
+msgid ""
+"Keeps the runtime small: the jail is pinned to a few CPUs with a low "
+"priority, one request at a time, one model loaded, and a bounded context."
+msgstr "保持執行環境的小規模：jail 綁定在少數幾個低優先權的 CPU，一次一個請求，只載入一個模型，上下文有上限。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1208
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1438
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:151
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:79
+msgid "Kind"
+msgstr "種類"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:147
+msgid "Ladder"
+msgstr "階梯"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:95
+msgid "Language"
+msgstr "語言"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Language of the explanations; by default the language of your GUI session."
+msgstr "解釋所用的語言；預設使用您 GUI 工作階段的語言。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:127
+msgid "Language: automatic"
+msgstr "語言：自動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:234
+msgid "Large models are slow on a firewall; only with this box ticked."
+msgstr "大型模型在防火牆上執行緩慢；僅在勾選此方塊時使用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:107
+msgid "Last activity"
+msgstr "最近活動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:64
+msgid "Last analysis"
+msgstr "上次分析"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1164
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1422
+msgid "Last offense"
+msgstr "上次違規"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:176
+msgid "Last run"
+msgstr "上次執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:66
+#, php-format
+msgid "Last scan %s"
+msgstr "上次掃描 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:85
+msgid "Last seen"
+msgstr "上次出現"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:54
+msgid "Last use"
+msgstr "上次使用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1089
+msgid "Latest jobs"
+msgstr "最近的工作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:106
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:55
+msgid "Ledger"
+msgstr "記錄簿"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:198
+msgid "Ledger (2)"
+msgstr "記錄簿 (2)"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:73
+msgid ""
+"Legacy rule: open Firewall: Rules: Migration to convert it before editing"
+msgstr "舊式規則：請先開啟 防火牆：規則：遷移 進行轉換後再編輯"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:140
+msgid "Less than 10 GiB free: room for the runtime and one small model only"
+msgstr "可用空間少於 10 GiB：僅夠容納執行環境與一個小模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:138
+msgid "Less than 12 GB of RAM: only small models (up to 3B) fit"
+msgstr "記憶體少於 12 GB：只能容納小模型（最多 3B）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:139
+msgid "Less than 4 GiB free: no room for the runtime and a model"
+msgstr "可用空間少於 4 GiB：沒有空間容納執行環境與模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:137
+msgid "Less than 8 GB of RAM: a local model would starve the firewall"
+msgstr "記憶體少於 8 GB：本機模型會讓防火牆資源不足"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1159
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1416
+msgid "Level"
+msgstr "等級"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:91
+msgid "Limit"
+msgstr "限制"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:156
+msgid "Limit of active entries"
+msgstr "使用中項目上限"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:190
+msgid "Limits"
+msgstr "限制"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:95
+msgid "List models"
+msgstr "列出模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:132
+msgid "Load average (1 / 5 / 15 min)"
+msgstr "平均負載（1 / 5 / 15 分鐘）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:143
+msgid "Load is high right now; explanations should run outside peak hours"
+msgstr "目前負載較高；解釋應在尖峰時段之外執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1194
+msgid "Load more"
+msgstr "載入更多"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:39
+msgid "Loading..."
+msgstr "載入中..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:89
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:158
+msgid "Local"
+msgstr "本機"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:128
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:85
+msgid "Low"
+msgstr "低"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:102
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:109
+msgid "MAC"
+msgstr "MAC"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1151
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1406
+msgid "Make permanent"
+msgstr "設為永久"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:81
+msgid "Manufacturer"
+msgstr "製造商"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:67
+#, php-format
+msgid "Manufacturers: %s (%s entries)"
+msgstr "製造商：%s（%s 個項目）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:89
+#, php-format
+msgid "Mapping suggestion for %s"
+msgstr "%s 的對應建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:77
+#, php-format
+msgid "Mark %s device(s)"
+msgstr "標記 %s 個裝置"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:90
+msgid "Mark as expected"
+msgstr "標記為預期"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:158
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:75
+msgid "Mark as known"
+msgstr "標記為已知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:159
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:76
+msgid "Mark as not known"
+msgstr "標記為未知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:181
+msgid "Mark the quarantine as running (it is paused now)."
+msgstr "將隔離標記為執行中（目前已暫停）。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Max"
+msgstr "最大"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1224
+msgid "Maximum active pf entries"
+msgstr "pf 使用中項目上限"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:76
+msgid "Maximum memory of the jail (RCTL)."
+msgstr "jail 的最大記憶體（RCTL）。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Maximum time to wait for an answer. Leave empty for the provider default "
+"(Ollama on this firewall 360 s, Ollama on the LAN 120 s, Claude Code (LAN) "
+"300 s, Claude 180 s). Local models on small hardware can need a few minutes."
+msgstr "等待回答的最長時間。留空則使用提供者的預設值（此防火牆上的 Ollama 360 秒，區域網路中的 Ollama 120 秒，Claude Code（區域網路）300 秒，Claude 180 秒）。小型硬體上的本機模型可能需要幾分鐘。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:127
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:84
+msgid "Medium"
+msgstr "中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:65
+msgid "Medium risk"
+msgstr "中風險"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:65
+msgid "Method"
+msgstr "方法"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:407
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:92
+msgid "Minimal rule"
+msgstr "最小規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:36
+msgid "Minimal rule from the observed traffic"
+msgstr "依據已觀測流量的最小規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:73
+msgid "Minimum TLS"
+msgstr "最低 TLS 版本"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:125
+msgid "Minimum severity"
+msgstr "最低嚴重性"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1083
+msgid "Mode"
+msgstr "模式"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1082
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:49
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:102
+msgid "Model"
+msgstr "模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:222
+msgid "Model name (name:tag)"
+msgstr "模型名稱（name:tag）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:231
+msgid "Model name from the Ollama library"
+msgstr "Ollama 模型庫中的模型名稱"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:293
+msgid "Model name used by the local runtime (chosen in the Model step)."
+msgstr "本機執行環境使用的模型名稱（在「模型」步驟中選擇）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:256
+msgid "Model to measure"
+msgstr "要測量的模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:164
+msgid ""
+"Models are stored below /var/db/ai (a ZFS dataset on ZFS systems). The "
+"directory comes from the Settings (Models directory)."
+msgstr "模型儲存在 /var/db/ai 下（在 ZFS 系統上為 ZFS 資料集）。該目錄來自設定（模型目錄）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:165
+msgid "Models directory"
+msgstr "模型目錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:82
+msgid "Monit has no mail server configured (Services > Monit > Settings)."
+msgstr "Monit 未設定郵件伺服器（服務 > Monit > 設定）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:109
+msgid "More"
+msgstr "更多"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:180
+msgid "Most relevant cases"
+msgstr "最相關的案例"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:63
+msgid "N/A"
+msgstr "N/A"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:81
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:283
+msgid "NOT anonymized"
+msgstr "未匿名化"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:99
+msgid "NTP servers"
+msgstr "NTP 伺服器"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:111
+msgid "NVR/DVR"
+msgstr "NVR/DVR"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:104
+msgid "NXDOMAIN per hour"
+msgstr "每小時 NXDOMAIN 數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:79
+msgid "Name"
+msgstr "名稱"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:77
+msgid "Needs the RAM limit enabled (button below, then a reboot)."
+msgstr "需要啟用記憶體限制（按下方按鈕，然後重新開機）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:60
+msgid "NetFlow (approximate)"
+msgstr "NetFlow（近似值）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1152
+msgid "Never block (pa_never_block)"
+msgstr "永不封鎖（pa_never_block）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:151
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:86
+msgid "New"
+msgstr "新增"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:49
+msgid "New (3 days)"
+msgstr "新增（3 天）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:62
+msgid "New (7 days)"
+msgstr "新增（7 天）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:48
+msgid "New aliases"
+msgstr "新別名"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:62
+msgid "New device"
+msgstr "新裝置"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:64
+msgid "New domain"
+msgstr "新網域"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:70
+msgid "New problem"
+msgstr "新問題"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:112
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1193
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:93
+msgid "Next"
+msgstr "下一步"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1150
+msgid "Next level"
+msgstr "下一等級"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:171
+msgid "Next run"
+msgstr "下次執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:145
+msgid "Next steps"
+msgstr "後續步驟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:160
+msgid "Next: storage, runtime, model, limits and test on this firewall."
+msgstr "下一步：在此防火牆上設定儲存空間、執行環境、模型、限制並測試。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:88
+msgid "No AI provider: nothing ever leaves this firewall."
+msgstr "無 AI 提供者：任何資料都不會離開此防火牆。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:59
+msgid "No AI service seen in this window."
+msgstr "此時間窗內未發現 AI 服務。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:80
+msgid "No WAN interface found."
+msgstr "找不到 WAN 介面。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:274
+msgid "No analysis report yet: run Analyze on the Findings page first."
+msgstr "尚無分析報表：請先在「發現項目」頁面執行分析。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:63
+msgid "No analysis yet. Click Analyze to review the rule set."
+msgstr "尚未分析。按「分析」以檢查規則集。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ApiHelperTrait.php:71
+msgid ""
+"No answer from the backend (timeout or script error), see the system log."
+msgstr "後端無回應（逾時或指令碼錯誤），請查看系統記錄。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:109
+msgid "No cases match the filters."
+msgstr "沒有符合篩選條件的案例。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:107
+msgid "No changes to save."
+msgstr "沒有需要儲存的變更。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:302
+msgid "No changes to save: the settings already match."
+msgstr "沒有需要儲存的變更：設定已一致。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:72
+msgid "No check matches the filter."
+msgstr "沒有符合篩選條件的檢查。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:71
+msgid ""
+"No data yet: the first run learns the network, findings appear after it."
+msgstr "尚無資料：首次執行會學習網路，之後才會出現發現項目。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:176
+msgid "No digest for this day yet."
+msgstr "這一天尚無摘要。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1195
+msgid "No entries match the filters."
+msgstr "沒有符合篩選條件的項目。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:97
+msgid "No exceptions."
+msgstr "沒有例外。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:102
+msgid ""
+"No exposure report yet: run it in the Exposure tab of the Policy Analyzer."
+msgstr "尚無曝險報表：請在 Policy Analyzer 的「曝險」分頁中執行。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:70
+msgid "No findings match the filters."
+msgstr "沒有符合篩選條件的發現項目。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:112
+msgid "No findings match the selected filters."
+msgstr "沒有符合所選篩選條件的發現項目。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:218
+msgid "No model downloaded yet."
+msgstr "尚未下載任何模型。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:157
+msgid ""
+"No model fits this hardware as a local runtime: use a model server in your "
+"network."
+msgstr "沒有模型適合在此硬體上作為本機執行環境：請使用您網路中的模型伺服器。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:100
+msgid "No network is used unless you click Update (simulation first)."
+msgstr "除非按下「更新」（先模擬），否則不會使用網路。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:120
+msgid "No network path (library only)"
+msgstr "無網路路徑（僅為函式庫）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:63
+msgid "No permissive pass rule found."
+msgstr "找不到過於寬鬆的放行規則。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:84
+msgid "No posture report yet."
+msgstr "尚無安全態勢報表。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:291
+msgid "No provider chosen yet: go back to the Provider step."
+msgstr "尚未選擇提供者：請返回「提供者」步驟。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:124
+msgid "No scan yet: click Scan now."
+msgstr "尚未掃描：請按「立即掃描」。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:61
+msgid "No traffic attributed to this rule in the window."
+msgstr "此時間窗內沒有歸屬於此規則的流量。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:167
+msgid "No value changed yet: edit a field to simulate."
+msgstr "尚未變更任何值：編輯欄位以進行模擬。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "None"
+msgstr "無"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:87
+msgid "None (AI disabled)"
+msgstr "無（AI 已停用）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:89
+msgid "Normal for this host"
+msgstr "對此主機屬於正常"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1127
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:205
+msgid "Not installed"
+msgstr "未安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:118
+msgid "Not installed yet: use the AI setup to install it."
+msgstr "尚未安裝：請使用 AI 設定進行安裝。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:152
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:72
+msgid "Not known"
+msgstr "未知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:63
+msgid "Not marked known"
+msgstr "未標記為已知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:149
+msgid "Not recommended for a local runtime"
+msgstr "不建議用於本機執行環境"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:165
+msgid "Note"
+msgstr "備註"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:133
+msgid "Note (optional)"
+msgstr "備註（選填）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:128
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:52
+msgid "Notes"
+msgstr "備註"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:87
+msgid "Nothing found for these filters."
+msgstr "找不到符合這些篩選條件的內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:51
+msgid "Nothing observed would be blocked."
+msgstr "已觀測的流量都不會被封鎖。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:88
+msgid ""
+"Nothing runs by itself: changes open a simulation first and are journaled."
+msgstr "不會自動執行任何內容：變更會先開啟模擬並記錄於日誌中。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:36
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:39
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:128
+msgid "Nothing to do: the system is already in the requested state."
+msgstr "無需操作：系統已處於所需狀態。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:161
+msgid ""
+"Nothing to install on this firewall: the next step collects the connection "
+"details and enables the AI."
+msgstr "此防火牆上無需安裝任何內容：下一步會收集連線詳細資料並啟用 AI。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:203
+msgid "Nothing to remove."
+msgstr "沒有可移除的內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:41
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:41
+msgid "Nothing to show."
+msgstr "沒有可顯示的內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:118
+msgid "Notification center enabled"
+msgstr "通知中心已啟用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:176
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:59
+msgid "Notifications"
+msgstr "通知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:106
+msgid "Notifications sent"
+msgstr "已傳送的通知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:90
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:46
+msgid "Now"
+msgstr "現在"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:42
+msgid "Observed"
+msgstr "已觀測"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:50
+msgid "Observed traffic the proposal would block"
+msgstr "該建議會封鎖的已觀測流量"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:76
+msgid "Occurrences"
+msgstr "出現次數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1141
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1420
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1439
+msgid "Offenses"
+msgstr "違規"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Offer \"Explain with AI\" on the findings. Off by default: without it "
+"nothing ever leaves this firewall. The AI only explains and suggests in "
+"text, it never changes the configuration."
+msgstr "在發現項目上提供「用 AI 解釋」。預設關閉：關閉時任何資料都不會離開此防火牆。AI 只以文字形式解釋與建議，從不變更設定。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Ollama"
+msgstr "Ollama"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:178
+msgid ""
+"Ollama runs in an isolated FreeBSD jail below /var/db/ai/jail, without "
+"network access, listening on 127.0.0.1:11434 only. The package database of "
+"OPNsense is not touched."
+msgstr "Ollama 在 /var/db/ai/jail 下隔離的 FreeBSD jail 中執行，無網路存取，僅監聽 127.0.0.1:11434。不會變動 OPNsense 的套件資料庫。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:185
+msgid "Ollama version"
+msgstr "Ollama 版本"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "On a server in my LAN"
+msgstr "在我區域網路中的伺服器上"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "On this firewall (local)"
+msgstr "在此防火牆上（本機）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:148
+msgid "Open"
+msgstr "未處理"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:90
+msgid "Open (new + in analysis)"
+msgstr "未處理（新增 + 分析中）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:113
+msgid "Open AI setup"
+msgstr "開啟 AI 設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:275
+msgid "Open Findings"
+msgstr "開啟發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:79
+msgid "Open Settings"
+msgstr "開啟設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:111
+msgid "Open in Firewall: Rules"
+msgstr "在 防火牆：規則 中開啟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:153
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1154
+msgid "Open in Live View"
+msgstr "在即時檢視中開啟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:69
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:53
+msgid "Open page"
+msgstr "開啟頁面"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:54
+msgid "Open rule"
+msgstr "開啟規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:191
+msgid "Open the Quarantine tab"
+msgstr "開啟「隔離」分頁"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:84
+msgid "Open the action history"
+msgstr "開啟操作歷程記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:124
+msgid "Open the full action history"
+msgstr "開啟完整的操作歷程記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:74
+msgid "Open the rule in Firewall: Rules (new tab)"
+msgstr "在 防火牆：規則 中開啟該規則（新分頁）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Opus 5.5 — balanced (US$4/20)"
+msgstr "Opus 5.5 — 均衡（US$4/20）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Opus — balanced, uses the quota fast"
+msgstr "Opus — 均衡，配額消耗較快"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1379
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1380
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1425
+msgid "Origin"
+msgstr "來源"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:56
+msgid "Other"
+msgstr "其他"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:61
+msgid "Outbound volume"
+msgstr "連出流量"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:63
+msgid "Own settings (imported from Monit or typed)"
+msgstr "獨立設定（從 Monit 匯入或手動輸入）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:63
+msgid "P1 critical"
+msgstr "P1 嚴重"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:64
+msgid "P2 high"
+msgstr "P2 高"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:65
+msgid "P3 medium"
+msgstr "P3 中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:66
+msgid "P4 low"
+msgstr "P4 低"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:134
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:225
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:236
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AiController.php:77
+msgid "POST required"
+msgstr "需要 POST"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:72
+msgid "Package"
+msgstr "套件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:100
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:217
+msgid "Packets"
+msgstr "封包"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:121
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:98
+msgid "Parameters"
+msgstr "參數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:200
+msgid "Part of it was allowed"
+msgstr "部分被放行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:62
+msgid "Pass"
+msgstr "通過"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:134
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:55
+msgid "Passive inventory of the local network: nothing is sent to the devices."
+msgstr "本地網路的被動資產清冊：不會向裝置傳送任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:75
+msgid "Password"
+msgstr "密碼"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1134
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1315
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:185
+msgid "Pause"
+msgstr "暫停"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:175
+msgid "Paused"
+msgstr "已暫停"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:51
+msgid "Per day (DNS queries + TLS connections)"
+msgstr "每天（DNS 查詢 + TLS 連線）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1191
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1210
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1441
+msgid "Per year"
+msgstr "每年"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:95
+msgid "Period"
+msgstr "期間"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:175
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:58
+msgid "Periodic report"
+msgstr "定期報表"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:211
+msgid ""
+"Pick the model the explanations will use. The recommendation is computed "
+"from this hardware; the download is verified (SHA256) and can be cancelled."
+msgstr "選擇解釋所用的模型。建議結果依據此硬體計算；下載會經過驗證（SHA256）並可取消。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1038
+msgid "Please correct the highlighted fields."
+msgstr "請更正醒目標示的欄位。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Policy Analyzer"
+msgstr "Policy Analyzer"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:102
+msgid "Policy Analyzer findings"
+msgstr "Policy Analyzer 發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:167
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:70
+msgid "Port"
+msgstr "通訊埠"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1219
+msgid "Port scan: distinct destination ports"
+msgstr "通訊埠掃描：不同目的通訊埠數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:151
+msgid "Port scan: distinct ports"
+msgstr "通訊埠掃描：不同通訊埠數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:152
+msgid "Port scan: window (s)"
+msgstr "通訊埠掃描：時間窗（秒）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1220
+msgid "Port scan: window (seconds)"
+msgstr "通訊埠掃描：時間窗（秒）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:120
+msgid "Port spike"
+msgstr "通訊埠暴增"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1205
+msgid "Ports"
+msgstr "通訊埠"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:51
+msgid "Portuguese (Brazil)"
+msgstr "葡萄牙文（巴西）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Portuguese (Portugal)"
+msgstr "葡萄牙文（葡萄牙）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:139
+msgid "Position"
+msgstr "位置"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+msgid "Posture"
+msgstr "安全態勢"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:100
+msgid "Posture (exposure)"
+msgstr "安全態勢（曝險）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:66
+msgid "Posture score"
+msgstr "安全態勢分數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:98
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:176
+msgid "Prepare storage"
+msgstr "準備儲存空間"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:46
+msgid "Prepare the storage first (Simulate prepare, then Prepare storage)."
+msgstr "請先準備儲存空間（先模擬準備，再準備儲存空間）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:39
+msgid ""
+"Prepares the optional AI explanations step by step. Every step shows the "
+"state detected now; Simulate shows exactly what would change, Apply asks for "
+"confirmation, and every change can be reverted from the action history. "
+"Nothing is ever applied without its simulation."
+msgstr "逐步準備選用的 AI 解釋功能。每個步驟都會顯示剛偵測到的狀態；模擬會準確顯示將變更的內容，套用前會要求確認，每項變更都可以從操作歷程記錄中還原。任何內容都不會在未經模擬的情況下套用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:153
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:73
+msgid "Present"
+msgstr "在線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:61
+msgid "Present now"
+msgstr "目前在線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1079
+msgid "Presets"
+msgstr "預設組合"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:153
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:109
+msgid "Preview"
+msgstr "預覽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:110
+msgid "Preview with AI summary"
+msgstr "附 AI 摘要的預覽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:158
+#, php-format
+msgid "Preview: with the logs of the last 5 min, %n address(es) would enter"
+msgstr "預覽：依最近 5 分鐘的記錄，將有 %n 個位址進入"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:111
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1192
+msgid "Previous"
+msgstr "上一步"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:67
+msgid "Prioritised"
+msgstr "已排定優先順序"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:160
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:162
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:163
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:164
+msgid "Priority"
+msgstr "優先權"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:245
+msgid "Priority (nice)"
+msgstr "優先權（nice）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:70
+msgid "Proposal only: nothing is applied from here."
+msgstr "僅為建議：不會從此處套用任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:79
+msgid ""
+"Proposal only: nothing is changed from here. Change it on the page, then run "
+"the checks again."
+msgstr "僅為建議：不會從此處變更任何內容。請在相應頁面上修改，然後重新執行檢查。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:69
+msgid ""
+"Proposal only: open the rule and change it yourself; nothing is applied from "
+"here."
+msgstr "僅為建議：請開啟規則並自行修改；不會從此處套用任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:47
+msgid "Proposed"
+msgstr "建議的"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:44
+msgid "Proposed changes"
+msgstr "建議的變更"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1199
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1321
+msgid "Protected addresses"
+msgstr "受保護的位址"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:188
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:93
+msgid "Proto"
+msgstr "協定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1082
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:99
+msgid "Provider"
+msgstr "提供者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:151
+msgid "Put {ip} in quarantine"
+msgstr "將 {ip} 隔離"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:150
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1240
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:101
+msgid "Quarantine"
+msgstr "隔離"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:37
+msgid "Quarantine setup"
+msgstr "隔離設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:146
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:261
+msgid "Question"
+msgstr "問題"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:133
+msgid "Queue and history"
+msgstr "佇列與歷程記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:258
+msgid "Quick test"
+msgstr "快速測試"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:159
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:129
+msgid "RAM"
+msgstr "記憶體"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:75
+msgid "RAM limit (GB)"
+msgstr "記憶體限制（GB）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:72
+msgid ""
+"RAM limit enabled: it becomes active after the next reboot of the firewall."
+msgstr "記憶體限制已啟用：將在防火牆下次重新開機後生效。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:267
+msgid "RAM used"
+msgstr "已用記憶體"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:62
+msgid "Rare destination"
+msgstr "罕見目的地"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:162
+msgid "Reachable from the internet AND (in CISA KEV OR EPSS >= 0.5)"
+msgstr "可從網際網路存取 且（列於 CISA KEV 或 EPSS >= 0.5）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:163
+msgid "Reachable from the internet AND CVSS >= 7, OR in KEV while not exposed"
+msgstr "可從網際網路存取 且 CVSS >= 7，或列於 KEV 但未曝露"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:190
+msgid "Reached an internal host"
+msgstr "到達了內部主機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:124
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:44
+msgid "Read only"
+msgstr "唯讀"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:58
+msgid "Reading DNS and TLS data..."
+msgstr "正在讀取 DNS 與 TLS 資料..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:42
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:87
+msgid "Reading the current state..."
+msgstr "正在讀取目前狀態..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:40
+msgid "Reading the filter log / NetFlow of the rule..."
+msgstr "正在讀取該規則的過濾記錄 / NetFlow..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1161
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1374
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1375
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1418
+msgid "Reason"
+msgstr "原因"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:79
+msgid "Recipients"
+msgstr "收件者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:81
+msgid "Recipients (empty: the Monit alert recipients)"
+msgstr "收件者（留空：使用 Monit 警示收件者）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1295
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:58
+msgid "Recommendation"
+msgstr "建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:168
+msgid ""
+"Recommendations are not available (the AI setup component is not installed)."
+msgstr "無法提供建議（未安裝 AI 設定元件）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:156
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:228
+msgid "Recommended for this hardware"
+msgstr "建議用於此硬體"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:52
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:145
+msgid "Recorded in the action history, it can be reverted from there."
+msgstr "已記錄於操作歷程記錄中，可從該處還原。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:170
+msgid "Recorded in the action history, it can be reverted there."
+msgstr "已記錄於操作歷程記錄中，可在該處還原。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:188
+msgid "Recurrence"
+msgstr "重複發生"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:106
+msgid "References"
+msgstr "參考資料"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:179
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:208
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:240
+msgid "Refresh"
+msgstr "重新整理"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:161
+msgid "Refresh preview"
+msgstr "重新整理預覽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1399
+msgid "Release"
+msgstr "解除"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:104
+msgid "Relevant CVEs"
+msgstr "相關 CVE"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1160
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1417
+msgid "Remaining"
+msgstr "剩餘"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:98
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1133
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1325
+msgid "Remove"
+msgstr "移除"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:124
+#, php-format
+msgid "Remove %s"
+msgstr "移除 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:193
+msgid "Remove all"
+msgstr "全部移除"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:192
+msgid "Remove all (step by step)"
+msgstr "全部移除（逐步）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:58
+msgid "Remove local AI"
+msgstr "移除本機 AI"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:59
+msgid ""
+"Remove local AI undoes the installation with one click; downloaded models "
+"are kept unless you choose to delete them."
+msgstr "「移除本機 AI」可一鍵復原安裝；已下載的模型會保留，除非您選擇刪除。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:124
+msgid "Remove my decision (back to pending)"
+msgstr "撤回我的決定（恢復為擱置）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:173
+msgid "Remove schedule"
+msgstr "移除排程"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:130
+msgid "Remove the aliases"
+msgstr "移除別名"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:143
+msgid "Remove the rule"
+msgstr "移除規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1312
+msgid "Reopen the quarantine setup at the current step"
+msgstr "在目前步驟重新開啟隔離設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:119
+msgid "Repeat offender"
+msgstr "累犯"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid ""
+"Replace IP addresses, hostnames, descriptions, alias and user names by "
+"placeholders (IP4_PRIV_1, HOST_1, DESC_1, ...) before sending, and put the "
+"real values back in the answer. Strongly recommended for providers outside "
+"this firewall."
+msgstr "傳送前將 IP 位址、主機名稱、說明、別名與使用者名稱替換為預留位置（IP4_PRIV_1、HOST_1、DESC_1、...），並在回答中還原真實值。強烈建議用於此防火牆以外的提供者。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:67
+msgid "Replay over the window"
+msgstr "在時間窗內重播"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:165
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:54
+msgid "Reports and notifications"
+msgstr "報表與通知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:146
+msgid "Resend"
+msgstr "重新傳送"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:150
+msgid "Reset after (days without offenses)"
+msgstr "重設時間（無違規的天數）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:88
+msgid "Resolved"
+msgstr "已解決"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:134
+msgid "Resource accounting (kern.racct.enable)"
+msgstr "資源計量（kern.racct.enable）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:110
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1462
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:80
+msgid "Result"
+msgstr "結果"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:179
+msgid "Result of the first run"
+msgstr "首次執行的結果"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1135
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1317
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:186
+msgid "Resume"
+msgstr "繼續"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:54
+msgid "Resume download"
+msgstr "繼續下載"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:52
+msgid "Resume installation"
+msgstr "繼續安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:85
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:123
+msgid "Revert"
+msgstr "還原"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:994
+msgid "Revert from the action history restores the previous value."
+msgstr "從操作歷程記錄還原會恢復先前的值。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1030
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:303
+msgid "Revert from the action history restores the previous values."
+msgstr "從操作歷程記錄還原會恢復先前的值。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:146
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:46
+msgid "Risk"
+msgstr "風險"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:162
+msgid ""
+"Risk is inferred without the firmware version (manufacturer history, CISA "
+"KEV entries of the manufacturer, port forwards, new device): it is a hint, "
+"never a confirmed vulnerability. Isolating a device is a suggestion of the "
+"AI; do it yourself in Firewall > Rules."
+msgstr "風險是在不知道韌體版本的情況下推斷的（製造商歷史、該製造商的 CISA KEV 項目、通訊埠轉送、新裝置）：這只是提示，絕非已確認的弱點。隔離裝置是 AI 的建議；請自行在 防火牆 > 規則 中操作。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:94
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:41
+msgid "Rule"
+msgstr "規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:196
+msgid "Rule (4): end the active quarantines, remove the rule"
+msgstr "規則 (4)：結束使用中的隔離，移除規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1294
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:66
+msgid "Rules"
+msgstr "規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:81
+msgid "Run analysis now"
+msgstr "立即執行分析"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:264
+msgid "Run benchmark"
+msgstr "執行效能測試"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:119
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:69
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:72
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:46
+msgid "Run now"
+msgstr "立即執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:182
+msgid ""
+"Run the quarantine once now; Simulate shows who would enter (read from the "
+"logs since the ledger was created)."
+msgstr "立即執行一次隔離；模擬會顯示誰將進入（讀取自記錄簿建立以來的記錄）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1088
+msgid "Run the queue now"
+msgstr "立即執行佇列"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:58
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:147
+msgid "Running in the background"
+msgstr "正在背景執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:47
+msgid "Running the checks..."
+msgstr "正在執行檢查..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:69
+msgid "Running..."
+msgstr "執行中..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:168
+msgid ""
+"Runs the quarantine every 5 minutes (System: Settings: Cron) and rebuilds "
+"the pf table from the ledger after a reboot (boot hook)."
+msgstr "每 5 分鐘執行一次隔離（系統：設定：Cron），並在重新開機後依據記錄簿重建 pf 表（開機掛鉤）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:179
+msgid "Runtime"
+msgstr "執行環境"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:183
+msgid "Runtime state not available (is the setup component installed?)."
+msgstr "無法取得執行環境狀態（是否已安裝設定元件？）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:117
+msgid "Runtime state not available."
+msgstr "無法取得執行環境狀態。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Russian"
+msgstr "俄文"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:223
+msgid "SHA-256 (required for a local file)"
+msgstr "SHA-256（本機檔案必填）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:69
+msgid "SMTP server"
+msgstr "SMTP 伺服器"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Same as the GUI"
+msgstr "與 GUI 相同"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1486
+msgid "Save"
+msgstr "儲存"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:84
+msgid "Save channel"
+msgstr "儲存通道"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:130
+msgid "Save notification settings"
+msgstr "儲存通知設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:108
+msgid "Save report settings"
+msgstr "儲存報表設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:89
+msgid "Save reports and notifications settings"
+msgstr "儲存報表與通知設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:103
+msgid "Save settings"
+msgstr "儲存設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:97
+msgid "Save the settings first, this uses the saved values."
+msgstr "請先儲存設定，此處使用已儲存的值。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:157
+msgid "Saved provider"
+msgstr "已儲存的提供者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1490
+msgid ""
+"Saving first shows the changes; every save is recorded in the action history "
+"and can be reverted. Test connection and List models use the saved settings "
+"and never send findings."
+msgstr "儲存時會先顯示變更；每次儲存都會記錄於操作歷程記錄中並可還原。「測試連線」與「列出模型」使用已儲存的設定，從不傳送發現項目。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:138
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:56
+msgid "Scan now"
+msgstr "立即掃描"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:115
+msgid "Scan then allowed"
+msgstr "先掃描後放行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1082
+msgid "Scenario"
+msgstr "場景"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:58
+msgid "Scenarios"
+msgstr "場景"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:59
+msgid "Schedule"
+msgstr "排程"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:195
+msgid "Schedule (6): remove the cron job and the boot hook"
+msgstr "排程 (6)：移除 Cron 工作與開機掛鉤"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:67
+msgid "Scheduled every 15 minutes"
+msgstr "每 15 分鐘執行一次"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:115
+msgid "Scheduled jobs (System > Settings > Cron)"
+msgstr "排程工作（系統 > 設定 > Cron）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:108
+msgid "Score"
+msgstr "分數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:69
+msgid "Score trend (90 days)"
+msgstr "分數趨勢（90 天）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:201
+msgid "Search"
+msgstr "搜尋"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:61
+msgid "Search checks"
+msgstr "搜尋檢查"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:146
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:79
+msgid "Search host, domain, port..."
+msgstr "搜尋主機、網域、通訊埠..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:154
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:74
+msgid "Search name, vendor, IP, MAC"
+msgstr "搜尋名稱、廠商、IP、MAC"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1226
+msgid "Seconds per run"
+msgstr "每次執行秒數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:99
+msgid "Sections"
+msgstr "區段"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:71
+msgid "Security"
+msgstr "安全性"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:166
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:55
+msgid ""
+"Security report every 6 h / daily and e-mail alerts, through the e-mail "
+"setup of Monit."
+msgstr "每 6 小時 / 每日安全報表及電子郵件警示，透過 Monit 的電子郵件設定傳送。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:94
+msgid "See all"
+msgstr "檢視全部"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:82
+msgid "See all models"
+msgstr "檢視所有模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:110
+msgid "Select a case to see its timeline."
+msgstr "選擇一個案例以查看其時間軸。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:72
+msgid "Select a finding to see its factors."
+msgstr "選擇一個發現項目以查看其因素。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:52
+msgid "Select a provider to enable AI assistance."
+msgstr "選擇一個提供者以啟用 AI 輔助。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ShadowaiController.php:95
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:72
+msgid "Select at least one service."
+msgstr "請至少選擇一項服務。"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:90
+msgid "Select or enter a model."
+msgstr "請選擇或輸入模型。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:88
+msgid "Send a test e-mail"
+msgstr "傳送測試電子郵件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:111
+msgid "Send report now"
+msgstr "立即傳送報表"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:87
+msgid "Send test"
+msgstr "傳送測試"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:90
+msgid "Send the periodic report"
+msgstr "傳送定期報表"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:112
+msgid "Send the report now"
+msgstr "立即傳送報表"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:147
+msgid "Send this notification again now (an e-mail can not be unsent)?"
+msgstr "現在再次傳送此通知嗎？（電子郵件寄出後無法撤回）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:78
+msgid "Sender"
+msgstr "寄件者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:278
+msgid ""
+"Sending needs the AI enabled with the saved settings: finish the setup, then "
+"come back to this step."
+msgstr "傳送需要以已儲存的設定啟用 AI：請完成設定，然後返回此步驟。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:177
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:60
+msgid "Sent e-mails"
+msgstr "已傳送的電子郵件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:242
+msgid "Sent with every request; at most the CPUs in the set."
+msgstr "隨每個請求傳送；最多為集合中的 CPU 數。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:133
+msgid "Sequence"
+msgstr "序號"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:62
+msgid ""
+"Server, port, TLS, user, password, sender and recipients are read from "
+"Services > Monit at every send: always in sync, nothing is copied."
+msgstr "伺服器、通訊埠、TLS、使用者、密碼、寄件者與收件者在每次傳送時從 服務 > Monit 讀取：永遠保持同步，不複製任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:205
+msgid "Service"
+msgstr "服務"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:145
+msgid "Service competing for CPU and memory"
+msgstr "爭搶 CPU 與記憶體的服務"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:48
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:104
+msgid "Services"
+msgstr "服務"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:52
+msgid "Services by use"
+msgstr "依使用量排列的服務"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1200
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1242
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1323
+msgid "Settings"
+msgstr "設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:104
+msgid "Settings change"
+msgstr "設定變更"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1313
+msgid "Setup"
+msgstr "設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:246
+msgid "Sev"
+msgstr "嚴重性"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:105
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:230
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:93
+msgid "Severity"
+msgstr "嚴重性"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:167
+msgid "Severity raised"
+msgstr "嚴重性已提高"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:129
+msgid "Short AI summary in each alert (fixed text when the AI is off)"
+msgstr "每則警示中附帶簡短的 AI 摘要（AI 關閉時為固定文字）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:164
+msgid "Show all {n} alternatives"
+msgstr "顯示全部 {n} 個替代方案"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:50
+msgid "Show data sent"
+msgstr "顯示已傳送的資料"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:66
+msgid "Show plan"
+msgstr "顯示計畫"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:43
+msgid "Show what is sent"
+msgstr "顯示傳送的內容"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:63
+msgid "Show what was sent"
+msgstr "顯示已傳送的內容"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:152
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:139
+msgid "Show what would be sent"
+msgstr "顯示將傳送的內容"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:106
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:247
+msgid "Signature"
+msgstr "特徵碼"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:66
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:95
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1085
+msgid "Simulate"
+msgstr "模擬"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:43
+msgid "Simulate download"
+msgstr "模擬下載"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:55
+msgid "Simulate install"
+msgstr "模擬安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:78
+msgid "Simulate limits"
+msgstr "模擬限制"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:44
+msgid "Simulate prepare"
+msgstr "模擬準備"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:203
+msgid ""
+"Simulate shows the download size (FreeBSD base and packages), the disk "
+"space, every command, the ports and how to undo it. Apply runs in the "
+"background with progress and Cancel."
+msgstr "模擬會顯示下載大小（FreeBSD 基本系統與套件）、磁碟空間、每個命令、通訊埠以及復原方式。套用會在背景執行，顯示進度並可取消。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:227
+msgid "Simulate the import"
+msgstr "模擬匯入"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:35
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:38
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:127
+msgid "Simulation"
+msgstr "模擬"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:107
+msgid "Size"
+msgstr "大小"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:44
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:89
+msgid "Skip"
+msgstr "略過"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Sonnet 5.5 — fast (US$2/10)"
+msgstr "Sonnet 5.5 — 快速（US$2/10）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Sonnet — fast (recommended)"
+msgstr "Sonnet — 快速（建議）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:189
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:247
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:94
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:123
+msgid "Source"
+msgstr "來源"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:100
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:68
+msgid "Sources"
+msgstr "來源"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.xml
+msgid "Spanish"
+msgstr "西班牙文"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:202
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:206
+msgid "Start"
+msgstr "開始"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:187
+msgid "Start at boot"
+msgstr "開機時啟動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:201
+msgid "Start the runtime after installing"
+msgstr "安裝後啟動執行環境"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:202
+msgid "Start the runtime at boot"
+msgstr "開機時啟動執行環境"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1162
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1367
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1368
+msgid "State"
+msgstr "狀態"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:164
+msgid "State changed"
+msgstr "狀態已變更"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:218
+msgid "States"
+msgstr "狀態"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1089
+msgid "Statistics per scenario and model (90 days)"
+msgstr "依場景與模型統計（90 天）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:144
+msgid "Status"
+msgstr "狀態"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:61
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:152
+msgid "Step"
+msgstr "步驟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:52
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:97
+#, php-format
+msgid "Step %n of %t"
+msgstr "第 %n 步，共 %t 步"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:37
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:40
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:129
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:38
+msgid "Steps"
+msgstr "步驟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:207
+msgid "Stop"
+msgstr "停止"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:108
+msgid "Stop the schedule"
+msgstr "停止排程"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:100
+msgid "Storage"
+msgstr "儲存空間"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:50
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:50
+msgid "Stored answer from"
+msgstr "已儲存的回答，來自"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:149
+msgid "Subject"
+msgstr "主旨"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:124
+msgid "Subscribe"
+msgstr "訂閱"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:239
+msgid "Suggested"
+msgstr "建議的"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:87
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:147
+msgid "Suggested actions"
+msgstr "建議的動作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:165
+msgid "Suggested settings"
+msgstr "建議的設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:60
+msgid "Suggestions"
+msgstr "建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:138
+msgid "Summarize again"
+msgstr "重新摘要"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:137
+msgid "Summarize with AI"
+msgstr "用 AI 摘要"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:188
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:287
+msgid "Summary"
+msgstr "概觀"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:88
+msgid "Suricata"
+msgstr "Suricata"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:144
+msgid "Suricata in IPS mode: inference competes with inline inspection"
+msgstr "Suricata 處於 IPS 模式：推論會與內嵌檢測爭搶資源"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:112
+msgid "Suricata is not writing alerts (eve.json) on this firewall."
+msgstr "Suricata 未在此防火牆上寫入警示（eve.json）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:107
+msgid "Suricata rules"
+msgstr "Suricata 規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:155
+msgid "Suricata severity up to"
+msgstr "Suricata 嚴重性上限"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1223
+msgid ""
+"Suricata: highest severity number that counts (1 = only the most severe)"
+msgstr "Suricata：列入計算的最高嚴重性數值（1 = 僅最嚴重）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:126
+msgid "System"
+msgstr "系統"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:73
+msgid "System: Power: Reboot"
+msgstr "系統：電源：重新開機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1225
+msgid "TCP: count only connection attempts (1/0)"
+msgstr "TCP：僅計算連線嘗試（1/0）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:157
+msgid "TCP: only connection attempts (SYN)"
+msgstr "TCP：僅連線嘗試（SYN）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:64
+msgid "TLS"
+msgstr "TLS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:50
+msgid "TLS connections"
+msgstr "TLS 連線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:107
+msgid "TLS fingerprints"
+msgstr "TLS 指紋"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:61
+msgid "TLS server names"
+msgstr "TLS 伺服器名稱"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:112
+msgid "TV"
+msgstr "電視"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:101
+msgid "Tailscale peers"
+msgstr "Tailscale 對等節點"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:54
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:150
+msgid "Technical details"
+msgstr "技術細節"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:104
+msgid "Test"
+msgstr "測試"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1488
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:305
+msgid "Test connection"
+msgstr "測試連線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:114
+msgid "Text"
+msgstr "文字"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:46
+msgid "The AI is disabled in the Policy Analyzer settings."
+msgstr "Policy Analyzer 設定中已停用 AI。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:47
+msgid ""
+"The AI only explains and suggests: nothing is changed. Apply any change "
+"yourself, with its simulation."
+msgstr "AI 只負責解釋與建議：不會變更任何內容。請自行套用任何變更，並附帶其模擬。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:188
+msgid ""
+"The AI only summarises and recommends. Saving, importing and sending always "
+"show a simulation first; saved settings are recorded in the action history "
+"of the Policy Analyzer and can be reverted there. The Monit password is "
+"never shown, copied to the browser or written to a log."
+msgstr "AI 只負責摘要與建議。儲存、匯入與傳送一律會先顯示模擬；已儲存的設定會記錄於 Policy Analyzer 的操作歷程記錄中並可在該處還原。Monit 密碼從不顯示、複製到瀏覽器或寫入記錄。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:135
+msgid "The FreeBSD Ollama package only exists for amd64"
+msgstr "FreeBSD 的 Ollama 套件僅適用於 amd64"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:70
+msgid "The RAM limit of the local AI is off (kern.racct.enable=0)."
+msgstr "本機 AI 的記憶體限制已關閉（kern.racct.enable=0）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1264
+msgid ""
+"The analysis is read only: it never changes rules or settings. Links open "
+"the rule in Firewall: Rules where you decide what to change."
+msgstr "分析是唯讀的：從不變更規則或設定。連結會在 防火牆：規則 中開啟規則，由您決定要變更什麼。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:65
+msgid "The anomaly detection is not scheduled yet."
+msgstr "異常偵測尚未排程。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:82
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:281
+msgid "The answer was cut off at the maximum length."
+msgstr "回答已在達到最大長度時被截斷。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:83
+msgid ""
+"The assistant was closed, the background job keeps running (closing does not "
+"cancel it). Its progress and Cancel button are at the top of the Action "
+"history."
+msgstr "助理已關閉，背景工作仍在執行（關閉不會取消它）。其進度與「取消」按鈕位於操作歷程記錄的頂端。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:263
+msgid "The benchmark needs the runtime running and at least one model."
+msgstr "效能測試需要執行環境正在執行且至少有一個模型。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:83
+#, php-format
+msgid "The channel is not usable yet: %s"
+msgstr "該通道尚無法使用：%s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:123
+msgid "The console only reads data and shows text."
+msgstr "主控台只讀取資料並顯示文字。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:51
+#, php-format
+msgid "The download of %s did not finish."
+msgstr "%s 的下載未完成。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:150
+msgid ""
+"The following steps install an isolated Ollama runtime on this firewall. You "
+"can still choose a server in your LAN or an API instead."
+msgstr "以下步驟將在此防火牆上安裝一個隔離的 Ollama 執行環境。您仍可改為選擇區域網路中的伺服器或 API。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1354
+msgid ""
+"The guards apply here too: private, own and protected addresses are refused, "
+"protected addresses inside a network stay reachable. Networks bigger than /"
+"16 (IPv4) or /32 (IPv6), ASNs with many prefixes and permanent entries ask "
+"for a second confirmation."
+msgstr "防護規則在此同樣適用：私有位址、自身位址與受保護位址會被拒絕，網路內的受保護位址仍可存取。大於 /16（IPv4）或 /32（IPv6）的網路、包含大量前綴的 ASN 以及永久項目需要再次確認。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:48
+msgid "The installation of the local AI did not finish: part of it is on disk."
+msgstr "本機 AI 的安裝未完成：部分內容已在磁碟上。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:194
+msgid ""
+"The inverse steps run one by one, each with its own simulation and "
+"confirmation and its own entry in the action history (each can be undone)."
+msgstr "反向步驟會逐一執行，每個步驟都有自己的模擬、確認以及在操作歷程記錄中的項目（每個都可復原）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:184
+msgid "The jail is running but Ollama does not answer on 127.0.0.1:11434 yet."
+msgstr "jail 正在執行，但 Ollama 尚未在 127.0.0.1:11434 上回應。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:49
+msgid "The last installation of the local AI failed and was rolled back."
+msgstr "本機 AI 上次安裝失敗，已復原。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:113
+msgid "The ledger exists; nothing to create."
+msgstr "記錄簿已存在；無需建立。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:105
+msgid ""
+"The ledger is the SQLite database of the quarantine: every offense, entry "
+"and exit, kept forever, plus the settings of the scenarios. Reading starts "
+"at the current end of the logs."
+msgstr "記錄簿是隔離功能的 SQLite 資料庫：永久保存每一次違規、進入與退出，以及各場景的設定。讀取從記錄的目前結尾開始。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:127
+msgid "The list can be edited once the aliases exist (Apply)."
+msgstr "別名建立後即可編輯該清單（套用）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:50
+msgid "The local AI is installed but not running."
+msgstr "本機 AI 已安裝但未執行。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:62
+msgid ""
+"The local AI is removed and the firewall goes back to how it was before the "
+"installation. This removal is recorded too and can be undone from the action "
+"history (it installs the local AI again)."
+msgstr "本機 AI 將被移除，防火牆恢復到安裝前的狀態。此移除操作同樣會被記錄，並可從操作歷程記錄中復原（即重新安裝本機 AI）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:294
+msgid ""
+"The local runtime is not installed: the explanations will fail until the "
+"Runtime step is applied."
+msgstr "本機執行環境未安裝：在套用「執行環境」步驟之前，解釋都會失敗。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:136
+msgid "The local runtime targets FreeBSD 15"
+msgstr "本機執行環境以 FreeBSD 15 為目標"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:83
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:280
+msgid "The model declined to answer"
+msgstr "模型拒絕回答"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:91
+msgid ""
+"The model server on this firewall is prepared by the AI setup (storage, "
+"runtime, model)."
+msgstr "此防火牆上的模型伺服器由 AI 設定準備（儲存空間、執行環境、模型）。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:98
+msgid "The previous values do not validate anymore."
+msgstr "先前的值已無法通過驗證。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:187
+msgid ""
+"The quarantine is ready when every step is done. Each step can be undone "
+"alone; Remove all goes through the inverse steps one by one and keeps the "
+"ledger unless you choose otherwise."
+msgstr "每個步驟完成後隔離即準備就緒。每個步驟都可以單獨復原；「全部移除」會逐一執行反向步驟，並保留記錄簿，除非您另行選擇。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:131
+msgid ""
+"The rule 'Max Cyber IA' blocks (quick, logged, IPv4+IPv6) inbound traffic "
+"from pa_quarantine on the WAN interfaces, before every other rule of its "
+"group."
+msgstr "規則「Max Cyber IA」會在 WAN 介面上封鎖來自 pa_quarantine 的傳入流量（quick、記錄、IPv4+IPv6），位於其所屬群組的所有其他規則之前。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:66
+msgid "The rule already matches only what was observed."
+msgstr "該規則已僅符合所觀測到的內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:214
+msgid ""
+"The runtime is not installed yet: a model can be downloaded now and becomes "
+"usable once it is."
+msgstr "執行環境尚未安裝：現在可以下載模型，安裝後即可使用。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:240
+msgid ""
+"The runtime is not installed: limits can be applied after the Runtime step."
+msgstr "執行環境未安裝：可在「執行環境」步驟之後套用限制。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:166
+msgid "The scenarios are stored in the ledger: create it first (step 2)."
+msgstr "場景儲存在記錄簿中：請先建立記錄簿（步驟 2）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:72
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:107
+msgid "The state could not be read (see the system log)."
+msgstr "無法讀取狀態（請查看系統記錄）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:173
+msgid "The storage is ready; nothing to do here."
+msgstr "儲存空間已就緒；此處無需操作。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:116
+msgid ""
+"This does not look like a private or LAN address: the data would leave your "
+"network."
+msgstr "這看起來不像私有位址或區域網路位址：資料將離開您的網路。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/QuarantineController.php:290
+msgid "This is the address of your own session."
+msgstr "這是您自己工作階段的位址。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:63
+msgid ""
+"This removal is recorded and can be undone from the action history with one "
+"click (the local AI is installed again; deleted models are not restored)."
+msgstr "此移除操作會被記錄，並可從操作歷程記錄中一鍵復原（重新安裝本機 AI；已刪除的模型不會還原）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:74
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:121
+msgid "This step has not changed anything yet."
+msgstr "此步驟尚未變更任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:108
+msgid "This step only reads the system; nothing is changed."
+msgstr "此步驟只讀取系統；不會變更任何內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:69
+msgid ""
+"This undo is recorded too and can itself be undone from the action history."
+msgstr "此復原操作同樣會被記錄，且本身也可以從操作歷程記錄中復原。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:71
+msgid "This version of the setup component can not change it yet."
+msgstr "此版本的設定元件尚無法變更它。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:241
+msgid "Threads (num_thread)"
+msgstr "執行緒數（num_thread）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:74
+msgid "Threshold"
+msgstr "閾值"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:126
+msgid "Throttle (min)"
+msgstr "節流（分鐘）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:185
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:246
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:89
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1203
+msgid "Time"
+msgstr "時間"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:127
+msgid "Timeline"
+msgstr "時間軸"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1083
+msgid "Timeout (s)"
+msgstr "逾時（秒）"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/forms/settings.xml
+msgid "Timeout (seconds)"
+msgstr "逾時（秒）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:143
+msgid "Title"
+msgstr "標題"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:150
+msgid "To"
+msgstr "收件者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:175
+msgid ""
+"To use another directory change the Models directory in the Settings first, "
+"then come back here."
+msgstr "要使用其他目錄，請先在設定中變更模型目錄，然後返回此處。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:244
+msgid "Tokens of context; 8192 fits one finding with room to spare."
+msgstr "上下文 token 數；8192 足以容納一個發現項目並留有餘裕。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/AnomaliesController.php:188
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ChangeController.php:160
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/IncidentsController.php:226
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ModuleHelperTrait.php:59
+msgid "Too many arguments."
+msgstr "參數過多。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1146
+msgid "Top ASNs"
+msgstr "主要 ASN"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:103
+msgid "Top blocks, ports and countries"
+msgstr "主要封鎖、通訊埠與國家"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1145
+msgid "Top countries"
+msgstr "主要國家"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:105
+msgid "Top destinations (24 h)"
+msgstr "主要目的地（24 小時）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:53
+msgid "Total"
+msgstr "總計"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:195
+msgid "Traffic to a quarantined address was allowed"
+msgstr "傳往被隔離位址的流量被放行了"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:174
+msgid ""
+"Turns the rule on (if it was created disabled), marks the quarantine as "
+"running and runs it once now. Undo pauses it: the rule is disabled and the "
+"ledger keeps recording."
+msgstr "啟用規則（若建立時為停用），將隔離標記為執行中並立即執行一次。復原會將其暫停：規則被停用，記錄簿繼續記錄。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:78
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:145
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:80
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1281
+msgid "Type"
+msgstr "類型"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ConsoleController.php:111
+msgid "Type a question."
+msgstr "請輸入問題。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:91
+#, php-format
+msgid "Type and name of %s"
+msgstr "%s 的類型與名稱"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:98
+msgid "Unable to build the PDF."
+msgstr "無法產生 PDF。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:62
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:68
+msgid "Under review"
+msgstr "審核中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:45
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:90
+msgid "Undo"
+msgstr "復原"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:78
+msgid ""
+"Undo of this step: the button Undo of the assistant, or Revert in the action "
+"history."
+msgstr "復原此步驟：使用助理的「復原」按鈕，或操作歷程記錄中的「還原」。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:117
+msgid ""
+"Undo removes an empty ledger. A ledger with history is only disconnected "
+"(renamed and kept); deleting it is a separate, explicit option with a double "
+"confirmation."
+msgstr "復原會刪除空的記錄簿。有歷史記錄的記錄簿只會被中斷連結（重新命名並保留）；刪除它是一個獨立且明確的選項，需要兩次確認。"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ApiHelperTrait.php:72
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/ReportsController.php:96
+msgid "Unexpected answer from the backend."
+msgstr "後端傳回了非預期的回應。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:49
+msgid "Unexpected hosts"
+msgstr "非預期的主機"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/SettingsController.php:87
+msgid "Unknown field."
+msgstr "未知欄位。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:207
+msgid "Unused only (0 packets)"
+msgstr "僅未使用的（0 個封包）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:58
+msgid "Update CISA KEV and FIRST EPSS"
+msgstr "更新 CISA KEV 與 FIRST EPSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:57
+msgid "Update KEV/EPSS"
+msgstr "更新 KEV/EPSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:58
+msgid "Update manufacturer database"
+msgstr "更新製造商資料庫"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:216
+msgid "Use"
+msgstr "使用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:199
+msgid "Use CPU numbers or ranges such as 2-3 or 1,3."
+msgstr "請使用 CPU 編號或範圍，例如 2-3 或 1,3。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:61
+msgid "Use Monit settings"
+msgstr "使用 Monit 設定"
+
+#: mvc/app/controllers/OPNsense/PolicyAnalyzer/Api/SetupController.php:63
+msgid "Use POST."
+msgstr "請使用 POST。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:154
+msgid "Use Suricata alerts"
+msgstr "使用 Suricata 警示"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1222
+msgid "Use Suricata alerts (1/0)"
+msgstr "使用 Suricata 警示（1/0）"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/PolicyAnalyzer.php:123
+msgid "Use http(s)://host[:port] without credentials, query or fragment."
+msgstr "請使用 http(s)://host[:port]，不要包含認證資訊、查詢字串或片段。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:235
+msgid "Use the model name as shown by the Ollama library, e.g. llama3.2:3b."
+msgstr "請使用 Ollama 模型庫中顯示的模型名稱，例如 llama3.2:3b。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:162
+msgid "Use this model"
+msgstr "使用此模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1081
+msgid ""
+"Used when the provider of a scenario fails (bridge down, timeout). auto: the "
+"Ollama of this firewall, when the AI setup installed it."
+msgstr "當場景的提供者失敗時使用（橋接中斷、逾時）。auto：此防火牆上的 Ollama（若已由 AI 設定安裝）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:74
+msgid "User"
+msgstr "使用者"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:68
+msgid "Value"
+msgstr "值"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:102
+msgid "Vendor"
+msgstr "廠商"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:72
+msgid "Verify certificate"
+msgstr "驗證憑證"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:153
+msgid "View"
+msgstr "檢視"
+
+#: mvc/app/models/OPNsense/PolicyAnalyzer/Menu/Menu.xml
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:54
+msgid "Vulnerabilities"
+msgstr "弱點"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:142
+msgid "WAN pass rules after it"
+msgstr "其後的 WAN 放行規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:62
+msgid "Warn"
+msgstr "警告"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:40
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:43
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:132
+msgid "Warnings"
+msgstr "警告"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:41
+msgid "What does the AI setup do?"
+msgstr "AI 設定會做什麼？"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:39
+msgid "What does the quarantine setup do?"
+msgstr "隔離設定會做什麼？"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:91
+msgid "What is expected"
+msgstr "預期內容"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:79
+msgid ""
+"What the quarantine would see on this firewall right now: the WAN "
+"interfaces, how many external sources the filter blocks there, the sources "
+"of events and the addresses that are never quarantined."
+msgstr "隔離功能此刻在此防火牆上會看到的內容：WAN 介面、過濾器在該處封鎖了多少外部來源、事件來源以及永不隔離的位址。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:132
+msgid "What the sources see now (nothing is queued or sent)"
+msgstr "來源目前看到的內容（不會排隊或傳送任何內容）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:64
+msgid "What was sent to the AI"
+msgstr "已傳送給 AI 的內容"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:65
+msgid "What would be sent to the AI"
+msgstr "將傳送給 AI 的內容"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:131
+msgid "What you checked, who you called, what you decided..."
+msgstr "您檢查了什麼、聯絡了誰、做出了什麼決定..."
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:140
+msgid "When"
+msgstr "時間"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:145
+msgid ""
+"When an external address enters the quarantine. Fixed by design: the base "
+"trigger (1 or more blocked inbound connections in the 5-minute window) and "
+"the ladder of durations; the rest is adjustable."
+msgstr "外部位址何時進入隔離。依設計固定的部分：基礎觸發條件（5 分鐘時間窗內 1 次或以上被封鎖的傳入連線）與時長階梯；其餘部分可調整。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:154
+msgid ""
+"Where should the explanations come from? Ollama keeps the data in your "
+"network; Claude Code (LAN) sends it to a computer in your network that "
+"passes it on to Anthropic with its Claude Code subscription; an API sends "
+"anonymized findings to the provider."
+msgstr "解釋應來自哪裡？Ollama 會將資料保留在您的網路中；Claude Code（區域網路）會將資料傳送到您網路中的一台電腦，再由它透過其 Claude Code 訂閱轉送給 Anthropic；API 會將匿名化的發現項目傳送給提供者。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:196
+msgid "Which FreeBSD package repository the jail installs misc/ollama from."
+msgstr "jail 從哪個 FreeBSD 套件庫安裝 misc/ollama。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:62
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:77
+msgid "Why"
+msgstr "原因"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:62
+msgid "Why expected"
+msgstr "為何屬於預期"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:81
+msgid "Why it is here"
+msgstr "為何出現在這裡"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:105
+msgid "Why this risk"
+msgstr "為何有此風險"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:126
+msgid "Why this score"
+msgstr "為何是此分數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:104
+msgid "Why this type"
+msgstr "為何是此類型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:199
+msgid "Wide port scan"
+msgstr "大範圍通訊埠掃描"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:38
+msgid "Window"
+msgstr "時間窗"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:102
+msgid "WireGuard clients (24 h)"
+msgstr "WireGuard 用戶端（24 小時）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:100
+msgid "WireGuard peers"
+msgstr "WireGuard 對等節點"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:83
+msgid "Would enter (estimate)"
+msgstr "將進入（估計）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1185
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1365
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1366
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1442
+msgid "Year"
+msgstr "年"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:61
+msgid ""
+"You can undo this at any time with one click: the local AI is removed and "
+"the firewall goes back to how it was. Downloaded models are kept unless you "
+"choose to delete them."
+msgstr "您可以隨時一鍵復原：本機 AI 會被移除，防火牆恢復原狀。已下載的模型會保留，除非您選擇刪除。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:64
+msgid "You can undo this with one click from the action history."
+msgstr "您可以從操作歷程記錄中一鍵復原此操作。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:66
+msgid ""
+"You can undo this with one click while the storage is empty: the folders "
+"(and the dataset) created here are removed."
+msgstr "在儲存空間為空時可以一鍵復原：此處建立的資料夾（以及資料集）會被移除。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:65
+msgid "You can undo this with one click: the model is deleted again."
+msgstr "您可以一鍵復原此操作：模型會再次被刪除。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:67
+msgid "You can undo this with one click: the previous limits come back."
+msgstr "您可以一鍵復原此操作：先前的限制會恢復。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:68
+msgid ""
+"You can undo this with one click: the tunable goes back to its previous "
+"value (effective after the next reboot)."
+msgstr "您可以一鍵復原此操作：該可調參數會恢復為先前的值（下次重新開機後生效）。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1173
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1370
+msgid "active"
+msgstr "使用中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:80
+msgid "active in 24 h"
+msgstr "24 小時內活躍"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:104
+msgid "admin sessions"
+msgstr "管理員工作階段"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:114
+msgid "advisory unclear"
+msgstr "公告不明確"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:70
+msgid "affected"
+msgstr "受影響"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:68
+msgid "ago"
+msgstr "前"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:231
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:104
+msgid "all"
+msgstr "全部"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:162
+msgid "already in quarantine"
+msgstr "已在隔離中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:95
+msgid "always"
+msgstr "一律"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:47
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:80
+msgid "anonymized"
+msgstr "已匿名化"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:169
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:174
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:202
+msgid "any"
+msgstr "任一"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1157
+msgid "at most {n} at a time"
+msgstr "一次最多 {n} 個"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:97
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1171
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1381
+msgid "automatic"
+msgstr "自動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:118
+msgid "available"
+msgstr "可用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:161
+msgid "backend"
+msgstr "後端"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1086
+msgid "background queue"
+msgstr "背景佇列"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1179
+msgid "bait"
+msgstr "誘餌"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1177
+msgid "base"
+msgstr "基礎"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:81
+msgid "baseline"
+msgstr "基準線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:113
+msgid "binary without package"
+msgstr "無套件的二進位檔"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1369
+msgid "blocked now"
+msgstr "目前已封鎖"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:184
+msgid "by reason"
+msgstr "依原因"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:179
+msgid "by rule"
+msgstr "依規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:72
+msgid "bytes"
+msgstr "位元組"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:74
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:72
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:77
+msgid "cached"
+msgstr "已快取"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:110
+msgid "camera"
+msgstr "攝影機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:177
+msgid "cases"
+msgstr "案例"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:213
+msgid "chosen"
+msgstr "已選擇"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:114
+msgid "computer"
+msgstr "電腦"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:146
+msgid "confidence"
+msgstr "信賴度"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:92
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:295
+msgid "configured"
+msgstr "已設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:109
+msgid "confirmed finding"
+msgstr "已確認的發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:118
+msgid "console"
+msgstr "遊戲機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:71
+msgid "context trimmed to fit"
+msgstr "上下文已裁剪以符合長度"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:116
+msgid "cores"
+msgstr "核心"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:160
+msgid "count"
+msgstr "計數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:109
+msgid "counters since"
+msgstr "計數器起始於"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:71
+msgid "covered by"
+msgstr "涵蓋於"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:161
+msgid "created"
+msgstr "已建立"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:148
+msgid "custom"
+msgstr "自訂"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:46
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:142
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:143
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:81
+msgid "days"
+msgstr "天"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:117
+msgid "decided"
+msgstr "已決定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:118
+msgid "decision expired"
+msgstr "決定已過期"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:149
+msgid "default"
+msgstr "預設"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:238
+msgid "defaults"
+msgstr "預設值"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:201
+msgid "delete it with its history (double confirmation, irreversible)"
+msgstr "連同其歷史一併刪除（需兩次確認，不可逆）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:111
+msgid "dependency only"
+msgstr "僅為相依套件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:120
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:112
+msgid "disabled"
+msgstr "停用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:138
+msgid "disabled (turned on in step 7, recommended)"
+msgstr "已停用（在步驟 7 啟用，建議）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:200
+msgid "disconnect it (renamed, kept)"
+msgstr "中斷連結（重新命名並保留）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:100
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:168
+msgid "does not exist yet"
+msgstr "尚不存在"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:106
+msgid "domains"
+msgstr "網域"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:189
+msgid "done"
+msgstr "完成"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:160
+msgid "download"
+msgstr "下載"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:250
+msgid ""
+"e.g. only outside peak hours when Suricata runs in IPS mode (not available "
+"yet)"
+msgstr "例如僅在 Suricata 以 IPS 模式執行時的尖峰時段之外（尚無法使用）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:54
+msgid ""
+"e.g. why can host 192.168.1.50 not reach example.com? / what changed since "
+"yesterday?"
+msgstr "例如：為什麼主機 192.168.1.50 無法連到 example.com？/ 從昨天起有什麼變化？"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:84
+msgid "earlier questions sent"
+msgstr "已傳送的先前問題"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:56
+msgid "elevated risk"
+msgstr "風險升高"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:225
+msgid "embedded in the file"
+msgstr "內嵌於檔案中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:122
+msgid "empty"
+msgstr "空"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:76
+#, php-format
+msgid "empty: keep %s"
+msgstr "留空：保持 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:77
+msgid "empty: no password"
+msgstr "留空：無密碼"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:119
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:111
+msgid "enabled"
+msgstr "啟用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:137
+msgid "enabled now"
+msgstr "現已啟用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:156
+msgid "enabled with"
+msgstr "啟用方式"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:42
+msgid "enabled, pending reboot"
+msgstr "已啟用，等待重新開機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:186
+msgid "engine"
+msgstr "引擎"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:128
+msgid "entries"
+msgstr "項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:89
+msgid "eve.json"
+msgstr "eve.json"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:155
+msgid "events"
+msgstr "事件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:170
+msgid "every"
+msgstr "每"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:63
+msgid "every client"
+msgstr "所有用戶端"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:93
+msgid "every finding of this kind for this host"
+msgstr "此主機上所有此類發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:94
+msgid "everything from this host"
+msgstr "來自此主機的所有內容"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:114
+msgid "evidence collected in"
+msgstr "證據收集耗時"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:167
+msgid "exists"
+msgstr "已存在"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:169
+msgid "exists but is not writable"
+msgstr "已存在但無法寫入"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:55
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:136
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:59
+msgid "expected"
+msgstr "預期"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1174
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1372
+msgid "expired"
+msgstr "已過期"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1144
+msgid "expired in 24 h"
+msgstr "24 小時內過期"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:121
+msgid "external"
+msgstr "外部"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:138
+msgid "failed"
+msgstr "失敗"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:182
+msgid "filter"
+msgstr "過濾器"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:59
+msgid "filter log (exact)"
+msgstr "過濾記錄（精確）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:123
+msgid "firewall"
+msgstr "防火牆"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:158
+msgid "first"
+msgstr "首次"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1211
+msgid "first / last"
+msgstr "首次 / 最後"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:135
+msgid "floating"
+msgstr "浮動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:115
+msgid "follow-up of the previous question"
+msgstr "上一個問題的追問"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:131
+msgid "free for"
+msgstr "空閒時長"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:99
+msgid "free on"
+msgstr "空閒於"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:249
+msgid "future"
+msgstr "未來"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:97
+msgid "gateways"
+msgstr "閘道"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:181
+msgid "generated"
+msgstr "已產生"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:266
+msgid "generation tokens/s"
+msgstr "產生 token/s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:136
+msgid "held (throttle)"
+msgstr "已暫緩（節流）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:232
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:120
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:67
+msgid "high"
+msgstr "高"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:155
+msgid "in quarantine"
+msgstr "隔離中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:123
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:149
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:65
+msgid "info"
+msgstr "資訊"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:180
+msgid "installed and running"
+msgstr "已安裝並執行中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:69
+msgid "installed, but the cron job is missing"
+msgstr "已安裝，但缺少 Cron 工作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:181
+msgid "installed, not running"
+msgstr "已安裝，未執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:122
+msgid "internal"
+msgstr "內部"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:94
+msgid "internal only"
+msgstr "僅內部"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:92
+msgid "internet"
+msgstr "網際網路"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:93
+msgid "internet (maybe)"
+msgstr "網際網路（可能）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:272
+msgid "jail RSS"
+msgstr "jail RSS"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:206
+msgid "just now"
+msgstr "剛剛"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:199
+msgid "keep it (default)"
+msgstr "保留（預設）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1436
+msgid "kept forever: every offense and every entry and exit, by year"
+msgstr "永久保存：依年份記錄每一次違規以及每一次進入與退出"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:94
+msgid "known"
+msgstr "已知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1197
+msgid "ladder (automatic)"
+msgstr "階梯（自動）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:159
+msgid "last"
+msgstr "最後"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:100
+msgid "last 24 h"
+msgstr "最近 24 小時"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:102
+msgid "last 30 days"
+msgstr "最近 30 天"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:101
+msgid "last 7 days"
+msgstr "最近 7 天"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1138
+msgid "last run"
+msgstr "上次執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:121
+#, php-format
+msgid "last run %s"
+msgstr "上次執行 %s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:103
+msgid "last year"
+msgstr "去年"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:195
+msgid "latest (newer Ollama)"
+msgstr "latest（較新的 Ollama）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:106
+msgid "learned"
+msgstr "已學習"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:72
+msgid "legacy"
+msgstr "舊式"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:156
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:163
+msgid "level"
+msgstr "等級"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:122
+msgid "limits"
+msgstr "限制"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:107
+msgid "lines read"
+msgstr "已讀取行數"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:215
+msgid "loaded in RAM"
+msgstr "已載入記憶體"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:74
+msgid "logs"
+msgstr "記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:122
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:64
+msgid "low"
+msgstr "低"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1172
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1181
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1382
+msgid "manual"
+msgstr "手動"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:108
+msgid "mapped by you"
+msgstr "由您對應"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:169
+msgid "matches absorbed as false positive"
+msgstr "作為誤報吸收的符合項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1212
+msgid "max level"
+msgstr "最高等級"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:121
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:148
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:67
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:64
+msgid "medium"
+msgstr "中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:66
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:87
+msgid "missing"
+msgstr "遺失"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:262
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:271
+msgid "model load"
+msgstr "模型載入"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:121
+msgid "models"
+msgstr "模型"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:127
+msgid "module not installed"
+msgstr "模組未安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:51
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:77
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1139
+msgid "never"
+msgstr "從不"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:56
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:95
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:178
+msgid "new"
+msgstr "新"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:108
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:79
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1142
+msgid "new in 24 h"
+msgstr "24 小時內新增"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:76
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1137
+msgid "next run"
+msgstr "下次執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:63
+msgid "no"
+msgstr "否"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:96
+msgid "no KEV cache: the KEV signal is missing"
+msgstr "無 KEV 快取：缺少 KEV 訊號"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:70
+msgid "no data"
+msgstr "無資料"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:95
+msgid "no listener"
+msgstr "無監聽"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:74
+msgid "no log"
+msgstr "無記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:159
+msgid "nobody"
+msgstr "無人"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:68
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:64
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:116
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:156
+msgid "none"
+msgstr "無"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:102
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:172
+msgid "not a local filesystem"
+msgstr "不是本機檔案系統"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:73
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/minrule.volt:71
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:76
+msgid "not anonymized"
+msgstr "未匿名化"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:93
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:296
+msgid "not configured"
+msgstr "未設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:190
+msgid "not done"
+msgstr "未完成"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:182
+msgid "not installed"
+msgstr "未安裝"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:171
+msgid "not recommended"
+msgstr "不建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:70
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:114
+msgid "not running"
+msgstr "未執行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:191
+msgid "not set"
+msgstr "未設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:101
+msgid "not writable"
+msgstr "無法寫入"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1090
+msgid "nothing yet"
+msgstr "尚無"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:81
+msgid "now"
+msgstr "現在"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:114
+msgid "of"
+msgstr "/"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1140
+msgid "offenses"
+msgstr "違規"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1143
+msgid "offenses in 24 h"
+msgstr "24 小時內違規"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:101
+msgid "ok"
+msgstr "正常"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:186
+msgid "older than the minimum supported version"
+msgstr "早於最低支援版本"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:290
+msgid "on this firewall"
+msgstr "在此防火牆上"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:108
+msgid "only part of the log was read within the time budget"
+msgstr "在時間預算內只讀取了部分記錄"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:92
+msgid "only this finding (same kind, host and key)"
+msgstr "僅此發現項目（相同種類、主機與鍵）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:135
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:59
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:78
+msgid "open"
+msgstr "未處理"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:103
+msgid "outbound this hour"
+msgstr "本小時連出"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:103
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:121
+msgid "pa_never_block"
+msgstr "pa_never_block"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:120
+msgid ""
+"pa_quarantine (External) holds the quarantined addresses as a pf table "
+"filled at run time; pa_never_block (Network) lists what you never want "
+"quarantined."
+msgstr "pa_quarantine（External）以執行時填入的 pf 表保存被隔離的位址；pa_never_block（Network）列出您永遠不希望被隔離的內容。"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:110
+msgid "package without service"
+msgstr "無服務的套件"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:113
+msgid "page"
+msgstr "頁"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:101
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:69
+msgid "partial"
+msgstr "部分"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:60
+msgid "partial (time budget)"
+msgstr "部分（時間預算）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:116
+msgid "pending"
+msgstr "擱置"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:269
+msgid "per finding"
+msgstr "每個發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:268
+msgid "per finding (estimate)"
+msgstr "每個發現項目（估計）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1147
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1176
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1371
+msgid "permanent"
+msgstr "永久"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:113
+msgid "phone"
+msgstr "手機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:73
+msgid "placeholders"
+msgstr "預留位置"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:124
+msgid "port"
+msgstr "通訊埠"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:170
+msgid "possible"
+msgstr "可能"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1209
+msgid "prefixes"
+msgstr "前綴"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:96
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:65
+msgid "present"
+msgstr "在線"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:168
+msgid "previous case"
+msgstr "上一個案例"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:117
+msgid "printer"
+msgstr "印表機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:265
+msgid "prompt tokens/s"
+msgstr "提示詞 token/s"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:184
+msgid "quarantine"
+msgstr "隔離"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:157
+msgid "quarantined recently"
+msgstr "最近被隔離"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:194
+msgid "quarterly (stable, default)"
+msgstr "quarterly（穩定，預設）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:77
+msgid "queries without a client address"
+msgstr "沒有用戶端位址的查詢"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:135
+msgid "queued"
+msgstr "已排隊"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:106
+msgid "random MAC"
+msgstr "隨機 MAC"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:169
+msgid "recommended"
+msgstr "建議"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1175
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1373
+msgid "released"
+msgstr "已解除"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:137
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:59
+msgid "resolved"
+msgstr "已解決"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:86
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:75
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:122
+msgid "reverted"
+msgstr "已還原"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:125
+msgid "rule"
+msgstr "規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:83
+msgid "rule analysis from"
+msgstr "規則分析來自"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:110
+msgid "rule counters not available"
+msgstr "規則計數器無法使用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:69
+msgid "rule counters not available, usage based findings are skipped"
+msgstr "規則計數器無法使用，已略過依據使用情況的發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:68
+msgid "rule counters since"
+msgstr "規則計數器起始於"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1131
+msgid "rule off"
+msgstr "規則關閉"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1130
+msgid "rule on"
+msgstr "規則開啟"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:65
+msgid "rules"
+msgstr "規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:82
+msgid "run the checks on other days to see the trend"
+msgstr "請在其他日期執行檢查以查看趨勢"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:123
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:69
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:113
+msgid "running"
+msgstr "執行中"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/console.volt:74
+msgid "s"
+msgstr "秒"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:158
+msgid "s per finding"
+msgstr "秒/發現項目"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:117
+msgid "saving will change the jobs"
+msgstr "儲存將變更工作"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1178
+msgid "scan"
+msgstr "掃描"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:90
+msgid "scenario disabled in the settings"
+msgstr "該場景已在設定中停用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1156
+msgid "selected"
+msgstr "已選取"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:137
+msgid "sent"
+msgstr "已傳送"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:140
+#, php-format
+msgid "sequence %s, %t, among %n enabled rules"
+msgstr "序號 %s，%t，共 %n 條已啟用規則"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:289
+msgid "server in the LAN"
+msgstr "區域網路中的伺服器"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:98
+msgid "set by you"
+msgstr "由您設定"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:203
+msgid "showing {n} of {total} evidence lines"
+msgstr "顯示 {total} 行證據中的 {n} 行"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:110
+msgid "since"
+msgstr "自"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/posture.volt:68
+msgid "since the previous run"
+msgstr "自上次執行以來"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:162
+msgid "state"
+msgstr "狀態"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/reports_body.volt:139
+msgid "suppressed"
+msgstr "已抑制"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1180
+msgid "suricata"
+msgstr "suricata"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1086
+msgid "synchronous"
+msgstr "同步"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:97
+#, php-format
+msgid "the KEV cache is %s days old"
+msgstr "KEV 快取已有 %s 天"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:86
+#, php-format
+msgid "the last %m min were read"
+msgstr "已讀取最近 %m 分鐘"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:160
+#, php-format
+msgid "the log covers only %s s"
+msgstr "記錄僅涵蓋 %s 秒"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:106
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:307
+msgid "the selected model is not available on the server"
+msgstr "所選模型在伺服器上無法使用"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:57
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:96
+msgid "this firewall"
+msgstr "此防火牆"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:114
+msgid "this firewall uses {used} of RAM right now"
+msgstr "此防火牆目前使用了 {used} 記憶體"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:64
+msgid "this host"
+msgstr "此主機"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:64
+msgid "this network (CIDR)"
+msgstr "此網路（CIDR）"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:115
+msgid "threads"
+msgstr "執行緒"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:115
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:117
+msgid "total"
+msgstr "總計"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/devices_body.volt:119
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:110
+msgid "unknown"
+msgstr "未知"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/vulns_body.volt:112
+msgid "unknown service"
+msgstr "未知服務"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/index.volt:1215
+msgid "until"
+msgstr "至"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/anomalies.volt:103
+msgid "usual for this hour"
+msgstr "該時段的常態"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/setup.volt:270
+msgid "wall time"
+msgstr "實際耗時"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/aiusage.volt:67
+msgid "would have been blocked"
+msgstr "本會被封鎖"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:62
+msgid "yes"
+msgstr "是"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:209
+msgid "{n} d ago"
+msgstr "{n} 天前"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:208
+msgid "{n} h ago"
+msgstr "{n} 小時前"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/incidents.volt:207
+msgid "{n} min ago"
+msgstr "{n} 分鐘前"
+
+#: mvc/app/views/OPNsense/PolicyAnalyzer/quarantine_setup.volt:84
+#, php-format
+msgid "≈ %a per 5 min · %b per hour"
+msgstr "≈ 每 5 分鐘 %a · 每小時 %b"

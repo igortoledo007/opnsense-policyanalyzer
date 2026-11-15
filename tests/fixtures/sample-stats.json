@@ -1,0 +1,44 @@
+{
+ "00000000-0000-4000-8000-18ec070bdc3c": {
+  "pf_rules": 1,
+  "evaluations": 1000,
+  "packets": 900,
+  "bytes": 1,
+  "states": 3
+ },
+ "00000000-0000-4000-8000-e8c2a9b18cef": {
+  "pf_rules": 1,
+  "evaluations": 1000,
+  "packets": 0,
+  "bytes": 0,
+  "states": 0
+ },
+ "00000000-0000-4000-8000-e352e625d911": {
+  "pf_rules": 1,
+  "evaluations": 10,
+  "packets": 0,
+  "bytes": 0,
+  "states": 0
+ },
+ "00000000-0000-4000-8000-c2e392e1ba11": {
+  "pf_rules": 1,
+  "evaluations": 10,
+  "packets": 4,
+  "bytes": 40,
+  "states": 1
+ },
+ "00000000-0000-4000-8000-f696019a9453": {
+  "pf_rules": 1,
+  "evaluations": 10,
+  "packets": 4,
+  "bytes": 40,
+  "states": 1
+ },
+ "00000000-0000-4000-8000-d41d8cd98f00": {
+  "pf_rules": 1,
+  "evaluations": 10,
+  "packets": 4,
+  "bytes": 40,
+  "states": 1
+ }
+}

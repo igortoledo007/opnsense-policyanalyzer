@@ -1,0 +1,596 @@
+/*
+ * Copyright (C) 2026 Igor Toledo <contato@igor.eti.br>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ * AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ * OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ * Reports, Vulnerabilities and Devices pages (reports.volt, vulns.volt, devices.volt). Theme independent like
+ * policyanalyzer.css: layout, translucent greys and the --pa-accent of the theme. Desktop 1350x570 without
+ * horizontal scrolling (fixed table layout, wrapping cells); below 768 px tables become label|value cards.
+ */
+
+.pa-mod {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 6px 0 12px;
+}
+
+.pa-mod *,
+.pa-mod-dialog * {
+    box-sizing: border-box;
+}
+
+.pa-mod-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+    padding: 4px 12px 8px;
+}
+
+.pa-mod-head h2 {
+    font-size: 17px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.pa-mod-head .pa-mod-sub {
+    opacity: 0.75;
+    font-size: 12px;
+}
+
+.pa-mod-head .pa-mod-actions {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pa-mod-kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    padding: 0 12px 8px;
+}
+
+.pa-kpi {
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 8px;
+    padding: 7px 10px;
+    min-width: 0;
+    background: transparent;
+    text-align: left;
+    color: inherit;
+    font: inherit;
+}
+
+button.pa-kpi {
+    cursor: pointer;
+}
+
+button.pa-kpi:hover,
+button.pa-kpi:focus-visible,
+.pa-kpi.pa-on {
+    border-color: var(--pa-accent, currentColor);
+    box-shadow: 0 0 0 1px var(--pa-accent, currentColor);
+    outline: none;
+}
+
+.pa-kpi .pa-kpi-n {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.15;
+    display: block;
+}
+
+.pa-kpi .pa-kpi-l {
+    font-size: 11px;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pa-mod .tab-content {
+    padding: 10px 12px 0;
+}
+
+.pa-mod-note {
+    border-left: 3px solid var(--pa-accent, rgba(128, 128, 128, 0.6));
+    padding: 6px 10px;
+    margin: 0 12px 8px;
+    font-size: 12px;
+    background: rgba(128, 128, 128, 0.07);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+}
+
+.pa-mod-note.pa-warn {
+    border-left-color: #d97706;
+}
+
+.pa-mod-note.pa-bad {
+    border-left-color: #dc2626;
+}
+
+.pa-mod-note .btn {
+    margin-left: auto;
+}
+
+/* tables: fixed layout, never wider than the page */
+.pa-mod table.pa-tbl {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 12.5px;
+}
+
+.pa-mod table.pa-tbl th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    opacity: 0.8;
+    font-weight: 600;
+    padding: 5px 6px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pa-mod table.pa-tbl td {
+    padding: 5px 6px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    vertical-align: top;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.pa-mod table.pa-tbl tr.pa-row-sel td {
+    background: color-mix(in srgb, var(--pa-accent, transparent) 8%, transparent);
+}
+
+.pa-mod table.pa-tbl td.pa-act {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.pa-mod table.pa-tbl td.pa-act .btn + .btn {
+    margin-left: 3px;
+}
+
+.pa-mod table.pa-tbl .form-control {
+    height: 26px;
+    min-height: 0;
+    padding: 1px 6px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.pa-mod table.pa-tbl td input[type="checkbox"] {
+    margin: 4px 0 0;
+}
+
+.pa-scroll {
+    max-height: calc(100vh - 330px);
+    min-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.pa-chip {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0 7px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #fff;
+    background: #64748b;
+    white-space: nowrap;
+}
+
+.pa-chip.pa-p1, .pa-chip.pa-critical { background: #b91c1c; }
+.pa-chip.pa-p2, .pa-chip.pa-high { background: #dc2626; }
+.pa-chip.pa-p3, .pa-chip.pa-medium { background: #d97706; }
+.pa-chip.pa-p4, .pa-chip.pa-low { background: #2563eb; }
+.pa-chip.pa-info { background: #64748b; }
+.pa-chip.pa-kev { background: #7f1d1d; }
+.pa-chip.pa-ok { background: #15803d; }
+.pa-chip.pa-muted-chip {
+    background: transparent;
+    color: inherit;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    font-weight: 500;
+}
+
+.pa-small {
+    font-size: 11.5px;
+    opacity: 0.8;
+}
+
+.pa-detail {
+    padding: 6px 4px 8px 10px;
+    border-left: 2px solid var(--pa-accent, rgba(128, 128, 128, 0.5));
+    margin: 2px 0 4px;
+    font-size: 12px;
+}
+
+.pa-detail ul {
+    margin: 2px 0 6px;
+    padding-left: 18px;
+}
+
+.pa-mod-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.pa-mod-toolbar .form-control {
+    width: auto;
+    display: inline-block;
+    height: 30px;
+    padding: 3px 8px;
+}
+
+.pa-mod-toolbar input.form-control {
+    min-width: 180px;
+}
+
+.pa-mod-toolbar .pa-right {
+    margin-left: auto;
+}
+
+/* forms (channel, reports, notifications) */
+.pa-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px 14px;
+    margin-bottom: 8px;
+}
+
+.pa-form-grid label {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.pa-form-grid .form-control {
+    width: 100%;
+    max-width: none;
+    height: 30px;
+    padding: 3px 8px;
+}
+
+.pa-form-grid .pa-origin {
+    font-size: 11px;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.pa-form-grid .pa-wide {
+    grid-column: 1 / -1;
+}
+
+.pa-modes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.pa-mode {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin: 0;
+    font-weight: normal;
+}
+
+.pa-mode input {
+    margin-top: 3px;
+}
+
+.pa-mode.pa-on {
+    border-color: var(--pa-accent, currentColor);
+    box-shadow: 0 0 0 1px var(--pa-accent, currentColor);
+    background: color-mix(in srgb, var(--pa-accent, transparent) 8%, transparent);
+}
+
+.pa-mode b {
+    display: block;
+}
+
+.pa-mode .pa-small {
+    display: block;
+}
+
+.pa-checks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin: 4px 0 8px;
+}
+
+.pa-mod .form-control.pa-inline {
+    display: inline-block;
+    width: auto;
+    height: 28px;
+    padding: 2px 26px 2px 6px;
+    vertical-align: middle;
+}
+
+.pa-checks label {
+    font-weight: normal;
+    margin: 0;
+}
+
+.pa-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.pa-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+}
+
+.pa-preview-frame {
+    width: 100%;
+    height: calc(100vh - 220px);
+    min-height: 320px;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 6px;
+    background: #eef2f7;
+}
+
+.pa-mod-dialog pre.pa-text,
+.pa-mod pre.pa-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: inherit;
+    font-size: 13px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.pa-ai-box {
+    border: 1px dashed rgba(128, 128, 128, 0.5);
+    border-radius: 6px;
+    padding: 6px 8px;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.pa-unavailable {
+    opacity: 0.55;
+}
+
+.pa-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #64748b;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.pa-dot.pa-on-dot {
+    background: #16a34a;
+}
+
+.pa-dot.pa-off-dot {
+    background: #9ca3af;
+}
+
+.pa-hide-desktop {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .pa-mod table.pa-tbl .pa-col-opt {
+        display: none;
+    }
+}
+
+/* phones: label | value cards, touch targets >= 44 px */
+@media (max-width: 767px) {
+    .pa-mod-head .pa-mod-actions {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .pa-mod-head .pa-mod-actions .btn {
+        flex: 1 1 45%;
+    }
+
+    .pa-mod .btn,
+    .pa-mod-dialog .btn,
+    .pa-mod .form-control {
+        min-height: 44px;
+    }
+
+    .pa-mod .nav-tabs {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .pa-mod .nav-tabs > li > a {
+        padding: 12px 10px;
+        white-space: nowrap;
+    }
+
+    .pa-mod-kpis {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pa-mod-toolbar .form-control,
+    .pa-mod-toolbar input.form-control {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .pa-mod-toolbar .pa-right {
+        margin-left: 0;
+    }
+
+    .pa-scroll {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .pa-split {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-mod table.pa-tbl,
+    .pa-mod table.pa-tbl tbody,
+    .pa-mod table.pa-tbl tr,
+    .pa-mod table.pa-tbl td {
+        display: block;
+        width: 100%;
+    }
+
+    .pa-mod table.pa-tbl thead {
+        display: none;
+    }
+
+    .pa-mod table.pa-tbl tr {
+        border: 1px solid rgba(128, 128, 128, 0.35);
+        border-radius: 8px;
+        margin-bottom: 8px;
+        padding: 4px 8px;
+    }
+
+    .pa-mod table.pa-tbl td {
+        border: 0;
+        display: flex;
+        gap: 10px;
+        padding: 4px 0;
+    }
+
+    .pa-mod table.pa-tbl td::before {
+        content: attr(data-label);
+        flex: 0 0 34%;
+        font-weight: 600;
+        opacity: 0.75;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+
+    .pa-mod table.pa-tbl td.pa-act {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+
+    .pa-mod table.pa-tbl td.pa-act::before {
+        display: none;
+    }
+
+    .pa-mod table.pa-tbl td.pa-act .btn {
+        min-width: 44px;
+        flex: 1 1 auto;
+    }
+
+    .pa-mod table.pa-tbl td.pa-detail-cell::before {
+        display: none;
+    }
+
+    .pa-mod table.pa-tbl .pa-col-opt {
+        display: flex;
+    }
+
+    .pa-hide-mobile {
+        display: none !important;
+    }
+
+    .pa-hide-desktop {
+        display: block;
+    }
+
+    .pa-preview-frame {
+        height: 70vh;
+    }
+
+    /* key | value tables (e-mail channel): one compact line per field instead of a card */
+    .pa-mod table.pa-tbl.pa-kv tr {
+        display: flex;
+        flex-wrap: wrap;
+        border: 0;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+        border-radius: 0;
+        margin: 0;
+        padding: 4px 0;
+    }
+
+    .pa-mod table.pa-tbl.pa-kv td {
+        width: auto;
+        padding: 0 6px 0 0;
+    }
+
+    .pa-mod table.pa-tbl.pa-kv td::before {
+        display: none;
+    }
+
+    .pa-mod table.pa-tbl.pa-kv td:first-child {
+        flex: 0 0 38%;
+        font-weight: 600;
+    }
+
+    .pa-mod table.pa-tbl.pa-kv td:nth-child(2) {
+        flex: 1 1 55%;
+    }
+
+    .pa-mod table.pa-tbl.pa-kv td:nth-child(3) {
+        flex: 1 1 100%;
+        padding-left: 38%;
+    }
+
+    .pa-mod table.pa-tbl .form-control {
+        min-height: 44px;
+        height: auto;
+        font-size: 14px;
+    }
+}

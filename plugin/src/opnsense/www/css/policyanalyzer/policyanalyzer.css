@@ -1,0 +1,1246 @@
+/*
+ * Copyright (C) 2026 Igor Toledo <contato@igor.eti.br>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ * AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ * OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ * Policy Analyzer page styles. Theme independent: only layout, borders with translucent grey and
+ * inherited colours, so light and dark themes keep their own palette.
+ */
+
+#pa_root {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* --pa-accent is set at load time from the theme's active tab colour (see index.volt) */
+}
+
+#pa_root *,
+.pa-dialog * {
+    box-sizing: border-box;
+}
+
+#pa_root pre,
+.pa-dialog pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.pa-dialog code,
+.pa-finding-card code {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* severity cards */
+.pa-card {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pa-card .pa-count {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* provider choice: one selectable card per line; colours come from the theme (.panel-default/.panel-primary) */
+.pa-choices {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+}
+
+.pa-choices .pa-choice-header {
+    margin: 14px 0 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+.pa-choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    margin: 0 0 8px;
+    padding: 10px 12px;
+    font-weight: normal;
+    cursor: pointer;
+    border-width: 1px;
+}
+
+.pa-choice.pa-choice-selected,
+.pa-segment-option.active,
+.pa-recommend .pa-rec-best {
+    border-color: var(--pa-accent, currentColor);
+    box-shadow: 0 0 0 1px var(--pa-accent, currentColor);
+    background-color: color-mix(in srgb, var(--pa-accent, transparent) 10%, transparent);
+}
+
+.pa-choice.pa-choice-selected .pa-choice-icon,
+.pa-segment-option.active .pa-segment-label {
+    color: var(--pa-accent, inherit);
+}
+
+.pa-choice:focus-within {
+    outline: 2px solid;
+    outline-offset: 2px;
+}
+
+.pa-choice input[type="radio"] {
+    margin: 3px 0 0;
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+}
+
+.pa-choice .pa-choice-icon {
+    flex: 0 0 auto;
+    font-size: 18px;
+    margin-top: 1px;
+}
+
+.pa-choice .pa-choice-text {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.pa-choice .pa-choice-name {
+    font-weight: bold;
+}
+
+.pa-choice .pa-choice-group {
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.pa-choice .pa-choice-desc {
+    display: block;
+    font-size: 90%;
+    margin-top: 3px;
+    word-break: break-word;
+}
+
+.pa-settings-actions {
+    margin-top: 18px;
+    padding-bottom: 15px;
+}
+
+#pa_root .pa-filters .bootstrap-select {
+    margin: 0 6px 6px 0;
+}
+
+/* findings as cards (phones); the grid is used from 768 px up */
+.pa-mobile-list {
+    display: none;
+}
+
+.pa-finding-card {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin: 0 0 10px;
+}
+
+.pa-finding-card .pa-fc-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.pa-finding-card .pa-fc-title {
+    font-weight: bold;
+    margin: 6px 0;
+    word-break: break-word;
+}
+
+.pa-finding-card .pa-fc-rules {
+    word-break: break-word;
+}
+
+.pa-finding-card .pa-fc-rules a {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.pa-dialog .checkbox label {
+    padding-left: 26px;
+}
+
+.pa-dialog .checkbox input[type="checkbox"] {
+    margin-left: -26px;
+}
+
+.pa-finding-card .pa-fc-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.pa-finding-card .pa-fc-actions .btn {
+    flex: 1 1 0;
+    min-height: 44px;
+}
+
+.pa-empty {
+    padding: 12px;
+}
+
+@media (max-width: 767px) {
+    #pa_root .pa-grid-wrap {
+        display: none;
+    }
+
+    #pa_root .pa-mobile-list {
+        display: block;
+        padding: 0 10px;
+    }
+
+    /* touch targets */
+    #pa_root .btn,
+    .pa-dialog .btn,
+    #pa_root .bootstrap-select > .dropdown-toggle {
+        min-height: 44px;
+    }
+
+    #pa_root .btn-xs {
+        min-width: 44px;
+    }
+
+    #pa_root .nav-tabs > li > a {
+        padding: 12px 10px;
+    }
+
+    #pa_root .pa-toolbar .btn {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    #pa_root .pa-filters .bootstrap-select,
+    #pa_root .pa-filters select {
+        width: 100% !important;
+        margin-right: 0;
+    }
+
+    /* settings: one column */
+    #frm_settings table,
+    #frm_settings tbody,
+    #frm_settings thead,
+    #frm_settings tr,
+    #frm_settings th,
+    #frm_settings td {
+        display: block;
+        width: 100% !important;
+    }
+
+    #frm_settings colgroup {
+        display: none;
+    }
+
+    #frm_settings .table-responsive {
+        overflow: hidden !important;
+        border: none;
+        margin-bottom: 0;
+    }
+
+    #frm_settings table {
+        table-layout: auto !important;
+    }
+
+    #frm_settings tr {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+        padding: 4px 0;
+    }
+
+    #frm_settings td {
+        border: none !important;
+        padding: 4px 8px !important;
+    }
+
+    #frm_settings input.form-control,
+    #frm_settings input[type="text"],
+    #frm_settings input[type="password"],
+    #frm_settings .bootstrap-select,
+    #frm_settings select {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    #frm_settings input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+    }
+
+    .pa-choices {
+        max-width: 100%;
+    }
+
+    #pa_provider_fields .btn {
+        margin: 6px 6px 0 0 !important;
+    }
+
+    #pa_root .pa-settings-actions .btn {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    /* action history as stacked cards */
+    #pa_history thead {
+        display: none;
+    }
+
+    #pa_history,
+    #pa_history tbody,
+    #pa_history tr,
+    #pa_history td {
+        display: block;
+        width: 100%;
+    }
+
+    #pa_history tr {
+        border: 1px solid rgba(128, 128, 128, 0.35);
+        border-radius: 4px;
+        margin-bottom: 10px;
+        padding: 6px 0;
+    }
+
+    #pa_history td {
+        border: none !important;
+        padding: 3px 10px !important;
+        word-break: break-word;
+    }
+
+    #pa_history td[data-label]::before {
+        content: attr(data-label) ": ";
+        font-weight: bold;
+    }
+
+    #pa_history td .btn {
+        width: 100%;
+    }
+
+    /* dialogs (details, explanation, simulation, revert) full screen */
+    .pa-dialog .modal-dialog {
+        width: auto;
+        margin: 0;
+    }
+
+    .pa-dialog .modal-content {
+        border-radius: 0;
+        min-height: 100vh;
+        border: none;
+    }
+
+    .pa-dialog .modal-footer .btn {
+        width: 100%;
+        margin: 4px 0 0 0 !important;
+    }
+
+    .pa-dialog .pa-sim-steps thead {
+        display: none;
+    }
+
+    .pa-dialog .pa-sim-steps,
+    .pa-dialog .pa-sim-steps tbody,
+    .pa-dialog .pa-sim-steps tr,
+    .pa-dialog .pa-sim-steps td {
+        display: block;
+        width: 100%;
+    }
+
+    .pa-dialog .pa-sim-steps tr {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+        padding: 6px 0;
+    }
+
+    .pa-dialog .pa-sim-steps td {
+        border: none !important;
+        padding: 2px 4px !important;
+    }
+
+    .pa-dialog .pa-sim-steps td[data-label]::before {
+        content: attr(data-label) ": ";
+        font-weight: bold;
+    }
+
+    .pa-dialog .checkbox label {
+        min-height: 44px;
+        padding-top: 2px;
+        padding-left: 34px;
+    }
+
+    .pa-dialog .checkbox input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin: 0 0 0 -34px;
+    }
+
+    .pa-dialog .pa-rule-link {
+        display: inline-block;
+        padding: 10px 0;
+    }
+
+    .pa-dialog .table-condensed {
+        table-layout: fixed;
+        width: 100%;
+    }
+}
+
+/* sub-parameter of a provider ("Where does Ollama run?"): one option per line, theme colours via .active */
+.pa-segment {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 560px;
+}
+
+.pa-segment-option {
+    display: block;
+    min-height: 44px;
+    margin: 0;
+    padding: 10px 12px 10px 36px;
+    position: relative;
+    font-weight: normal;
+    cursor: pointer;
+    border-width: 1px;
+}
+
+
+.pa-segment-option:focus-within {
+    outline: 2px solid;
+    outline-offset: 2px;
+}
+
+.pa-segment-option input[type="radio"] {
+    position: absolute;
+    left: 12px;
+    top: 13px;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.pa-segment-label {
+    font-weight: bold;
+}
+
+.pa-segment-desc {
+    display: block;
+    font-size: 90%;
+    margin-top: 2px;
+}
+
+.pa-status-box .pa-status-text {
+    margin-bottom: 6px;
+}
+
+.pa-public-warn {
+    margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+    .pa-segment {
+        max-width: 100%;
+    }
+
+    .pa-status-box .btn {
+        width: 100%;
+    }
+}
+
+/* "Recommended for this hardware" (recommend.js) */
+.pa-recommend {
+    max-width: 720px;
+}
+
+.pa-recommend .pa-rec-best {
+    margin-bottom: 8px;
+    border-width: 2px;
+}
+
+.pa-recommend .pa-rec-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pa-recommend .pa-rec-facts,
+.pa-recommend .pa-rec-reasons {
+    margin: 4px 0;
+    word-break: break-word;
+}
+
+.pa-recommend .pa-rec-item {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.pa-recommend .pa-rec-item .btn {
+    margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+    .pa-recommend .btn {
+        width: 100%;
+        min-height: 44px;
+    }
+}
+
+/* fields of the selected provider, expanded right below its card */
+.pa-provider-detail {
+    margin: -2px 0 14px 18px;
+    padding: 8px 0 4px 12px;
+    border-left: 2px solid var(--pa-accent, rgba(128, 128, 128, 0.5));
+}
+
+.pa-provider-detail > .alert {
+    margin-bottom: 8px;
+}
+
+.pa-provider-detail .table {
+    margin-bottom: 0;
+}
+
+.pa-number {
+    display: inline-block !important;
+    width: 110px !important;
+}
+
+.pa-provider-detail td {
+    text-align: left !important;
+    vertical-align: top !important;
+}
+
+.pa-recommend .pa-rec-more {
+    margin: 6px 0;
+}
+
+.pa-hw-note {
+    margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+    .pa-provider-detail {
+        margin-left: 4px;
+        padding-left: 8px;
+    }
+
+    #frm_settings input.pa-number {
+        width: 110px !important;
+    }
+}
+
+/* desktop: simulation/result dialogs use the width and height of the screen so a plan fits without scrolling
+   on laptop screens (1350x570): wide dialog, compact rows, commands on one line where possible */
+@media (min-width: 768px) {
+    .pa-dialog .modal-dialog { width: min(1280px, 96vw); margin: 8px auto; }
+    .pa-dialog .modal-header { padding: 8px 14px; }
+    .pa-dialog .modal-footer { padding: 6px 14px; }
+    .pa-dialog .modal-body { padding: 8px 14px; max-height: calc(100vh - 130px); overflow-y: auto; font-size: 13px; }
+    .pa-dialog .modal-body h4, .pa-dialog .modal-body p { margin: 4px 0; }
+    .pa-dialog .pa-sim-steps { margin-bottom: 6px; }
+    .pa-dialog .pa-sim-steps > tbody > tr > td, .pa-dialog .pa-sim-steps > thead > tr > th { padding: 3px 6px; line-height: 1.35; }
+    .pa-dialog .pa-sim-steps code { white-space: pre-wrap; word-break: break-word; font-size: 11.5px; }
+    .pa-dialog .alert { padding: 6px 10px; margin: 6px 0; }
+}
+
+/* ===================================================================== plan info blocks (simulation) */
+.pa-dialog details.pa-sim-info {
+    margin: 6px 0 10px;
+    padding: 6px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 4px;
+}
+
+.pa-dialog details.pa-sim-info summary {
+    cursor: pointer;
+}
+
+.pa-dialog details.pa-sim-info ul {
+    margin: 6px 0 0;
+    padding-left: 18px;
+    overflow-wrap: anywhere;
+}
+
+/* ===================================================================== Quarantine tab */
+.pa-q {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pa-q-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.pa-q-state-line {
+    font-size: 1.15em;
+}
+
+.pa-q-badge {
+    font-size: 0.85em;
+    vertical-align: middle;
+}
+
+.pa-q-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pa-q-warning {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+.pa-q-warning .btn {
+    margin-left: auto;
+}
+
+/* active entries per level: six buttons in one row on desktop, 3 x 2 on phones */
+.pa-q-cards {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+    margin: 6px 0 8px;
+}
+
+.pa-q-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    padding: 6px 4px;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.pa-q-card:hover,
+.pa-q-card:focus-visible,
+.pa-q-card-on {
+    border-color: var(--pa-accent, currentColor);
+    box-shadow: inset 0 0 0 1px var(--pa-accent, currentColor);
+}
+
+.pa-q-card .pa-q-count {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.pa-q-card .pa-q-card-label {
+    font-size: 0.85em;
+    opacity: 0.85;
+}
+
+/* severity ramp per level (longer block, warmer colour); the count takes it, the card a thin top edge, and a bar
+   at the bottom shows the level's share of all active entries (--pa-share, set by quarantine.js) */
+.pa-q-card { --pa-lvl: #38BDF8; position: relative; overflow: hidden; border-top: 3px solid var(--pa-lvl); }
+.pa-q-card[data-level="2"] { --pa-lvl: #FACC15; }
+.pa-q-card[data-level="3"] { --pa-lvl: #FB923C; }
+.pa-q-card[data-level="4"] { --pa-lvl: #F87171; }
+.pa-q-card[data-level="5"] { --pa-lvl: #E11D48; }
+.pa-q-card[data-level="6"] { --pa-lvl: #A78BFA; }
+.pa-q-card .pa-q-count { color: var(--pa-lvl); font-variant-numeric: tabular-nums; }
+.pa-q-card-empty .pa-q-count { color: inherit; opacity: 0.45; }
+.pa-q-share {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: rgba(128, 128, 128, 0.18);
+}
+.pa-q-share > span {
+    display: block;
+    width: var(--pa-share, 0%);
+    height: 100%;
+    background: var(--pa-lvl);
+}
+
+/* last 24 h: three indicators with an icon each */
+.pa-q-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: 2px 0 8px;
+}
+.pa-q-fact {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 4px 12px 4px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 16px;
+    background: rgba(128, 128, 128, 0.08);
+}
+.pa-q-fact b { font-size: 1.15em; font-variant-numeric: tabular-nums; }
+.pa-q-fact > span { opacity: 0.85; }
+.pa-q-fact-new i { color: #FB923C; }
+.pa-q-fact-offenses i { color: #F87171; }
+.pa-q-fact-expired i { color: #38BDF8; }
+
+.pa-q-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0;
+}
+.pa-q-top-title { min-width: 92px; }
+/* top countries / ASNs: key and count, with a bar of the count against the largest of the list (--pa-bar) */
+.pa-q-top .pa-q-chip {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 92px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+/* (a pseudo-element, so a theme's own button background stays underneath) */
+.pa-q-top .pa-q-chip::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--pa-bar, 0%);
+    background: rgba(251, 146, 60, 0.30);
+    pointer-events: none;
+}
+.pa-q-top .pa-q-chip > span { position: relative; }
+.pa-q-chip-key { font-weight: 600; }
+.pa-q-chip-n { font-variant-numeric: tabular-nums; opacity: 0.85; }
+
+.pa-q-panel {
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.pa-q-add {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.pa-q-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 0 1 180px;
+}
+
+.pa-q-field-wide {
+    flex: 1 1 260px;
+}
+
+.pa-q-field label {
+    margin-bottom: 2px;
+}
+
+.pa-q-help {
+    margin: 6px 0 0;
+}
+
+.pa-q-settings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 8px 16px;
+}
+
+.pa-q-setting label {
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+.pa-q-toolbar {
+    margin: 10px 0 6px;
+}
+
+.pa-q-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.pa-q-filters .form-control {
+    width: auto;
+    min-width: 0;
+    flex: 0 1 150px;
+}
+
+.pa-q-filters input.form-control {
+    flex: 0 1 120px;
+}
+
+.pa-q-filters-toggle,
+.pa-q-mobile-only {
+    display: none !important;
+}
+
+.pa-q-batch {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    margin: 6px 0;
+    border: 1px solid var(--pa-accent, rgba(128, 128, 128, 0.5));
+    border-radius: 4px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: inherit;
+}
+
+.pa-q-batch:not(.pa-q-batch-on) {
+    border-color: rgba(128, 128, 128, 0.35);
+    opacity: 0.75;
+}
+
+.pa-q-batch .pa-q-batch-count {
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.pa-q-batch-extend {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.pa-q-batch-extend .form-control {
+    width: auto;
+}
+
+/* grid: no sideways scrolling at 1350 px; long values wrap */
+.pa-q-grid-wrap {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#grid-quarantine code.pa-q-addr,
+.pa-q-cardrow code.pa-q-addr {
+    white-space: normal;
+    word-break: break-all;
+}
+
+.pa-q-comment {
+    display: inline-block;
+    max-width: 28em;
+    white-space: normal;
+}
+
+.pa-q-level {
+    display: inline-block;
+    min-width: 5.2em;
+    font-weight: normal;
+    border: 1px solid transparent;
+}
+
+/* level colours: translucent fills that work on light and dark themes */
+.pa-q-l1 { background: rgba(240, 173, 78, 0.25); color: inherit; border-color: rgba(240, 173, 78, 0.7); }
+.pa-q-l2 { background: rgba(240, 130, 60, 0.28); color: inherit; border-color: rgba(240, 130, 60, 0.75); }
+.pa-q-l3 { background: rgba(217, 83, 79, 0.28); color: inherit; border-color: rgba(217, 83, 79, 0.75); }
+.pa-q-l4 { background: rgba(190, 40, 60, 0.35); color: inherit; border-color: rgba(190, 40, 60, 0.85); }
+.pa-q-l5 { background: rgba(150, 20, 60, 0.45); color: inherit; border-color: rgba(150, 20, 60, 0.9); }
+.pa-q-l6 { background: rgba(110, 40, 150, 0.45); color: inherit; border-color: rgba(110, 40, 150, 0.9); }
+
+.pa-q-reason {
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 9px;
+    border: 1px solid rgba(128, 128, 128, 0.45);
+    font-size: 0.9em;
+}
+
+.pa-q-r-suricata { border-color: rgba(217, 83, 79, 0.8); }
+.pa-q-r-scan,
+.pa-q-r-bait { border-color: rgba(240, 130, 60, 0.8); }
+.pa-q-r-manual { border-style: dashed; }
+
+.pa-q-countdown {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.pa-q-soon {
+    font-weight: bold;
+}
+
+.pa-q-perm {
+    font-size: 1.2em;
+}
+
+.pa-q-history {
+    margin-top: 14px;
+}
+
+.pa-q-history > summary {
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.pa-q-history-filters {
+    margin: 6px 0;
+}
+
+.pa-q-pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.pa-q-guard-list code {
+    display: inline-block;
+    margin: 2px;
+}
+
+/* label | value lists (cards on phones, entry dialog) */
+dl.pa-q-kv {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 4px 12px;
+    margin: 6px 0;
+}
+
+dl.pa-q-kv dt {
+    font-weight: normal;
+    opacity: 0.75;
+}
+
+dl.pa-q-kv dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+dl.pa-q-kv-wide {
+    grid-template-columns: max-content minmax(0, 1fr) max-content minmax(0, 1fr);
+}
+
+.pa-q-menu .btn,
+.pa-q-menu .pa-q-extend {
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.pa-q-menu .btn-danger-outline {
+    border-color: rgba(217, 83, 79, 0.8);
+}
+
+.pa-q-mobile {
+    display: none;
+}
+
+.pa-q-cardrow {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+}
+
+.pa-q-cardrow.pa-q-sel {
+    border-color: var(--pa-accent, currentColor);
+    box-shadow: inset 0 0 0 1px var(--pa-accent, currentColor);
+}
+
+.pa-q-cr-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pa-q-cr-addr {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.pa-q-cr-actions {
+    display: flex;
+    gap: 6px;
+    flex: 0 0 auto;
+}
+
+.pa-q-check-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    margin: -8px 0 0 -8px;
+}
+
+.pa-q-check-wrap input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+/* desktop dialogs of the tab: as wide as the other plugin dialogs, tables wrap instead of scrolling */
+.pa-dialog .pa-q-kvtable td {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+    .pa-q-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    dl.pa-q-kv-wide {
+        grid-template-columns: max-content minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .pa-q-grid-wrap {
+        display: none;
+    }
+
+    .pa-q-mobile {
+        display: block;
+    }
+
+    .pa-q-head {
+        display: block;
+    }
+
+    /* header buttons: two per row, the main action (Install / Resume) on its own row */
+    .pa-q-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-top: 6px;
+    }
+
+    .pa-q-buttons .btn {
+        width: 100%;
+        min-height: 44px;
+        padding: 6px 8px;
+        white-space: normal;
+    }
+
+    .pa-q-buttons .btn-primary {
+        grid-column: 1 / -1;
+    }
+
+    .pa-q-warning .btn {
+        width: 100%;
+        margin-left: 0;
+        min-height: 44px;
+    }
+
+    .pa-q-card {
+        min-height: 60px;
+    }
+
+    .pa-q-add,
+    .pa-q-field,
+    .pa-q-field-wide {
+        display: block;
+        width: 100%;
+    }
+
+    .pa-q-field {
+        margin-bottom: 8px;
+    }
+
+    .pa-q-field .btn,
+    .pa-q-field .form-control {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .pa-q-filters-toggle {
+        display: block !important;
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .pa-q-mobile-only {
+        display: block !important;
+    }
+
+    #pa_q_filters {
+        display: none;
+        margin-top: 6px;
+    }
+
+    #pa_q_filters.pa-q-open {
+        display: flex;
+    }
+
+    .pa-q-filters .form-control,
+    .pa-q-filters input.form-control,
+    .pa-q-filters .btn {
+        flex: 1 1 100%;
+        width: 100%;
+        min-height: 44px;
+    }
+
+    /* phones: the batch bar only appears with a selection, fixed at the bottom (no layout jump) */
+    .pa-q-batch {
+        display: none;
+    }
+
+    .pa-q-batch.pa-q-batch-on {
+        display: flex;
+        position: fixed;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        top: auto;
+        z-index: 1030;
+        background: var(--pa-q-bg, rgba(128, 128, 128, 0.35));
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .pa-q-mobile {
+        padding-bottom: 8px;
+    }
+
+    .pa-q-batch .btn,
+    .pa-q-batch .form-control {
+        min-height: 44px;
+    }
+
+    .pa-q-batch .btn {
+        flex: 1 1 45%;
+    }
+
+    .pa-q-batch-extend {
+        display: flex;
+        flex: 1 1 100%;
+    }
+
+    .pa-q-batch-extend .form-control {
+        flex: 1 1 auto;
+    }
+
+    .pa-q-cr-actions .btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .pa-q-settings {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-q-setting .form-control,
+    .pa-q-setting .btn {
+        min-height: 44px;
+    }
+
+    /* history and entry tables become label | value cards */
+    .pa-q-kvtable thead {
+        display: none;
+    }
+
+    .pa-q-kvtable,
+    .pa-q-kvtable tbody,
+    .pa-q-kvtable tr,
+    .pa-q-kvtable td {
+        display: block;
+        width: 100%;
+    }
+
+    .pa-q-kvtable tr {
+        border: 1px solid rgba(128, 128, 128, 0.35);
+        border-radius: 4px;
+        margin-bottom: 8px;
+        padding: 4px 0;
+    }
+
+    .pa-q-kvtable td {
+        display: grid;
+        grid-template-columns: 7.5em minmax(0, 1fr);
+        justify-items: start;
+        align-items: center;
+        gap: 8px;
+        border: none !important;
+        padding: 3px 10px !important;
+        overflow-wrap: anywhere;
+    }
+
+    .pa-q-kvtable td::before {
+        content: attr(data-label);
+        opacity: 0.75;
+    }
+
+    .pa-q-pager .btn {
+        min-height: 44px;
+    }
+
+    .pa-q-menu .btn,
+    .pa-q-menu .form-control {
+        min-height: 44px;
+    }
+}
+
+/* ------------------------------------------------------------------ Settings > AI per scenario (airouting.js) */
+.pa-airouting { margin-top: 20px; }
+.pa-air-presets, .pa-air-fallback { margin: 8px 0; }
+.pa-air-presets .btn.active { font-weight: bold; }
+.pa-air-table-wrap { overflow-x: auto; }
+.pa-air-table td, .pa-air-jobs td, .pa-air-stats td { vertical-align: top; }
+.pa-air-table .label { font-weight: normal; }
+.pa-air-cards { display: none; }
+.pa-air-card { border: 1px solid rgba(128, 128, 128, 0.35); border-radius: 4px; padding: 8px 10px; margin-bottom: 8px; }
+.pa-air-card-title { margin-bottom: 6px; }
+.pa-air-dl { display: grid; grid-template-columns: max-content 1fr; gap: 2px 10px; margin: 0 0 6px 0; }
+.pa-air-dl dt { font-weight: normal; opacity: 0.75; }
+.pa-air-dl dd { margin: 0; word-break: break-word; }
+.pa-import-gguf { margin: 12px 0; }
+.pa-import-form { max-width: 640px; }
+@media (max-width: 767px) {
+    .pa-air-table-wrap .pa-air-table { display: none; }
+    .pa-air-cards { display: block; }
+    .pa-air-card .btn, .pa-air-presets .btn, .pa-air-fallback .btn { min-height: 44px; }
+    .pa-air-presets .btn { display: block; width: 100%; margin-bottom: 6px; }
+    .pa-air-fallback .form-control { width: 100%; margin-bottom: 6px; }
+}
+

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- fictional hardened configuration; documentation addresses only; @@CRT@@ is replaced by the tests -->
+<opnsense>
+  <system>
+    <hostname>fw-good</hostname>
+    <domain>example.test</domain>
+    <group><name>admins</name><gid>1999</gid><member>0,2000</member><priv>page-all</priv></group>
+    <group><name>api</name><gid>2000</gid><member>2002</member><priv>page-diagnostics-configurationhistory</priv></group>
+    <user><name>root</name><uid>0</uid><scope>system</scope><password>$2y$10$fake</password><otp_seed>ABCDEF</otp_seed></user>
+    <user><name>alice</name><uid>2000</uid><password>$2y$10$fake</password><otp_seed>GHIJKL</otp_seed>
+      <authorizedkeys>@@KEY@@</authorizedkeys></user>
+    <user><name>reader</name><uid>2002</uid><password>$2y$10$fake</password><apikeys><item><key>k</key></item></apikeys></user>
+    <webgui><protocol>https</protocol><ssl-certref>cert1</ssl-certref><ssl-hsts>1</ssl-hsts><interfaces>lan</interfaces>
+      <session_timeout>20</session_timeout><authmode>TOTP Local</authmode><noantilockout>1</noantilockout></webgui>
+    <authserver><name>TOTP Local</name><type>totp</type></authserver>
+    <ssh><enabled>enabled</enabled><interfaces>lan</interfaces></ssh>
+    <disableconsolemenu>1</disableconsolemenu>
+    <sudo_allow_wheel>1</sudo_allow_wheel>
+    <keepcounters>1</keepcounters>
+    <backupcount>60</backupcount>
+    <remotebackup><GDriveEnabled>on</GDriveEnabled><GDrivePassword>secret</GDrivePassword></remotebackup>
+  </system>
+  <interfaces>
+    <wan><if>em0</if><descr>WAN</descr><enable>1</enable><ipaddr>dhcp</ipaddr><blockpriv>1</blockpriv><blockbogons>1</blockbogons></wan>
+    <lan><if>em1</if><descr>LAN</descr><enable>1</enable><ipaddr>192.0.2.1</ipaddr><subnet>24</subnet></lan>
+  </interfaces>
+  <cert><refid>cert1</refid><descr>GUI certificate</descr><crt>@@CRT@@</crt></cert>
+  <OPNsense>
+    <Firewall><Filter>
+      <rules>
+        <rule uuid="44444444-4444-4444-8444-444444444444"><enabled>1</enabled><action>pass</action><interface>lan</interface>
+          <direction>in</direction><ipprotocol>inet</ipprotocol><protocol>tcp</protocol><source_net>lan</source_net>
+          <destination_net>any</destination_net><destination_port>443</destination_port><log>1</log>
+          <description>web out</description></rule>
+        <rule uuid="55555555-5555-4555-8555-555555555555"><enabled>1</enabled><action>block</action><interface>lan</interface>
+          <direction>in</direction><ipprotocol>inet</ipprotocol><source_net>any</source_net><destination_net>any</destination_net>
+          <log>1</log><description>logged block</description></rule>
+        <rule uuid="66666666-6666-4666-8666-666666666666"><enabled>1</enabled><action>block</action><interface>wan</interface>
+          <direction>in</direction><ipprotocol>inet46</ipprotocol><source_net>pa_quarantine</source_net>
+          <destination_net>any</destination_net><log>1</log><description>Max Cyber IA</description></rule>
+      </rules>
+    </Filter></Firewall>
+    <Syslog><general><enabled>1</enabled><loglocal>1</loglocal><maxpreserve>120</maxpreserve></general>
+      <destinations><destination><enabled>1</enabled><transport>tls4</transport><port>6514</port></destination></destinations></Syslog>
+    <unboundplus>
+      <general><enabled>1</enabled><dnssec>1</dnssec><active_interface>lan</active_interface></general>
+      <advanced><hideidentity>1</hideidentity><hideversion>1</hideversion><privateaddress>192.168.0.0/16</privateaddress></advanced>
+      <dots><dot><enabled>1</enabled><type>dot</type><server>192.0.2.53</server><port>853</port></dot></dots>
+    </unboundplus>
+    <chrony><enabled>1</enabled><peers>a.example.test,b.example.test,c.example.test</peers><ntsclient>1</ntsclient></chrony>
+    <IDS><general><enabled>1</enabled><mode>netmap</mode><ips>1</ips><interfaces>lan,wan</interfaces><UpdateCron>c1</UpdateCron></general>
+      <policies><policy><enabled>1</enabled><new_action>drop</new_action></policy></policies>
+      <files><file><filename>x.rules</filename><enabled>1</enabled></file></files></IDS>
+    <cron><jobs>
+      <job uuid="c1"><enabled>1</enabled><minutes>0</minutes><hours>3</hours><command>ids update</command></job>
+      <job uuid="c2"><enabled>1</enabled><minutes>45</minutes><hours>4</hours><command>system remote backup</command></job>
+    </jobs></cron>
+    <monit><general><enabled>1</enabled><mailserver>smtp.example.test</mailserver></general><alert><enabled>1</enabled></alert></monit>
+    <Interfaces><settings><disableipv6>1</disableipv6></settings></Interfaces>
+  </OPNsense>
+</opnsense>

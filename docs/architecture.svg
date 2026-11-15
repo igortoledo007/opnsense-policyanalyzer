@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1250" viewBox="0 0 1800 1250">
+<defs><marker id="a64748b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748b"/></marker><marker id="af97316" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f97316"/></marker><marker id="a2563eb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker><marker id="a059669" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker><marker id="adc2626" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker><marker id="a94a3b8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker><marker id="a0f172a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/></marker><filter id="shadow" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.12"/></filter></defs>
+<rect x="0" y="0" width="1800" height="1250" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="0" y="0" width="1800" height="8" fill="#f97316"/>
+<text xml:space="preserve" x="40" y="54" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="28" font-weight="bold" fill="#0f172a" text-anchor="start">OPNsense Policy Analyzer (Max Cyber IA) · architecture on the firewall</text>
+<text xml:space="preserve" x="40" y="82" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="normal" fill="#475569" text-anchor="start">What the plugin installs and creates, how the parts talk to each other, and what may leave the box. Solid = always on the firewall · dashed = optional / opt-in.</text>
+<text xml:space="preserve" x="1760" y="54" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="14" font-weight="bold" fill="#475569" text-anchor="end">os-policyanalyzer · OPNsense 26.7</text>
+<text xml:space="preserve" x="1760" y="76" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#64748b" text-anchor="end">github.com/igortoledo007/opnsense-policyanalyzer</text>
+<rect x="60" y="104" width="430" height="52" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="60" y="114" width="5" height="32" rx="2" fill="#0f172a"/>
+<text xml:space="preserve" x="78" y="130" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Administrator</text>
+<text xml:space="preserve" x="190" y="130" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">web browser · HTTPS · OPNsense login + ACL</text>
+<rect x="30" y="176" width="1420" height="860" rx="16" fill="#fffaf5" stroke="#f97316" stroke-width="2"/>
+<text xml:space="preserve" x="48" y="202" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">OPNsense firewall</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   FreeBSD 15.1 · amd64</tspan></text>
+<rect x="60" y="222" width="430" height="182" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="60" y="232" width="5" height="162" rx="2" fill="#f97316"/>
+<circle cx="86" cy="243" r="11" fill="#f97316"/>
+<text xml:space="preserve" x="86" y="247" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text xml:space="preserve" x="104" y="248" font-size="15" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Web GUI</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   lighttpd + PHP MVC</tspan></text>
+<text xml:space="preserve" x="78" y="272" font-size="13" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Firewall › Policy Analyzer</tspan></text>
+<text xml:space="preserve" x="78" y="290" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Analysis · Incidents · Anomalies · Posture · Devices</text>
+<text xml:space="preserve" x="78" y="308" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Vulnerabilities · AI Console · Reports · AI setup</text>
+<text xml:space="preserve" x="78" y="326" font-size="11.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#475569">ACL </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569">page-firewall-policyanalyzer</tspan></text>
+<text xml:space="preserve" x="78" y="344" font-size="11.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">    + </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569">page-firewall-policyanalyzer-admin</tspan></text>
+<text xml:space="preserve" x="78" y="362" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">own gettext domain PolicyAnalyzer · 20 languages</text>
+<rect x="530" y="222" width="330" height="182" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="530" y="232" width="5" height="162" rx="2" fill="#f97316"/>
+<text xml:space="preserve" x="548" y="248" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">REST API</text>
+<text xml:space="preserve" x="548" y="272" font-size="12.5" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#f97316">/api/policyanalyzer/*</tspan></text>
+<text xml:space="preserve" x="548" y="290" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">analysis · incidents · anomalies · posture</text>
+<text xml:space="preserve" x="548" y="308" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">vulns · devices · console · ai · setup</text>
+<text xml:space="preserve" x="548" y="326" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">change · quarantine · reports · settings</text>
+<text xml:space="preserve" x="548" y="344" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">minrule · shadowai</text>
+<text xml:space="preserve" x="548" y="362" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">CSRF-protected XHR from the pages</text>
+<rect x="900" y="222" width="230" height="182" rx="10" fill="#0f172a" stroke="#0f172a" stroke-width="1.2" filter="url(#shadow)"/>
+<circle cx="926" cy="243" r="11" fill="#f97316"/>
+<text xml:space="preserve" x="926" y="247" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text xml:space="preserve" x="944" y="248" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="start">configd</text>
+<text xml:space="preserve" x="918" y="274" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#e2e8f0" text-anchor="start">129 actions, run as root</text>
+<text xml:space="preserve" x="918" y="293" font-family="'DejaVu Sans Mono', monospace" font-size="12.5" font-weight="normal" fill="#e2e8f0" text-anchor="start">actions_policyanalyzer.conf</text>
+<text xml:space="preserve" x="918" y="312" font-family="'DejaVu Sans Mono', monospace" font-size="12.5" font-weight="normal" fill="#e2e8f0" text-anchor="start">actions_pa_*.conf</text>
+<text xml:space="preserve" x="918" y="331" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#e2e8f0" text-anchor="start">the only path from the GUI</text>
+<text xml:space="preserve" x="918" y="350" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#e2e8f0" text-anchor="start">to privileged work</text>
+<rect x="1170" y="222" width="250" height="182" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="1170" y="232" width="5" height="162" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1188" y="248" font-size="15" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Cron</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   scheduled</tspan></text>
+<text xml:space="preserve" x="1188" y="272" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">core cron model, no files of its own</text>
+<text xml:space="preserve" x="1188" y="290" font-size="12.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">quarantine </tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">every 5 min</tspan></text>
+<text xml:space="preserve" x="1188" y="308" font-size="12.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">incidents </tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">every 5 min</tspan></text>
+<text xml:space="preserve" x="1188" y="326" font-size="12.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">anomalies </tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">every 15 min</tspan></text>
+<text xml:space="preserve" x="1188" y="344" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">collectors · AI queue · reports</text>
+<rect x="60" y="452" width="300" height="252" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="60" y="462" width="5" height="232" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="78" y="478" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Data sources</text>
+<text xml:space="preserve" x="78" y="502" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#059669">read only</tspan></text>
+<text xml:space="preserve" x="78" y="520" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• config.xml + rule counters</text>
+<text xml:space="preserve" x="78" y="538" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• filter log (pf)</text>
+<text xml:space="preserve" x="78" y="556" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• Suricata eve.json</text>
+<text xml:space="preserve" x="78" y="574" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• Unbound reporting (DuckDB)</text>
+<text xml:space="preserve" x="78" y="592" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• Kea leases · ARP / NDP</text>
+<text xml:space="preserve" x="78" y="610" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• Insight / NetFlow</text>
+<text xml:space="preserve" x="78" y="628" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• GeoIP alias lists · ASN table</text>
+<text xml:space="preserve" x="78" y="646" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">• Monit SMTP settings</text>
+<rect x="400" y="452" width="640" height="252" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="1.6" filter="url(#shadow)"/>
+<circle cx="426" cy="473" r="11" fill="#f97316"/>
+<text xml:space="preserve" x="426" y="477" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text xml:space="preserve" x="444" y="478" font-size="15" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Engine</tspan></text>
+<text xml:space="preserve" x="512" y="478" font-family="'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="normal" fill="#475569" text-anchor="start">/usr/local/opnsense/scripts/policyanalyzer</text>
+<text xml:space="preserve" x="1024" y="478" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#059669" text-anchor="end">Python standard library only</text>
+<rect x="423" y="494" width="194" height="48" rx="7" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+<text xml:space="preserve" x="520" y="514" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">rule analysis</text>
+<text xml:space="preserve" x="520" y="531" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">shadowed · redundant · unused · broad</text>
+<rect x="623" y="494" width="194" height="48" rx="7" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+<text xml:space="preserve" x="720" y="514" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">incidents</text>
+<text xml:space="preserve" x="720" y="531" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">scored, correlated cases</text>
+<rect x="823" y="494" width="194" height="48" rx="7" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+<text xml:space="preserve" x="920" y="514" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">anomalies</text>
+<text xml:space="preserve" x="920" y="531" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">beaconing · DNS · volume · scans</text>
+<rect x="423" y="550" width="194" height="48" rx="7" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+<text xml:space="preserve" x="520" y="570" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">posture</text>
+<text xml:space="preserve" x="520" y="587" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">hardening checks, score</text>
+<rect x="623" y="550" width="194" height="48" rx="7" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+<text xml:space="preserve" x="720" y="570" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">exposure + vulns</text>
+<text xml:space="preserve" x="720" y="587" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">NVD · KEV · EPSS · P1–P4</text>
+<rect x="823" y="550" width="194" height="48" rx="7" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+<text xml:space="preserve" x="920" y="570" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">devices</text>
+<text xml:space="preserve" x="920" y="587" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">passive inventory, risk</text>
+<rect x="423" y="606" width="194" height="48" rx="7" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+<text xml:space="preserve" x="520" y="626" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">quarantine</text>
+<text xml:space="preserve" x="520" y="643" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">escalating ladder, guards</text>
+<rect x="623" y="606" width="194" height="48" rx="7" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+<text xml:space="preserve" x="720" y="626" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">AI layer</text>
+<text xml:space="preserve" x="720" y="643" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">router · anonymizer · validation</text>
+<rect x="823" y="606" width="194" height="48" rx="7" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+<text xml:space="preserve" x="920" y="626" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="bold" fill="#0f172a" text-anchor="middle">reports</text>
+<text xml:space="preserve" x="920" y="643" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="normal" fill="#475569" text-anchor="middle">PDF + e-mail · 20 languages</text>
+<rect x="423" y="662" width="594" height="30" rx="7" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+<text xml:space="preserve" x="720" y="682" font-size="12.5" text-anchor="middle"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">change journal  </tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">every change is simulated → applied → revertible</tspan></text>
+<rect x="1080" y="452" width="340" height="252" rx="10" fill="#fff5f5" stroke="#dc2626" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="1080" y="462" width="5" height="232" rx="2" fill="#dc2626"/>
+<circle cx="1106" cy="473" r="11" fill="#dc2626"/>
+<text xml:space="preserve" x="1106" y="477" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text xml:space="preserve" x="1124" y="478" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Enforcement</text>
+<text xml:space="preserve" x="1098" y="502" font-size="11.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#dc2626">optional · created by the quarantine assistant</tspan></text>
+<text xml:space="preserve" x="1098" y="520" font-size="12.5" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#0f172a">pa_quarantine</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   External alias</tspan></text>
+<text xml:space="preserve" x="1098" y="538" font-size="12.5" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#0f172a">pa_never_block</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">  allow-list alias</tspan></text>
+<text xml:space="preserve" x="1098" y="556" font-size="12.5" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">floating block rule </tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">&quot;Max Cyber IA&quot;</tspan></text>
+<text xml:space="preserve" x="1098" y="574" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">→ pf (packet filter) blocks the sources</text>
+<text xml:space="preserve" x="1098" y="592" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start"></text>
+<text xml:space="preserve" x="1098" y="610" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">never touches other rules or aliases</text>
+<text xml:space="preserve" x="1098" y="628" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">every step simulated first, revertible</text>
+<text xml:space="preserve" x="1098" y="646" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">from the action history</text>
+<rect x="60" y="740" width="900" height="280" rx="16" fill="#f5f9ff" stroke="#2563eb" stroke-width="2"/>
+<text xml:space="preserve" x="78" y="766" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Storage</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   ZFS pool zroot</tspan></text>
+<rect x="80" y="790" width="280" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="80" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
+<circle cx="106" cy="811" r="11" fill="#2563eb"/>
+<text xml:space="preserve" x="106" y="815" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text xml:space="preserve" x="124" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">State</text>
+<text xml:space="preserve" x="98" y="840" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/policyanalyzer</tspan></text>
+<text xml:space="preserve" x="98" y="858" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">SQLite: quarantine ledger, incidents,</text>
+<text xml:space="preserve" x="98" y="876" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">anomalies, devices, posture, collectors</text>
+<text xml:space="preserve" x="98" y="894" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">JSON: findings, settings, journal</text>
+<text xml:space="preserve" x="98" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start"></text>
+<text xml:space="preserve" x="98" y="930" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/log/policyanalyzer</tspan></text>
+<text xml:space="preserve" x="98" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">plain logs, rotated</text>
+<rect x="380" y="790" width="290" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="380" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="398" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Dataset · setup step 3</text>
+<text xml:space="preserve" x="398" y="840" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="bold" fill="#2563eb">zroot/ai</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">  →  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/ai</tspan></text>
+<text xml:space="preserve" x="398" y="858" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">recordsize=1M · compression=off</text>
+<text xml:space="preserve" x="398" y="876" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">atime=off · no quota (pool free space)</text>
+<text xml:space="preserve" x="398" y="894" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">tuned for large write-once model files</text>
+<text xml:space="preserve" x="398" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start"></text>
+<text xml:space="preserve" x="398" y="930" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#0f172a">/var/db/ai/models</tspan></text>
+<text xml:space="preserve" x="398" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">0750 root:wheel · 2–20 GB per model</text>
+<rect x="690" y="790" width="250" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="690" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="708" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Dataset · step 4</text>
+<text xml:space="preserve" x="708" y="840" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="bold" fill="#2563eb">zroot/ai/jail</tspan></text>
+<text xml:space="preserve" x="708" y="858" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">→  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/ai/jail</tspan></text>
+<text xml:space="preserve" x="708" y="876" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">lz4 · recordsize=128K · atime=off</text>
+<text xml:space="preserve" x="708" y="894" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">FreeBSD 15.1 base.txz (~0.7 GB)</text>
+<text xml:space="preserve" x="708" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">+ pkg ollama and dependencies</text>
+<text xml:space="preserve" x="708" y="930" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start"></text>
+<text xml:space="preserve" x="708" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">jail root, ~0.8 GB on disk</text>
+<rect x="1000" y="740" width="420" height="280" rx="16" fill="#f3fcf8" stroke="#059669" stroke-width="2"/>
+<text xml:space="preserve" x="1018" y="766" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Local AI runtime</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   jail &quot;ollama&quot;</tspan></text>
+<rect x="1020" y="790" width="380" height="210" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="1020" y="800" width="5" height="190" rx="2" fill="#059669"/>
+<circle cx="1046" cy="811" r="11" fill="#059669"/>
+<text xml:space="preserve" x="1046" y="815" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<text xml:space="preserve" x="1064" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Ollama ≥ 0.17.1</text>
+<text xml:space="preserve" x="1038" y="840" font-size="12.5" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="bold" fill="#059669">127.0.0.1:11434</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">  (host only)</tspan></text>
+<text xml:space="preserve" x="1038" y="858" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">non-VNET · ip4 = 127.0.0.1 only · no egress</text>
+<text xml:space="preserve" x="1038" y="876" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">runs as nobody · cpuset · nice · RCTL memory</text>
+<text xml:space="preserve" x="1038" y="894" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">models: nullfs rw → </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569">/var/lib/ollama/models</tspan></text>
+<text xml:space="preserve" x="1038" y="912" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">boot: </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569">/etc/jail.conf.d/ollama.conf</tspan></text>
+<text xml:space="preserve" x="1038" y="930" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">e.g. qwen3:4b · qwen3:8b · qwen3:30b-a3b</text>
+<text xml:space="preserve" x="1038" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">default limits: CPUs 2–3 · 2 threads · ctx 8192</text>
+<rect x="1480" y="420" width="290" height="616" rx="16" fill="#fafafa" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text xml:space="preserve" x="1498" y="446" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Outside the firewall</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   optional</tspan></text>
+<rect x="1500" y="470" width="250" height="92" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+<rect x="1500" y="480" width="5" height="72" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1518" y="496" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">SMTP server</text>
+<text xml:space="preserve" x="1518" y="520" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Monit settings or own SMTP</text>
+<text xml:space="preserve" x="1518" y="538" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">reports and alerts</text>
+<rect x="1500" y="582" width="250" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+<rect x="1500" y="592" width="5" height="90" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1518" y="608" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Remote AI providers</text>
+<text xml:space="preserve" x="1518" y="632" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Ollama server in the LAN</text>
+<text xml:space="preserve" x="1518" y="650" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">Anthropic API</text>
+<text xml:space="preserve" x="1518" y="668" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">claude-bridge (LAN)</text>
+<rect x="1500" y="712" width="250" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+<rect x="1500" y="722" width="5" height="90" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1518" y="738" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Feeds (opt-in)</text>
+<text xml:space="preserve" x="1518" y="762" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">NVD · CISA KEV · EPSS · OSV</text>
+<text xml:space="preserve" x="1518" y="780" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">IEEE OUI</text>
+<text xml:space="preserve" x="1518" y="798" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">MaxMind GeoLite2 (own key)</text>
+<rect x="1500" y="842" width="250" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+<rect x="1500" y="852" width="5" height="90" rx="2" fill="#94a3b8"/>
+<text xml:space="preserve" x="1518" y="868" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Setup downloads</text>
+<text xml:space="preserve" x="1518" y="892" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">download.freebsd.org</text>
+<text xml:space="preserve" x="1518" y="910" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">pkg.FreeBSD.org</text>
+<text xml:space="preserve" x="1518" y="928" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">registry.ollama.ai · SHA-256</text>
+<rect x="1500" y="104" width="250" height="52" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="1500" y="114" width="5" height="32" rx="2" fill="#0f172a"/>
+<text xml:space="preserve" x="1518" y="130" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Mailbox</text>
+<text xml:space="preserve" x="1600" y="130" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">PDF reports, alerts</text>
+<path d="M440 156 L440 222" fill="none" stroke="#0f172a" stroke-width="1.8" marker-end="url(#a0f172a)"/>
+<text xml:space="preserve" x="450" y="170" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="start">HTTPS</text>
+<path d="M490 313 L530 313" fill="none" stroke="#f97316" stroke-width="1.8" marker-end="url(#af97316)"/>
+<text xml:space="preserve" x="510" y="304" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="10.5" font-weight="bold" fill="#f97316" text-anchor="middle">XHR</text>
+<path d="M860 313 L900 313" fill="none" stroke="#f97316" stroke-width="1.8" marker-end="url(#af97316)"/>
+<text xml:space="preserve" x="880" y="304" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="10" font-weight="bold" fill="#f97316" text-anchor="middle">configctl</text>
+<path d="M1170 313 L1130 313" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#a64748b)"/>
+<path d="M1015 404 L1015 452" fill="none" stroke="#0f172a" stroke-width="1.8" marker-end="url(#a0f172a)"/>
+<rect x="970.6" y="419" width="88.8" height="18" rx="9" fill="#ffffff" stroke="#0f172a" stroke-width="0.8"/>
+<text xml:space="preserve" x="1015" y="432" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">runs as root</text>
+<path d="M360 578 L400 578" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#a059669)"/>
+<text xml:space="preserve" x="380" y="569" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="10.5" font-weight="bold" fill="#059669" text-anchor="middle">read</text>
+<path d="M1040 578 L1080 578" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#adc2626)"/>
+<text xml:space="preserve" x="1060" y="569" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="10.5" font-weight="bold" fill="#dc2626" text-anchor="middle">apply</text>
+<path d="M520 704 L520 724 L310 724 L310 790" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a2563eb)"/>
+<rect x="370.6" y="715" width="88.8" height="18" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="0.8"/>
+<text xml:space="preserve" x="415" y="728" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">read / write</text>
+<path d="M900 704 L900 724 L1340 724 L1340 790" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#a059669)"/>
+<rect x="1050" y="715" width="140" height="18" rx="9" fill="#ffffff" stroke="#059669" stroke-width="0.8"/>
+<text xml:space="preserve" x="1120" y="728" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle">HTTP 127.0.0.1:11434</text>
+<path d="M940 895 L1020 895" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a2563eb)"/>
+<text xml:space="preserve" x="980" y="886" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="10.5" font-weight="bold" fill="#2563eb" text-anchor="middle">jail root</text>
+<path d="M525 1000 L525 1028 L1100 1028 L1100 1000" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a2563eb)"/>
+<rect x="596.4" y="1019" width="127.2" height="18" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="0.8"/>
+<text xml:space="preserve" x="660" y="1032" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">nullfs rw · models</text>
+<path d="M1040 472 L1060 472 L1060 428 L1462 428 L1462 516 L1500 516" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a94a3b8)"/>
+<rect x="1183.2" y="419" width="133.6" height="18" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8"/>
+<text xml:space="preserve" x="1250" y="432" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#94a3b8" text-anchor="middle">opt-in · anonymized</text>
+<path d="M1462 516 L1462 637 L1500 637" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a94a3b8)"/>
+<path d="M1462 637 L1462 767 L1500 767" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a94a3b8)"/>
+<path d="M1500 897 L1466 897 L1466 1052 L815 1052 L815 1000" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a94a3b8)"/>
+<rect x="1057.2" y="1043" width="165.6" height="18" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8"/>
+<text xml:space="preserve" x="1140" y="1056" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#94a3b8" text-anchor="middle">setup only · by the host</text>
+<path d="M1730 470 L1730 156" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a94a3b8)"/>
+<text xml:space="preserve" x="40" y="1084" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="17" font-weight="bold" fill="#0f172a" text-anchor="start">AI setup assistant</text>
+<text xml:space="preserve" x="210" y="1084" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="normal" fill="#475569" text-anchor="start">eight steps · each one simulated first, written to the action history and revertible (&quot;Remove local AI&quot;)</text>
+<polygon points="40,1102 237,1102 255,1158 237,1214 40,1214" fill="#fff7ed" stroke="#fdba74" stroke-width="1.3"/>
+<circle cx="138.5" cy="1128" r="13" fill="#f97316"/>
+<text xml:space="preserve" x="138.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text xml:space="preserve" x="138.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Check</text>
+<text xml:space="preserve" x="138.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">CPU, AVX2, RAM,</text>
+<text xml:space="preserve" x="138.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">disk, load</text>
+<polygon points="255,1102 452,1102 470,1158 452,1214 255,1214 273,1158" fill="#ffedd5" stroke="#fdba74" stroke-width="1.3"/>
+<circle cx="362.5" cy="1128" r="13" fill="#f97316"/>
+<text xml:space="preserve" x="362.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text xml:space="preserve" x="362.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Provider</text>
+<text xml:space="preserve" x="362.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">local · LAN</text>
+<text xml:space="preserve" x="362.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">API · bridge</text>
+<polygon points="470,1102 667,1102 685,1158 667,1214 470,1214 488,1158" fill="#eff6ff" stroke="#2563eb" stroke-width="1.3"/>
+<circle cx="577.5" cy="1128" r="13" fill="#2563eb"/>
+<text xml:space="preserve" x="577.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text xml:space="preserve" x="577.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Storage</text>
+<text xml:space="preserve" x="577.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">zfs create</text>
+<text xml:space="preserve" x="577.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">zroot/ai + models/</text>
+<polygon points="685,1102 882,1102 900,1158 882,1214 685,1214 703,1158" fill="#eff6ff" stroke="#2563eb" stroke-width="1.3"/>
+<circle cx="792.5" cy="1128" r="13" fill="#2563eb"/>
+<text xml:space="preserve" x="792.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text xml:space="preserve" x="792.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Runtime</text>
+<text xml:space="preserve" x="792.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">zroot/ai/jail · base</text>
+<text xml:space="preserve" x="792.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">pkg ollama · jail.conf</text>
+<polygon points="900,1102 1097,1102 1115,1158 1097,1214 900,1214 918,1158" fill="#fff7ed" stroke="#fdba74" stroke-width="1.3"/>
+<circle cx="1007.5" cy="1128" r="13" fill="#f97316"/>
+<text xml:space="preserve" x="1007.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text xml:space="preserve" x="1007.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Model</text>
+<text xml:space="preserve" x="1007.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">pull + SHA-256</text>
+<text xml:space="preserve" x="1007.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">or GGUF import</text>
+<polygon points="1115,1102 1312,1102 1330,1158 1312,1214 1115,1214 1133,1158" fill="#ffedd5" stroke="#fdba74" stroke-width="1.3"/>
+<circle cx="1222.5" cy="1128" r="13" fill="#f97316"/>
+<text xml:space="preserve" x="1222.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<text xml:space="preserve" x="1222.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Limits</text>
+<text xml:space="preserve" x="1222.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">cpuset · threads</text>
+<text xml:space="preserve" x="1222.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">context · RAM</text>
+<polygon points="1330,1102 1527,1102 1545,1158 1527,1214 1330,1214 1348,1158" fill="#fff7ed" stroke="#fdba74" stroke-width="1.3"/>
+<circle cx="1437.5" cy="1128" r="13" fill="#f97316"/>
+<text xml:space="preserve" x="1437.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+<text xml:space="preserve" x="1437.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Test</text>
+<text xml:space="preserve" x="1437.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">benchmark</text>
+<text xml:space="preserve" x="1437.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">first explanation</text>
+<polygon points="1545,1102 1742,1102 1760,1158 1742,1214 1545,1214 1563,1158" fill="#ffedd5" stroke="#fdba74" stroke-width="1.3"/>
+<circle cx="1652.5" cy="1128" r="13" fill="#f97316"/>
+<text xml:space="preserve" x="1652.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+<text xml:space="preserve" x="1652.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Finish</text>
+<text xml:space="preserve" x="1652.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">settings saved</text>
+<text xml:space="preserve" x="1652.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">AI on in the GUI</text>
+</svg>

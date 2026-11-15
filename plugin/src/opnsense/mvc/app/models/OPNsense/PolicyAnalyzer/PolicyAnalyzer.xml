@@ -1,0 +1,126 @@
+<model>
+    <mount>//OPNsense/policyanalyzer</mount>
+    <version>1.0.2</version>
+    <description>Policy Analyzer and its optional AI layer</description>
+    <items>
+        <!-- shared AI settings; every provider has a container named after it (see scripts/policyanalyzer/ai/providers) -->
+        <ai>
+            <enabled type="BooleanField">
+                <Default>0</Default>
+                <Required>Y</Required>
+            </enabled>
+            <provider type="OptionField">
+                <Default>none</Default>
+                <Required>Y</Required>
+                <OptionValues>
+                    <none>None</none>
+                    <ollama>Ollama</ollama>
+                    <claude>Claude (Anthropic)</claude>
+                    <claudecode>Claude Code (LAN)</claudecode>
+                </OptionValues>
+            </provider>
+            <!-- empty: provider default (Ollama 120 s, local Ollama 360 s, Claude 180 s, Claude Code (LAN) 300 s) -->
+            <timeout type="IntegerField">
+                <MinimumValue>5</MinimumValue>
+                <MaximumValue>900</MaximumValue>
+            </timeout>
+            <anonymize type="BooleanField">
+                <Default>1</Default>
+                <Required>Y</Required>
+            </anonymize>
+            <language type="OptionField">
+                <Default>auto</Default>
+                <Required>Y</Required>
+                <OptionValues>
+                    <auto>Same as the GUI</auto>
+                    <en_US>English</en_US>
+                    <pt_BR>Portuguese (Brazil)</pt_BR>
+                    <pt_PT>Portuguese (Portugal)</pt_PT>
+                    <es_ES>Spanish</es_ES>
+                    <de_DE>German</de_DE>
+                    <fr_FR>French</fr_FR>
+                    <it_IT>Italian</it_IT>
+                    <nl_NL>Dutch</nl_NL>
+                    <ja_JP>Japanese</ja_JP>
+                    <zh_CN>Chinese (Simplified)</zh_CN>
+                    <ru_RU>Russian</ru_RU>
+                </OptionValues>
+            </language>
+        </ai>
+        <ollama>
+            <location type="OptionField">
+                <Default>local</Default>
+                <Required>Y</Required>
+                <OptionValues>
+                    <local>On this firewall (local)</local>
+                    <lan>On a server in my LAN</lan>
+                </OptionValues>
+            </location>
+            <url type="UrlField"/>
+            <model type="TextField">
+                <Mask>/^[A-Za-z0-9][A-Za-z0-9._:\/@+-]{0,127}$/</Mask>
+                <ValidationMessage>Use the model name as shown by "ollama list", e.g. llama3.2:3b.</ValidationMessage>
+            </model>
+            <models_dir type="TextField">
+                <Default>/var/db/ai/models</Default>
+                <Required>Y</Required>
+                <Mask>/^\/[A-Za-z0-9._\/-]{0,254}$/</Mask>
+                <ValidationMessage>An absolute path with letters, digits, ".", "_", "-" and "/" only.</ValidationMessage>
+            </models_dir>
+            <ram_budget type="IntegerField">
+                <Default>40</Default>
+                <MinimumValue>10</MinimumValue>
+                <MaximumValue>75</MaximumValue>
+                <Required>Y</Required>
+                <ValidationMessage>Choose a value between 10 and 75 percent.</ValidationMessage>
+            </ram_budget>
+        </ollama>
+        <claude>
+            <apikey type="UpdateOnlyTextField">
+                <Mask>/^[A-Za-z0-9_-]{20,256}$/</Mask>
+                <ValidationMessage>This does not look like an Anthropic API key.</ValidationMessage>
+            </apikey>
+            <model type="OptionField">
+                <Default>claude-fable-5-1</Default>
+                <Required>Y</Required>
+                <OptionValues>
+                    <claude-fable-5-1>Fable 5.1 — most capable (US$10/50 per MTok in/out)</claude-fable-5-1>
+                    <claude-opus-5-5>Opus 5.5 — balanced (US$4/20)</claude-opus-5-5>
+                    <claude-sonnet-5-5>Sonnet 5.5 — fast (US$2/10)</claude-sonnet-5-5>
+                    <claude-haiku-5-5>Haiku 5.5 — cheapest (US$0.10/0.50)</claude-haiku-5-5>
+                </OptionValues>
+            </model>
+            <effort type="OptionField">
+                <Default>high</Default>
+                <Required>Y</Required>
+                <OptionValues>
+                    <low>Low</low>
+                    <medium>Medium</medium>
+                    <high>High</high>
+                    <xhigh>Extra high</xhigh>
+                    <max>Max</max>
+                </OptionValues>
+            </effort>
+        </claude>
+        <!-- Claude Code (LAN): claude-bridge on a computer in the LAN, Claude Code subscription of its owner -->
+        <claudecode>
+            <url type="UrlField">
+                <Default>http://bridge.example.lan:11436</Default>
+            </url>
+            <token type="UpdateOnlyTextField">
+                <Mask>/^[A-Za-z0-9._~+\/=-]{16,512}$/</Mask>
+                <ValidationMessage>The bridge token must have 16 to 512 characters (letters, digits and . _ ~ + / = -).</ValidationMessage>
+            </token>
+            <model type="OptionField">
+                <Default>sonnet</Default>
+                <Required>Y</Required>
+                <OptionValues>
+                    <fable>Fable — most capable, uses the quota fastest</fable>
+                    <opus>Opus — balanced, uses the quota fast</opus>
+                    <sonnet>Sonnet — fast (recommended)</sonnet>
+                    <haiku>Haiku — fastest, lightest on the quota</haiku>
+                </OptionValues>
+            </model>
+        </claudecode>
+    </items>
+</model>
