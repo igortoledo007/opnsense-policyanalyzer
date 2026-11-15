@@ -32,7 +32,7 @@ revert**, recorded in an action history.
 
 ## Screenshots
 
-Taken on my own firewall (OPNsense 26.7.9, Forja theme); addresses, host and device names are blurred.
+Taken on my own firewall (OPNsense 26.7.9, Forja theme); addresses, host, device and rule names are blurred.
 
 | | |
 |---|---|
