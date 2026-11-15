@@ -185,32 +185,34 @@ card(1080, 452, 340, 252, 'Enforcement', [
     'from the action history'], accent=RED, fill='#fff5f5', badge='4')
 
 # row C: storage
-frame(60, 740, 900, 280, 'Storage', 'ZFS pool zroot',
+frame(60, 740, 900, 280, 'Storage', 'ZFS or UFS root',
       BLUE, '#f5f9ff')
-card(80, 790, 280, 210, 'State', [
+card(80, 790, 260, 210, 'State', [
     (([('/var/db/policyanalyzer', {'mono': True, 'color': BLUE})], 12),),
     'SQLite: quarantine ledger, incidents,',
     'anomalies, devices, posture, collectors',
     'JSON: findings, settings, journal',
-    '',
     (([('/var/log/policyanalyzer', {'mono': True, 'color': BLUE})], 12),),
-    'plain logs, rotated'], accent=BLUE, badge='5')
-card(380, 790, 290, 210, 'Dataset · setup step 3', [
-    (([('zroot/ai', {'mono': True, 'color': BLUE, 'weight': 'bold'}), ('  →  ', {'color': MUTED}),
-       ('/var/db/ai', {'mono': True, 'color': BLUE})], 12),),
-    'recordsize=1M · compression=off',
-    'atime=off · no quota (pool free space)',
-    'tuned for large write-once model files',
-    '',
-    (([('/var/db/ai/models', {'mono': True})], 12),),
-    '0750 root:wheel · 2–20 GB per model'], accent=BLUE)
-card(690, 790, 250, 210, 'Dataset · step 4', [
-    (([('zroot/ai/jail', {'mono': True, 'color': BLUE, 'weight': 'bold'})], 12),),
-    (([('→  ', {'color': MUTED}), ('/var/db/ai/jail', {'mono': True, 'color': BLUE})], 12),),
-    'lz4 · recordsize=128K · atime=off',
+    'plain logs, rotated',
+    'any root file system (ZFS or UFS)'], accent=BLUE, badge='5')
+card(355, 790, 330, 210, 'Models · setup step 3', [
+    (([('ZFS  ', {'weight': 'bold', 'color': BLUE}), ('zroot/ai', {'mono': True, 'color': BLUE}),
+       (' → /var/db/ai', {'mono': True, 'color': MUTED})], 12),),
+    'recordsize=1M · compression=off · atime=off',
+    (([('UFS  ', {'weight': 'bold', 'color': BLUE}), ('/var/db/ai/models', {'mono': True, 'color': BLUE}),
+       (' (directory)', {'color': MUTED})], 12),),
+    'shares the system disk · space guard',
+    'leaves ≥ max(20 % of size, 2 GiB) free',
+    (([('UFS opt-in  ', {'weight': 'bold', 'color': BLUE}), ('aipool/ai', {'mono': True, 'color': BLUE})], 12),),
+    (([('← /var/db/ai.zpool.img', {'mono': True, 'color': MUTED}), (' (md vnode)', {'color': MUTED})], 11.5),),
+    'fixed size · ARC cap · own rc.d at boot'], accent=BLUE)
+card(700, 790, 245, 210, 'Jail root · step 4', [
+    (([('ZFS  ', {'weight': 'bold', 'color': BLUE}), ('zroot/ai/jail', {'mono': True, 'color': BLUE})], 12),),
+    (([('UFS  ', {'weight': 'bold', 'color': BLUE}), ('/var/db/ai/jail', {'mono': True, 'color': BLUE})], 12),),
+    (([('pool  ', {'weight': 'bold', 'color': BLUE}), ('aipool/ai/jail', {'mono': True, 'color': BLUE})], 12),),
+    (([('→  ', {'color': MUTED}), ('/var/db/ai/jail', {'mono': True, 'color': MUTED})], 12),),
     'FreeBSD 15.1 base.txz (~0.7 GB)',
     '+ pkg ollama and dependencies',
-    '',
     'jail root, ~0.8 GB on disk'], accent=BLUE)
 
 # row C: jail
@@ -251,8 +253,8 @@ arrow([(1040, 578), (1080, 578)], RED)
 text(1060, 569, 'apply', 10.5, 'bold', RED, 'middle')
 arrow([(520, 704), (520, 724), (310, 724), (310, 790)], BLUE, 'read / write', 415, 728)
 arrow([(900, 704), (900, 724), (1340, 724), (1340, 790)], GREEN, 'HTTP 127.0.0.1:11434', 1120, 728)
-arrow([(940, 895), (1020, 895)], BLUE)
-text(980, 886, 'jail root', 10.5, 'bold', BLUE, 'middle')
+arrow([(945, 895), (1020, 895)], BLUE)
+text(982, 886, 'jail root', 10.5, 'bold', BLUE, 'middle')
 arrow([(525, 1000), (525, 1028), (1100, 1028), (1100, 1000)], BLUE, 'nullfs rw · models', 660, 1032)
 # opt-in bus to the right column
 arrow([(1040, 472), (1060, 472), (1060, 428), (1462, 428), (1462, 516), (1500, 516)], GREY, 'opt-in · anonymized', 1250, 432,
@@ -268,8 +270,8 @@ sy = 1084
 text(40, sy, 'AI setup assistant', 17, 'bold')
 text(210, sy, 'eight steps · each one simulated first, written to the action history and revertible ("Remove local AI")',
      13.5, color=MUTED)
-steps = [('Check', 'CPU, AVX2, RAM,', 'disk, load'), ('Provider', 'local · LAN', 'API · bridge'),
-         ('Storage', 'zfs create', 'zroot/ai + models/'), ('Runtime', 'zroot/ai/jail · base', 'pkg ollama · jail.conf'),
+steps = [('Check', 'CPU, AVX2, RAM, load', 'file system · free space'), ('Provider', 'local · LAN', 'API · bridge'),
+         ('Storage', 'ZFS dataset or UFS dir', '(opt-in file pool)'), ('Runtime', 'jail root · base.txz', 'pkg ollama · jail.conf'),
          ('Model', 'pull + SHA-256', 'or GGUF import'), ('Limits', 'cpuset · threads', 'context · RAM'),
          ('Test', 'benchmark', 'first explanation'), ('Finish', 'settings saved', 'AI on in the GUI')]
 n = len(steps)

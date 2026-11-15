@@ -19,6 +19,26 @@ class TestHealth(Sandbox):
     def latest(self):
         return query.Query(self.ctx).health_latest()['metrics']
 
+    def test_ufs_root_with_file_pool_keeps_root_disk(self):
+        # UFS root plus the file-backed AI pool: the pool is reported and / is still measured with df
+        self.runner.set(['/sbin/zpool', 'list', '-Hp'],
+                        'aipool\t42949672960\t1073741824\t41875931136\t-\t-\t1\t2\t1.00\tONLINE\t-\n')
+        self.runner.set(['/sbin/mount', '-p'], '/dev/gpt/rootfs\t/\tufs\trw\t1 1\n'
+                        'aipool/ai\t/var/db/ai\tzfs\trw\t0 0\n')
+        self.runner.set(['/bin/df', '-kP', '/'], 'Filesystem 1024-blocks Used Avail Capacity Mounted on\n'
+                        '/dev/gpt/rootfs 40000000 12000000 26800000 31% /\n')
+        health.run(self.ctx, self.settings)
+        m = self.latest()
+        self.assertEqual(m['zpool:aipool:cap_pct'], 2)
+        self.assertEqual(m['disk_root_used_pct'], 31)
+        self.assertAlmostEqual(m['disk_root_free_gb'], 25.56, 1)
+
+    def test_zfs_root_skips_df(self):
+        self.runner.set(['/sbin/mount', '-p'], 'zroot/ROOT/default\t/\tzfs\trw\t0 0\n')
+        health.run(self.ctx, self.settings)
+        self.assertNotIn('disk_root_used_pct', self.latest())
+        self.assertNotIn(['/bin/df', '-kP', '/'], self.runner.calls)
+
     def test_first_sample(self):
         result = health.run(self.ctx, self.settings)
         self.assertEqual(result['errors'], [])

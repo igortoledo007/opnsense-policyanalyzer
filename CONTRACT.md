@@ -128,6 +128,28 @@ topics (`pa_reports`, `pa_vulns`, `pa_devices`, `pa_collect`, ...).
 
 See also `plugin/README.md` ("Simulate → apply → revert").
 
+### Local AI storage without ZFS (UFS)
+
+- `uninstall_runtime +remove_dataset <confirm>`: `<confirm>` is the dataset name (`zroot/ai`, or `aipool/ai` with
+  the pool in a file) when `/var/db/ai` is a ZFS dataset, otherwise the path `/var/db/ai/models`; on UFS the step is
+  `remove_tree` with `models: true` (the only case where the executor may delete the models directory), listed in
+  `irreversible`.
+- Space guard (`setup/common.py space_check`), in `install_runtime`, `pull_model`, `import_gguf` and
+  `create_file_pool`: blocked (`errors`, text starts with "not enough space") when the free space left on the target
+  file system would be below max(20 % of the estimate, 2 GiB on the file system that holds `/var` — same device on
+  UFS, same pool on ZFS — or 1 GiB elsewhere). Estimates: `BASE_*`/`PKG_*` in `setup/common.py` (runtime), blob
+  sizes of the registry manifest (pull), file size ×2 for a Hugging Face download (import); the pool image is
+  exact (no 20 %). On UFS a warning says the models share the system disk.
+- `create_file_pool <size GiB> [arc_mb]` (setup, background): preallocated image `/var/db/ai.zpool.img`,
+  `mdconfig -t vnode -u <10..99>`, pool `aipool` (`cachefile=none`, root not mounted), dataset `aipool/ai` on
+  `/var/db/ai`, models directory, `/usr/local/etc/rc.d/policyanalyzer_aipool` (REQUIRE: FILESYSTEMS, BEFORE: jail)
+  enabled in `/etc/rc.conf.d/policyanalyzer_aipool`; optional `vfs.zfs.arc.max`. Step types `image_create`,
+  `md_attach`, `zpool_create` (inverses `image_remove`, `md_detach`, `zpool_destroy` with `only_empty`). Revert only
+  while the pool holds no files. `remove_file_pool aipool` destroys the pool with its content (irreversible; its
+  revert creates an empty pool again). `status runtime` returns `file_pool` and `models_fs`.
+- Default limits on small hosts: when the default cpu set (`2-3`) does not exist (e.g. 2 cpus), `runtime_args` uses
+  the upper half of the cpus and caps the default `threads` to that set; explicit `threads` are still validated.
+
 ## Automatic quarantine
 
 Automatic blocking of external sources that insist on the WAN, with an escalating ladder for repeat offenders,
@@ -315,7 +337,7 @@ JSON per run):
   the oldest revisions (items and changes stay).
 - `health`: one sample per run (hourly cron): `kern.cp_time`, `vm.loadavg`, memory (`vm.stats.vm.*`,
   `hw.physmem`, ARC), temperatures (`dev.cpu.N`, `hw.acpi.thermal.tzN`), `swapinfo -k`, `zpool list -Hp` (or
-  `df -kP /` without ZFS), `pfctl -si/-sm`, dpinger (`/var/run/dpinger_*.sock`: RTT, deviation, loss),
+  `df -kP /` whenever `/` is not ZFS, read from `mount -p`, even when a pool such as the file-backed `aipool` exists), `pfctl -si/-sm`, dpinger (`/var/run/dpinger_*.sock`: RTT, deviation, loss),
   `netstat -ibdn`, `netstat -m`, `pluginctl -S` (stopped services → metric + event), `ps` (RSS/CPU of
   `processes`), `wg show all dump` (rx/tx/handshake age per peer; keys are never read beyond the public field),
   `arp -an` (table `hosts`). Events: `ALERT:` lines of `/var/log/gateways/latest.log`, reboot (change of

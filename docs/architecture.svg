@@ -111,8 +111,8 @@
 <text xml:space="preserve" x="1098" y="628" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">every step simulated first, revertible</text>
 <text xml:space="preserve" x="1098" y="646" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">from the action history</text>
 <rect x="60" y="740" width="900" height="280" rx="16" fill="#f5f9ff" stroke="#2563eb" stroke-width="2"/>
-<text xml:space="preserve" x="78" y="766" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Storage</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   ZFS pool zroot</tspan></text>
-<rect x="80" y="790" width="280" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
+<text xml:space="preserve" x="78" y="766" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Storage</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   ZFS or UFS root</tspan></text>
+<rect x="80" y="790" width="260" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
 <rect x="80" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
 <circle cx="106" cy="811" r="11" fill="#2563eb"/>
 <text xml:space="preserve" x="106" y="815" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
@@ -121,29 +121,30 @@
 <text xml:space="preserve" x="98" y="858" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">SQLite: quarantine ledger, incidents,</text>
 <text xml:space="preserve" x="98" y="876" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">anomalies, devices, posture, collectors</text>
 <text xml:space="preserve" x="98" y="894" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">JSON: findings, settings, journal</text>
-<text xml:space="preserve" x="98" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start"></text>
-<text xml:space="preserve" x="98" y="930" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/log/policyanalyzer</tspan></text>
-<text xml:space="preserve" x="98" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">plain logs, rotated</text>
-<rect x="380" y="790" width="290" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
-<rect x="380" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
-<text xml:space="preserve" x="398" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Dataset · setup step 3</text>
-<text xml:space="preserve" x="398" y="840" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="bold" fill="#2563eb">zroot/ai</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">  →  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/ai</tspan></text>
-<text xml:space="preserve" x="398" y="858" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">recordsize=1M · compression=off</text>
-<text xml:space="preserve" x="398" y="876" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">atime=off · no quota (pool free space)</text>
-<text xml:space="preserve" x="398" y="894" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">tuned for large write-once model files</text>
-<text xml:space="preserve" x="398" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start"></text>
-<text xml:space="preserve" x="398" y="930" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#0f172a">/var/db/ai/models</tspan></text>
-<text xml:space="preserve" x="398" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">0750 root:wheel · 2–20 GB per model</text>
-<rect x="690" y="790" width="250" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
-<rect x="690" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
-<text xml:space="preserve" x="708" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Dataset · step 4</text>
-<text xml:space="preserve" x="708" y="840" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="bold" fill="#2563eb">zroot/ai/jail</tspan></text>
-<text xml:space="preserve" x="708" y="858" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">→  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/ai/jail</tspan></text>
-<text xml:space="preserve" x="708" y="876" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">lz4 · recordsize=128K · atime=off</text>
-<text xml:space="preserve" x="708" y="894" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">FreeBSD 15.1 base.txz (~0.7 GB)</text>
-<text xml:space="preserve" x="708" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">+ pkg ollama and dependencies</text>
-<text xml:space="preserve" x="708" y="930" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start"></text>
-<text xml:space="preserve" x="708" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">jail root, ~0.8 GB on disk</text>
+<text xml:space="preserve" x="98" y="912" font-size="12" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/log/policyanalyzer</tspan></text>
+<text xml:space="preserve" x="98" y="930" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">plain logs, rotated</text>
+<text xml:space="preserve" x="98" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">any root file system (ZFS or UFS)</text>
+<rect x="355" y="790" width="330" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="355" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="373" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Models · setup step 3</text>
+<text xml:space="preserve" x="373" y="840" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">ZFS  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">zroot/ai</tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569"> → /var/db/ai</tspan></text>
+<text xml:space="preserve" x="373" y="858" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">recordsize=1M · compression=off · atime=off</text>
+<text xml:space="preserve" x="373" y="876" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">UFS  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/ai/models</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569"> (directory)</tspan></text>
+<text xml:space="preserve" x="373" y="894" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">shares the system disk · space guard</text>
+<text xml:space="preserve" x="373" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">leaves ≥ max(20 % of size, 2 GiB) free</text>
+<text xml:space="preserve" x="373" y="930" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">UFS opt-in  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">aipool/ai</tspan></text>
+<text xml:space="preserve" x="373" y="948" font-size="11.5" text-anchor="start"><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569">← /var/db/ai.zpool.img</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569"> (md vnode)</tspan></text>
+<text xml:space="preserve" x="373" y="966" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">fixed size · ARC cap · own rc.d at boot</text>
+<rect x="700" y="790" width="245" height="210" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4" filter="url(#shadow)"/>
+<rect x="700" y="800" width="5" height="190" rx="2" fill="#2563eb"/>
+<text xml:space="preserve" x="718" y="816" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="start">Jail root · step 4</text>
+<text xml:space="preserve" x="718" y="840" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">ZFS  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">zroot/ai/jail</tspan></text>
+<text xml:space="preserve" x="718" y="858" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">UFS  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">/var/db/ai/jail</tspan></text>
+<text xml:space="preserve" x="718" y="876" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#2563eb">pool  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#2563eb">aipool/ai/jail</tspan></text>
+<text xml:space="preserve" x="718" y="894" font-size="12" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">→  </tspan><tspan font-family="'DejaVu Sans Mono', monospace" font-weight="normal" fill="#475569">/var/db/ai/jail</tspan></text>
+<text xml:space="preserve" x="718" y="912" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">FreeBSD 15.1 base.txz (~0.7 GB)</text>
+<text xml:space="preserve" x="718" y="930" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">+ pkg ollama and dependencies</text>
+<text xml:space="preserve" x="718" y="948" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="normal" fill="#475569" text-anchor="start">jail root, ~0.8 GB on disk</text>
 <rect x="1000" y="740" width="420" height="280" rx="16" fill="#f3fcf8" stroke="#059669" stroke-width="2"/>
 <text xml:space="preserve" x="1018" y="766" font-size="16" text-anchor="start"><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="bold" fill="#0f172a">Local AI runtime</tspan><tspan font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-weight="normal" fill="#475569">   jail &quot;ollama&quot;</tspan></text>
 <rect x="1020" y="790" width="380" height="210" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#shadow)"/>
@@ -207,8 +208,8 @@
 <path d="M900 704 L900 724 L1340 724 L1340 790" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#a059669)"/>
 <rect x="1050" y="715" width="140" height="18" rx="9" fill="#ffffff" stroke="#059669" stroke-width="0.8"/>
 <text xml:space="preserve" x="1120" y="728" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#059669" text-anchor="middle">HTTP 127.0.0.1:11434</text>
-<path d="M940 895 L1020 895" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a2563eb)"/>
-<text xml:space="preserve" x="980" y="886" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="10.5" font-weight="bold" fill="#2563eb" text-anchor="middle">jail root</text>
+<path d="M945 895 L1020 895" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a2563eb)"/>
+<text xml:space="preserve" x="982" y="886" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="10.5" font-weight="bold" fill="#2563eb" text-anchor="middle">jail root</text>
 <path d="M525 1000 L525 1028 L1100 1028 L1100 1000" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a2563eb)"/>
 <rect x="596.4" y="1019" width="127.2" height="18" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="0.8"/>
 <text xml:space="preserve" x="660" y="1032" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">nullfs rw · models</text>
@@ -227,8 +228,8 @@
 <circle cx="138.5" cy="1128" r="13" fill="#f97316"/>
 <text xml:space="preserve" x="138.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
 <text xml:space="preserve" x="138.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Check</text>
-<text xml:space="preserve" x="138.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">CPU, AVX2, RAM,</text>
-<text xml:space="preserve" x="138.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">disk, load</text>
+<text xml:space="preserve" x="138.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">CPU, AVX2, RAM, load</text>
+<text xml:space="preserve" x="138.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">file system · free space</text>
 <polygon points="255,1102 452,1102 470,1158 452,1214 255,1214 273,1158" fill="#ffedd5" stroke="#fdba74" stroke-width="1.3"/>
 <circle cx="362.5" cy="1128" r="13" fill="#f97316"/>
 <text xml:space="preserve" x="362.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
@@ -239,13 +240,13 @@
 <circle cx="577.5" cy="1128" r="13" fill="#2563eb"/>
 <text xml:space="preserve" x="577.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
 <text xml:space="preserve" x="577.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Storage</text>
-<text xml:space="preserve" x="577.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">zfs create</text>
-<text xml:space="preserve" x="577.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">zroot/ai + models/</text>
+<text xml:space="preserve" x="577.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">ZFS dataset or UFS dir</text>
+<text xml:space="preserve" x="577.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">(opt-in file pool)</text>
 <polygon points="685,1102 882,1102 900,1158 882,1214 685,1214 703,1158" fill="#eff6ff" stroke="#2563eb" stroke-width="1.3"/>
 <circle cx="792.5" cy="1128" r="13" fill="#2563eb"/>
 <text xml:space="preserve" x="792.5" y="1133" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
 <text xml:space="preserve" x="792.5" y="1162" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Runtime</text>
-<text xml:space="preserve" x="792.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">zroot/ai/jail · base</text>
+<text xml:space="preserve" x="792.5" y="1182" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">jail root · base.txz</text>
 <text xml:space="preserve" x="792.5" y="1198" font-family="'Source Sans Pro', 'DejaVu Sans', sans-serif" font-size="12" font-weight="normal" fill="#475569" text-anchor="middle">pkg ollama · jail.conf</text>
 <polygon points="900,1102 1097,1102 1115,1158 1097,1214 900,1214 918,1158" fill="#fff7ed" stroke="#fdba74" stroke-width="1.3"/>
 <circle cx="1007.5" cy="1128" r="13" fill="#f97316"/>

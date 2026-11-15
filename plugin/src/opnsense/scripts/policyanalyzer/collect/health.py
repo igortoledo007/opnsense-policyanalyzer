@@ -29,7 +29,7 @@
       sysctl      kern.cp_time (CPU busy/idle averaged since the previous run), vm.loadavg, hw.physmem,
                   vm.stats.vm.* (memory), kstat.zfs.misc.arcstats.size, kern.boottime, temperatures
                   (dev.cpu.N.temperature, hw.acpi.thermal.tzN.temperature)
-      swapinfo -k, zpool list -Hp, df -kP / (only when there is no ZFS pool)
+      swapinfo -k, zpool list -Hp, mount -p, df -kP / (when / is not ZFS or there is no pool)
       pfctl -si / -sm   states, state limit, counters as rates since the previous run
       dpinger     /var/run/dpinger_<gw>.sock: "<name> <rtt us> <rttsd us> <loss %>"
       /var/log/gateways/latest.log   "ALERT:" lines -> events (incremental, dev/ino/offset marker)
@@ -171,7 +171,14 @@ def probe_disk(ctx):
             m['zpool:%s:cap_pct' % name] = _num(f[7])
             m['zpool:%s:frag_pct' % name] = _num(f[6])
         m['zpool:%s:healthy' % name] = 1.0 if f[9].strip() == 'ONLINE' else 0.0
-    if not pools.strip():
+    # the root file system is measured with df whenever it is not ZFS: on UFS a pool may still exist
+    # (the Policy Analyzer file-backed pool for the AI models) without holding /
+    root_fs = ''
+    for line in ctx.read(['/sbin/mount', '-p']).splitlines():
+        f = line.split()
+        if len(f) >= 3 and f[1] == '/':
+            root_fs = f[2]
+    if not pools.strip() or (root_fs and root_fs != 'zfs'):
         df = ctx.read(['/bin/df', '-kP', '/'])
         lines = df.splitlines()
         if len(lines) >= 2:

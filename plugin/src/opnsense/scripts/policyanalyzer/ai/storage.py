@@ -35,6 +35,9 @@
                large, write-once model files) when the path is below it, then
                the directory itself (0750 root:wheel).  Idempotent; it never
                destroys or modifies an existing dataset or directory.
+               Without ZFS (UFS) only the directory is created, on the system
+               disk; a dataset already mounted on /var/db/ai (the ZFS pool in a
+               file of setup/filepool.py) is used as is.
     Nothing here installs or touches the model server.
 """
 
@@ -59,6 +62,10 @@ DATASET_PROPERTIES = (
     ('primarycache', 'metadata'),
 )
 STORAGE_LOG = '/var/log/policyanalyzer/storage.log'
+SHARED_DISK_NOTE = ('without ZFS, models in %s share the system disk with /var (logs, config backups): the setup '
+                    'refuses a download that would leave less than 2 GiB free there; a ZFS pool in a file '
+                    '(create_file_pool) gives the models a fixed size limit, an Ollama server in the LAN keeps them '
+                    'off the firewall')
 
 
 def validate_path(path):
@@ -202,7 +209,15 @@ def plan(path):
     elif pool:
         warnings.append('path is outside %s, only a directory is created on the existing dataset' % DATASET_MOUNTPOINT)
     else:
-        warnings.append('root filesystem is not ZFS, only a directory is created')
+        device, mountpoint, fstype = _mount_of(DATASET_MOUNTPOINT)
+        if below_ds and fstype == 'zfs' and mountpoint == DATASET_MOUNTPOINT:
+            # ZFS pool in a file (setup create_file_pool) or another pool already mounted on /var/db/ai
+            dataset = device
+            warnings.append('%s is the ZFS dataset %s, only a directory is created in it' % (DATASET_MOUNTPOINT,
+                                                                                            device))
+        else:
+            warnings.append('root filesystem is not ZFS, only a directory is created')
+            warnings.append(SHARED_DISK_NOTE % path)
     if not os.path.isdir(path):
         steps.append({
             'type': 'mkdir',
