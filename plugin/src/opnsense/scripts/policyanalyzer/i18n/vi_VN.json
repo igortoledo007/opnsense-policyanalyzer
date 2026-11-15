@@ -700,5 +700,26 @@
     "decision_head": "| Kịch bản | Mô hình khuyến nghị | Phương án thay thế | Chế độ | timeout | num_predict | ngân sách | Đáp ứng? | Lý do |",
     "applicable": "Có thể áp dụng (mỗi kịch bản một lệnh, mô phỏng trước; mọi thứ đều được ghi nhật ký và có thể hoàn nguyên):",
     "events": "## 12. Sự kiện (bảo vệ tạm dừng, hủy bỏ, lỗi e-mail)"
+  },
+  "events": {
+    "quarantine_title": "%s bị cách ly: %s (mức %d)",
+    "days_10": "10 ngày",
+    "days_30": "30 ngày",
+    "permanent": "vĩnh viễn",
+    "kind_enter": "Đã thêm",
+    "kind_upgrade": "Đã nâng mức",
+    "kind_extend": "Đã gia hạn",
+    "kind_permanent": "Đã đặt vĩnh viễn",
+    "origin_auto": "tự động",
+    "origin_manual": "bởi quản trị viên",
+    "country": "quốc gia %s",
+    "device_title": "Thiết bị mới: %s (%s)",
+    "unknown_vendor": "nhà sản xuất không rõ",
+    "device_detail": "%s trên %s, loại %s, rủi ro %s",
+    "vuln_p1_title": "%s đã thành P1 (%s %s)",
+    "vuln_kev_title": "%s (%s) có trong CISA KEV",
+    "vuln_kev_detail": "thêm ngày %s; ưu tiên %s",
+    "ai_down_title": "Nhà cung cấp AI không khả dụng: %s (%d lỗi liên tiếp)",
+    "posture_title": "Điểm tư thế bảo mật giảm từ %.0f xuống %.0f"
   }
 }

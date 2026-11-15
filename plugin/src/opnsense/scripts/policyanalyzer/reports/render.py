@@ -377,11 +377,11 @@ def notification(events, summary, language, base, hostname=''):
     title = top['title'] if len(events) == 1 else t['digest'] % len(events)
     subject = '[%s] %s: %s' % (hostname or 'OPNsense', t['alert'] if len(events) == 1 else t['events'], title)
     link = top.get('link') or LINKS['reports']
-    rows = [[chip(ev['severity'], SEV_COLOR.get(ev['severity'], '#64748b')),
+    rows = [[chip(ev.get('severity_label') or ev['severity'], SEV_COLOR.get(ev['severity'], '#64748b')),
              '<b>%s</b><div class="pa-muted">%s</div>' % (e(ev['title']), e(ev.get('detail') or '')),
              e(when(ev['ts'], t))] for ev in events[:30]]
     inner = [_header(title, '%s%s' % (hostname + ' - ' if hostname else '', when(top['ts'], t)),
-                     SEV_COLOR.get(top['severity'], '#0f172a'), badge=top['severity']),
+                     SEV_COLOR.get(top['severity'], '#0f172a'), badge=top.get('severity_label') or top['severity']),
              '<div class="pa-sec"><div class="pa-sum" style="background:#f8fafc;border-radius:8px;padding:12px 14px">'
              '%s</div></div>' % e(summary['text']),
              _section('notifications', t['events'], _table([t['severity'], t['events'], t['when']], rows, hide=(2,)),
@@ -390,7 +390,8 @@ def notification(events, summary, language, base, hostname=''):
                  ('<p><a class="pa-btn" href="%s%s">%s</a></p>' % (e(base), e(link), e(t['open']))) if base else '',
                  '<p class="pa-muted">%s %s</p>' % (e(t['throttle']) if len(events) > 1 else '', e(t['footer'])))]
     text = [title, '', summary['text'], '']
-    text += ['[%s] %s - %s (%s)' % (ev['severity'], ev['title'], ev.get('detail') or '', when(ev['ts'], t))
+    text += ['[%s] %s - %s (%s)' % (ev.get('severity_label') or ev['severity'], ev['title'], ev.get('detail') or '',
+                                     when(ev['ts'], t))
              for ev in events[:30]]
     if base:
         text += ['', '%s: %s%s' % (t['open'], base, link)]

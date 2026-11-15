@@ -700,5 +700,26 @@
     "decision_head": "| 场景 | 推荐模型 | 备选 | 模式 | timeout | num_predict | 预算 | 适用？ | 原因 |",
     "applicable": "可应用（每个场景一项，先模拟；所有内容均记录在日志中且可还原）：",
     "events": "## 12. 事件（保护暂停、中止、邮件失败）"
+  },
+  "events": {
+    "quarantine_title": "%s 已隔离：%s（级别 %d）",
+    "days_10": "10 天",
+    "days_30": "30 天",
+    "permanent": "永久",
+    "kind_enter": "已加入",
+    "kind_upgrade": "已升级",
+    "kind_extend": "已延长",
+    "kind_permanent": "已设为永久",
+    "origin_auto": "自动",
+    "origin_manual": "由管理员",
+    "country": "国家 %s",
+    "device_title": "新设备：%s（%s）",
+    "unknown_vendor": "未知厂商",
+    "device_detail": "%s，位于 %s，类型 %s，风险 %s",
+    "vuln_p1_title": "%s 已变为 P1（%s %s）",
+    "vuln_kev_title": "%s（%s）在 CISA KEV 中",
+    "vuln_kev_detail": "加入日期 %s；优先级 %s",
+    "ai_down_title": "AI 提供商不可用：%s（连续 %d 次失败）",
+    "posture_title": "安全态势评分从 %.0f 降至 %.0f"
   }
 }

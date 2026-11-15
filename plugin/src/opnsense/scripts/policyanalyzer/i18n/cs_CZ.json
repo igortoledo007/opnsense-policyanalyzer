@@ -700,5 +700,26 @@
     "decision_head": "| Scénář | Doporučený model | Alternativa | Režim | timeout | num_predict | rozpočet | Slouží? | Důvod |",
     "applicable": "Použitelné (jedno na scénář, nejprve simulovat; vše se zaznamenává do deníku a je vratné):",
     "events": "## 12. Události (pauzy ochrany, přerušení, selhání e-mailů)"
+  },
+  "events": {
+    "quarantine_title": "%s v karanténě: %s (úroveň %d)",
+    "days_10": "10 dní",
+    "days_30": "30 dní",
+    "permanent": "trvale",
+    "kind_enter": "Přidáno",
+    "kind_upgrade": "Zvýšena úroveň",
+    "kind_extend": "Prodlouženo",
+    "kind_permanent": "Nastaveno trvale",
+    "origin_auto": "automaticky",
+    "origin_manual": "administrátorem",
+    "country": "země %s",
+    "device_title": "Nové zařízení: %s (%s)",
+    "unknown_vendor": "neznámý výrobce",
+    "device_detail": "%s na %s, typ %s, riziko %s",
+    "vuln_p1_title": "%s je nyní P1 (%s %s)",
+    "vuln_kev_title": "%s (%s) je v CISA KEV",
+    "vuln_kev_detail": "přidáno %s; priorita %s",
+    "ai_down_title": "Poskytovatel AI nedostupný: %s (%d chyb za sebou)",
+    "posture_title": "Skóre zabezpečení kleslo z %.0f na %.0f"
   }
 }

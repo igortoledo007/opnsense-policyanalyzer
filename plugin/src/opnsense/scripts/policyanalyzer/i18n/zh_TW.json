@@ -700,5 +700,26 @@
     "decision_head": "| 場景 | 建議模型 | 替代 | 模式 | timeout | num_predict | 預算 | 適用？ | 原因 |",
     "applicable": "可套用（每個場景一項，先模擬；所有內容均記錄於日誌中且可還原）：",
     "events": "## 12. 事件（防護暫停、中止、電子郵件失敗）"
+  },
+  "events": {
+    "quarantine_title": "%s 已隔離：%s（等級 %d）",
+    "days_10": "10 天",
+    "days_30": "30 天",
+    "permanent": "永久",
+    "kind_enter": "已加入",
+    "kind_upgrade": "已升級",
+    "kind_extend": "已延長",
+    "kind_permanent": "已設為永久",
+    "origin_auto": "自動",
+    "origin_manual": "由管理員",
+    "country": "國家 %s",
+    "device_title": "新裝置：%s（%s）",
+    "unknown_vendor": "未知廠商",
+    "device_detail": "%s，位於 %s，類型 %s，風險 %s",
+    "vuln_p1_title": "%s 已變為 P1（%s %s）",
+    "vuln_kev_title": "%s（%s）在 CISA KEV 中",
+    "vuln_kev_detail": "加入日期 %s；優先順序 %s",
+    "ai_down_title": "AI 供應商無法使用：%s（連續 %d 次失敗）",
+    "posture_title": "安全態勢分數從 %.0f 降至 %.0f"
   }
 }

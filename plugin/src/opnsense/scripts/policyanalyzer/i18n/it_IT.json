@@ -700,5 +700,26 @@
     "decision_head": "| Scenario | Modello consigliato | Alternativa | Modalità | timeout | num_predict | budget | Serve? | Motivo |",
     "applicable": "Applicabile (uno per scenario, prima simula; tutto è registrato nel journal e reversibile):",
     "events": "## 12. Eventi (pause della salvaguardia, interruzioni, errori di e-mail)"
+  },
+  "events": {
+    "quarantine_title": "%s in quarantena: %s (livello %d)",
+    "days_10": "10 giorni",
+    "days_30": "30 giorni",
+    "permanent": "permanente",
+    "kind_enter": "Entrato",
+    "kind_upgrade": "Livello aumentato",
+    "kind_extend": "Prorogato",
+    "kind_permanent": "Reso permanente",
+    "origin_auto": "automaticamente",
+    "origin_manual": "da un amministratore",
+    "country": "paese %s",
+    "device_title": "Nuovo dispositivo: %s (%s)",
+    "unknown_vendor": "produttore sconosciuto",
+    "device_detail": "%s su %s, tipo %s, rischio %s",
+    "vuln_p1_title": "%s è diventata P1 (%s %s)",
+    "vuln_kev_title": "%s (%s) è in CISA KEV",
+    "vuln_kev_detail": "aggiunta il %s; priorità %s",
+    "ai_down_title": "Provider IA non disponibile: %s (%d errori consecutivi)",
+    "posture_title": "Il punteggio di postura è sceso da %.0f a %.0f"
   }
 }

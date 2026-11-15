@@ -700,5 +700,26 @@
     "decision_head": "| Scenario | Recommended model | Alternative | Mode | timeout | num_predict | budget | Serves? | Reason |",
     "applicable": "Applicable (one per scenario, simulate first; everything is journaled and reversible):",
     "events": "## 12. Events (guard pauses, aborts, e-mail failures)"
+  },
+  "events": {
+    "quarantine_title": "%s in quarantine: %s (level %d)",
+    "days_10": "10 days",
+    "days_30": "30 days",
+    "permanent": "permanent",
+    "kind_enter": "Entered",
+    "kind_upgrade": "Moved up",
+    "kind_extend": "Extended",
+    "kind_permanent": "Made permanent",
+    "origin_auto": "automatically",
+    "origin_manual": "by an administrator",
+    "country": "country %s",
+    "device_title": "New device: %s (%s)",
+    "unknown_vendor": "unknown vendor",
+    "device_detail": "%s on %s, type %s, risk %s",
+    "vuln_p1_title": "%s became P1 (%s %s)",
+    "vuln_kev_title": "%s (%s) is in CISA KEV",
+    "vuln_kev_detail": "added %s; priority %s",
+    "ai_down_title": "AI provider unavailable: %s (%d failures in a row)",
+    "posture_title": "Posture score dropped from %.0f to %.0f"
   }
 }

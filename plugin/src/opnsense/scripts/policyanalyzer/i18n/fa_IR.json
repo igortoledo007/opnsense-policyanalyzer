@@ -700,5 +700,26 @@
     "decision_head": "| سناریو | مدل توصیه‌شده | جایگزین | حالت | timeout | num_predict | بودجه | پاسخگو؟ | دلیل |",
     "applicable": "قابل اعمال (یکی برای هر سناریو، ابتدا شبیه‌سازی؛ همه چیز ثبت می‌شود و برگشت‌پذیر است):",
     "events": "## 12. رویدادها (توقف‌های محافظ، لغوها، خطاهای ایمیل)"
+  },
+  "events": {
+    "quarantine_title": "%s در قرنطینه: %s (سطح %d)",
+    "days_10": "۱۰ روز",
+    "days_30": "۳۰ روز",
+    "permanent": "دائمی",
+    "kind_enter": "وارد شد",
+    "kind_upgrade": "سطح بالا رفت",
+    "kind_extend": "تمدید شد",
+    "kind_permanent": "دائمی شد",
+    "origin_auto": "به‌طور خودکار",
+    "origin_manual": "توسط مدیر",
+    "country": "کشور %s",
+    "device_title": "دستگاه جدید: %s (%s)",
+    "unknown_vendor": "سازنده نامشخص",
+    "device_detail": "%s روی %s، نوع %s، ریسک %s",
+    "vuln_p1_title": "%s به P1 رسید (%s %s)",
+    "vuln_kev_title": "%s (%s) در CISA KEV است",
+    "vuln_kev_detail": "افزوده‌شده در %s؛ اولویت %s",
+    "ai_down_title": "ارائه‌دهنده هوش مصنوعی در دسترس نیست: %s (%d خطای پیاپی)",
+    "posture_title": "امتیاز وضعیت امنیتی از %.0f به %.0f کاهش یافت"
   }
 }

@@ -700,5 +700,26 @@
     "decision_head": "| Szenario | Empfohlenes Modell | Alternative | Modus | Timeout | num_predict | Budget | Geeignet? | Grund |",
     "applicable": "Anwendbar (eine pro Szenario, zuerst simulieren; alles wird protokolliert und ist umkehrbar):",
     "events": "## 12. Ereignisse (Pausen der Schutzregel, Abbrüche, E-Mail-Fehler)"
+  },
+  "events": {
+    "quarantine_title": "%s in Quarantäne: %s (Stufe %d)",
+    "days_10": "10 Tage",
+    "days_30": "30 Tage",
+    "permanent": "dauerhaft",
+    "kind_enter": "Aufgenommen",
+    "kind_upgrade": "Hochgestuft",
+    "kind_extend": "Verlängert",
+    "kind_permanent": "Dauerhaft gemacht",
+    "origin_auto": "automatisch",
+    "origin_manual": "von einem Administrator",
+    "country": "Land %s",
+    "device_title": "Neues Gerät: %s (%s)",
+    "unknown_vendor": "unbekannter Hersteller",
+    "device_detail": "%s an %s, Typ %s, Risiko %s",
+    "vuln_p1_title": "%s ist jetzt P1 (%s %s)",
+    "vuln_kev_title": "%s (%s) steht in CISA KEV",
+    "vuln_kev_detail": "aufgenommen am %s; Priorität %s",
+    "ai_down_title": "KI-Anbieter nicht erreichbar: %s (%d Fehler in Folge)",
+    "posture_title": "Posture-Wert gefallen von %.0f auf %.0f"
   }
 }

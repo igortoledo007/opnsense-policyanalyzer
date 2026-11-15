@@ -37,7 +37,7 @@ import time
 
 import i18n
 
-from . import charts, common, pdf, render
+from . import charts, common, evtext, pdf, render
 
 MAX_BYTES = 300 * 1024          # target size of the attachment
 
@@ -81,9 +81,9 @@ def _bars(doc, t, items, **kwargs):
     doc.bars(items, value_format=lambda v: str(num(v, t['_lang'])), **kwargs)
 
 
-def _sev_cell(value):
+def _sev_cell(value, label=None):
     value = value or 'info'
-    return {'text': value, 'chip': render.SEV_COLOR.get(value, '#64748b')}
+    return {'text': label or value, 'chip': render.SEV_COLOR.get(value, '#64748b')}
 
 
 def _muted(doc, text):
@@ -605,6 +605,8 @@ def notification(events, summary, language, hostname='', base='', metrics=None, 
     that event type over the last <hours> (metrics = collect.metrics(now - hours h, now)). :return: (name, bytes)
     """
     t = strings(language)
+    # the PDF may fall back to English (script it cannot draw): the event texts follow the PDF, not the e-mail
+    events = evtext.localize(events, t['_lang'])
     now = now or common.now()
     host = hostname or 'OPNsense'
     etype = events[0].get('type') if events else 'report'
@@ -615,12 +617,13 @@ def notification(events, summary, language, hostname='', base='', metrics=None, 
                        page_label=t['page'], compress=compress, created=now)
     worst = max((e.get('severity') for e in events), key=common.severity_rank, default='info')
     doc.title_block('%s: %s' % (t['notify_title'], label),
-                    '%s · %d %s' % (host, len(events), t['events'].lower()), badge=str(worst).upper())
+                    '%s · %d %s' % (host, len(events), t['events'].lower()),
+                    badge=evtext.severity(worst, t['_lang']).upper())
     if summary and summary.get('text'):
         doc.note(summary['text'], t['exec'] if summary.get('ai') else t['exec_fallback'], summary.get('note'))
     rows = []
     for ev in events[:40]:
-        rows.append([when(ev.get('ts') or now, t), _sev_cell(ev.get('severity')),
+        rows.append([when(ev.get('ts') or now, t), _sev_cell(ev.get('severity'), ev.get('severity_label')),
                      {'text': ev.get('title') or '-', 'sub': ev.get('detail') or ''}])
     doc.table([t['when'], t['severity'], t['events_col']], rows, widths=[0.17, 0.13, 0.7])
     m = metrics or {}
