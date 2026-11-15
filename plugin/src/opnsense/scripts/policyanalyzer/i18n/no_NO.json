@@ -700,5 +700,26 @@
     "decision_head": "| Scenario | Anbefalt modell | Alternativ | Modus | timeout | num_predict | budsjett | Fungerer? | Årsak |",
     "applicable": "Kan tas i bruk (én per scenario, simuler først; alt journalføres og kan reverseres):",
     "events": "## 12. Hendelser (vaktpauser, avbrudd, e-postfeil)"
+  },
+  "events": {
+    "quarantine_title": "%s i karantene: %s (nivå %d)",
+    "days_10": "10 dager",
+    "days_30": "30 dager",
+    "permanent": "permanent",
+    "kind_enter": "Lagt inn",
+    "kind_upgrade": "Nivå hevet",
+    "kind_extend": "Forlenget",
+    "kind_permanent": "Gjort permanent",
+    "origin_auto": "automatisk",
+    "origin_manual": "av en administrator",
+    "country": "land %s",
+    "device_title": "Ny enhet: %s (%s)",
+    "unknown_vendor": "ukjent produsent",
+    "device_detail": "%s på %s, type %s, risiko %s",
+    "vuln_p1_title": "%s ble P1 (%s %s)",
+    "vuln_kev_title": "%s (%s) er i CISA KEV",
+    "vuln_kev_detail": "lagt til %s; prioritet %s",
+    "ai_down_title": "AI-leverandør utilgjengelig: %s (%d feil på rad)",
+    "posture_title": "Sikkerhetspoengsummen falt fra %.0f til %.0f"
   }
 }

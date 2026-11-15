@@ -700,5 +700,26 @@
     "decision_head": "| 시나리오 | 권장 모델 | 대안 | 모드 | timeout | num_predict | 예산 | 충족? | 사유 |",
     "applicable": "적용 가능 (시나리오당 하나, 먼저 시뮬레이션; 모든 것이 기록되며 되돌릴 수 있음):",
     "events": "## 12. 이벤트 (보호 장치 일시 중지, 중단, 이메일 실패)"
+  },
+  "events": {
+    "quarantine_title": "%s 격리됨: %s (수준 %d)",
+    "days_10": "10일",
+    "days_30": "30일",
+    "permanent": "영구",
+    "kind_enter": "추가됨",
+    "kind_upgrade": "수준 상향",
+    "kind_extend": "연장됨",
+    "kind_permanent": "영구로 전환",
+    "origin_auto": "자동으로",
+    "origin_manual": "관리자가",
+    "country": "국가 %s",
+    "device_title": "새 장치: %s (%s)",
+    "unknown_vendor": "알 수 없는 제조사",
+    "device_detail": "%s (%s), 유형 %s, 위험 %s",
+    "vuln_p1_title": "%s이(가) P1이 됨 (%s %s)",
+    "vuln_kev_title": "%s (%s)이(가) CISA KEV에 있음",
+    "vuln_kev_detail": "추가일 %s, 우선순위 %s",
+    "ai_down_title": "AI 제공자를 사용할 수 없음: %s (연속 %d회 실패)",
+    "posture_title": "보안 태세 점수가 %.0f에서 %.0f(으)로 하락"
   }
 }

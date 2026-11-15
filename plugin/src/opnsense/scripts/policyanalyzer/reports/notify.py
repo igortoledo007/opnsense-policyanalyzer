@@ -44,7 +44,7 @@ import json
 import os
 import sqlite3
 
-from . import aisum, common, deliver, render, settings, store
+from . import aisum, common, deliver, evtext, render, settings, store
 
 RETRY = (300, 900, 3600, 10800)
 MAX_ATTEMPTS = 5
@@ -102,7 +102,8 @@ def detect_quarantine(db, now):
                        'detail': '%s by %s%s%s' % (kind, origin, (', country %s' % country) if country else '',
                                                    (', AS%s' % asn) if asn else ''),
                        'link': '/ui/policyanalyzer/#quarantine',
-                       'data': {'level': level, 'kind': kind, 'origin': origin, 'country': country}})
+                       'data': {'level': level, 'kind': kind, 'origin': origin, 'country': country, 'addr': addr,
+                                'asn': asn}})
     return events
 
 
@@ -122,14 +123,16 @@ def detect_vulns(db, now):
                                                                                      item['version'] or ''),
                            'detail': item['explanation'], 'link': '/ui/policyanalyzer/vulns#%s' % item['cve'],
                            'data': {'cve': item['cve'], 'priority': 'P1', 'kev': bool(item['kev']),
-                                    'epss': item['epss'], 'exposure': item['exposure']['class']}})
+                                    'epss': item['epss'], 'exposure': item['exposure']['class'],
+                                    'package': item['package'], 'version': item['version'], 'became_p1': True}})
         if item['kev'] and item['priority'] != 'P1':
             events.append({'key': 'vuln:KEV:%s' % item['cve'], 'type': 'vuln_kev_p1', 'source': 'vulns',
                            'severity': 'high',
                            'title': '%s (%s) is in CISA KEV' % (item['cve'], item['package']),
                            'detail': 'added %s; priority %s' % (item['kev'].get('date_added') or '?', item['priority']),
                            'link': '/ui/policyanalyzer/vulns#%s' % item['cve'],
-                           'data': {'cve': item['cve'], 'priority': item['priority'], 'kev': True}})
+                           'data': {'cve': item['cve'], 'priority': item['priority'], 'kev': True,
+                                    'package': item['package'], 'kev_date': item['kev'].get('date_added')}})
     return events
 
 
@@ -152,7 +155,9 @@ def detect_devices(db, now):
                        'detail': '%s on %s, type %s, risk %s' % (', '.join(dev['ip4']) or '-', dev['iface_descr'],
                                                                  dev['type'], dev['risk']),
                        'link': '/ui/policyanalyzer/devices#%d' % dev['id'],
-                       'data': {'type': dev['type'], 'vendor': dev['vendor'], 'risk': dev['risk']}})
+                       'data': {'type': dev['type'], 'vendor': dev['vendor'], 'risk': dev['risk'],
+                                'label': dev['name'] or dev['mac'], 'ips': ', '.join(dev['ip4']),
+                                'iface': dev['iface_descr']}})
     return events
 
 
@@ -192,7 +197,8 @@ def detect_ai(db, now):
              'title': 'AI provider unavailable: %s (%d failures in a row)' % (
                  'Claude Code bridge (claude-bridge)' if bridge else provider, len(calls)),
              'detail': error, 'link': '/ui/policyanalyzer/#settings',
-             'data': {'provider': provider, 'failures': len(calls), 'endpoint': calls[-1].get('endpoint')}}]
+             'data': {'provider': provider, 'failures': len(calls), 'endpoint': calls[-1].get('endpoint'),
+                      'provider_label': 'Claude Code bridge (claude-bridge)' if bridge else provider}}]
 
 
 def detect_inbox(db, now):
@@ -389,8 +395,9 @@ def process(db, cfg, now, smtp_factory=None, assistant=None, only_ids=None, forc
                        % ','.join('?' * len(ids)), ids)
             results.append({'type': etype, 'ids': ids, 'status': 'held'})
             continue
-        events = [{'type': i['type'], 'severity': i['severity'], 'title': i['title'], 'detail': i['detail'],
-                   'link': i['link'], 'ts': i['ts'], 'data': i['data']} for i in items]
+        events = evtext.localize([{'type': i['type'], 'severity': i['severity'], 'title': i['title'],
+                                   'detail': i['detail'], 'link': i['link'], 'ts': i['ts'], 'data': i['data']}
+                                  for i in items], cfg['language'])
         summary = aisum.notification(events, cfg['language'], cfg['notify']['ai_summary'], assistant)
         subject, html_body, text = render.notification(events, summary, cfg['language'], base, host)
         attachments, short = None, {'type': etype, 'events': len(items)}

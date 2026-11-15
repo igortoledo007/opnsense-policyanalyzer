@@ -700,5 +700,26 @@
     "decision_head": "| シナリオ | 推奨モデル | 代替 | モード | timeout | num_predict | 予算 | 使用可? | 理由 |",
     "applicable": "適用可能 (シナリオごとに 1 つ、先にシミュレート。すべて記録され、元に戻せます):",
     "events": "## 12. イベント (ガードによる一時停止、中断、メール送信失敗)"
+  },
+  "events": {
+    "quarantine_title": "%s を隔離中: %s (レベル %d)",
+    "days_10": "10 日間",
+    "days_30": "30 日間",
+    "permanent": "無期限",
+    "kind_enter": "追加",
+    "kind_upgrade": "レベル上昇",
+    "kind_extend": "延長",
+    "kind_permanent": "無期限化",
+    "origin_auto": "自動",
+    "origin_manual": "管理者による",
+    "country": "国 %s",
+    "device_title": "新しいデバイス: %s (%s)",
+    "unknown_vendor": "不明なベンダー",
+    "device_detail": "%s (%s)、種類 %s、リスク %s",
+    "vuln_p1_title": "%s が P1 になりました (%s %s)",
+    "vuln_kev_title": "%s (%s) は CISA KEV に掲載",
+    "vuln_kev_detail": "追加日 %s、優先度 %s",
+    "ai_down_title": "AI プロバイダーが利用できません: %s (%d 回連続で失敗)",
+    "posture_title": "ポスチャスコアが %.0f から %.0f に低下"
   }
 }

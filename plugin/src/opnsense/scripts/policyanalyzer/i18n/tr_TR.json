@@ -700,5 +700,26 @@
     "decision_head": "| Senaryo | Önerilen model | Alternatif | Kip | timeout | num_predict | bütçe | Karşılıyor mu? | Neden |",
     "applicable": "Uygulanabilir (senaryo başına bir tane, önce simüle edin; her şey günlüğe kaydedilir ve geri döndürülebilir):",
     "events": "## 12. Olaylar (koruma duraklamaları, iptaller, e-posta hataları)"
+  },
+  "events": {
+    "quarantine_title": "%s karantinada: %s (seviye %d)",
+    "days_10": "10 gün",
+    "days_30": "30 gün",
+    "permanent": "kalıcı",
+    "kind_enter": "Eklendi",
+    "kind_upgrade": "Seviyesi yükseltildi",
+    "kind_extend": "Uzatıldı",
+    "kind_permanent": "Kalıcı yapıldı",
+    "origin_auto": "otomatik olarak",
+    "origin_manual": "bir yönetici tarafından",
+    "country": "ülke %s",
+    "device_title": "Yeni cihaz: %s (%s)",
+    "unknown_vendor": "bilinmeyen üretici",
+    "device_detail": "%s, %s üzerinde, tür %s, risk %s",
+    "vuln_p1_title": "%s P1 oldu (%s %s)",
+    "vuln_kev_title": "%s (%s) CISA KEV listesinde",
+    "vuln_kev_detail": "eklenme %s; öncelik %s",
+    "ai_down_title": "Yapay zeka sağlayıcısı kullanılamıyor: %s (art arda %d hata)",
+    "posture_title": "Güvenlik puanı %.0f değerinden %.0f değerine düştü"
   }
 }

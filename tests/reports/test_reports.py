@@ -254,7 +254,11 @@ class NotifyTest(ReportsCase):
         self.run_notify(self.now + 60)
         self.assertEqual(len(self.smtp.messages), 1)
         mail = self.smtp.messages[0]['data']
-        self.assertIn('203.0.113.5 in quarantine: 30 days', mail)
+        # the event text follows the language of the reports (pt_BR here), rebuilt from the stored facts
+        self.assertIn('203.0.113.5 em quarentena: 30 dias', mail)
+        self.assertNotIn('in quarantine', mail)
+        stored = [r for r in self.rows() if r['type'] == 'quarantine_long'][0]
+        self.assertIn('in quarantine', stored['title'])                     # the database keeps the English text
         self.assertIn('https://fw.example.test:8443/ui/policyanalyzer/#quarantine', mail)
         sent = [r for r in self.rows() if r['status'] == 'sent']
         self.assertEqual([r['type'] for r in sent], ['quarantine_long'])

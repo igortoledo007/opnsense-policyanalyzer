@@ -700,5 +700,26 @@
     "decision_head": "| Scenariusz | Zalecany model | Alternatywa | Tryb | timeout | num_predict | budget | Spełnia? | Powód |",
     "applicable": "Do zastosowania (po jednym na scenariusz, najpierw symulacja; wszystko trafia do dziennika i jest odwracalne):",
     "events": "## 12. Zdarzenia (pauzy ochrony, przerwania, błędy e-mail)"
+  },
+  "events": {
+    "quarantine_title": "%s w kwarantannie: %s (poziom %d)",
+    "days_10": "10 dni",
+    "days_30": "30 dni",
+    "permanent": "na stałe",
+    "kind_enter": "Dodano",
+    "kind_upgrade": "Podniesiono poziom",
+    "kind_extend": "Przedłużono",
+    "kind_permanent": "Ustawiono na stałe",
+    "origin_auto": "automatycznie",
+    "origin_manual": "przez administratora",
+    "country": "kraj %s",
+    "device_title": "Nowe urządzenie: %s (%s)",
+    "unknown_vendor": "nieznany producent",
+    "device_detail": "%s na %s, typ %s, ryzyko %s",
+    "vuln_p1_title": "%s ma teraz P1 (%s %s)",
+    "vuln_kev_title": "%s (%s) jest w CISA KEV",
+    "vuln_kev_detail": "dodano %s; priorytet %s",
+    "ai_down_title": "Dostawca AI niedostępny: %s (%d błędów z rzędu)",
+    "posture_title": "Wynik bezpieczeństwa spadł z %.0f do %.0f"
   }
 }
